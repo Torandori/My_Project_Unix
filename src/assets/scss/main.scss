@@ -187,6 +187,9 @@
       margin-bottom: 80px;
     }
     .witness-slider{
+      ul {
+        display: flex;
+      }
       .slider-img-wrap {
         width: 558px;
         height: 460px;
@@ -660,6 +663,9 @@
         background-color: #fff;
       }
     }
+  }
+  .border {
+    border-left: 1px solid #383838;
   }
   .clients {
     grid-column: 3/5;

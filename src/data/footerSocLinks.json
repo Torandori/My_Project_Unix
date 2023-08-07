@@ -1,0 +1,27 @@
+[ 
+  {
+    "iconName": "Linkedin",
+    "iconTitle": "Linkedin",
+    "iconTo": "https://www.linkedin.com"
+  },
+  {
+    "iconName": "Instagram",
+    "iconTitle": "Instagram",
+    "iconTo": "https://www.instagram.com"
+  },
+  {
+    "iconName": "Dribble",
+    "iconTitle": "Dribble",
+    "iconTo": "https://dribbble.com"
+  },
+  {
+    "iconName": "Behance",
+    "iconTitle": "Behance",
+    "iconTo": "https://www.behance.net"
+  },
+  {
+    "iconName": "Facebook",
+    "iconTitle": "Facebook",
+    "iconTo": "https://www.facebook.com"
+  }
+]
