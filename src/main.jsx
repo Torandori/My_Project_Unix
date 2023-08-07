@@ -6,7 +6,7 @@ import './assets/scss/style.scss'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/My_Project_Unix">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
