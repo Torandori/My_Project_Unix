@@ -1,0 +1,483 @@
+@import 'vars';
+
+// HERO_SEC
+#contacts-page {
+  background-color: $color-black-text;
+  #hero-sec {
+    background:   url("../images/vector1.svg") 52% 75% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 0;
+    h1 {
+      margin-bottom: 378px;
+    }
+    .hero-wrap {
+      display: flex;
+      gap: 80px;
+      .wrap-item {
+        div {
+          color: #fff;
+          font-family: 'Panchang', sans-serif;
+          @include fz(24);
+          @include lh(28);
+          font-weight: 700;
+          letter-spacing: -0.24px;
+          text-transform: uppercase;
+          margin-bottom: 6px;
+        }
+        a {
+          @include fz(28);
+          @include lh(38);
+          color: #fff;
+          &:hover {
+            opacity: 0.7;
+          }
+          &:focus-visible, &:focus {
+            outline: none;
+            border: 1px solid rgba(255,255,255,.5);
+          }
+          &:active {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    .btn-circle {
+      &:active {
+        box-shadow: 0 0 32px rgba(255, 255, 255, 0.3);
+      }
+      &:focus-visible {
+        box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
+        outline: none;
+      }
+    }
+  }
+}
+// #HERO_SEC
+
+// CONTACTS_SEC
+#contacts-sec {
+  .container {
+    padding: 80px 0 100px;
+  }
+  .form {
+    width: 50%;
+    color: #fff;
+    margin: 0 auto;
+    .h2 {
+      margin-bottom: 26px;
+      .text-italic {
+        margin-left: 12px;
+      }
+    }
+    &.first {
+      padding-top: 16px;
+    }
+  }
+  input:focus, textarea:focus {
+    outline: 0 none;
+  }
+  input[type=text], input[type=email], input[type=tel], textarea {
+    height: 32px;
+    @include fz(18);
+    @include lh(20);
+    font-weight: 400;
+    opacity: 0.75;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid $color-grey4;
+    width: 100%;
+    padding-bottom: 12px;
+    background-color: transparent;
+    color: #fff;
+  }
+  textarea {
+    height: 34px;
+    @include fz(18);
+    @include lh(20);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    opacity: 0.75;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid $color-grey4;
+    width: 100%;
+    padding-bottom: 12px;
+    background-color: transparent;
+    color: #fff;
+  }
+  input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus {
+    border-bottom: 1px solid #fff;
+  }
+  .form-element {
+    margin-bottom: 40px;
+    width: 100%;
+    @include fz(18);
+    @include lh(20);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    position: relative;
+    label {
+      position: absolute;
+      left: 0;
+      top: 0px;
+      -webkit-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      &.fake {
+        opacity: 0.5;
+      }
+    }
+    &.last {
+      margin-bottom: 34px;
+      margin-top: -1px;
+    }
+  }
+  input[type=text], input[type=email], input[type=tel], textarea {
+    &:not(:-moz-placeholder-shown) + label {
+      top: -26px;
+      @include fz(16);
+      color: #9c9b9bf5;
+    }
+    &:not(:-ms-input-placeholder) + label {
+      top: -26px;
+      @include fz(16);
+      color: #9c9b9bf5;
+    }
+    &:focus + label, &:not(:placeholder-shown) + label {
+      top: -26px;
+      @include fz(16);
+      color: #9c9b9bf5;
+    }
+  }
+  .form-btn {
+    @include fz(16);
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    &:hover {
+      box-shadow: 0 0 20px rgba(205, 205, 205, 0.3);
+    }
+    &:active {
+      box-shadow: 0 0 40px rgba(205, 205, 205, 0.3);
+    }
+    &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 12px rgba(205, 205, 205, 0.3);
+    }
+  }
+}
+
+// #CONTACTS_SEC
+
+// SOCIAL_SEC
+#social-sec {
+  margin-bottom: 124px;
+  .soc-projects-wrap{
+    display: flex;
+    margin-bottom: 114px;
+    .left-col {
+      width: 550px;
+      margin-right: 80px;
+      .soc-icon-wrap {
+        display: block;
+        margin-bottom: 133px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        &:hover svg {
+          outline: #fff;
+          path:first-child {
+            fill: transparent;
+          }
+          path:last-child {
+            fill: $color-white-cream;
+          }
+        }
+        &:active {
+          opacity: 0.5;
+          svg {
+            opacity: 0.8;
+          } 
+        }
+        &:hover {
+          border: 1px solid $color-white-cream;
+        }
+        &:focus-visible {
+          outline: none;
+          border-radius: 50%;
+          box-shadow: 0 0 24px rgba(255, 255, 255, 0.5);
+        }
+      }
+      .name {
+        font-family: 'Panchang', sans-serif;
+        @include fz(32);
+        @include lh(36);
+        font-weight: 700;
+        letter-spacing: -0.32px;
+        text-transform: uppercase;
+        color: #fff;
+        margin-bottom: 24px;
+      }
+      .arrow {
+        margin-bottom: 20px;
+        width: 32px;
+        height: 32px;
+        display: block;
+        &:hover {
+          opacity: 0.7;
+        }
+        &:active {
+          opacity: 0.5;
+        }
+        &:focus-visible {
+          outline: 0;
+          border: 1px solid rgba(255,255,255,.5);
+        }
+      }
+    }
+    .right-col {
+      .wrap-soc-projects {
+        display: flex;
+      }
+      .soc-project-wrap {
+        overflow: hidden;
+        border-radius: 20px;
+        width: 420px;
+        height: 320px;
+        img {
+          aspect-ratio: 42/32;
+        }
+      }
+    }
+  }
+  .soc-list-wrap {
+    margin-bottom: 60px;
+  }
+  .soc-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    a {
+      margin-bottom: 40px;
+      width: 60px;
+      height: 60px;
+      display: block;
+      border-radius: 50%;
+      &:hover svg {
+        path:first-child {
+          fill: transparent;
+        }
+        path:last-child {
+          fill: $color-white-cream;
+        }
+      }
+      &:active {
+        opacity: 0.5;
+        svg {
+          opacity: 0.8;
+        } 
+      }
+      &:focus-visible {
+        outline: none;
+        border-radius: 50%;
+        box-shadow: 0 0 24px rgba(255, 255, 255, 0.5);
+      }
+      &:hover {
+        border: 1px solid $color-white-cream;
+      }
+    }
+    .soc-name {
+      font-family: 'Panchang', sans-serif;
+      @include lh(28);
+      font-weight: 600;
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+  }
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: $color-dark-line;
+  }
+}
+// #SOCIAL_SEC
+
+// PROJECT_CAREER_SEC
+#project-career-sec {
+  color: #fff;
+  .wrap-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 90px;
+  }
+  .wrap-poject-career {
+    display: flex;
+  }
+  .location {
+    align-self: center;
+    margin-left: 130px;
+    margin-bottom: 48px;
+    .where {
+      font-weight: 600;
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .descr {
+      @include lh(32);
+      text-transform: uppercase;
+    }
+  }
+}
+.to-top-wrap a {
+  &:hover {
+    opacity: 0.7;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+  &:focus-visible {
+    outline: none;
+    border: 1px solid rgba(255,255,255,.5);
+  }
+  
+}
+// #PROJECT_CAREER_SEC
+// FOOOTER
+#footer-contacts {
+  .container {
+    border-top: 1px solid $color-dark-line;
+    padding: 38px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .to-top-wrap {
+      display: flex;
+      gap: 26px;
+      color: #fff;
+      align-items: center;
+    }
+    .copy {
+      color: #fff;
+      @include fz(20);
+    }
+  }
+}
+// #FOOOTER
+
+@media screen and (max-width: 1180px) {
+  #project-career-sec .wrap-buttons {
+    flex-wrap: wrap;
+  }
+  #project-career-sec .location {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  #social-sec .soc-projects-wrap .left-col .name {
+    font-size: 1.6rem;
+  }
+  #social-sec .soc-list .soc-name {
+    font-size: 1.4rem;
+  }
+  #contacts-page #hero-sec {
+    height: 780px;
+    h1 {
+      margin-bottom: 320px;
+    }
+    .hero-wrap  {
+      flex-wrap: wrap;
+      gap: 40px;
+      .wrap-item {
+        div {
+          font-size: 1.3rem;
+        }
+        a {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .btn-circle {
+      bottom: 30%;
+    }
+  }
+}
+@media screen and (max-width: 680px) {
+  .btn-circle-arrow-text{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+  #project-career-sec .location {
+    margin-bottom: 60px;
+  }
+  #project-career-sec .wrap-buttons {
+    margin-bottom: 0;
+  }
+  #footer-contacts .container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .btn-circle-arrow-text {
+    width: 260px;
+    height: 260px;
+  }
+  #project-career-sec .location {
+    font-size: 1.4rem;
+  }
+  #project-career-sec .wrap-poject-career {
+    flex-wrap: wrap;
+  }
+  #project-career-sec .wrap-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+  #project-career-sec .location .where {
+    font-size: 1.2rem;
+  }
+  #project-career-sec .wrap-poject-career {
+    justify-content: center;
+    align-items: center;
+  }
+  #contacts-sec .form {
+    width: 80%;
+  }
+  #contacts-page #hero-sec {
+    height: 780px;
+    h1 {
+      margin-bottom: 320px;
+    }
+    .hero-wrap  {
+      .wrap-item {
+        div {
+          font-size: 1em;
+        }
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+

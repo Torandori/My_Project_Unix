@@ -1,0 +1,322 @@
+@import 'vars';
+
+.service-details-grafic-bg {
+  background: 
+  url("../images/gradient2.svg") 84% 35% no-repeat,
+  url("../images/vector5.svg") 50% 66% no-repeat,
+}
+.service-details-body-bg {
+  background: linear-gradient(180deg, white 0%, white 42%, #1A1A1A 42%, #1A1A1A 100%);
+}
+
+#service-details-page {
+  #hero-sec {
+    margin-bottom: 0;
+    .container  {
+      h1 {
+        margin-bottom: 386px;
+      }
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// SERVICE_DESCR_SEC
+#service-details-page {
+  #service-descr-sec {
+    border: 1px solid pink;
+    .wrap-service-details {
+      display: flex;
+      .empty-col {
+        border-right: 1px solid $color-grey;
+        width: 103%;
+      }
+      .right-col {
+        padding: 92px 0 82px 40px;
+        .number-text-block {
+          display: flex;
+          gap: 28px;
+          align-items: flex-start;
+          margin-left: 87px; 
+          margin-bottom: 60px;
+          .number {
+            opacity: 0.6;
+            margin-top: 12px;
+          }
+          .text {
+            margin-bottom: 0;
+          }
+        }
+        .text {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    .text {
+      @include fz(44);
+      @include lh(56);
+      letter-spacing: -2.6px;
+    }
+  }
+}
+// #SERVICE_DESCR_SEC
+
+// HOW_SEC
+#how-sec {
+  color: #fff;
+  padding-bottom: 100px;
+  .big-img-wrap{
+    margin-bottom: 116px;
+  }
+  .block-text-under-pic {
+    margin-bottom: 173px;
+    .h2 {
+      width: 74%;
+      margin-bottom: 76px;
+    }
+  }
+  .how-list {
+    display: grid;
+    grid-template-columns: 260px 428px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    margin-bottom: 98px;
+    .cell {
+      padding: 80px 0;
+      display: flex;
+      align-items: center;
+    }
+    .number {
+      color: $color-grey2;
+      border-bottom: 1px solid $color-grey2;
+      align-items: flex-start;
+    }
+    .name {
+      font-family: 'Panchang', sans-serif;
+      @include lh(28);
+      font-weight: 700;
+      letter-spacing: -0.24px;
+      text-transform: uppercase;
+      border-bottom: 1px solid $color-grey2;
+    }
+    .item-descr {
+      @include fz(20);
+      @include lh(30);
+      border-bottom: 1px solid $color-grey2;
+    }
+  }
+  .text {
+    @include fz(44);
+    @include lh(56);
+    letter-spacing: -2.6px;
+  }
+  .big-text {
+    @include fz(130);
+    @include lh(130);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    // margin-bottom: 136px;
+    .margin {
+      margin-left: -10px;
+      margin-right: 5px;
+    }
+    .project-btn {
+      position: absolute;
+      right: 74px;
+      bottom: -13px;
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $color-black-light;
+      display: inline-flex;
+      &:hover {
+        border: 1px solid $color-black-light;
+        svg circle {
+          fill: transparent;
+        }
+      }
+      &:active {
+        svg {
+          opacity: 0.5;
+        }
+      }
+      &:focus-visible {
+        outline: none;
+        border: 1px solid rgba(255,255,255,.5);
+      }
+    }
+  }
+}
+// #HOW_SEC
+
+@media screen and (max-width: 1460px) {
+  #service-details-page #hero-sec {
+    h1 {
+      margin-bottom: 320px;
+      width: 100%;
+    }
+    .flake {
+      top: 40%;
+    }
+  }
+  #how-sec .big-text {
+    font-size: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #how-sec .big-text .project-btn {
+    bottom: 40%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #how-sec .how-list {
+    grid-template-columns: 10% 1fr 1fr;
+  }
+  #how-sec .big-text {
+    font-size: 5.8rem;
+  }
+  #how-sec .big-text .margin {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  #service-details-page #hero-sec .container h1 {
+    margin-bottom: 300px;
+  }
+  #how-sec .big-text .project-btn {
+    right: 60px;
+    svg {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  #how-sec .big-text {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+  #service-details-page #hero-sec {
+    .flake {
+      top: 40%;
+    }
+    .hero-wrap  {
+      .wrap-item {
+        div {
+          font-size: 1em;
+        }
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  #how-sec .how-list {
+    grid-template-columns: 1fr;
+  }
+  #how-sec .how-list .number, #how-sec .how-list .name {
+    border-bottom: none;
+    padding: 0;
+    align-items: center;
+    display: block;
+  }
+  #how-sec .block-text-under-pic .h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 100%;
+  }
+  #how-sec .how-list .name {
+   padding-right: 10px;
+  }
+  #how-sec .text {
+    font-size: 2rem;
+    line-height: 2.6rem;
+  }
+  .block-text-under-pic {
+    margin-left: 0;
+  }
+  #how-sec .block-text-under-pic {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 660px) { 
+  #how-sec .how-list {
+    grid-template-rows: repeat(12, 160px);
+  }
+  #how-sec .block-text-under-pic {
+    margin-bottom: 100px;
+  }
+  #how-sec .how-list .number, #how-sec .how-list .name {
+    padding-top: 40px;
+  }
+  #how-sec .big-text {
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
+  #how-sec .big-text .project-btn {
+    right: 20px;
+  }
+  #how-sec .big-text {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 560px) {
+  #how-sec .big-text {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+  #how-sec .big-text .project-btn {
+    right: 10px;
+    bottom: 100%;
+    svg {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  #service-details-page #hero-sec .container h1 {
+    margin-bottom: 380px;
+  }
+  #service-details-page #hero-sec {
+    height: 700px;
+    .flake {
+      top: 40%;
+    }
+    .btn-circle {
+      bottom: 20%;
+    }
+    .hero-wrap  {
+      .wrap-item {
+        div {
+          font-size: 1em;
+        }
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+  #service-details-page #service-descr-sec .wrap-service-details .right-col .number-text-block {
+    margin-left: 0;
+  }
+  #service-details-page #service-descr-sec .wrap-service-details .right-col .number-text-block .text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+  #service-details-page #service-descr-sec .wrap-service-details .right-col .text {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+  }
+  #how-sec .how-list .number {
+    height: 40px;
+    border: 1px solid orange;
+    margin-bottom: 80px;
+  }
+  #how-sec .how-list {
+    grid-template-rows: repeat(8, 1fr);
+  }
+  #how-sec .how-list .name {
+    padding: 20px 0;
+  }
+}
+

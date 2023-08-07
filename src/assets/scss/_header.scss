@@ -1,0 +1,103 @@
+$color-black: #1A1A1A;
+$color-black-text: #121212;
+$color-black-light: #2A2A2A;
+$color-grey: #D0D0D0;
+@mixin fz($px) {
+  font-size: calc($px / 16)*1rem;
+}
+@mixin lh($px) {
+  line-height: calc($px / 16)*1rem;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: $color-black;
+  height: 70px;
+  z-index: 10000;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    &.separator::before {
+      background-color: #fff;
+      opacity: .2;
+    }
+  }
+}
+#logo a  {
+  &:focus-visible {
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  img {
+    vertical-align: baseline;
+    padding-bottom: 3px;
+  }
+}
+#main-menu {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28.5px;
+    padding-bottom: 12px;
+    li {
+      position: relative;
+      display: block;
+      cursor: pointer;
+      transition: .6s;
+      &:hover {
+        transition: .6s;
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        top: 105%;
+        margin-top: -2px;
+        background: #fff;
+      }
+      &:before {
+        left: 0;
+      }
+      &:after {
+        right: 2.5px;
+        background: #fff;
+        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      &:hover:before {
+        background: #fff;
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      
+      &:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+      }
+      a {
+        font-family: 'Hubot Sans', sans-serif;
+        @include fz(16);
+        @include lh(22);
+        letter-spacing: 0.32px;
+        color: #fff;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:focus-visible {
+          outline: none;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        &:active {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
