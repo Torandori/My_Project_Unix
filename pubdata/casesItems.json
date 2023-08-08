@@ -14,7 +14,7 @@
     "caseTo": "https://sussextaps.com.au/",
     "caseLinkTitle": "Link to Sussextaps project",
     "caseDescr": "The blockchain-powered platform introduces a unique system of E-learning. It unites students who strive to level up their skills, contributors who share knowledge and get paid for it, as well as sponsors who invest in learners' education and get dividends.",
-    "caseImgUrl": "./src/assets/images/tracking.jpg",
+    "caseImgUrl": "./public/pubimgs/tracking.jpg",
     "caseImgAlt": "Picture of Teachchain Project"
   },
   {
