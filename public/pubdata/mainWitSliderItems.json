@@ -1,0 +1,50 @@
+[
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img1.jpg",
+    "witSliderImgAlt": "Meditation Course picture",
+    "witSliderItemTitle": "medit",
+    "witSliderItemService": "Website Design"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img2.jpg",
+    "witSliderImgAlt": "Blockchain Creators Economy Picture",
+    "witSliderItemTitle": "sonox",
+    "witSliderItemService": "Blockchain"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img3.jpg",
+    "witSliderImgAlt": "Create 3d picture",
+    "witSliderItemTitle": "mecha",
+    "witSliderItemService": "3D World"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img4.jpg",
+    "witSliderImgAlt": "Generate 3D with AI picture",
+    "witSliderItemTitle": "hex",
+    "witSliderItemService": "3D AI Generator"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img5.jpg",
+    "witSliderImgAlt": "AI home styling picture",
+    "witSliderItemTitle": "foderma",
+    "witSliderItemService": "Quant Design"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img6.jpg",
+    "witSliderImgAlt": "Check your flights picture",
+    "witSliderItemTitle": "wander",
+    "witSliderItemService": "Check Your Flight"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img7.jpg",
+    "witSliderImgAlt": "Justis library picture",
+    "witSliderItemTitle": "justis",
+    "witSliderItemService": "Design System"
+  },
+  {
+    "witSliderImgUrl": "../../src/assets/images/witness-slider-img8.jpg",
+    "witSliderImgAlt": "Travel agency picture",
+    "witSliderItemTitle": "wave",
+    "witSliderItemService": "Travel experience"
+  }
+]

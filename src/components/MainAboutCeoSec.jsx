@@ -3,15 +3,14 @@ import Flake from './svgComponents/Flake'
 import quote from '../assets/images/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
 import PromoLines from './PromoLines'
-import ceoData from '../data/MainAboutCeoSecData.json'
+import ceoData from '../data/mainAboutCeoSecData.json'
 
 function MainAboutCeoSec(){
-  const _ceoData = ceoData[0];
   return(
     <section id="about-ceo-sec">
     <div className="container">
       <div className="wrap">
-        <h2 className="h2">{_ceoData.ceoTitle}</h2>
+        <h2 className="h2">{ceoData.ceoTitle}</h2>
         <div className="flake">
           <Flake />
         </div>
@@ -24,7 +23,7 @@ function MainAboutCeoSec(){
             </div>
             <ul>
               <li>
-                <p>{_ceoData.ceoQuote}</p>
+                <p>{ceoData.ceoQuote}</p>
               </li>
             </ul>
           </div>
@@ -34,8 +33,8 @@ function MainAboutCeoSec(){
               <img src={ceoPic} alt="Picture of ceo" />
             </div>
             <div className="text">
-              <div className="panchang">{_ceoData.ceoName}</div>
-              <div>{_ceoData.ceoPosition}</div>
+              <div className="panchang">{ceoData.ceoName}</div>
+              <div>{ceoData.ceoPosition}</div>
             </div>
             <div className="arrows">
               <div className="arrow-btn">
@@ -54,8 +53,8 @@ function MainAboutCeoSec(){
     
 
     <div className="container separator">
-      <p className="under-run">{_ceoData.underLinesText}</p>
-      <a href="/" className="small-link">{_ceoData.ceoLink}</a>
+      <p className="under-run">{ceoData.underLinesText}</p>
+      <a href="/" className="small-link">{ceoData.ceoLink}</a>
     </div>
   </section>
 

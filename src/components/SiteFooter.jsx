@@ -8,7 +8,6 @@ import footerData from '../data/footerData.json'
 import FooterSocLinks from './FooterSocLinks'
 
 function SiteFooter() {
-  const footerContent = footerData[0];
 
   return ( 
     <footer id="footer">
@@ -19,17 +18,17 @@ function SiteFooter() {
               <FooterSocLinks />
             </div>
             <div className="footer-title">
-              <div className="small-text">{footerContent.footerSubTitle}</div>
-              <div className="h4">{footerContent.footerLocation}</div>
+              <div className="small-text">{footerData.footerSubTitle}</div>
+              <div className="h4">{footerData.footerLocation}</div>
             </div>
             <div className="footer-contact">
-              <div className="small-text">{footerContent.footerSmallText}</div>
-              <Link to="mailto: Hello@unixstudio.agency">{footerContent.footerEmail}</Link>
+              <div className="small-text">{footerData.footerSmallText}</div>
+              <Link to="mailto: Hello@unixstudio.agency">{footerData.footerEmail}</Link>
             </div>
             <button type="button" className="btn footer-btn">
               become a client <img src={footerArrow} alt="Arrow" className="footerArrow" />
             </button>
-            <p className="copy">{footerContent.footerCopy}</p>
+            <p className="copy">{footerData.footerCopy}</p>
             <button type="button" className="btn btn-circle">
               <img src={btnCircleLight} alt="Contact us" />
             </button>

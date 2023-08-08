@@ -1,10 +1,8 @@
-[
-  {
-    "footerSubTitle": "our team is",
-    "footerLocation": "in newyork, usa",
-    "footerSmallText": "drop us a line",
-    "footerEmail": "Hello@unixstudio.agency",
-    "footerBtnName": "become a client",
-    "footerCopy": "© 2023 Unix Studio. — Product Design Agency"
-  }
-]
+{
+  "footerSubTitle": "our team is",
+  "footerLocation": "in newyork, usa",
+  "footerSmallText": "drop us a line",
+  "footerEmail": "Hello@unixstudio.agency",
+  "footerBtnName": "become a client",
+  "footerCopy": "© 2023 Unix Studio. — Product Design Agency"
+}

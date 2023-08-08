@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 import Arrow from './svgComponents/Arrow';
-import aboutData from '../data/MainAboutSecData.json'
-import aboutAccord from '../data/MainAboutSecAccordData.json'
+import aboutData from '../data/mainAboutSecData.json'
+import aboutAccord from '../data/mainAboutSecAccordData.json'
 
 function MainAboutSec() {
-  const _aboutData = aboutData[0];
 
   return (
     <section id="about-sec">
       <div className="container separator">
-        <h2 className="h2">{_aboutData.aboutTitle}</h2>
-        <div className="subtext">{_aboutData.aboutSubtext}</div>
+        <h2 className="h2">{aboutData.aboutTitle}</h2>
+        <div className="subtext">{aboutData.aboutSubtext}</div>
         <div className="wrap">
-          <p>{_aboutData.aboutDescr}</p>
-          <Link to="/" className="small-link">{_aboutData.aboutLinkText}</Link>
+          <p>{aboutData.aboutDescr}</p>
+          <Link to="/" className="small-link">{aboutData.aboutLinkText}</Link>
         </div>
         <div id="main-services">
           <ul className="panchang">

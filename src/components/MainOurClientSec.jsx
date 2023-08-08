@@ -1,22 +1,20 @@
 import Arrow from './svgComponents/Arrow'
 import quote from '../assets/images/quote.svg'
-import avatar from '../assets/images/peter_img.jpg'
-import clientData from '../data/MainOurClient.json'
+import clientData from '../data/mainOurClient.json'
 
 function MainOurClientSec() {
-  const _clientData = clientData[0];
 
   return (
     <section id="our-client">
       <div className="container">
         <div className="flex-clients separator">
           <div className="client-wrap">
-            <h3 className="h3">{_clientData.clientTitleStart}</h3>
-            <div className="h3">{_clientData.clientTitleEnd}</div>
+            <h3 className="h3">{clientData.clientTitleStart}</h3>
+            <div className="h3">{clientData.clientTitleEnd}</div>
           </div>
           <div className="small-text">
-            <p>{_clientData.clientSmallTextStart}</p>
-            <p>{_clientData.clientSmallTextEnd}</p>
+            <p>{clientData.clientSmallTextStart}</p>
+            <p>{clientData.clientSmallTextEnd}</p>
           </div>
           <div className="arrows">
             <div className="arrow-btn">
@@ -43,11 +41,11 @@ function MainOurClientSec() {
             </div>
             <div className="gen-slider-descr">
               <div className="pic-wrap">
-                <img src={avatar} alt="Picture of Peter Visser" />
+                <img src={clientData.clientAvatarUrl} alt="Picture of Peter Visser" />
               </div>
               <div className="text">
-                <div className="panchang">{_clientData.clientName}</div>
-                <div>{_clientData.clientPosition}</div>
+                <div className="panchang">{clientData.clientName}</div>
+                <div>{clientData.clientPosition}</div>
               </div>
             </div>
           </div>

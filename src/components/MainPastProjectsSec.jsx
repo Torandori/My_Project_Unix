@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PromoLines from "./PromoLines";
 import Arrow from "./svgComponents/Arrow";
-import projectSecData from "../data/MainPastProjectsSecData.json"
-
+import projectSecData from "../data/mainPastProjectsSecData.json"
+import React from "react";
 
 function MainPastProjectsSec() {
-  const _projectSecData = projectSecData[0];
   const [projects, setProjects] = useState([]);
-  const [services, setServices] = useState([]);
+  const [services, setServices] = useState({ left: [], right: [] });
 
   useEffect(() => {
-    fetch('./pubdata/mainPastProjectsItem.json')
+    fetch('./pubdata/mainPastProjectsItems.json')
     .then(resp => resp.json())
     .then(resp => {
       setProjects(resp);
@@ -19,26 +18,29 @@ function MainPastProjectsSec() {
   }, []);
 
   useEffect(() => {
-    fetch('./pubdata/mainServiceItem.json')
+    fetch('./pubdata/mainServiceItems.json')
     .then(resp => resp.json())
     .then(resp => {
       setServices(resp);
     })
   }, []);
 
+  let servicesLeft = services.left;
+  let servicesRight = services.right;
+
   return (
     <section id="past-projects-sec">
     <div className="container">
       <div className="title">
-        <h2 className="h2">{_projectSecData.pastTitle}</h2>
-        <div>{_projectSecData.pastCount}</div>
+        <h2 className="h2">{projectSecData.pastTitle}</h2>
+        <div>{projectSecData.pastCount}</div>
       </div>
       <div className="projects-net">
         <div className="empty-cell"></div>
         <div className="projects-cells">
           {projects.map((item, index) => {
             return (
-              < >
+              <React.Fragment key={index}>
                 <div className="project-descr" key={index}>
                   <div className="wrap">
                     <div className="project-name">{item.projName}</div>
@@ -54,7 +56,7 @@ function MainPastProjectsSec() {
                     <img src={item.projImgUrl} alt={item.projAlt} />
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             )
           })}
         </div>
@@ -64,14 +66,14 @@ function MainPastProjectsSec() {
         <div className="empty-cell"></div>
         <div className="content-cell">
           <div className="wrap">
-            <div>{_projectSecData.serviceTitle}</div>
-            <p>{_projectSecData.serviceDescr}</p>
+            <div>{projectSecData.serviceTitle}</div>
+            <p>{projectSecData.serviceDescr}</p>
           </div>
-          <p className="continue">{_projectSecData.serviceContinue}</p>
+          <p className="continue">{projectSecData.serviceContinue}</p>
 
           <div className="services-cells">
             <div className="left-col">
-              {services.map((item, index) => {
+              {servicesLeft.map((item, index) => {
                 return (
                   <div className="service-item" key={index}>
                     <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
@@ -86,9 +88,22 @@ function MainPastProjectsSec() {
               })}
             </div>
             <div className="right-col">
-              <div className="service-item">
+              {servicesRight.map((item, index) => {
+                  return (
+                    <div className="service-item" key={index}>
+                      <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
+                        <div className="h3 panchang">{item.mainServiceName}</div>
+                        <div className="arrow-btn">
+                          <Arrow />
+                        </div>
+                      </Link>
+                      <p className="item-descr">{item.mainServiceDescr}</p>
+                  </div>
+                  )
+                })}
+              {/* <div className="service-item">
                 <Link to="serviceDetails.html" className="item-title" title="Find out more about Saas service"> 
-                  <div className="h3 panchang">saas</div>
+                  <div className="h3 panchang">{}</div>
                   <div className="arrow-btn">
                     <Arrow />
                   </div>
@@ -102,7 +117,7 @@ function MainPastProjectsSec() {
                     <Arrow />
                   </div>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

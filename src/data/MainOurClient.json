@@ -1,10 +1,9 @@
-[
-  {
-    "clientTitleStart": "our",
-    "clientTitleEnd": "clients",
-    "clientSmallTextStart": "all around",
-    "clientSmallTextEnd": "the globe",
-    "clientName": "Peter Visser",
-    "clientPosition": "Visser Consulting"
-  }
-]
+{
+  "clientTitleStart": "our",
+  "clientTitleEnd": "clients",
+  "clientSmallTextStart": "all around",
+  "clientSmallTextEnd": "the globe",
+  "clientName": "Peter Visser",
+  "clientPosition": "Visser Consulting",
+  "clientAvatarUrl": "./src/assets/images/peter_img.jpg"
+}
