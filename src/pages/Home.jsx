@@ -6,18 +6,21 @@ import MainPastProjectsSec from '../components/MainPastProjectsSec';
 import MainVideoSec from '../components/MainVideoSec';
 import MainWitnessSec from '../components/MainWitnessSec';
 import MainWorthySec from '../components/MainWorthySec';
+import '../assets/scss/main.scss'
 
 function Home() {
   return (
-    <div className="main-grafic-bg">
-      <HeroSec />
-      <MainAboutSec />
-      <MainVideoSec />
-      <MainWitnessSec />
-      <MainAboutCeoSec />
-      <MainPastProjectsSec />
-      <MainWorthySec />
-      <MainOurClientSec />
+    <div className="main-body-bg main-page">
+      <div className="main-grafic-bg">
+        <HeroSec />
+        <MainAboutSec />
+        <MainVideoSec />
+        <MainWitnessSec />
+        <MainAboutCeoSec />
+        <MainPastProjectsSec />
+        <MainWorthySec />
+        <MainOurClientSec />
+      </div>
     </div>
   )
 }

@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
-import '../assets/scss/style.scss'
-import '../assets/scss/_footer.scss'
-import footerPic from '../assets/images/footer-pic.jpg'
+import FooterSocLinks from './FooterSocLinks'
 import btnCircleLight from '../assets/images/svg/btnCircleLight.svg'
+import footerPic from '../assets/images/footer-pic.jpg'
 import footerArrow from '../assets/images/svg/footerArrow.svg'
 import footerData from '../data/footerData.json'
-import FooterSocLinks from './FooterSocLinks'
+import '../assets/scss/_footer.scss'
 
 function SiteFooter() {
 

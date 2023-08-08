@@ -40,7 +40,7 @@ function MainPastProjectsSec() {
         <div className="projects-cells">
           {projects.map((item, index) => {
             return (
-              <React.Fragment key={index}>
+              <>
                 <div className="project-descr" key={index}>
                   <div className="wrap">
                     <div className="project-name">{item.projName}</div>
@@ -56,7 +56,24 @@ function MainPastProjectsSec() {
                     <img src={item.projImgUrl} alt={item.projAlt} />
                   </div>
                 </div>
-              </React.Fragment>
+              </>
+              // <React.Fragment key={index}>
+              //   <div className="project-descr" key={index}>
+              //     <div className="wrap">
+              //       <div className="project-name">{item.projName}</div>
+              //       <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
+              //         <Arrow />
+              //       </Link>
+              //     </div>
+              //     <p>{item.projDescr}</p>
+              //     <div>{item.projUnderText}</div>
+              //   </div>
+              //   <div className="project-pic" key={item.projName}>
+              //     <div className="img-wrap">
+              //       <img src={item.projImgUrl} alt={item.projAlt} />
+              //     </div>
+              //   </div>
+              // </React.Fragment>
             )
           })}
         </div>
@@ -101,23 +118,6 @@ function MainPastProjectsSec() {
                   </div>
                   )
                 })}
-              {/* <div className="service-item">
-                <Link to="serviceDetails.html" className="item-title" title="Find out more about Saas service"> 
-                  <div className="h3 panchang">{}</div>
-                  <div className="arrow-btn">
-                    <Arrow />
-                  </div>
-                </Link>
-                <p className="item-descr">The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.</p>
-              </div>
-              <div className="service-item">
-                <Link to="serviceDetails.html" className="item-title" title="Find out more about Software service">
-                  <div className="h3 panchang">software to clouds</div>
-                  <div className="arrow-btn">
-                    <Arrow />
-                  </div>
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>

@@ -197,9 +197,9 @@ ul {
   }
 }
 // #HERO_SEC
-@import "main";
-@import "services";
-@import "serviceDetails";
+// @import "main";
+// @import "services";
+// @import "serviceDetails";
 // @import 'contacts';
 
 .big-img-wrap{
@@ -604,6 +604,11 @@ ul {
   .arrow-in {
     margin-bottom: 32px;
     display: block;
+    scale: (-1);
+    svg {
+      width: 32px;
+      height: 32px;
+    }
   }
   .btn-text {
     font-family: 'Panchang', sans-serif;
@@ -626,7 +631,7 @@ ul {
 }
 
 
-@import "footer";
+// @import "footer";
 
 @import "response";
 

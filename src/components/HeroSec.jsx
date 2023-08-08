@@ -4,6 +4,7 @@ import heroData from '../data/heroData.json'
 
 function HeroSec(){
   const _heroData = heroData[0];
+  
   return (
     <section id="hero-sec">
       <div className="container separator">
@@ -11,7 +12,7 @@ function HeroSec(){
         <div className="flake dark">
           <Flake />
         </div>
-        <p>{_heroData.heroDescr}y</p>
+        <p>{_heroData.heroDescr}</p>
         <button type="button" className="btn btn-circle">
           <img src={btnCircle} alt="Contact us" />
         </button>

@@ -7,7 +7,7 @@ function Default(){
 
   return (
     <>
-      <div className="page-wrap main-body-bg main-page">
+      <div className="page-wrap">
         <MobBar />
         <SiteHeader />
           <main>

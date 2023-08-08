@@ -13,11 +13,8 @@
   url("../images/gradient4.svg") 50% 82.5% no-repeat;
 }
 .main-body-bg {
-  background: linear-gradient(180deg, white 0%, white 23%, #1A1A1A 23%, #1A1A1A 48%, white 49%, white 69.9%, #1A1A1A 72%, #1A1A1A 100%);
+  background: linear-gradient(180deg, white 0%, white 25%, #1A1A1A 25%, #1A1A1A 50%, white 50%, white 75%, #1A1A1A 75%, #1A1A1A 100%);
 }
-// .main-body-bg {
-//   background: linear-gradient(180deg, white 0%, white 23%, #1A1A1A 23%, #1A1A1A 48%, white 49%, white 69.9%, #1A1A1A 72%, #1A1A1A 100%);
-// }
 .main-page {
   #hero-sec {
     margin-bottom: 118px;
@@ -402,7 +399,7 @@
       display: flex;
       border-top: 1px solid $color-grey;
       .empty-cell {
-        width: 69%;
+        width: 101%;
         border-bottom: 1px solid $color-grey; 
       }
       .projects-cells{
@@ -413,6 +410,10 @@
           border-left: 1px solid $color-grey;
           border-bottom: 1px solid $color-grey;
           padding: 34px;
+          height: 100%;
+          margin-bottom: auto;
+          overflow: auto;
+          position: inherit;
           .wrap {
             display: flex;
             justify-content: space-between;
@@ -465,9 +466,6 @@
             letter-spacing: 1px;
             text-transform: uppercase;
           }
-        }
-        .project-descr:nth-child(3) {
-          order: 4;
         }
         .project-pic {
           padding: 45px 40.8px 42.26px 36.8px;
