@@ -5,7 +5,7 @@
     "caseTo": "https://www.metastaq.com/",
     "caseLinkTitle": "Link to Metastaq project",
     "caseDescr": "This Web3 SaaS platform serves as a marketplace where brands, both experts in blockchain and newcomers, can create and distribute non-fungible token collections. It allows users to create non-code NFTs with an automatically generated  contract.",
-    "caseImgUrl": "./src/assets/images/metas.jpg",
+    "caseImgUrl": "../assets/images/metas.jpg",
     "caseImgAlt": "Picture of Metas Project"
   },
   {
