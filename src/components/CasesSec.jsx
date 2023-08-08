@@ -47,7 +47,7 @@ function CasesSec() {
                 </div>
                 <div className="img-line">
                   <div className="img-wrap">
-                    <img src={item.caseImgUrl} alt={item.caseImgAlt} />
+                    <img src={`${import.meta.env.My_Project_Unix}${item.caseImgUrl}`} alt={item.caseImgAlt} />
                   </div>
                   <div className="dashed-line"></div>
                 </div>
@@ -55,7 +55,7 @@ function CasesSec() {
             )
           })}
         </div>
-
+{/* 
         <div className="cases-projects">
           <div className="left">
             <div className="project-descr">
@@ -64,10 +64,9 @@ function CasesSec() {
             </div>
             <button type="button" className="btn btn-circle-arrow-text dark">
               <span className="btn-content">
-                <span className="arrow-in"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8915 7.46686H4.70844V3.2002H28.1751V26.6669H23.9084V10.4839L6.21694 28.1753L3.19995 25.1584L20.8915 7.46686Z" fill="black"/>
-                </svg>
-              </span>
+                <span className="arrow-in">
+                  <Arrow />
+                </span>
                 <span className="btn-text">start <br /> a project</span>
               </span>
             </button>
@@ -167,7 +166,7 @@ function CasesSec() {
               <div className="dashed-line"></div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <Link to={casesData.casesLinkTo} className="small-link panchang" title={casesData.casesLinkTitle}>{casesData.casesLinkText}</Link>
       </div>
