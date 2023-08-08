@@ -1,15 +1,17 @@
 import btnCircle from '../assets/images/svg/btnCircle.svg'
-import Flake from './svgComponents/Flake';
+import Flake from './svgComponents/Flake'
+import heroData from '../data/heroData.json'
 
 function HeroSec(){
+  const _heroData = heroData[0];
   return (
     <section id="hero-sec">
       <div className="container separator">
-        <h1 className="panchang">unixstudio digit<span>al</span> a<span>gency</span></h1>
+        <h1 className="panchang">{_heroData.heroTitle}</h1>
         <div className="flake dark">
           <Flake />
         </div>
-        <p>We won 50+ desgin awards in 2022 stand alone, some of which had us share the stage with Google, Netflix, and Spotify</p>
+        <p>{_heroData.heroDescr}y</p>
         <button type="button" className="btn btn-circle">
           <img src={btnCircle} alt="Contact us" />
         </button>

@@ -1,52 +1,62 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import PromoLines from "./PromoLines";
 import Arrow from "./svgComponents/Arrow";
-import olive from "../assets/images/olive-max.jpg"
-import digit from "../assets/images/digit-clothing.jpg"
-
+import projectSecData from "../data/MainPastProjectsSecData.json"
 
 
 function MainPastProjectsSec() {
+  const _projectSecData = projectSecData[0];
+  const [projects, setProjects] = useState([]);
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch('./pubdata/mainPastProjectsItem.json')
+    .then(resp => resp.json())
+    .then(resp => {
+      setProjects(resp);
+    })
+  }, []);
+
+  useEffect(() => {
+    fetch('./pubdata/mainServiceItem.json')
+    .then(resp => resp.json())
+    .then(resp => {
+      setServices(resp);
+    })
+  }, []);
+
   return (
     <section id="past-projects-sec">
     <div className="container">
       <div className="title">
-        <h2 className="h2">our past project</h2>
-        <div>500+ PROJECTS</div>
+        <h2 className="h2">{_projectSecData.pastTitle}</h2>
+        <div>{_projectSecData.pastCount}</div>
       </div>
       <div className="projects-net">
         <div className="empty-cell"></div>
         <div className="projects-cells">
-          <div className="project-descr">
-            <div className="wrap">
-              <div className="project-name">olive max</div>
-              <Link to="https://us.oliveunion.com/" className="arrow-btn" target="_blank" title="Link to Olive project">
-                <Arrow />
-              </Link>
-            </div>
-            <p>The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.</p>
-            <div>interface &amp; website</div>
-          </div>
-          <div className="project-pic">
-            <div className="img-wrap">
-              <img src={olive} alt="Olive Max project picture" />
-            </div>
-          </div>
-          <div className="project-pic">
-            <div className="img-wrap">
-              <img src={digit} alt="Digit clothing picture" />
-            </div>
-          </div>
-          <div className="project-descr">
-            <div className="wrap">
-              <div className="project-name">shock</div>
-              <Link to="https://shock.se/eu/" className="arrow-btn" target="_blank" title="Link to Shock store project">
-                <Arrow />
-              </Link>
-            </div>
-            <p>The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.</p>
-            <div>interface &amp; website</div>
-          </div>
+          {projects.map((item, index) => {
+            return (
+              < >
+                <div className="project-descr" key={index}>
+                  <div className="wrap">
+                    <div className="project-name">{item.projName}</div>
+                    <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
+                      <Arrow />
+                    </Link>
+                  </div>
+                  <p>{item.projDescr}</p>
+                  <div>{item.projUnderText}</div>
+                </div>
+                <div className="project-pic" key={item.projName}>
+                  <div className="img-wrap">
+                    <img src={item.projImgUrl} alt={item.projAlt} />
+                  </div>
+                </div>
+              </>
+            )
+          })}
         </div>
       </div>
 
@@ -54,32 +64,26 @@ function MainPastProjectsSec() {
         <div className="empty-cell"></div>
         <div className="content-cell">
           <div className="wrap">
-            <div>services</div>
-            <p>We combine human empathy and intelligent data to provide the</p>
+            <div>{_projectSecData.serviceTitle}</div>
+            <p>{_projectSecData.serviceDescr}</p>
           </div>
-          <p className="continue">highest level of satisfaction for our customers and their users.</p>
+          <p className="continue">{_projectSecData.serviceContinue}</p>
 
           <div className="services-cells">
             <div className="left-col">
-              <div className="service-item">
-                <Link to="serviceDetails.html" className="item-title" title="Find out more about Web app service">
-                  <div className="h3 panchang">web app</div>
-                  <div className="arrow-btn">
-                    <Arrow />
-                  </div>
-                </Link>
-                <p className="item-descr">The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.</p>
-              </div>
-              <div className="service-item">
-                <div className="small-text">industries</div>
-                <Link to="serviceDetails.html" className="item-title" title="Find out more about Mobile service">
-                  <div className="h3 panchang">mobile</div>
-                  <div className="arrow-btn">
-                    <Arrow />
-                  </div>
-                </Link>
-                <p className="item-descr">The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.</p>
-              </div>
+              {services.map((item, index) => {
+                return (
+                  <div className="service-item" key={index}>
+                    <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
+                      <div className="h3 panchang">{item.mainServiceName}</div>
+                      <div className="arrow-btn">
+                        <Arrow />
+                      </div>
+                    </Link>
+                    <p className="item-descr">{item.mainServiceDescr}</p>
+                 </div>
+                )
+              })}
             </div>
             <div className="right-col">
               <div className="service-item">
@@ -107,7 +111,7 @@ function MainPastProjectsSec() {
     <div className="promo-second">
       <PromoLines />
     </div>
-  </section>
+    </section>
   )
 }
 export default MainPastProjectsSec;

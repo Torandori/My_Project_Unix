@@ -1,19 +1,22 @@
 import Arrow from './svgComponents/Arrow'
 import quote from '../assets/images/quote.svg'
 import avatar from '../assets/images/peter_img.jpg'
+import clientData from '../data/MainOurClient.json'
 
 function MainOurClientSec() {
+  const _clientData = clientData[0];
+
   return (
     <section id="our-client">
       <div className="container">
         <div className="flex-clients separator">
           <div className="client-wrap">
-            <h3 className="h3">our</h3>
-            <div className="h3">clients</div>
+            <h3 className="h3">{_clientData.clientTitleStart}</h3>
+            <div className="h3">{_clientData.clientTitleEnd}</div>
           </div>
           <div className="small-text">
-            <p>all around</p>
-            <p>the globe</p>
+            <p>{_clientData.clientSmallTextStart}</p>
+            <p>{_clientData.clientSmallTextEnd}</p>
           </div>
           <div className="arrows">
             <div className="arrow-btn">
@@ -43,8 +46,8 @@ function MainOurClientSec() {
                 <img src={avatar} alt="Picture of Peter Visser" />
               </div>
               <div className="text">
-                <div className="panchang">Peter Visser</div>
-                <div>Visser Consulting</div>
+                <div className="panchang">{_clientData.clientName}</div>
+                <div>{_clientData.clientPosition}</div>
               </div>
             </div>
           </div>

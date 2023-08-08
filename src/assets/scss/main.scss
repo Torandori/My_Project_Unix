@@ -466,6 +466,9 @@
             text-transform: uppercase;
           }
         }
+        .project-descr:nth-child(3) {
+          order: 4;
+        }
         .project-pic {
           padding: 45px 40.8px 42.26px 36.8px;
           border-left: 1px solid $color-grey;
