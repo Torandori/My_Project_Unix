@@ -1,0 +1,44 @@
+[
+  {
+    "worthyItemClass": "worthy-item",
+    "worthyItemText": "Active users on marketplaces we've created",
+    "worthyItemCount": "1m"
+  },
+  {
+    "worthyItemClass": "worthy-item clients",
+    "worthyItemText": "Our clients raised owning to our design work",
+    "worthyItemCount": "$500m",
+    "worthyItemLinkTo": "/",
+    "worthyItemLinkTitle": "View our case link",
+    "worthyItemLinkText": "view our case"
+  },
+  {
+    "worthyItemClass": "worthy-item other-size",
+    "worthyItemText": "People on board",
+    "worthyItemCount": "60+"
+  },
+  {
+    "worthyItemClass": "worthy-item other-size",
+    "worthyItemText": "Years of growth",
+    "worthyItemCount": "7"
+  },
+  {
+    "worthyItemClass": "worthy-item other-size last",
+    "worthyItemText": "Successfully finished projects",
+    "worthyItemCount": "500+"
+  },
+  {
+    "worthyItemClass": "worthy-item no-count",
+    "worthyItemText": "Wanna fill this cell with your success story"
+  },
+  {
+    "worthyItemClass": "worthy-item other-size",
+    "worthyItemText": "Design awards",
+    "worthyItemCount": "80+"
+  },
+  {
+    "worthyItemClass": "worthy-item other",
+    "worthyItemText": "Monthly visit on E-Commerce we designed",
+    "worthyItemCount": "25m"
+  }
+]
