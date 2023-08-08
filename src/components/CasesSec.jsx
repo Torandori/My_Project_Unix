@@ -47,7 +47,7 @@ function CasesSec() {
                 </div>
                 <div className="img-line">
                   <div className="img-wrap">
-                    <img src={`${import.meta.env.My_Project_Unix}${item.caseImgUrl}`} alt={item.caseImgAlt} />
+                    <img src={item.caseImgUrl} alt={item.caseImgAlt} />
                   </div>
                   <div className="dashed-line"></div>
                 </div>
