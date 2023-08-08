@@ -849,6 +849,10 @@
     border: 1px solid rgba(120, 118, 118, 0.9);
   }
 }
+
+.project-descr:not(.project-descr.first):after {
+  width: auto;
+}
 // #OUR_CLIENT
 
 // RESPONSIVE
