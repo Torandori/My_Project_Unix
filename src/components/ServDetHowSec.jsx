@@ -1,23 +1,23 @@
-import under from "../data/servDetHowSec.json"
-import teamImg from '../assets/images/team-picture.jpg'
 import React from "react";
 import StartBtn from "./svgComponents/StartBtn";
 
-function ServDetHowSec() {
-  const how = under.howList;
+function ServDetHowSec({descr}) {
+  const under = descr.howSec;
+  const _under = under.howList;
+  console.log(under.howImgUrl);
 
   return (
     <section id="how-sec">
       <div className="container">
         <div className="big-img-wrap">
-          <img src={teamImg} alt="Picture of team" />
+          <img src={under.howImgUrl} alt="Picture of team" />
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2">{under.servDetUnderTitle}</h2>
           <p className="text">{under.servDetUnderDescr}</p>
         </div>
         <div className="how-list">
-          {how.map((item, index) => {
+          {_under.map((item, index) => {
 
             return (
               <React.Fragment key={index}>

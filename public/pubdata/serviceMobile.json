@@ -1,0 +1,32 @@
+{
+  "servDetNumber": "02",
+  "servDetText": "Our experienced team of designers will work closely with you to understand your brand, goals, and target audience.",
+  "servDetDescrContinue": "We'll craft a unique mobile app design that reflects your brand identity while ensuring a seamless and intuitive user experience. In the age of mobile browsing, having a website that looks and works great on all screen sizes is essential. Our responsive web design ensures that your website adapts flawlessly to smartphones and tablets, providing a consistent and enjoyable browsing experience.",
+  "sentenceStart": "At",
+  "boldtext": " Unix Studio",
+  "sentenceEnd": ", we prioritize user-centric design principles, focusing on user needs, preferences, and behaviors.",
+  "howSec": {
+    "servDetUnderTitle": "how do we make it work",
+    "servDetUnderDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition",
+    "servDetBigName": "boost",
+    "servDetBigNameContinue": "your business",
+    "howImgUrl": "./assets/images/mob.jpg",
+    "howList": [
+      {
+        "howListNumber": "/01",
+        "howListTitle": "reduced training costs",
+        "howListDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition"
+      },
+      {
+        "howListNumber": "/02",
+        "howListTitle": "improved record-keeping",
+        "howListDescr": "Strategically grouping the info on a clear dashboard, we help users quickly check how production is going, monitor business expenses, or examine the overall state of affairs."
+      },
+      {
+        "howListNumber": "/03",
+        "howListTitle": "increased employee satisfaction",
+        "howListDescr": "Offering intelligent and engaging design, we streamline complex business procedures, lower the stress levels of the users and encourage employees to do more."
+      }
+    ]
+  }
+}

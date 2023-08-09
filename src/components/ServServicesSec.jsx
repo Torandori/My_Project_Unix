@@ -17,7 +17,7 @@ function ServServicesSec() {
                 {column.map((item, index) => {
                   return (
                     <div className="services-item" key={index}>
-                      <Link to={item.servicesTo} className="wrap-text-arrow" title={item.servicesLinkTitle}>
+                      <Link to={"/services/" + item.servicesTo} className="wrap-text-arrow" title={item.servicesLinkTitle}>
                         <div className="wrap-number-text">
                           <div className="number">{item.number}</div>
                           <div className="text">{item.area}</div> 

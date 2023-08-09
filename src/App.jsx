@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Case from "./pages/Case";
 import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
+
 import './assets/scss/style.scss'
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
         <Route index element={<Home />}/>
         <Route path="case" element={<Case />}/>
         <Route path="/services" element={<Services />}/>
-        <Route path="/services/serviceDetails" element={<ServiceDetails />}/>
+        <Route path="/services/:slug" element={<ServiceDetails />}/>
+        {/* <Route path="/about" element={<About />}/> */}
+
 
       </Route>
     </Routes>

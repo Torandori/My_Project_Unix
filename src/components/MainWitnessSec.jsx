@@ -1,11 +1,3 @@
-// import witnessSliderImg1 from "../assets/images/witness-slider-img1.jpg"
-// import witnessSliderImg2 from "../assets/images/witness-slider-img2.jpg"
-// import witnessSliderImg3 from "../assets/images/witness-slider-img3.jpg"
-// import witnessSliderImg4 from "../assets/images/witness-slider-img4.jpg"
-// import witnessSliderImg5 from "../assets/images/witness-slider-img5.jpg"
-// import witnessSliderImg6 from "../assets/images/witness-slider-img6.jpg"
-// import witnessSliderImg7 from "../assets/images/witness-slider-img7.jpg"
-// import witnessSliderImg8 from "../assets/images/witness-slider-img8.jpg"
 import { useState, useEffect } from "react";
 import witnessData from "../data/mainWitnessSecData.json"
 

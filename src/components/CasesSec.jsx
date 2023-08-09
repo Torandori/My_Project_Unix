@@ -20,7 +20,6 @@ function CasesSec() {
   const casesLeftFirst = casesData[0]
   const casesLeftSecond = casesData[1]
   const casesLink = casesData[2]
-  console.log(casesLink)
 
 
   return (
