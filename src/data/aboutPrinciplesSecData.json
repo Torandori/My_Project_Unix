@@ -1,0 +1,38 @@
+{
+  "princTitle": "our guiding principles",
+  "princSubtitle": "sectors",
+  "princTextStart": "Unix Studio combines the freedom of ",
+  "princTextEnd": "personality and the synergy of an agency. Striving to bring the best to clients, we unite forces, cooperate closely",
+  "princUnderText": "We combine human empathy and intelligent    data to provide the",
+  "princUnderTextTwo": "highest level of satisfaction for our customers and their users.",
+
+  "princElements": [
+    { 
+      "princClass": "element",
+      "aboutPrincTitle": "passion is our craft"
+    },
+    { 
+      "princClass": "element light",
+      "aboutPrincTitle": "diligence"
+    },
+    { "princClass": "element",
+      "aboutPrincTitle": "creativity and innovation"},
+    { 
+      "princClass": "element light",
+      "aboutPrincTitle": "humor & irony"
+    },
+    { "princClass": "element",
+      "aboutPrincTitle": "sincerity"
+    },
+    { 
+      "princClass": "element light",
+      "aboutPrincTitle": "amiable nerdiness"
+    },
+    { "princClass": "element light",
+      "aboutPrincTitle": "humor & irony"
+    },
+    { "princClass": "element",
+      "aboutPrincTitle": "sincerity"
+    }
+  ]
+}

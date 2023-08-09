@@ -1,0 +1,25 @@
+{
+  "aboutPictureTitle": "Picture of team",
+  "aboutTestTitle": "testimonial",
+  "aboutTestTextFirst": "I have been hiring people in this space for a number of years",
+  "aboutTestText": "and I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done.",
+  "aboutTestUnderSlider": "Dont't wait any longer, let&apos;s unleash your imagination and create something extraordinary together!",
+  "aboutTestLinkText": "Catch a glimse!",
+  "aboutTestSlider": [
+    {
+      "sliderMemberImg": "./assets/images/slider-member1.jpg",
+      "sliderImgAlt": "Portrait of Eugene Massy",
+      "sliderMemberName": "Eugene Massy"
+    },
+    {
+      "sliderMemberImg": "./assets/images/slider-member2.jpg",
+      "sliderImgAlt": "Portrait of Tilda Marrow",
+      "sliderMemberName": "Tilda Marrow"
+    },
+    {
+      "sliderMemberImg": "./assets/images/slider-member3.jpg",
+      "sliderImgAlt": "Portrait of Priscilla Hargraves",
+      "sliderMemberName": "Priscilla Hargraves"
+    }
+  ]
+}

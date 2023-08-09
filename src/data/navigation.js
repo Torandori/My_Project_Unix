@@ -15,7 +15,7 @@ export const MainNav = [
   {
     name: 'about',
     title: 'Go to About page',
-    to: 'about'
+    to: '/about'
   },
   {
     name: 'contacts',

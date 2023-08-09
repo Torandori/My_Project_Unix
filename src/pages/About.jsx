@@ -1,0 +1,17 @@
+import HeroSec from "../components/HeroSec";
+import AboutDescrSec from "../components/AboutDescrSec";
+import '../assets/scss/about.scss'
+import AboutTestimonialSec from "../components/AboutTestimonialSec";
+import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
+
+function About(){
+  return (
+    <div className="about-grafic-bg" id="about-page">
+      <HeroSec />
+      <AboutDescrSec />
+      <AboutTestimonialSec />
+      <AboutPrinciplesSec />
+    </div>
+  )
+}
+export default About;

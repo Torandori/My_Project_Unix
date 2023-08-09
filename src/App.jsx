@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Case from "./pages/Case";
 import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
+import About from "./pages/About";
 
 import './assets/scss/style.scss'
 
@@ -16,8 +17,7 @@ function App() {
         <Route path="case" element={<Case />}/>
         <Route path="/services" element={<Services />}/>
         <Route path="/services/:slug" element={<ServiceDetails />}/>
-        {/* <Route path="/about" element={<About />}/> */}
-
+        <Route path="/about" element={<About />}/>
 
       </Route>
     </Routes>
