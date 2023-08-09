@@ -6,7 +6,7 @@
       "caseTo": "https://www.metastaq.com/",
       "caseLinkTitle": "Link to Metastaq project",
       "caseDescr": "This Web3 SaaS platform serves as a marketplace where brands, both experts in blockchain and newcomers, can create and distribute non-fungible token collections. It allows users to create non-code NFTs with an automatically generated  contract.",
-      "caseImgUrl": "./src/assets/images/metas.jpg",
+      "caseImgUrl": "./assets/images/metas.jpg",
       "caseImgAlt": "Picture of Metas Project"
     },
     {
@@ -15,7 +15,7 @@
       "caseTo": "https://sussextaps.com.au/",
       "caseLinkTitle": "Link to Sussextaps project",
       "caseDescr": "The blockchain-powered platform introduces a unique system of E-learning. It unites students who strive to level up their skills, contributors who share knowledge and get paid for it, as well as sponsors who invest in learners' education and get dividends.",
-      "caseImgUrl": "./public/pubimgs/tracking.jpg",
+      "caseImgUrl": "./assets/images/tracking.jpg",
       "caseImgAlt": "Picture of Teachchain Project"
     },
     {
@@ -24,7 +24,7 @@
       "caseTo": "https://www.artgalleryofballarat.com.au/",
       "caseLinkTitle": "Link to Artgallery project",
       "caseDescr": "It's a B2B highly specialized and complex software for chemical, oil, gas, and bulk carriers in the maritime industry. It encompasses financial analysis and modeling of ship investments, helps manage risks and provide adjusted results.",
-      "caseImgUrl": "./src/assets/images/boel.jpg",
+      "caseImgUrl": "./assets/images/boel.jpg",
       "caseImgAlt": "Picture of Boel IT Project"
     },
     {
@@ -33,7 +33,7 @@
       "caseTo": "https://lr.doesbook.kr/en/",
       "caseLinkTitle": "Link to Ir project",
       "caseDescr": "The SaaS Inbound Video Calls &amp; Customer Engagement Platform is a leader in the space of one-click video technology. The innovative tool empowers customers and companies with the fastest and simplest way to connect from any channel.",
-      "caseImgUrl": "./src/assets/images/sight.jpg",
+      "caseImgUrl": "./assets/images/sight.jpg",
       "caseImgAlt": "Picture of Ir Project"
     }
   ],
@@ -44,7 +44,7 @@
       "caseTo": "http://jams.basicagency.com/",
       "caseLinkTitle": "Link to Jams project",
       "caseDescr": "The SaaS-based energy and carbon management platform helps mining, manufacturing, and metal industries make the most of their energy consumption, reduce its costs and greenhouse gas emissions.",
-      "caseImgUrl": "./src/assets/images/new-poster3.jpg",
+      "caseImgUrl": "./assets/images/new-poster3.jpg",
       "caseImgAlt": "Picture of Jams Project"
     },
     {
@@ -53,7 +53,7 @@
       "caseTo": "https://www.seen.space/",
       "caseLinkTitle": "Link to Seen project",
       "caseDescr": "It's an online service helping search for flight tickets. Unlike other relevant services, the platform's focus isn't on a budget but on comfort. It allows people to find and pick the best option within minutes.",
-      "caseImgUrl": "./src/assets/images/new-poster1.jpg",
+      "caseImgUrl": "./assets/images/new-poster1.jpg",
       "caseImgAlt": "Picture of Seen Project"
     },
     {
@@ -62,7 +62,7 @@
       "caseTo": "https://vivatech2022.cher-ami.tv/",
       "caseLinkTitle": "Link to Vivatech project",
       "caseDescr": "It's a B2B highly specialized and complex software for chemical, oil, gas, and bulk carriers in the maritime industry. It encompasses financial analysis and modeling of ship investments, helps manage risks and provide adjusted results.",
-      "caseImgUrl": "./src/assets/images/poster-4.jpg",
+      "caseImgUrl": "./assets/images/poster-4.jpg",
       "caseImgAlt": "Picture of Vivatech Project"
     },
     {
@@ -71,7 +71,7 @@
       "caseTo": "https://www.atomus.io/",
       "caseLinkTitle": "Link to Atomus project",
       "caseDescr": "The SaaS Inbound Video Calls &amp; Customer Engagement Platform is a leader in the space of one-click video technology. The innovative tool empowers customers and companies with the fastest and simplest way to connect from any channel.",
-      "caseImgUrl": "./src/assets/images/poster-5.jpg",
+      "caseImgUrl": "./assets/images/poster-5.jpg",
       "caseImgAlt": "Picture of Atomus Project"
     }
   ]
