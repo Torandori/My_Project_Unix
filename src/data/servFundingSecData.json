@@ -1,0 +1,20 @@
+{
+  "fundingTitle": "wait! are you looking for funding?",
+  "fundingDescr": "We connect exceptional start-ups in Web3, Fintech, and SaaS sectors with our trusted network of Angel investors and Venture Capital.",
+  "fundingSubtitle": "sectors",
+  "fundingContinue": "We connect exceptional start-ups in Web3, Fintech, and SaaS sectors with our trusted network of Angel investors and Venture Capital.",
+  "fundingList": [
+    {
+      "fundingNumber": "01",
+      "fundingText": "web 3"
+    },
+    {
+      "fundingNumber": "02",
+      "fundingText": "fintech"
+    },
+    {
+      "fundingNumber": "03",
+      "fundingText": "blockchain"
+    }
+  ]
+}

@@ -1,8 +1,18 @@
-{
-  "casesLeftTitle": "Featured",
-  "casesLeftShortDescr": "We build engaging user experience forearly-stage startups by connecting thedots between users's; needs and theclient's business model.",
-  "casesBtnText": "start a project",
-  "casesLinkTo": "/",
-  "casesLinkTitle": "Contact us",
-  "casesLinkText": "Contact us!"
-}
+[
+  {
+    "casesLeftTitle": "Featured",
+    "casesLeftShortDescr": "We build engaging user experience forearly-stage startups by connecting thedots between users's; needs and theclient's business model.",
+    "casesBtnText": "start a project"
+  },
+  {
+    "casesLeftTitle": "saas",
+    "casesLeftShortDescr": "We enter the arena when a SaaS product scales up and problems tend to multiply. We think out each design element and meet the scalability changes that could appear in thelong tun.",
+    "casesBtnText": "contact us"
+  },
+  {
+    "casesLinkTo": "/",
+    "casesLinkTitle": "View our services",
+    "casesLinkText": "View our services!"
+  }
+
+]

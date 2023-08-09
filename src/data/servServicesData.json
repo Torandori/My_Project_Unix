@@ -1,0 +1,38 @@
+[
+  { 
+    "servicesColClass": "left-col",
+    "servicesTitle": "services",
+    "col": [
+      { 
+        "servicesTo": "/services/serviceDetails",
+        "servicesLinkTitle": "Web Design Service Details",
+        "number": "01",
+        "area": "web design"
+      },
+      {
+        "servicesTo": "serviceDetails",
+        "servicesLinkTitle": "Mobile Service Details",
+        "number": "02",
+        "area": "mobile"
+      }
+    ]
+  },
+  {
+    "servicesColClass": "right-col",
+    "servicesTitle": "industries",
+    "col": [
+      { 
+        "servicesTo": "serviceDetails",
+        "servicesLinkTitle": "Saas Service Details",
+        "number": "03",
+        "area": "saas"
+      },
+      {
+        "servicesTo": "serviceDetails",
+        "servicesLinkTitle": "software Service Details",
+        "number": "04",
+        "area": "software"
+      }
+    ]
+  }
+]

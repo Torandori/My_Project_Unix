@@ -11,7 +11,7 @@ export const MainNav = [
   },
   { name: 'services', 
     title: 'Go to Services page', 
-    to: 'services'},
+    to: '/services'},
   {
     name: 'about',
     title: 'Go to About page',

@@ -5,8 +5,14 @@ main {
   background: none;
 }
 
-.circle-arrow-btn svg {
+.circle-arrow-btn img {
   cursor: pointer;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .7;
+  }
 }
 
 
@@ -136,6 +142,10 @@ main {
         }
         .circle-arrow-btn {
           margin-bottom: 52px;
+          img {
+            width: 120px;
+            height: 120px;
+          }
         }
       }
     }
@@ -267,9 +277,9 @@ main {
     font-size: 1.4rem;
   }
   .circle-arrow-btn {
-    svg {
-      width: 70px;
-      height: 70px;
+    img {
+      width: 70px!important;
+      height: 70px!important;
     }
   }
   #funding .wrap-funding .right-col .text-block .text-medium, #funding .wrap-funding .right-col .text-block2 .text-medium {
