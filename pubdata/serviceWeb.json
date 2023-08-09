@@ -1,0 +1,32 @@
+{
+  "servDetNumber": "01",
+  "servDetText": "The widespread adoption of web apps, which aid communication with customers",
+  "servDetDescrContinue": "collaboration with employees, data storage, etc., is revamping how businesses are run and clients are served. The enterprise UX is all about the wants, needs, drivers, and pain points of employees, thereby creating an effective, efficient, and pleasant experience.",
+  "sentenceStart": "At",
+  "boldtext": " Unix Studio",
+  "sentenceEnd": ", we design enterprise web applications that boost business operations and deliver maximum value to end-users.",
+  "howSec": {
+    "servDetUnderTitle": "How do we make it work",
+    "servDetUnderDescr": "Web app design refers to the process of creating the visual and interactive elements of a web-based application to ensure an optimal user experience. It encompasses the layout, user interface (UI), user experience (UX), and overall aesthetic of the application.",
+    "servDetBigName": "boost",
+    "servDetBigNameContinue": "your business",
+    "howImgUrl": "./assets/images/team-picture.jpg",
+    "howList": [
+      {
+        "howListNumber": "/01",
+        "howListTitle": "User Interface Design",
+        "howListDescr": "UI design focuses on the visual elements of the web app, including layout, typography, colors, icons, buttons, and other graphical components. The goal is to create a visually appealing and consistent design."
+      },
+      {
+        "howListNumber": "/02",
+        "howListTitle": "User Experience Design",
+        "howListDescr": "UX design involves understanding the needs and behaviors of users to ensure a smooth and enjoyable interaction with the web app. UX designers prioritize usability, accessibility, and efficiency. "
+      },
+      {
+        "howListNumber": "/03",
+        "howListTitle": "Responsive Design",
+        "howListDescr": "With users accessing web apps on various devices and screen sizes, responsive design is crucial. This approach ensures that the app's layout and elements adapt seamlessly to different screen dimensions."
+      }
+    ]
+  }
+}

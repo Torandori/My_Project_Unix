@@ -1,0 +1,23 @@
+{
+  "servDetUnderTitle": "how do we make it work",
+  "servDetUnderDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition",
+  "servDetBigName": "boost",
+  "servDetBigNameContinue": "your business",
+  "howList": [
+    {
+      "howListNumber": "/01",
+      "howListTitle": "reduced training costs",
+      "howListDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition"
+    },
+    {
+      "howListNumber": "/02",
+      "howListTitle": "improved record-keeping",
+      "howListDescr": "Strategically grouping the info on a clear dashboard, we help users quickly check how production is going, monitor business expenses, or examine the overall state of affairs."
+    },
+    {
+      "howListNumber": "/03",
+      "howListTitle": "increased employee satisfaction",
+      "howListDescr": "Offering intelligent and engaging design, we streamline complex business procedures, lower the stress levels of the users and encourage employees to do more."
+    }
+  ]
+}
