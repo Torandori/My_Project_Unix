@@ -22,9 +22,9 @@ function MainAboutCeoSec(){
               <img src={quote} alt="Quote picture" />
             </div>
             <ul>
-              <li>
+              {/* <li>
                 <p>{ceoData.ceoQuote}</p>
-              </li>
+              </li> */}
             </ul>
           </div>
 
