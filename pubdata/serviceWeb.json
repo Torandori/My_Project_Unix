@@ -10,7 +10,8 @@
     "servDetUnderDescr": "Web app design refers to the process of creating the visual and interactive elements of a web-based application to ensure an optimal user experience. It encompasses the layout, user interface (UI), user experience (UX), and overall aesthetic of the application.",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "./assets/images/team-picture.jpg",
+    "howImgUrl": "../assets/images/web.jpg",
+    "howImgAlt": "Image by Freepik",
     "howList": [
       {
         "howListNumber": "/01",
@@ -28,5 +29,9 @@
         "howListDescr": "With users accessing web apps on various devices and screen sizes, responsive design is crucial. This approach ensures that the app's layout and elements adapt seamlessly to different screen dimensions."
       }
     ]
+  },
+  "heroServ": {
+    "heroServTitle": "web app design",
+    "heroServText": "unix srudio high-end user experience to foster web app success"
   }
 }
