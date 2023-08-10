@@ -1,20 +1,6 @@
 @import 'vars';
 
 // HERO_SEC
-.main-grafic-bg {
-  background: 
-  url("../images/vector2.svg") 52% 8.5% no-repeat,
-  // url("../images/vector1.svg") 52% 3.8% no-repeat,
-  // url("../images/gradient1.svg") 80% 2.7% no-repeat, 
-  url("../images/gradient2.svg") 84% 22% no-repeat,
-  url("../images/vector3.svg") 50% 35% no-repeat,
-  url("../images/gradient3.svg") 40% 53% no-repeat,
-  // url("../images/vector4.svg") 48% 46% no-repeat,
-  url("../images/gradient4.svg") 50% 82.5% no-repeat;
-}
-.main-body-bg {
-  background: linear-gradient(180deg, white 0%, white 25%, #1A1A1A 25%, #1A1A1A 50%, white 50%, white 75%, #1A1A1A 75%, #1A1A1A 100%);
-}
 .main-page {
   #hero-sec {
     margin-bottom: 118px;
@@ -22,7 +8,9 @@
 }
 // ABOUT_SEC
 #about-sec {
-  margin-bottom: 40px;
+  margin-bottom: 160px;
+  background: 
+  url("../images/vector2.svg") 50% 5% no-repeat;
   .container {
     padding-bottom: 80px;
     position: relative;
@@ -107,7 +95,10 @@
 
 // VIDEO_SEC
 #video-sec {
-  margin-bottom: 188px;
+  background: 
+  url("../images/gradient2.svg") 84% -300% no-repeat,
+  linear-gradient(180deg, white 0%, white 30%, #1A1A1A 30%, #1A1A1A 100%);
+  padding-bottom: 188px;
   .container {
     .h2 {
       margin-bottom: 63px;
@@ -150,7 +141,10 @@
 // #VIDEO_SEC
 // WITNESS_SEC
 #witness-sec{
-  margin-bottom: 238px;
+  padding-bottom: 238px;
+  background: 
+  url("../images/vector3.svg") 50% 26% no-repeat;
+  background-color: $color-black;
   .container {
     .h2{
       color: #fff;
@@ -193,7 +187,11 @@
 
 // ABOUT_CEO_SEC
 #about-ceo-sec {
-  // margin-bottom: 96px;
+  background: 
+  url("../images/gradient3.svg") 50% 8% no-repeat,
+  url("../images/vector2.svg") 50% 26% no-repeat,
+  linear-gradient(180deg, #1A1A1A 0%, #1A1A1A 70%, #fff 70%, #fff 100%);
+  background-color: $color-black;
   .run-wrap {
     margin-bottom: 73px;
   }
@@ -256,6 +254,9 @@
       margin-bottom: 105px;
     }
   }
+}
+#about-sec .container::before {
+  display: none;
 }
 // .run-wrap:hover .run div {
 //   animation-play-state: paused;
@@ -345,7 +346,8 @@
 // #ABOUT_CEO_SEC
 // PAST_PROJECTS
 #past-projects-sec {
-  margin-bottom: 370px;
+  background-color: #fff;
+  padding-bottom: 100px;
   .container {
     position: relative;
     margin-bottom: 28px;
@@ -569,7 +571,12 @@
 
 // WE_WORTHY_SEC
 #we-worthy-sec {
+  background: 
+  url("../images/gradient4.svg") 50% 144% no-repeat,
+  linear-gradient(180deg, #fff 0%, #fff 4%, #1A1A1A 4%, #1A1A1A 100%);
   color: #fff;
+  background-color: $color-black;
+  padding-top: 100px;
   .h3 {
     font-family: 'Panchang', sans-serif;
     @include fz(96);
@@ -622,6 +629,9 @@
       @include lh(38);
       margin-top: 22px;
     }
+  }
+  .promo-lines {
+    margin-bottom: 370px;
   }
 }
 .h3 {
@@ -726,6 +736,7 @@
 // OUR_CLIENT
 #our-client {
   color: #fff;
+  background-color: $color-black;
   .flex-clients {
     display: flex;
     justify-content: space-between;
@@ -842,6 +853,16 @@
 
 // RESPONSIVE
 @media screen and (max-width: 1300px) {
+  #we-worthy-sec {
+    background: 
+    url("../images/gradient4.svg") 50% 226% no-repeat,
+    linear-gradient(180deg, #fff 0%, #fff 10%, #1A1A1A 10%, #1A1A1A 100%);
+  }
+  #video-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -340% no-repeat,
+    linear-gradient(180deg, white 0%, white 20%, #1A1A1A 20%, #1A1A1A 100%);
+  }
   #we-worthy-sec .wrap {
     flex-wrap: wrap;
     gap: 40px;
@@ -885,20 +906,25 @@
   .client-slider p {
     line-height: 3rem;
   }
-
+}
+@media screen and (max-width: 1100px) {
+  #video-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -360% no-repeat,
+    linear-gradient(180deg, #fff 0%, #fff 2%, #1A1A1A 10%, #1A1A1A 100%);
+  }
+}
+@media screen and (max-width: 990px) {
+  #we-worthy-sec .wrap .title-ending .small-text {
+    display: none;
+  }
+  #past-projects-sec {
+    padding-bottom: 0;
+  }
 }
 @media screen and (max-width: 980px) {
-  .main-grafic-bg {
-    background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 20% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 48% no-repeat,
-    url("../images/gradient4.svg") 50% 81% no-repeat;
-  }
-  
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 23%, #1A1A1A 23%, #1A1A1A 44%, white 44%, white 69.9%, #1A1A1A 72%, #1A1A1A 100%);
+  #past-projects-sec .container::before {
+    display: none;
   }
   #our-client .flex-slider-sec .empty {
     display: none;
@@ -952,21 +978,50 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 760px) {
-  .main-grafic-bg {
+@media screen and (max-width: 768px) {
+  .line-text span {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .promo-second .promo-lines {
+    margin-bottom: 40px;
+  }
+  .line-text {
+    font-size: 50px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  #video-sec {
     background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 16% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 40% no-repeat,
-    url("../images/gradient4.svg") 29% 84% no-repeat;
-  } 
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 19%, #1A1A1A 19%, #1A1A1A 38%, white 38%, white 70%, #1A1A1A 71%, #1A1A1A 100%);
+    url("../images/gradient2.svg") 84% -500% no-repeat,
+    linear-gradient(180deg,  #fff 10%, #fff1 14%,#1A1A1A 14%, #1A1A1A 100%);
+  }
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 234% no-repeat, linear-gradient(180deg, #fff 0%, #fff 4%, #1A1A1A 4%, #1A1A1A 100%);
+  }
+  .line-text {
+    font-size: 47px;
+  }
+  #past-projects-sec .container .title {
+    margin-bottom: 0;
+  }
+  #past-projects-sec .container .projects-net .projects-cells .project-descr {
+    overflow: hidden;
+  }
+  #past-projects-sec .container .projects-net .projects-cells .project-pic:nth-child(4) {
+    order: 1;
+  }
+  #about-sec {
+    padding-bottom: 0px;
   }
   #about-sec .container .h2 {
-    font-size: 3.4rem;
-    line-height: 3.6rem;
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+  #about-sec .container {
+    padding-bottom: 20px;
   }
   #our-client .client-wrap .h3 {
     font-size: 4rem;
@@ -996,11 +1051,11 @@
     height: 40px;
   }
   #video-sec .container .h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     line-height: 3rem;
   }
   #video-sec {
-    margin-bottom: 140px;
+    padding-bottom: 140px;
   }
   #video-sec .container .flex-wrap .small-link {
     width: 40%;
@@ -1011,15 +1066,20 @@
     width: 100%;
   }
   #witness-sec {
-    margin-bottom: 130px;
+    margin-bottom: 0;
   }
   #about-ceo-sec .container:first-child .wrap .h2 {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
+    line-height: 2.2rem;
   }
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider p {
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
     width: 100%;
+  }
+  #about-ceo-sec .container:last-child .under-run {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
   }
   #about-ceo-sec .container:first-child .wrap .flake {
     display: none;
@@ -1042,7 +1102,7 @@
     margin-bottom: 140px;
   }
   .promo-lines {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
   .line-text {
     font-size: 2rem;
@@ -1149,20 +1209,27 @@
     margin-bottom: 50px;
   }
 }
-@media screen and (max-width: 660px) {
-  .main-grafic-bg {
-    background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 16% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 40% no-repeat,
-    url("../images/gradient4.svg") 50% 83% no-repeat;
+@media screen and (max-width: 600px) {
+  #about-sec {
+    padding-bottom: 0px;
   }
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 19%, #1A1A1A 19%, #1A1A1A 35.8%, white 35.8%, white 72%, #1A1A1A 72%, #1A1A1A 100%);
+  #video-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -500% no-repeat,
+    linear-gradient(180deg,  #fff 0%, #fff 4%,#1A1A1A 4%, #1A1A1A 100%);
+  }
+  #video-sec .container .h2 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
   }
 }
 @media screen and (max-width: 560px) {
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 700% no-repeat, linear-gradient(180deg, #fff 0%, #fff 10%, #1A1A1A 10%, #1A1A1A 100%);
+  } 
+  #past-projects-sec {
+    margin-bottom: 0;
+  }
   #we-worthy-sec .wrap .title-ending .btn-circle {
     width: 60px;
     height: 60px;
@@ -1170,17 +1237,6 @@
   #hero-sec .container .btn-circle {
     width: 100px;
     height: 100px;
-  }
-  .main-grafic-bg {
-    background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 17% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 40% no-repeat,
-    url("../images/gradient4.svg") 50% 79% no-repeat;
-  }
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 19%, #1A1A1A 19%, #1A1A1A 38%, white 38%, white 68%, #1A1A1A 68%, #1A1A1A 100%);
   }
   .services-cells .right-col {
     padding-top: 20px;
@@ -1308,23 +1364,20 @@
     margin-bottom: 60px;
   }
 }
+@media screen and (max-width: 540px) {
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 1500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  }
+}
 @media screen and (max-width: 500px) {
+    #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 2500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  }
+  #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider {
+    margin-bottom: 40px;
+  }
   #past-projects-sec .services .content-cell  {
     padding: 20px 0 0 0;
-  }
-  // #past-projects-sec .services .content-cell .wrap p {
-  //   width: 60%;
-  // }
-  .main-grafic-bg {
-    background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 15% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 43% no-repeat,
-    url("../images/gradient4.svg") 50% 78% no-repeat;
-  }
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 19%, #1A1A1A 19%, #1A1A1A 38%, white 38%, white 66.5%, #1A1A1A 66.5%, #1A1A1A 100%);
   }
   .services-cells .service-item .item-title .h3 {
     font-size: 1.8rem;
@@ -1335,23 +1388,26 @@
     width: 80%;
   }
   #past-projects-sec .container .title .h2 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
     color: $color-black-text;
+  }
+  #past-projects-sec .services .empty-cell {
+    width: 20%;
   }
 }
 @media screen and (max-width: 430px) { 
+  #video-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -500% no-repeat,
+    linear-gradient(180deg,  #fff 0%, #fff 4%,#1A1A1A 4%, #1A1A1A 100%);
+  }
+  #video-sec .container .h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
   #past-projects-sec .container .projects-net .projects-cells .project-descr div:last-child {
     color: transparent;
-  }
-  .main-grafic-bg {
-    background: 
-    url("../images/vector2.svg") 52% 8.5% no-repeat,
-    url("../images/gradient2.svg") 84% 14% no-repeat,
-    url("../images/vector3.svg") 50% 35% no-repeat,
-    url("../images/gradient3.svg") 40% 44% no-repeat,
-    url("../images/gradient4.svg") 50% 78% no-repeat;
-  }
-  .main-body-bg {
-    background: linear-gradient(180deg, white 0%, white 16%, #1A1A1A 16%, #1A1A1A 38%, white 38%, white 66%, #1A1A1A 66%, #1A1A1A 100%);
   }
   #past-projects-sec .services .content-cell {
     padding-top: 20px;
@@ -1364,7 +1420,22 @@
     height: 20px;
   }
 }
-
+@media screen and (max-width: 400px) { 
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  }
+  .promo-second .line-red {
+    top: -70px;
+  }
+  #we-worthy-sec .promo-lines {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 354px) { 
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 900% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  }
+}
 // #RESPONSIVE
 
 

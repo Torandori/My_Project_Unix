@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import btnCircle from '../assets/images/svg/btnCircle.svg'
 import { Link } from 'react-router-dom'
 import worthyData from '../data/mainWorthySecData.json'
+import PromoLines from './PromoLines';
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
@@ -16,6 +17,9 @@ function MainWorthySec() {
 
   return (
     <section id="we-worthy-sec">
+      <div className="promo-second">
+        <PromoLines />
+      </div>
       <div className="container">
         <h3 className="h3">{worthyData.worthyTitle}</h3>
         <div className="wrap">

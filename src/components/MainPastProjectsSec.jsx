@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import PromoLines from "./PromoLines";
 import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json"
 import React from "react";
@@ -122,9 +121,6 @@ function MainPastProjectsSec() {
           </div>
         </div>
       </div>
-    </div>
-    <div className="promo-second">
-      <PromoLines />
     </div>
     </section>
   )

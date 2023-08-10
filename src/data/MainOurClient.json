@@ -5,5 +5,5 @@
   "clientSmallTextEnd": "the globe",
   "clientName": "Peter Visser",
   "clientPosition": "Visser Consulting",
-  "clientAvatarUrl": "./src/assets/images/peter_img.jpg"
+  "clientAvatarUrl": "./assets/images/peter_img.jpg"
 }

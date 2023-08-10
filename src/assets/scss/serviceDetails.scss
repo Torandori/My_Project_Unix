@@ -1,13 +1,13 @@
 @import 'vars';
 
-.service-details-grafic-bg {
-  background: 
-  url("../images/gradient2.svg") 84% 35% no-repeat,
-  url("../images/vector5.svg") 50% 66% no-repeat,
-}
-.service-details-body-bg {
-  background: linear-gradient(180deg, white 0%, white 40%, #1A1A1A 40%, #1A1A1A 100%);
-}
+// .service-details-grafic-bg {
+//   background: 
+//   url("../images/gradient2.svg") 84% 35% no-repeat,
+//   url("../images/vector5.svg") 50% 66% no-repeat,
+// }
+// .service-details-body-bg {
+//   background: linear-gradient(180deg, white 0%, white 40%, #1A1A1A 40%, #1A1A1A 100%);
+// }
 #service-details-page {
   #hero-sec {
     margin-bottom: 0;
@@ -66,6 +66,9 @@
 #how-sec {
   color: #fff;
   padding-bottom: 100px;
+  background: 
+    url("../images/gradient2.svg") 84% -20% no-repeat,
+    linear-gradient(180deg, white 0%, white 5%, #1A1A1A 5%, #1A1A1A 100%);
   .big-img-wrap{
     margin-bottom: 116px;
   }
@@ -237,8 +240,18 @@
   #how-sec .block-text-under-pic {
     margin-bottom: 20px;
   }
+  #how-sec .block-text-under-pic .h2 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
 }
 @media screen and (max-width: 660px) { 
+  #how-sec .how-list {
+    grid-template-rows: repeat(8, 160px)!important;
+  }
+  #how-sec .block-text-under-pic {
+    margin-left: 0;
+  }
   #how-sec .how-list {
     grid-template-rows: repeat(12, 160px);
   }
@@ -246,7 +259,7 @@
     margin-bottom: 100px;
   }
   #how-sec .how-list .number, #how-sec .how-list .name {
-    padding-top: 40px;
+    padding-top: 0;
   }
   #how-sec .big-text {
     font-size: 3.4rem;
@@ -258,8 +271,22 @@
   #how-sec .big-text {
     margin-bottom: 60px;
   }
+  #how-sec .how-list {
+    gap: 60px;
+  }
+  #how-sec .how-list .item-descr {
+    padding-bottom: 100px;
+  }
+  #how-sec .how-list .item-descr {
+    border-bottom: none;
+  }
 }
 @media screen and (max-width: 560px) {
+  #how-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -20% no-repeat,
+    linear-gradient(180deg, white 0%, white 5%, #1A1A1A 5%, #1A1A1A 100%);
+  }
   #how-sec .big-text {
     font-size: 2.2rem;
     line-height: 3rem;
@@ -308,7 +335,6 @@
   }
   #how-sec .how-list .number {
     height: 40px;
-    border: 1px solid orange;
     margin-bottom: 80px;
   }
   #how-sec .how-list {
@@ -318,4 +344,11 @@
     padding: 20px 0;
   }
 }
+@media screen and (max-width: 400px) {
+  #how-sec {
+    background: 
+    url("../images/gradient2.svg") 84% -20% no-repeat,
+    linear-gradient(180deg, white 0%, white 1%, #1A1A1A 1%, #1A1A1A 100%);
+  }
 
+}
