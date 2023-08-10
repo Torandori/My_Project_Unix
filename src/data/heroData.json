@@ -25,11 +25,12 @@
   },
   {
     "heroTitle": "news",
+    "underTitle": "enjoy our news",
     "heroDescr": "Take a look behind the scenes, and discover the untold stories behind our projects, lessons learned, work culture, and business curiosities."
   },
   {
     "heroTitle": "our cases",
-    "underTitle": "/shot",
+    "underCase": "/shot",
     "heroDescr": "Take a look behind the scenes, and discover the untold stories behind our projects, lessons learned, work culture, and business curiosities."
   }
 ]

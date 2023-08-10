@@ -10,7 +10,7 @@ function ServDetHowSec({descr}) {
     <section id="how-sec">
       <div className="container">
         <div className="big-img-wrap">
-          <img src={under.howImgUrl} alt="Picture of team" />
+          <img src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} />
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2">{under.servDetUnderTitle}</h2>

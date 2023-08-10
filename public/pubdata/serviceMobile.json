@@ -10,7 +10,8 @@
     "servDetUnderDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "./assets/images/mob.jpg",
+    "howImgUrl": "../assets/images/mob.jpg",
+    "howImgAlt": "Image by senivpetroon Freepik",
     "howList": [
       {
         "howListNumber": "/01",
@@ -28,5 +29,9 @@
         "howListDescr": "Offering intelligent and engaging design, we streamline complex business procedures, lower the stress levels of the users and encourage employees to do more."
       }
     ]
+  },
+  "heroServ": {
+    "heroServTitle": "mobile design",
+    "heroServText": "unix srudio high-end user experience to foster mobile app success"
   }
 }
