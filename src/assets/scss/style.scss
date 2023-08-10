@@ -50,6 +50,8 @@
   }
 }
 .mob-menu {
+  height: 100vh;
+  overflow-y: auto;
   ul {
     li {
       a {
@@ -730,6 +732,9 @@ ul {
   }
 }
 @media screen and (max-width: 400px) {
+  .mob-menu ul li a {
+    padding: 20px 50px;
+  }
   #hero-sec {
     .container   {
       h1 {

@@ -6,6 +6,8 @@ import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
+import DarkLayout from "./layouts/DarkLayout";
+import News from "./pages/News";
 
 import './assets/scss/style.scss'
 
@@ -19,8 +21,11 @@ function App() {
         <Route path="/services" element={<Services />}/>
         <Route path="/services/:slug" element={<ServiceDetails />}/>
         <Route path="/about" element={<About />}/>
-        <Route path="/contacts" element={<Contacts />}/>
+        {/* <Route path="/news" element={<News />}/> */}
       </Route>
+        <Route path="/" element={<DarkLayout />}>
+          <Route path="/contacts" element={<Contacts />}/>
+        </Route>
     </Routes>
   )
 }

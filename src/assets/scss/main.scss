@@ -613,6 +613,9 @@
       .btn-circle {
         background-color: transparent;
         transform: translateY(15%);
+        width: 100px;
+        height: 100px;
+        margin: 0 10px;
         svg {
           width: 100px;
           height: 100px;
@@ -863,7 +866,6 @@
   }
   #we-worthy-sec .wrap .around-title {
     width: 100%;
-    border: 1px solid red;
   }
   .worthy-grid {
     grid-template-columns: 50% 50%;
@@ -940,7 +942,6 @@
   }
   #we-worthy-sec .wrap .around-title {
     width: 100%;
-    border: 1px solid red;
   }
 }
 @media screen and (max-width: 880px) {
@@ -1180,6 +1181,14 @@
   }
 }
 @media screen and (max-width: 560px) {
+  #we-worthy-sec .wrap .title-ending .btn-circle {
+    width: 60px;
+    height: 60px;
+  }
+  #hero-sec .container .btn-circle {
+    width: 100px;
+    height: 100px;
+  }
   .main-grafic-bg {
     background: 
     url("../images/vector2.svg") 52% 8.5% no-repeat,

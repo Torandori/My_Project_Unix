@@ -4,10 +4,12 @@ import HeroSec from "../components/HeroSec";
 import ServDetDescrSec from "../components/ServDetDescrSec";
 import ServDetHowSec from "../components/ServDetHowSec";
 import "../assets/scss/serviceDetails.scss"
+// import par from '../data/heroData.json';
 
 function ServiceDetails() {
   const [descr, setDescr] = useState({ howSec: {howList: []}})
-  const { slug } = useParams()
+  const { slug } = useParams();
+  // const heroPar = par[8];
 
   useEffect(() => {
     console.log(slug);
@@ -21,7 +23,7 @@ function ServiceDetails() {
   return (
     <div id="service-details-page" className="service-details-body-bg">
       <div className="service-details-grafic-bg" >
-        <HeroSec />
+        {/* <HeroSec /> */}
         <ServDetDescrSec descr={descr} />
         <ServDetHowSec descr={descr} />
       </div>

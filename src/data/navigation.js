@@ -20,11 +20,11 @@ export const MainNav = [
   {
     name: 'contacts',
     title: 'Go to Contacts page',
-    to: 'contacts'
+    to: '/contacts'
   },
   {
     name: 'news',
     title: 'Go to News page',
-    to: 'news'
+    to: '/news'
   }
 ];
