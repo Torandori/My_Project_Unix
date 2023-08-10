@@ -240,6 +240,7 @@
         width: 32px;
         height: 32px;
         display: block;
+        scale: (-1);
         &:hover {
           opacity: 0.7;
         }
@@ -347,6 +348,9 @@
       text-transform: uppercase;
     }
   }
+}
+.btn-circle-arrow-text .arrow-in svg path {
+  fill: #000;
 }
 .to-top-wrap a {
   &:hover {

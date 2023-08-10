@@ -1,0 +1,21 @@
+{
+  "colLeft": {
+    "socTo": "https://dribbble.com",
+    "socLinkTitle": "Link to Dribble",
+    "socTitle": "dribbble"
+  },
+  "colRight": [
+    {
+      "socImg": "./assets/images/soc-slider-roject1.jpg",
+      "socImgAlt": "Dribble project Duh!"
+    },
+    {
+      "socImg": "./assets/images/soc-slider-roject2.jpg",
+      "socImgAlt": "Dribble project Monama!"
+    },
+    {
+      "socImg": "./assets/images/soc-slider-roject3.jpg",
+      "socImgAlt": "Dribble project Blitz!"
+    }
+  ]
+}
