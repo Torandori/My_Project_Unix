@@ -2,12 +2,12 @@
   "left": [
     {
       "mainServiceTo": "/services/serviceWeb",
-      "mainServiceName": "!web app",
+      "mainServiceName": "web app",
       "mainServiceLinkTitle": "Find out more about Web app service",
       "mainServiceDescr": "The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse."
     },
     {
-      "mainServiceTo": "/serviceDetails",
+      "mainServiceTo": "/services/serviceMobile",
       "mainServiceName": "mobile",
       "mainServiceLinkTitle": "Find out more about Mobile service",
       "mainServiceDescr": "The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse."
@@ -15,13 +15,13 @@
   ],
   "right": [
     {
-      "mainServiceTo": "/serviceDetails",
+      "mainServiceTo": "/services/serviceSaas",
       "mainServiceName": "saas",
       "mainServiceLinkTitle": "Find out more about Saas app service",
       "mainServiceDescr": "The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse."
     },
     {
-      "mainServiceTo": "/serviceDetails",
+      "mainServiceTo": "/services/serviceSoftware",
       "mainServiceName": "software to clouds",
       "mainServiceLinkTitle": "Find out more about Mobile service"
     }
