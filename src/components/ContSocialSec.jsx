@@ -21,7 +21,6 @@ function ContSocialSec() {
             <Link to={socLeft.socTo} className="arrow" target="_blank" title={socLeft.socLinkTitle} rel="noreferrer nofollow">
               <Arrow />
             </Link>
-            <div className="line"></div>
           </div>
 
           <div className="right-col">

@@ -1,4 +1,4 @@
-import Arrow from './svgComponents/Arrow'
+import { Link } from 'react-router-dom'
 import Flake from './svgComponents/Flake'
 import PromoLines from './PromoLines'
 import ceoData from '../data/mainAboutCeoSecData.json'
@@ -24,7 +24,7 @@ function MainAboutCeoSec(){
     <PromoLines />
     <div className="container separator">
       <p className="under-run">{ceoData.underLinesText}</p>
-      <a href="/" className="small-link">{ceoData.ceoLink}</a>
+      <Link to={ceoData.ceoLinkTo} className="small-link">{ceoData.ceoLinkText}</Link>
     </div>
   </section>
   )

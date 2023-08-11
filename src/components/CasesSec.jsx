@@ -2,10 +2,15 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import casesData from "../data/caseCasesSecData.json"
 import Arrow from "./svgComponents/Arrow";
+import { useNavigate } from "react-router-dom";
 
 function CasesSec() {
   const [caseItems, setCaseItems] = useState({ casesFirstBlock: [], casesSecondBlock: [] });
+  const moveTo = useNavigate(); 
 
+  const btnClick = () => {
+    moveTo('/contacts');
+  };
 
   useEffect(() => {
     fetch('./pubdata/casesItems.json')
@@ -31,7 +36,7 @@ function CasesSec() {
               <h4 className="h4">{casesLeftFirst.casesLeftTitle}</h4>
               <p className="short-descr">{casesLeftFirst.casesLeftShortDescr}</p>
             </div>
-            <button type="button" className="btn btn-circle-arrow-text dark">
+            <button type="button" onClick={btnClick} className="btn btn-circle-arrow-text dark">
               <span className="btn-content">
                 <span className="arrow-in">
                   <Arrow />
@@ -69,7 +74,7 @@ function CasesSec() {
               <div className="h4">{casesLeftSecond.casesLeftTitle}</div>
               <p className="short-descr">{casesLeftSecond.casesLeftShortDescr}</p>
             </div>
-            <button type="button" className="btn btn-circle-arrow-text dark">
+            <button type="button" onClick={btnClick} className="btn btn-circle-arrow-text dark">
               <span className="btn-content">
                 <span className="arrow-in">
                   <Arrow />

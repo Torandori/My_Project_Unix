@@ -1,10 +1,16 @@
 import React from "react";
 import StartBtn from "./svgComponents/StartBtn";
+import { useNavigate } from "react-router-dom";
 
 function ServDetHowSec({descr}) {
   const under = descr.howSec;
   const _under = under.howList;
-  console.log(under.howImgUrl);
+
+  const moveTo = useNavigate();
+
+  const btnClick = () => {
+    moveTo('/contacts');
+  };
 
   return (
     <section id="how-sec">
@@ -29,7 +35,7 @@ function ServDetHowSec({descr}) {
           })}
         </div>
         <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
-          <button type="button" className="btn project-btn">
+          <button type="button" onClick={btnClick} className="btn project-btn">
             <StartBtn />
           </button>
         </div>

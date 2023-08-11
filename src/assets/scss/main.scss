@@ -231,7 +231,6 @@
     }
   }
 }
-
 .center {
   height: 600px;
 }
@@ -349,91 +348,6 @@
 #about-ceo-sec .container:first-child .ceo-wrap .slider-descr {
   display: block;
 }
-// .run-wrap:hover .run div {
-//   animation-play-state: paused;
-//   -webkit-text-stroke-width: 3px;
-//   -webkit-text-stroke-color: $color-black-text;
-//   color: transparent;
-// }
-// .run {
-//   font-size: 5vw;
-//   color: $color-black-text;
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   height: 6vw;
-//   overflow: hidden;
-//   position: relative;
-//   letter-spacing: -1.6px;
-//   display: flex;
-//   align-items: center;
-//   margin-bottom: 14px;
-//   div {
-//     display: block;
-//     width: 225%;
-//     position: absolute; 
-//     overflow: hidden;
-//     animation: run 12s linear infinite;
-//   }
-// }
-// .run span {
-//   float: left;
-//   width: 48.5%;
-//   display: flex;
-//   align-items: center;
-//   border: none;
-//   svg {
-//     width: 100px;
-//     height: 100px;
-//     margin: 0 30px 0 40px;
-//   }
-// }
-// .run span:last-child {
-//   align-items: center;
-// }
-
-// @keyframes run {
-//   0% { left: 0; }
-//   100% { left: -112.5%; }
-// }
-
-// .gen-slider-descr{
-//   display: flex;
-//   gap: 24px;
-//   align-items: center;
-//   .pic-wrap {
-//     width: 72px;
-//     height: 72px;
-//     border-radius: 50%;
-//     overflow: hidden;
-//   }
-//   .text{
-//     div:first-child {
-//       font-weight: 700;
-//       @include lh(28);
-//       letter-spacing: -0.24px;
-//       text-transform: uppercase;
-//       color: #fff;
-//       margin-bottom: 17px;
-//     }
-//     div:last-child {
-//       color: $color-grey2;
-//     }
-//   }
-//   .arrows {
-//     display: flex;
-//     gap: 49px;
-//     margin-left: auto;
-//     margin-right: 17px;
-//     .arrow-btn:hover {
-//       svg path {
-//         fill: #fff;
-//       }
-//     }
-//     .arrow-btn:last-child svg {
-//       transform: scale(-1, -1);
-//     }
-//   }
-// }
 // #ABOUT_CEO_SEC
 // PAST_PROJECTS
 #past-projects-sec {
