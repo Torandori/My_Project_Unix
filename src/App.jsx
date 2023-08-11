@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import DarkLayout from "./layouts/DarkLayout";
 import News from "./pages/News";
-
 import './assets/scss/style.scss'
 
 function App() {

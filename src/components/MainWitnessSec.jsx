@@ -28,19 +28,3 @@ function MainWitnessSec() {
 }
 
 export default MainWitnessSec;
-
-        {/* <ul>
-          {sliderItems.map((item, index) => {
-              return (
-                <li key={index}>
-                  <div className="slider-img-wrap">
-                    <img src={item.witSliderImgUrl} alt={item.witSliderImgAlt} />
-                  </div>
-                  <div className="slider-descr">
-                    <div className="panchang">{item.witSliderItemTitle}</div>
-                    <div>{item.witSliderItemService}</div>
-                  </div>
-                </li>
-              )
-            })}
-        </ul> */}

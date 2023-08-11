@@ -1,11 +1,14 @@
-import React from "react";
+// import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import ceoData from '../data/mainAboutCeoSecData.json'
+import { useRef } from "react";
+
 
 
 function SliderCeo() {
   const ceo = ceoData.sliderCeo;
+  const sliderRef = useRef()
 
   const sliderSettings = {
     dots: false,
@@ -17,16 +20,24 @@ function SliderCeo() {
     centerMode: false,
   };
 
+  function next() {
+    sliderRef.current.slickNext();
+  }
+
   return (
-    <Slider {...sliderSettings}>
-      {ceo.map((item, index) => {
-        return (
-          <li key={index}>
-            <p>{item.ceoQuote}</p>
-          </li> 
-        )
-      })}
-    </Slider>
+    <>
+      <Slider ref={sliderRef} {...sliderSettings}>
+        {ceo.map((item, index) => {
+          return (
+            <li key={index}>
+              <p>{item.ceoQuote}</p>
+            </li> 
+          )
+        })}
+      </Slider>
+      <br/>
+      <button type="button" onClick={next}>Next</button>
+    </>
   )
 
 }
