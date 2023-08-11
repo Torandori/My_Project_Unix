@@ -1,8 +1,18 @@
 {
   "ceoTitle": "about ceo",
-  "ceoQuote": "This is the highest level of professionalism I have ever encountered in the years that I have been hiring people in this field. You have the distinct impression that you are a part of a productive team.",
   "ceoName": "Rachel Wilson",
   "ceoPosition": "CEO of Unix Studio",
   "underLinesText": "Don't wait any longer, let's unleash your imagination and create something extraordinary together!",
-  "ceoLink": "Catch a glimse!"
+  "ceoLink": "Catch a glimse!",
+  "sliderCeo": [
+    {
+      "ceoQuote": "This is the highest level of professionalism I have ever encountered in the years that I have been hiring people in this field. You have the distinct impression that you are a part of a productive team."
+    },
+    {
+      "ceoQuote": "Unixtudio prides itself on being at the forefront of technology. If a tool doesn't exist to solve a problem, the team will build it. When it comes to things like AI, agencies are most likely to add value by being able to interpret new tech."
+    },
+    {
+      "ceoQuote": "I spend regular time with every single person in the business, however experienced, and empower each member of the team by delivering them every opportunity to progress with their careers. With their ambitions listened to."
+    }
+  ]
 }

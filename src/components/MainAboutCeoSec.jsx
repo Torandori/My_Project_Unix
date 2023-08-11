@@ -4,6 +4,7 @@ import quote from '../assets/images/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
 import PromoLines from './PromoLines'
 import ceoData from '../data/mainAboutCeoSecData.json'
+import SliderCeo from './SliderCeo'
 
 function MainAboutCeoSec(){
   return(
@@ -22,9 +23,7 @@ function MainAboutCeoSec(){
               <img src={quote} alt="Quote picture" />
             </div>
             <ul>
-              {/* <li>
-                <p>{ceoData.ceoQuote}</p>
-              </li> */}
+              <SliderCeo />
             </ul>
           </div>
 
@@ -36,14 +35,14 @@ function MainAboutCeoSec(){
               <div className="panchang">{ceoData.ceoName}</div>
               <div>{ceoData.ceoPosition}</div>
             </div>
-            <div className="arrows">
+            {/* <div className="arrows">
               <div className="arrow-btn">
                 <Arrow />
               </div>
               <div className="arrow-btn">
                  <Arrow />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

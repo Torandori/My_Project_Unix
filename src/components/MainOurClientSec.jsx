@@ -1,6 +1,7 @@
 import Arrow from './svgComponents/Arrow'
-import quote from '../assets/images/quote.svg'
+// import quote from '../assets/images/quote.svg'
 import clientData from '../data/mainOurClient.json'
+import SliderClient from './SliderClient';
 
 function MainOurClientSec() {
 
@@ -28,7 +29,8 @@ function MainOurClientSec() {
         <div className="flex-slider-sec">
           <div className="empty"></div>
           <div className="slider">
-            <div className="client-slider">
+            <SliderClient />
+            {/* <div className="client-slider">
               <div className="quote">
                 <img src={quote} alt="Quote picture" />
               </div>
@@ -47,7 +49,7 @@ function MainOurClientSec() {
                 <div className="panchang">{clientData.clientName}</div>
                 <div>{clientData.clientPosition}</div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

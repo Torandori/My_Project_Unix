@@ -9,9 +9,10 @@ import MainWorthySec from '../components/MainWorthySec';
 import '../assets/scss/main.scss'
 import par from '../data/heroData.json'
 
+
 function Home() {
   const heroPar = par[0];
-  
+
   return (
     <div className="main-body-bg main-page">
       <div className="main-grafic-bg">

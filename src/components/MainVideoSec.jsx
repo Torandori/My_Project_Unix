@@ -12,7 +12,7 @@ function MainVideoSec() {
         <div className="flex-wrap">
           <div className="wrap">
             <div className="video-descr panchang">{videoData.videoDescrTitle}</div>
-            <div>Website Design</div>
+            <div>{videoData.videoUnder}</div>
           </div>
           <Link to={videoData.videoLinkTo} className="small-link" title={videoData.videoLinkTitle}>{videoData.videoLinkText}</Link>
         </div>

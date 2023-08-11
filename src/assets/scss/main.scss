@@ -244,6 +244,41 @@
   url("../images/vector2.svg") 50% 26% no-repeat,
   linear-gradient(180deg, #1A1A1A 0%, #1A1A1A 70%, #fff 70%, #fff 100%);
   background-color: $color-black;
+
+  #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider {
+    margin-bottom: 0!important;
+  }
+  .slider-descr {
+    .slick-arrow.slick-prev, .slick-arrow.slick-next {
+      background: url('./assets/images/svg/arrowCeo.svg') no-repeat 0 0;
+      background-color: transparent;
+      color: transparent;
+      width: 40px;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+    .slick-slide {
+      padding: 10px 0;
+    }
+    .slick-arrow.slick-prev {
+      left: 100px;
+      bottom: -60px;
+      scale: (-1);
+    }
+    .slick-arrow.slick-next {
+      left: 0;
+      bottom: -60px;
+    }
+  }
+
   .run-wrap {
     margin-bottom: 73px;
   }
@@ -841,7 +876,6 @@
     }
   }
   .flex-slider-sec {
-    display: flex;
     .empty{
       width: 462px;
     }

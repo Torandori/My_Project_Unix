@@ -9,7 +9,6 @@ import '../assets/scss/contacts.scss'
 function HeroSec(props){
   // const _heroData = heroData[0];
   const heroD = props.par;
-  console.log(heroD.underCase)
   
   return (
     <section id="hero-sec">

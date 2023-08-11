@@ -5,7 +5,7 @@ import projectSecData from "../data/mainPastProjectsSecData.json"
 import React from "react";
 
 function MainPastProjectsSec() {
-  const [projects, setProjects] = useState([]);
+  const [projects, setProjects] = useState([{}, {}]);
   const [services, setServices] = useState({ left: [], right: [] });
 
   useEffect(() => {
@@ -15,6 +15,7 @@ function MainPastProjectsSec() {
       setProjects(resp);
     })
   }, []);
+  
 
   useEffect(() => {
     fetch('./pubdata/mainServiceItems.json')
@@ -39,7 +40,7 @@ function MainPastProjectsSec() {
         <div className="projects-cells">
           {projects.map((item, index) => {
             return (
-              <>
+              <React.Fragment key={index}>
                 <div className="project-descr" key={index}>
                   <div className="wrap">
                     <div className="project-name">{item.projName}</div>
@@ -55,24 +56,7 @@ function MainPastProjectsSec() {
                     <img src={item.projImgUrl} alt={item.projAlt} />
                   </div>
                 </div>
-              </>
-              // <React.Fragment key={index}>
-              //   <div className="project-descr" key={index}>
-              //     <div className="wrap">
-              //       <div className="project-name">{item.projName}</div>
-              //       <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
-              //         <Arrow />
-              //       </Link>
-              //     </div>
-              //     <p>{item.projDescr}</p>
-              //     <div>{item.projUnderText}</div>
-              //   </div>
-              //   <div className="project-pic" key={item.projName}>
-              //     <div className="img-wrap">
-              //       <img src={item.projImgUrl} alt={item.projAlt} />
-              //     </div>
-              //   </div>
-              // </React.Fragment>
+              </React.Fragment>
             )
           })}
         </div>
