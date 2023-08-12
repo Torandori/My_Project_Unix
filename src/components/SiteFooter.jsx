@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import FooterSocLinks from './FooterSocLinks'
 import btnCircleLight from '../assets/images/svg/btnCircleLight.svg'
-import footerPic from '../assets/images/footer-pic.jpg'
+import footerPic from '../assets/images/footer-pic1.jpg'
 import footerArrow from '../assets/images/svg/footerArrow.svg'
 import footerData from '../data/footerData.json'
 import '../assets/scss/_footer.scss'

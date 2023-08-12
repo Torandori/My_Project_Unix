@@ -9,14 +9,14 @@ function ContactsFooter() {
   }
   return(
     <footer id="footer-contacts">
-      <div class="container">
-        <div class="to-top-wrap">
+      <div className="container">
+        <div className="to-top-wrap">
           <button type="button" onClick={btnTopHandler} title="Scroll to top" className="btn-to-top">
             <ArrowTop />
           </button>
             <div>Back to top</div>
         </div>
-        <p class="copy">© 2023 Unix Studio. — Product Design Agency</p>
+        <p className="copy">© 2023 Unix Studio. — Product Design Agency</p>
       </div>
     </footer>
   )

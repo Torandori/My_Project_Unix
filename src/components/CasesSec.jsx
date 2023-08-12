@@ -105,7 +105,6 @@ function CasesSec() {
             )
           })}
         </div>
-
         <Link to={casesLink.casesLinkTo} className="small-link panchang" title={casesLink.casesLinkTitle}>{casesLink.casesLinkText}</Link>
       </div>
     </section>

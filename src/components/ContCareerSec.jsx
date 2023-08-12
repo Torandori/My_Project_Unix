@@ -4,26 +4,26 @@ import career from "../data/contCareerSecData.json"
 function ContCareerSec() {
   return (
     <section id="project-career-sec">
-      <div class="container">
-        <div class="wrap-poject-career">
-          <div class="wrap-buttons">
+      <div className="container">
+        <div className="wrap-poject-career">
+          <div className="wrap-buttons">
             {career.map((item, index) => {
               return (
-              <button type="button" class={item.careerClass} key={index}>
-                <span class="btn-content">
-                  <span class="arrow-in">
+              <button type="button" className={item.careerClass} key={index}>
+                <span className="btn-content">
+                  <span className="arrow-in">
                     <Arrow />
                   </span>
-                  <span class="btn-text">{item.careerText}</span>
+                  <span className="btn-text">{item.careerText}</span>
                 </span>
               </button>
               )
             })}
 
           </div>
-          <div class="location">
-            <div class="where panchang">in new york, usa</div>
-            <div class="descr">our location</div>
+          <div className="location">
+            <div className="where panchang">in new york, usa</div>
+            <div className="descr">our location</div>
           </div>
         </div>
       </div>

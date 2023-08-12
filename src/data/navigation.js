@@ -7,7 +7,7 @@ export const MainNav = [
   { 
       name: 'cases',
       title: 'Go to Cases page',
-      to: 'case'
+      to: '/case'
   },
   { name: 'services', 
     title: 'Go to Services page', 
@@ -26,5 +26,10 @@ export const MainNav = [
     name: 'news',
     title: 'Go to News page',
     to: '/news'
+  },
+  {
+    name: '404',
+    title: 'Go to News page',
+    to: '/404'
   }
 ];

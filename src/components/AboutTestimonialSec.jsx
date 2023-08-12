@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PromoLines from "./PromoLines";
-import testimonialPic from "../assets/images/team-picture.jpg"
+import testimonialPic from "../assets/images/team-pic.jpg"
 import testData from '../data/aboutTestimonial.json'
 import AboutTestSlider from "./AboutTestSlider";
 
@@ -9,7 +9,7 @@ function AboutTestimonialSec() {
     <section id="testimonial-sec">
       <div className="container first">
         <div className="big-img-wrap">
-          <img src={testimonialPic} alt={testData.aboutPictureTitle} />
+          <img src={testimonialPic} alt={testData.aboutPictureTitle} title={testData.aboutPicTitle} />
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2">{testData.aboutTestTitle}</h2>
@@ -23,7 +23,7 @@ function AboutTestimonialSec() {
       </div>
       <div className="container">
         <p className="testimonial-text">{testData.aboutTestUnderSlider}</p>
-        <Link to="/" className="small-link">{testData.aboutTestLinkText}</Link>
+        <Link to="/services" className="small-link">{testData.aboutTestLinkText}</Link>
       </div>
     </section>
   )

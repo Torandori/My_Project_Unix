@@ -50,7 +50,7 @@ function News(){
   return (
     <div id="news-page">
       <HeroSec par={heroPar} />
-      <NewsSliderSec />
+      {/* <NewsSliderSec /> */}
       {/* <NewsBestSliderSec /> */}
     </div>
   )

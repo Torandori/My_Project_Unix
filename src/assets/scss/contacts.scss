@@ -119,6 +119,11 @@
     font-weight: 400;
     letter-spacing: 0.08em;
     position: relative;
+    &.has-error {
+      input[type=text], input[type=email], input[type=tel], textarea {
+        border-color:  #EF6461;
+      }
+    }
     label {
       position: absolute;
       left: 0;
@@ -181,7 +186,13 @@
     }
   }
 }
-
+p.input-error {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  @include fz(12);
+  color: #EF6461;
+}
 // #CONTACTS_SEC
 
 // SOCIAL_SEC
@@ -426,6 +437,10 @@
       bottom: 30%;
     }
   }
+}
+#contacts-page #hero-sec .hero-wrap .wrap-item a:focus-visible, #contacts-page #hero-sec .hero-wrap .wrap-item a:focus {
+  border: none;
+  opacity: 0.7;
 }
 @media screen and (max-width: 680px) {
   .btn-circle-arrow-text{
