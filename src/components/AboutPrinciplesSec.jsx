@@ -19,7 +19,7 @@ function AboutPrinciplesSec() {
             <div className="interact-elements">
               {princ.princElements.map((item, index) => {
                 return (
-                  <div className={item.princClass}><span>{item.aboutPrincTitle}</span></div>
+                  <div className={item.princClass} key={index}><span>{item.aboutPrincTitle}</span></div>
                 )
               })}
             </div>

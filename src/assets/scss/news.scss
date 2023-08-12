@@ -4,15 +4,6 @@
 #news-page {
   #hero-sec {
     margin-bottom: 243px; //need 64
-    h1 {
-      margin-bottom: 36px;
-    }
-    .under {
-      margin-bottom: 384px;
-    }
-    p {
-      width: 49%;
-    }
     .under-title {
       font-weight: 600;
       @include lh(28);
@@ -31,15 +22,30 @@
         background-color: #fff;
       }
     }
+    h1 {
+      margin-bottom: 36px;
+    }
+    .under {
+      margin-bottom: 384px;
+    }
+    p {
+      width: 49%;
+    }
   }
 }
 // #HERO_SEC
 
 // SLIDER_NEWS_SEC
 #slider-news-sec {
+  .restTopic {
+    height: 110px;
+    overflow: hidden;
+    // border: 1px solid red;
+    margin-bottom: 20px;
+  }
   .news-slider-item {
     .content-wrap {
-      display: flex;
+      // display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 72px;
@@ -58,6 +64,7 @@
         }
         .next {
           transition: all .2s ease;
+          scale: (-1);
         }
         .prev:hover, .next:hover {
           svg rect {
@@ -106,49 +113,11 @@
     }
   }
 }
-// .author{
-//   display: flex;
-//   gap: 24px;
-//   align-items: center;
-//   .pic-wrap {
-//     width: 80px;
-//     height: 80px;
-//     border-radius: 50%;
-//     overflow: hidden;
-//   }
-//   .text{
-//     div:first-child {
-//       color: $color-black-text;
-//       font-weight: 600;
-//       @include fz(16);
-//       @include fz(24);
-//       text-transform: uppercase;
-//       margin-bottom: 4px;
-//     }
-//     div:last-child {
-//       color: $color-black-light;
-//       @include fz(16);
-//       @include lh(22);
-//       letter-spacing: 0.32px;
-//     }
-//   }
-//   .arrows {
-//     display: flex;
-//     gap: 49px;
-//     margin-left: auto;
-//     margin-right: 17px;
-//     .arrow-btn:hover {
-//       svg path {
-//         fill: #fff;
-//       }
-//     }
-//     .arrow-btn:last-child svg {
-//       transform: scale(-1, -1);
-//     }
-//   }
-// }
+.news-list .news-list-item .poster-wrap {
+  background: $color-grey;
+}
 .news-list {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   list-style: none;
   margin-bottom: 120px;

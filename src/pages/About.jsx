@@ -6,7 +6,7 @@ import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
 import par from '../data/heroData.json';
 
 function About(){
-  const heroPar = par[2];
+  const heroPar = par.about;
 
   return (
     <div className="about-grafic-bg" id="about-page">

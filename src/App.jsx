@@ -11,6 +11,9 @@ import News from "./pages/News";
 import './assets/scss/style.scss'
 import {useLayoutEffect} from 'react';
 // import ScrollTop from "./components/scrollTop";
+import NewsDetails from './components/NewsDetails';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -30,12 +33,14 @@ function App() {
           <Route path="/services" element={<Services />}/>
           <Route path="/services/:slug" element={<ServiceDetails />}/>
           <Route path="/about" element={<About />}/>
-          {/* <Route path="/news" element={<News />}/> */}
+          <Route path="/news" element={<News />}/>
+          <Route path="news/:hash" element={<NewsDetails/>}/>
         </Route>
         <Route path="/" element={<DarkLayout />}>
           <Route path="/contacts" element={<Contacts />}/>
         </Route>
       </Routes>
+      <ToastContainer />
     </Wrapper>
   )
 }

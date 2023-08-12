@@ -5,16 +5,18 @@
 #news-details-page {
   #hero-sec {
     h1 {
-      @include fz(48);
-      @include lh(56);
+      @include fz(46);
+      @include lh(50);
       font-weight: 700;
-      letter-spacing: -0.48px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       width: 56%;
-      margin-bottom: 268px;
+      margin-bottom: 200px;
     }
     p {
       width: 49%;
+      position: absolute;
+      bottom: 10%;
     }
   }
 }

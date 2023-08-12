@@ -5,7 +5,7 @@ import '../assets/scss/services.scss';
 import par from '../data/heroData.json';
 
 function Services() {
-  const heroPar = par[1];
+  const heroPar = par.services;
   return (
     <div id="services-page">
       <HeroSec par={heroPar} />

@@ -4,7 +4,7 @@ import CasesSec from '../components/CasesSec';
 import par from '../data/heroData.json';
 
 function Case() {
-  const heroPar = par[6];
+  const heroPar = par.cases;
 
   return (
     <div id="case-page">

@@ -6,7 +6,7 @@ import '../assets/scss/contacts.scss'
 import par from '../data/heroData.json';
 
 function Contacts() {
-  const heroPar = par[4];
+  const heroPar = par.contacts;
 
   return(
     <div id="contacts-page">

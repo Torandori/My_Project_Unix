@@ -11,7 +11,7 @@ import par from '../data/heroData.json'
 
 
 function Home() {
-  const heroPar = par[0];
+  const heroPar = par.home;
 
   return (
     <div className="main-body-bg main-page">

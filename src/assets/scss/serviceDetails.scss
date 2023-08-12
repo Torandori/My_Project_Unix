@@ -1,13 +1,5 @@
 @import 'vars';
 
-// .service-details-grafic-bg {
-//   background: 
-//   url("../images/gradient2.svg") 84% 35% no-repeat,
-//   url("../images/vector5.svg") 50% 66% no-repeat,
-// }
-// .service-details-body-bg {
-//   background: linear-gradient(180deg, white 0%, white 40%, #1A1A1A 40%, #1A1A1A 100%);
-// }
 #service-details-page {
   #hero-sec {
     margin-bottom: 0;
@@ -17,6 +9,8 @@
       }
       p {
         text-transform: uppercase;
+        position: absolute;
+        bottom: 10%;
       }
     }
   }
@@ -350,5 +344,4 @@
     url("../images/gradient2.svg") 84% -20% no-repeat,
     linear-gradient(180deg, white 0%, white 1%, #1A1A1A 1%, #1A1A1A 100%);
   }
-
 }
