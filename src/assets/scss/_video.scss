@@ -1,0 +1,62 @@
+@import "vars";
+
+.video-wrapper {
+  position: relative;
+  aspect-ratio: 128/70;
+  background-color: $color-black-text;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 63px;
+  img, iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  button {
+    border: none;
+    background-color: rgba(18, 18, 18, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-black-text;
+      border: 1px solid #fff;
+      z-index: 1;
+      transition: all .2s ease;
+    }
+    &::after {
+      content: '';
+      border-left: 38px solid #fff;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-35%, -50%);
+      transition: all .2s ease;
+      z-index: 2;
+    }
+    &::before, &::after {
+      opacity: 0.7;
+    }
+    &:hover {
+      background-color: rgba(18, 18, 18, 0);
+      &::before, &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -21,21 +21,22 @@ function MobBar(){
   };
 
   useEffect(() => {
-    document.getElementById('hamb-btn').addEventListener('click', toggleMenu);
-
+    const hambBtn = document.getElementById('hamb-btn');
     const menuLinks = document.querySelectorAll('.menu-link');
+    const shadow = document.getElementById('shadow');
+
+     hambBtn.addEventListener('click', toggleMenu);
     for (const link of menuLinks) {
       link.addEventListener('click', toggleMenu);
     }
-
-    document.getElementById('shadow').addEventListener('click', toggleMenu);
+    shadow.addEventListener('click', toggleMenu);
 
     return () => {
-      document.getElementById('hamb-btn').removeEventListener('click', toggleMenu);
+      hambBtn.removeEventListener('click', toggleMenu);
       for (const link of menuLinks) {
         link.removeEventListener('click', toggleMenu);
       }
-      document.getElementById('shadow').removeEventListener('click', toggleMenu);
+      shadow.removeEventListener('click', toggleMenu);
     };
   }, []);
 

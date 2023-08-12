@@ -9,12 +9,13 @@ import contacts from '../data/contContactsSecData.json'
 function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  // const [tel, setTel] = useState('');
   const [message, setMessage] = useState('');
 
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
+
+  
   
   function isValidEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -114,6 +115,7 @@ function ContactForm() {
         change={(val) => setEmail(val)} 
         blur={(val) => checkEmail(val)} 
         error={emailError}/>
+
 
       <InputField 
         multy={true} 

@@ -149,14 +149,15 @@ a {
   // border: 1px solid red;
 }
 .page-wrap {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
   min-height: 100vh;
   overflow-x: hidden;
 }
 ul {
   list-style: none;
+}
+.Toastify {
+  position: absolute;
+  z-index: 999999;
 }
 // @import "header";
 
@@ -164,7 +165,7 @@ ul {
 #hero-sec {
   background: 
   url("../images/vector1.svg") 52% 75% no-repeat,
-  url("../images/gradient1.svg") 80% -60% no-repeat;
+  url("../images/grad1.svg") 87% -12% no-repeat;
   background-color: $color-black;
   .container {
     height: 828px;
@@ -195,6 +196,8 @@ ul {
       width: 46%;
       @include lh(32);
       color: $color-black-text;
+      position: absolute;
+      bottom: 10%;
     }
   }
 }
@@ -704,7 +707,7 @@ ul {
       padding-bottom: 0;
       h1 {
         font-size: 2.2rem;
-        line-height: 3rem;
+        line-height: 2.2rem;
         margin-bottom: 340px;
       }
       .under {
@@ -715,7 +718,7 @@ ul {
         font-size: 1.3rem;
       }
       .btn-circle {
-        bottom: 30%;
+        bottom: 34%;
         svg {
           width: 120px;
           height: 120px;

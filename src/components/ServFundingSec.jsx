@@ -1,9 +1,10 @@
 import fundingData from '../data/servFundingSecData.json'
 import circleArrowBtn from '../assets/images/svg/circleArrowBtn.svg'
 import { useNavigate } from 'react-router-dom';
+import FaqList from './FaqList';
 
 function ServFundingSec() {
-  const fundingList = fundingData.fundingList;
+  // const fundingList = fundingData.fundingList;
   const moveTo = useNavigate(); 
 
   const btnClick = () => {
@@ -21,7 +22,8 @@ function ServFundingSec() {
               <p className="text-medium">{fundingData.fundingDescr}</p>
               <div className="services-subtitle">{fundingData.fundingSubtitle}</div>
             </div>
-            <div className="name-block">
+            <FaqList />
+            {/* <div className="name-block">
               {fundingList.map((item, index) => {
                 return (
                   <div className="wrap-number-text" key={index}>
@@ -30,7 +32,7 @@ function ServFundingSec() {
                   </div>
                 )
               })}
-            </div>
+            </div> */}
             <div className="text-block2">
               <p className="text-medium">{fundingData.fundingContinue}</p>
               <div className="circle-arrow-btn" onClick={btnClick}>

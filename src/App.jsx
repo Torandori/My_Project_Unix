@@ -12,10 +12,8 @@ import News from "./pages/News";
 import NewsDetails from './components/NewsDetails';
 import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
-// import ScrollTop from "./components/scrollTop";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import NotFoundComp from './components/NotFoundComp';
 
 const Wrapper = ({children}) => {
   const location = useLocation();
@@ -37,14 +35,13 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/news" element={<News />}/>
           <Route path="news/:hash" element={<NewsDetails/>}/>
-          <Route path="*" element={<NotFound />}/>
         </Route>
+        <Route path="*" element={<NotFound />}/>
         <Route path="/" element={<DarkLayout />}>
-          <Route path="*" element={<NotFound />}/>
           <Route path="/contacts" element={<Contacts />}/>
         </Route>
       </Routes>
-      <ToastContainer />
+      <ToastContainer theme="dark" pauseOnHover position="bottom-left"/>
     </Wrapper>
   )
 }

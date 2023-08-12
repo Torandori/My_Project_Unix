@@ -35,10 +35,7 @@ function ContSocialSec() {
             </div>
           </div>
         </div>
-
         <SocList />
-
-        <div className="line"></div>
       </div>
     </section>
   )

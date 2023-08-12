@@ -1,6 +1,6 @@
 import { useId } from "react"
 
-function InputField({name, change, label, value, error, multy, blur}){
+function InputField({name, type, change, label, value, error, multy, blur}){
   const inputId = useId();
 
   function changeHandler(event){

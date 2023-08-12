@@ -6,15 +6,18 @@
   "fundingList": [
     {
       "fundingNumber": "01",
-      "fundingText": "web 3"
+      "fundingText": "web 3",
+      "fundingDescr": "The next generation of the internet that is being built using decentralized technologies. It's a vision for a more open, secure, and user-centric web that leverages blockchain and other decentralized technologies to reshape how online interactions and applications work."
     },
     {
       "fundingNumber": "02",
-      "fundingText": "fintech"
+      "fundingText": "fintech",
+      "fundingDescr": "Dynamic and rapidly growing industry that merges the worlds of finance and technology. It encompasses a wide range of innovative digital solutions and services designed to enhance and revolutionize traditional financial activities."
     },
     {
       "fundingNumber": "03",
-      "fundingText": "blockchain"
+      "fundingText": "blockchain",
+      "fundingDescr": "Evolutionary digital technology that functions as a decentralized and transparent ledger. It securely records and verifies transactions in a way that is resistant to tampering. This chain of data blocks ensures data integrity, as each block is linked to the previous one, forming an unchangeable sequence."
     }
   ]
 }

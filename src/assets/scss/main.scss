@@ -96,18 +96,11 @@
 // VIDEO_SEC
 #video-sec {
   background: 
-  url("../images/gradient2.svg") 84% -300% no-repeat,
-  linear-gradient(180deg, white 0%, white 30%, #1A1A1A 30%, #1A1A1A 100%);
+  url("/My_Project_Unix/src/assets/images/grad2.svg") 87% 64% no-repeat;
+  background-color: $color-black;
   padding-bottom: 188px;
   .container {
     .h2 {
-      margin-bottom: 63px;
-    }
-    .video-wrap {
-      height: 700px;
-      width: 100%;
-      border-radius: 20px;
-      overflow: hidden;
       margin-bottom: 63px;
     }
     .flex-wrap {
@@ -231,17 +224,13 @@
     }
   }
 }
-.center {
-  height: 600px;
-}
 // #WITNESS_SEC
 
 // ABOUT_CEO_SEC
 #about-ceo-sec {
   background: 
-  url("../images/gradient3.svg") 50% 8% no-repeat,
   url("../images/vector2.svg") 50% 26% no-repeat,
-  linear-gradient(180deg, #1A1A1A 0%, #1A1A1A 70%, #fff 70%, #fff 100%);
+  url("../images/grad3.svg") 30% 30% no-repeat;
   background-color: $color-black;
 
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider {
@@ -577,8 +566,7 @@
 // WE_WORTHY_SEC
 #we-worthy-sec {
   background: 
-  url("../images/gradient4.svg") 50% 144% no-repeat,
-  linear-gradient(180deg, #fff 0%, #fff 4%, #1A1A1A 4%, #1A1A1A 100%);
+  url("../images/grad4.svg") 26% 80% no-repeat;
   color: #fff;
   background-color: $color-black;
   padding-top: 100px;
@@ -856,16 +844,10 @@
 // #OUR_CLIENT
 
 // RESPONSIVE
-@media screen and (max-width: 1300px) {
+
+@media screen and (max-width: 1316px) {
   #we-worthy-sec {
-    background: 
-    url("../images/gradient4.svg") 50% 226% no-repeat,
-    linear-gradient(180deg, #fff 0%, #fff 10%, #1A1A1A 10%, #1A1A1A 100%);
-  }
-  #video-sec {
-    background: 
-    url("../images/gradient2.svg") 84% -340% no-repeat,
-    linear-gradient(180deg, white 0%, white 20%, #1A1A1A 20%, #1A1A1A 100%);
+    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 96% no-repeat;
   }
   #we-worthy-sec .wrap {
     flex-wrap: wrap;
@@ -909,13 +891,6 @@
   }
   .client-slider p {
     line-height: 3rem;
-  }
-}
-@media screen and (max-width: 1100px) {
-  #video-sec {
-    background: 
-    url("../images/gradient2.svg") 84% -360% no-repeat,
-    linear-gradient(180deg, #fff 0%, #fff 2%, #1A1A1A 10%, #1A1A1A 100%);
   }
 }
 @media screen and (max-width: 990px) {
@@ -991,6 +966,20 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 100% no-repeat;
+  }
+  #video-sec {
+    background-color: $color-black;
+  }
+  .flex-wrap {
+    row-gap: 40px;
+    flex-wrap: wrap;
+  }
+  .slider-descr div:last-child {
+    flex-wrap: wrap;
+    row-gap: 40px;
+  }
   .slider-descr div:last-child {
     font-size: 1.1rem;
   }
@@ -1008,14 +997,6 @@
       height: 50px;
     }
   }
-  #video-sec {
-    background: 
-    url("../images/gradient2.svg") 84% -500% no-repeat,
-    linear-gradient(180deg,  #fff 10%, #fff1 14%,#1A1A1A 14%, #1A1A1A 100%);
-  }
-  #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 234% no-repeat, linear-gradient(180deg, #fff 0%, #fff 4%, #1A1A1A 4%, #1A1A1A 100%);
-  }
   .line-text {
     font-size: 47px;
   }
@@ -1030,10 +1011,11 @@
   }
   #about-sec {
     padding-bottom: 0px;
+    margin-bottom: 100px;
   }
   #about-sec .container .h2 {
-    font-size: 3rem;
-    line-height: 3.3rem;
+    font-size: 2.2rem;
+    line-height: 2.4rem!important;
   }
   #about-sec .container {
     padding-bottom: 20px;
@@ -1066,18 +1048,15 @@
     height: 40px;
   }
   #video-sec .container .h2 {
-    font-size: 2.6rem;
-    line-height: 3rem;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
   }
   #video-sec {
     padding-bottom: 140px;
   }
-  #video-sec .container .flex-wrap .small-link {
-    width: 40%;
-  }
   #witness-sec .container .subtext {
-    font-size: 1.8rem;
-    line-height: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
     width: 100%;
   }
   #witness-sec {
@@ -1085,7 +1064,7 @@
   }
   #about-ceo-sec .container:first-child .wrap .h2 {
     font-size: 2.2rem;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
   }
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider p {
     font-size: 1.6rem;
@@ -1100,8 +1079,13 @@
     display: none;
   }
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider .quote {
-    width: 20px;
-    height: 20px;
+    img {
+      height: 20px;
+      min-width: 24px;
+    }
+  }
+  .slick-slider .slick-track, .slick-slider .slick-list {
+    margin-bottom: 0;
   }
   #about-ceo-sec .container:first-child .ceo-wrap {
     display: block;
@@ -1142,7 +1126,8 @@
     width: 60%;
   }
   #past-projects-sec .container .title .h2 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
   }
   #past-projects-sec .container .title {
     display: flex;
@@ -1154,8 +1139,11 @@
   }
   #past-projects-sec .container .projects-net .projects-cells {
     grid-template-columns: 1fr;
-    grid-template-rows: 290px;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
   }
+  // #past-projects-sec .container .projects-net .projects-cells .project-pic .img-wrap {
+  //   display: flex;
+  // }
   #past-projects-sec .container .projects-net .projects-cells .project-descr p {
     margin-bottom: 100px;
   }
@@ -1210,38 +1198,57 @@
   #we-worthy-sec .wrap .title-ending .small-text {
     display: none;
   }
-  .promo-second .promo-lines {
-    min-height: 140px;
-  }
-  .promo-second .line-violet {
-    top: -46px;
-  }
   #about-sec .container .subtext {
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.4rem!important;
   }
   .subtext {
     margin-bottom: 50px;
+  }
+  // #video-sec { 
+  //   background: 
+  //     url("/My_Project_Unix/src/assets/images/grad2.svg") 84% 120% no-repeat;
+  //   background-color: $color-black;
+  // }
+  .slider-descr .pic-wrap {
+    img {
+      min-width: 72px!important;
+    }
+  }
+  .promo-second .promo-lines {
+    height: 120px!important;
+  }
+  .promo-second .line-red {
+    top: -100px!important;
+    height: 60px!important;
+  }
+  .promo-second .line-violet {
+    top: -42px!important;
+    height: 60px!important;
   }
 }
 @media screen and (max-width: 600px) {
   #about-sec {
     padding-bottom: 0px;
   }
-  #video-sec {
+  #bout-ceo-sec {
     background: 
-    url("../images/gradient2.svg") 84% -500% no-repeat,
-    linear-gradient(180deg,  #fff 0%, #fff 4%,#1A1A1A 4%, #1A1A1A 100%);
-  }
-  #video-sec .container .h2 {
-    font-size: 2.2rem;
-    line-height: 2.4rem;
+    url("../images/vector2.svg") 50% 34% no-repeat,
+    url("../images/grad3.svg") 50% 18% no-repeat!important;
+    background-color: $color-black;
   }
 }
 @media screen and (max-width: 560px) {
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 700% no-repeat, linear-gradient(180deg, #fff 0%, #fff 10%, #1A1A1A 10%, #1A1A1A 100%);
-  } 
+    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 112% no-repeat;
+    background-color: $color-black;
+  }
+  #we-worthy-sec .promo-lines {
+    margin-bottom: 100px;
+  }
+  .gen-slider-descr .arrows {
+    margin-left: 0;
+  }
   #past-projects-sec {
     margin-bottom: 0;
   }
@@ -1253,6 +1260,7 @@
     width: 100px;
     height: 100px;
   }
+  
   .services-cells .right-col {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1273,9 +1281,11 @@
   }
   .client-slider p:first-child {
     font-size: 1.6rem;
+    line-height: 2rem;
   }
   .client-slider p {
     font-size: 1.6rem;
+    line-height: 2rem;
   }
   .worthy-grid {
     grid-template-columns: 100%;
@@ -1312,7 +1322,8 @@
     .container {
       .h2 {
         width: 100%;
-        font-size: 2.3rem;
+        font-size: 2.2rem;
+        line-height: 2.4rem;
       }
       .subtext {
         margin-bottom: 100px;
@@ -1338,6 +1349,7 @@
   }
   #main-services li p {
     font-size: 1.4rem;
+    line-height: 1.6rem;
   }
   #main-services li .arrow-btn svg {
     width: 30px;
@@ -1364,30 +1376,23 @@
     font-size: 1.6rem;
   }
   #about-sec .container .h2, #witness-sec .container .h2 {
-    line-height: 3rem;
-  }
-  #witness-sec .container .h2 {
-    font-size: 3rem;
-  }
-  #witness-sec .container .subtext {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
+    font-size: 2.2rem;
+    line-height: 2.4rem;
   }
   #about-sec .container .subtext {
     letter-spacing: -1px;
     margin-bottom: 40px;
-    line-height: 1.6rem;
     margin-bottom: 60px;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
   }
-}
-@media screen and (max-width: 540px) {
-  #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 1500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  #past-projects-sec .container .projects-net .projects-cells {
+    grid-template-rows: 400px 500px 400px 500px;
   }
 }
 @media screen and (max-width: 500px) {
-    #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 2500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  #past-projects-sec .container .projects-net .projects-cells {
+    grid-template-rows: 340px 500px 340px 500px;
   }
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider {
     margin-bottom: 40px;
@@ -1409,14 +1414,25 @@
     color: $color-black-text;
   }
   #past-projects-sec .services .empty-cell {
-    width: 20%;
+    display: none;
   }
 }
 @media screen and (max-width: 430px) { 
-  #video-sec {
-    background: 
-    url("../images/gradient2.svg") 84% -500% no-repeat,
-    linear-gradient(180deg,  #fff 0%, #fff 4%,#1A1A1A 4%, #1A1A1A 100%);
+  .slider {
+    padding-left: 0;
+  }
+  #we-worthy-sec {
+    padding-top: 40px;
+  }
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 114% no-repeat;
+    background-color: $color-black;
+  }
+  #we-worthy-sec .promo-lines {
+    margin-bottom: 40px;
+  } 
+  #about-ceo-sec .container:last-child .under-run {
+    width: 100%;
   }
   #video-sec .container .h2 {
     font-size: 1.8rem;
@@ -1437,19 +1453,15 @@
   }
 }
 @media screen and (max-width: 400px) { 
-  #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 500% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
+  #hero-sec .container h1 {
+    line-height: 2.4rem;
+    line-height: 2.4rem;
   }
   .promo-second .line-red {
     top: -70px;
   }
   #we-worthy-sec .promo-lines {
     margin-bottom: 100px;
-  }
-}
-@media screen and (max-width: 354px) { 
-  #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/gradient4.svg") 50% 900% no-repeat, linear-gradient(180deg, #fff 0%, #fff 5%, #1A1A1A 5%, #1A1A1A 100%);
   }
 }
 // #RESPONSIVE

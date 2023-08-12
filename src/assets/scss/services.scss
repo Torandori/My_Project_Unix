@@ -131,7 +131,6 @@ main {
       .name-block {
         margin-bottom: 60px;
         .wrap-number-text {
-          border-bottom: 1px solid $color-grey;
           padding: 40px 0 46px 182px;
         }
       }
@@ -150,6 +149,17 @@ main {
       }
     }
   }
+}
+.szh-accordion__item-btn {
+  padding: 0 20px;
+}
+.szh-accordion__item--expanded .szh-accordion__item-btn {
+  background-color: $color-black-text;
+  .wrap-number-text {
+    .number, .text {
+      color: #fff;
+    }
+  } 
 }
 .text-medium {
   @include fz(44);

@@ -48,7 +48,6 @@ function SocList() {
             </li>
           )
         })}
-
       </ul>
     </div>
   )
