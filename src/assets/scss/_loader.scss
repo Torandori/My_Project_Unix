@@ -1,0 +1,37 @@
+.loader-3d {
+  top: calc(50% - 12.5px);
+  left: calc(50% - 100px);
+  position: absolute !important;
+}
+/* Demo specific styles end */
+
+.loader-3d, .loader-3d:before, .loader-3d:after {
+  width: 200px;
+  height: 40px;
+  background: no-repeat;
+  background-image: radial-gradient(closest-side, #fff 100%, transparent), radial-gradient(closest-side, #fff 100%, transparent);
+  background-size: 20px 20px, 20px 20px;
+  background-position: 0% center, 100% center;
+  position: absolute;
+  transform: translateZ(0);
+  animation: slide 1.5s cubic-bezier(.5,0,.5,1) infinite, zoom ease-out .75s infinite alternate;
+  content: '';
+}
+.loader-3d {
+  animation-delay: .5s;
+}
+.loader-3d:after {
+  animation-delay: 1s;
+}
+
+@keyframes slide {
+  to {
+    background-position: 100%, 0;
+  }
+}
+
+@keyframes zoom {
+  to {
+    background-size: 40px 40px, 10px 10px;
+  }
+}

@@ -3,19 +3,19 @@ import { WN_API, WN_API_KEY } from "../env";
 import { useState, useEffect, useRef } from "react";
 import ky from "ky";
 import { toast } from "react-toastify";
-// import Loader from "../components/Loader";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import formatDate from "../helpers/formatDate"
 import LinkedinShare from "../components/svgComponents/LinkedinShare";
 import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
+import Loader from "../components/Loader";
 
 
 function NewsDetails(){
   const {hash} = useParams();
   const [news, setNewsData] = useState({});
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const fetchCount = useRef(0);
 
   async function fetchOneNews(){
@@ -27,7 +27,7 @@ function NewsDetails(){
     const storageNews = localStorage.getItem(hash);
     if(storageNews !== null){
       setNewsData(JSON.parse(storageNews));
-      // setLoading(false);
+      setLoading(false);
       return false;
     }
 
@@ -36,11 +36,11 @@ function NewsDetails(){
       const resp = await ky(`${WN_API}extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
       setNewsData(resp);
       localStorage.setItem(hash, JSON.stringify(resp));
-      // setLoading(false);
+      setLoading(false);
     } catch (err){
       console.log(err);
       toast.error("Some error occured");
-      // setLoading(false);
+      setLoading(false);
     }
   }
 
@@ -48,9 +48,9 @@ function NewsDetails(){
     fetchOneNews();
   }, []);
 
-  // if(loading){
-  //   return (<Loader />)
-  // }
+  if(loading){
+    return (<Loader />)
+  }
 
   return(
     <div id="news-details-page">

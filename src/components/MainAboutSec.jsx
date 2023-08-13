@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Arrow from './svgComponents/Arrow';
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
+import '../assets/scss/_accordArrows.scss'
 
 function MainAboutSec() {
 
@@ -14,23 +15,41 @@ function MainAboutSec() {
           <p>{aboutData.aboutDescr}</p>
           <Link to={aboutData.aboutLinkTo} className="small-link">{aboutData.aboutLinkText}</Link>
         </div>
-        <div id="main-services">
-          <ul className="panchang">
+        <div id="main-services" className="accordion panchang">
+          {/* <ul className="panchang"> */}
             {aboutAccord.map((item, index) => {
                 return (
-                  <li tabIndex="1" key={index}>
-                    <p>{item.aboutAccordName}</p>
-                    <div>Lorem ipsum dolor sit.</div>
-                    <div className="arrow-btn">
-                      <Arrow />
+                  <div tabIndex="1" key={index} className="accordion-item">
+                    <div className="accord-header">
+                      <div className="accord-title">{item.aboutAccordName}</div>
+                      <div className="arrow-btn">
+                        <Arrow />
+                      </div>
                     </div>
-                  </li>
+                    <div class="accordion-item-content">
+                      <p className="accordDescr">{item.aboutAccordDescr}</p>
+                    </div>
+                  </div>
                 )
             })}
-          </ul>
+          {/* </ul> */}
         </div>
       </div>
     </section>
   )
 }
 export default MainAboutSec;
+
+// return (
+//   <li tabIndex="1" key={index}>
+//     <div className="accord-header">
+//       <div className="accord-title">{item.aboutAccordName}</div>
+//       <div className="arrow-btn">
+//         <Arrow />
+//       </div>
+//     </div>
+//     <div class="accordion-content">
+//       <p className="accordDescr">{item.aboutAccordDescr}</p>
+//     </div>
+//   </li>
+// )

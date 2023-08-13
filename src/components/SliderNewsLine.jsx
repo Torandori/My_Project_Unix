@@ -6,10 +6,13 @@ import ky from "ky";
 import NewsItem from "./NewsItem";
 import { toast } from "react-toastify";
 import formatDate from "../helpers/formatDate";
+import Loader from "./Loader";
 
 function SliderNewsLine() {
 
   const [newsLine, setNewsLine] = useState([]);
+  const [loading, setLoading] = useState(true)
+
   const fetchCount = useRef(0);
 
   async function fetchNews(){
@@ -23,6 +26,7 @@ function SliderNewsLine() {
       const now = new Date().getTime();
       if((now - lastUpdate) < NEWS_CACHE_TIME) {
         setNewsLine(JSON.parse(storageNews));
+        setLoading(false);
         return false;
       } 
     }
@@ -30,17 +34,23 @@ function SliderNewsLine() {
     try {
       const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=3`).json();
       setNewsLine(resp.news);
-      localStorage.setItem('newsList', JSON.stringify(resp.news));
+      localStorage.setItem('newsLine', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
+      setLoading(false);
     } catch (err){
       console.log(err);
       toast.error("Some error occured");
+      setLoading(false);
     }
   }
 
   useEffect(() => {
     fetchNews();
   }, []);
+
+  if(loading){
+    return (<Loader />)
+  }
 
   const sliderSettings = {
     dots: false,

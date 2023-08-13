@@ -1,4 +1,4 @@
-import SliderNewsOne from "./SliderNewsOne";
+// import SliderNewsOne from "./SliderNewsOne";
 import SliderNewsLine from "./SliderNewsLine";
 
 function NewsSliderSec() {

@@ -1,7 +1,17 @@
 [
-  { "aboutAccordName": "marketing and communication plan" },
-  { "aboutAccordName": "branding" },
-  { "aboutAccordName": "digital campaigns" },
-  { "aboutAccordName": "programmatic advertising" },
-  { "aboutAccordName": "marketing as a service" }
+  { "aboutAccordName": "marketing and communication plan",
+    "aboutAccordDescr": "Research and understand the target market's needs, preferences, behaviors, and demographics.Craft compelling messages that resonate with the audience's needs and preferences."
+  },
+  { "aboutAccordName": "branding",
+    "aboutAccordDescr": "Craft a compelling and consistent brand message that communicates the essence of your business. A strong brand stands out and is instantly recognizable in the marketplace."
+  },
+  { "aboutAccordName": "digital campaigns",
+    "aboutAccordDescr": "Our digital campaign service encompasses the planning, creation, and execution of tailored online marketing strategies that leverage various digital channels to effectively engage your target audience."
+  },
+  { "aboutAccordName": "programmatic advertising",
+    "aboutAccordDescr": "Our programmatic advertising service involves leveraging advanced technology and strategies to automate the buying and optimization of digital advertisements across various online platforms."
+  },
+  { "aboutAccordName": "marketing as a service",
+    "aboutAccordDescr": "This service covers a wide range of marketing activities, including strategy development, campaign execution, content creation, social media management, SEO, analytics, and more."
+  }
 ]
