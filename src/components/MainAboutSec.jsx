@@ -20,6 +20,7 @@ function MainAboutSec() {
                 return (
                   <li tabIndex="1" key={index}>
                     <p>{item.aboutAccordName}</p>
+                    <div>Lorem ipsum dolor sit.</div>
                     <div className="arrow-btn">
                       <Arrow />
                     </div>

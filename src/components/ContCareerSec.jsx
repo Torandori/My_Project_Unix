@@ -5,8 +5,10 @@ import ContactsModal from "./ContactsModal";
 
 function ContCareerSec() {
   const [modalOpen, setModalOpen] = useState(false)
+  const [modalTitle, setModalTitle] = useState('')
 
-  const openModal = () => {
+  const openModal = (title) => {
+    setModalTitle(title)
     setModalOpen(true)
     document.body.classList.add('open-modal')
   }
@@ -15,40 +17,50 @@ function ContCareerSec() {
     document.body.classList.remove('open-modal')
   }
 
+  // const  = () => {
+  //   setModalOpen(false)
+  //   document.body.classList.remove('open-modal')
+  // }
 
+  // const buttonData = [
+  //   {
+  //     id: "project",
+  //     careerClass: "btn btn-circle-arrow-text dark",
+  //     careerText: "start a project"
+  //   },
+  //   {
+  //     id: "career",
+  //     careerClass: "btn btn-circle-arrow-text",
+  //     careerText: "start your career"
+  //   }
+  // ]
 
   return (
     <section id="project-career-sec">
       <div className="container">
         <div className="wrap-poject-career">
           <div className="wrap-buttons">
-            {career.map((item, index) => {
+            {career.map((item) => {
               console.log(item.id)
               return (
-                <>
-                  {/* {(item.id === "project")  || (item.id === "career") 
-                    ? <ContactsModal isOpen={modalOpen} onClose={closeModal} heading={career} /> 
-                    : <ContactsModal isOpen={modalOpen} onClose={closeModal} />
-                  } */}
-                  <button type="button" className={item.careerClass} key={index} onClick={openModal}>
-                    <span className="btn-content">
-                      <span className="arrow-in">
-                        <Arrow />
-                      </span>
-                      <span className="btn-text">{item.careerText}</span>
+                <button type="button" className={item.careerClass} key ={item.id} onClick={() => openModal(item.careerText)}>
+                  <span className="btn-content">
+                    <span className="arrow-in">
+                      <Arrow />
                     </span>
-                  </button>
-                </>
+                    <span className="btn-text">{item.careerText}</span>
+                  </span>
+                </button>
               )
             })}
 
+          {modalOpen && <ContactsModal isOpen={modalOpen} onClose={closeModal} prop={modalTitle} />}
           </div>
           <div className="location">
             <div className="where panchang">in new york, usa</div>
             <div className="descr">our location</div>
           </div>
         </div>
-        <ContactsModal isOpen={modalOpen} onClose={closeModal} />
       </div>
     </section>
   )

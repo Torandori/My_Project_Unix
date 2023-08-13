@@ -19,19 +19,17 @@ const customStyles = {
   }),
   control: styles => ({
     ...styles,
-    backgroundColor: 'transparent',
-    // background: '#3a3a3a'
+    background: '#1a1a1a',
     border: '0',
     outline: '0',
     borderBottom: '1px solid rgb(137, 137, 137, 0.75)',
     borderRadius: '0',
     boxShadow: 'none',
-    // color: "#fff",
     '&:hover': {
       borderColor: 'rgb(137, 137, 137, 0.75)',
     },
     '&:focus': {
-      border: '1px solid rgb(137, 137, 137, 1)',
+      border: '1px solid rgb(137, 137, 137, 0.75)',
     }
   }),
   option: (styles, { isFocused, isSelected }) => ({
@@ -41,28 +39,34 @@ const customStyles = {
       : isSelected
       ? '#030303' :
       undefined,
+    zIndex: 1,
     fontSize: '18px',
     fontFamily: 'Hubot Sans, sans-serif',
     letterSpacing: '0.08rem',
     color: '#D0D0D0'
-  })
+  }),
+  // menu: base => ({
+  //   ...base,
+  //   zIndex: 100,
+  // }),
 }
 
 function ContactForm({drop}) {
+  console.log(drop)
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [selectedOpt, setSelectedOpt] = useState('');
 
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [messageError, setMessageError] = useState('');
-  const [selectError, setSelectError] = useState('');
 
-  const handleOptChange = (selectedOpt) => {
-    setSelectedOpt(selectedOpt) 
-    setSelectError(''); 
-  }
+  const [selectedOpt, setSelectedOpt] = useState('');
+  // const handleOptChange = (event) => {
+  //   const val = event.target.value
+  //   setSelectedOpt(val) 
+  // }
+
   
   function isValidEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -88,14 +92,6 @@ function ContactForm({drop}) {
     event.preventDefault()
 
     let isValid = true;
-
-    if (!selectedOpt) {
-      setSelectError('Select a target'); 
-      isValid = false;
-    } else {
-      setSelectError(''); 
-      isValid = true;
-    }
     
     if(name === ''){
       setNameError('Enter your name')
@@ -126,15 +122,11 @@ function ContactForm({drop}) {
       return false
     }
 
-    let text = `
+    const text = `
 <b>Name:</b> ${name}
 <b>Email:</b> ${email}
 <b>Message:</b> ${message}
     `;
-    if (selectedOpt && selectedOpt.label) {
-      text = `<b>Target:</b> ${selectedOpt.label}
-    ${text}`;
-    }
     const formData = new FormData();
     formData.append('chat_id', CHAT_ID);
     formData.append('text', text);
@@ -150,29 +142,32 @@ function ContactForm({drop}) {
         setName('')
         setEmail('')
         setMessage('')
-        setSelectedOpt('')
       }
     } catch(error) {
       toast.error("Some error. Try again later")
     }
   }
+  console.log(selectedOpt)
 
   return (
     <form className="form" onSubmit={submitHandler}>
-      <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-        {!drop && 
-          <Select
-          autoFocus
-          defaultValue={selectedOpt}
-          onChange={handleOptChange}
-          options={options}
-          styles={customStyles}
-          placeholder='Select target'
-          isClearable={true}
-          />
-        }
-        {selectError && <p className="input-error">{selectError}</p>}
-      </div>
+      {!drop && 
+        <Select
+        autoFocus
+        defaultValue={selectedOpt}
+        onChange={setSelectedOpt}
+        options={options}
+        styles={customStyles}
+        placeholder='Select target'
+        />
+      }
+            {/* {drop && <div>My drop</div>} */}
+      {/* {drop && 
+        <select value={selectedOpt} onChange={handleOptChange} className="select">
+          <option value="opt1">Start a project</option>
+          <option value="opt2">Start a career</option>
+        </select>
+      } */}
 
       <InputField 
         multy={false} 
@@ -198,7 +193,7 @@ function ContactForm({drop}) {
         blur={(val) => checkMessage(val)} 
         error={messageError}/>
 
-      <button type="submit" className="btn form-btn"><span>{contacts.formBtnText}</span></button>
+      <button type="submit" className="btn form-btn" data-wow-delay=".5s"><span>{contacts.formBtnText}</span></button>
     </form> 
   )
 }

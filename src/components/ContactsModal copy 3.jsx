@@ -5,9 +5,13 @@ import modalData from "../data/modalData.json"
 
 function ContactsModal({ isOpen, onClose, prop}) {
   if (!isOpen) return null;
+  // console.log(prop)
+  // const modalD = modalData.modalTitle
   const handleContentClick = (e) => {
     e.stopPropagation();
   };
+  // const modalTitle = heading.careerText;
+  // const modalDefaultTitle = modalData.modalTitle
 
   return (
     <div className="modal-shadow" onClick={onClose}>
@@ -15,8 +19,8 @@ function ContactsModal({ isOpen, onClose, prop}) {
         <button className="modal-close" onClick={onClose}></button>
         <div className="modal-content">
           <div className="h2">{prop ? prop : modalData.modalTitle}</div>
-            {/* {prop ? <ContactForm drop={isDrop} /> : <ContactForm /> } */}
-            <ContactForm drop={prop}/> 
+            {prop && <div>Your drop</div>}
+            <ContactForm /> 
         </div>
       </div>
     </div>

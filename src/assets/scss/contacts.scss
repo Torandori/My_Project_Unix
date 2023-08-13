@@ -189,11 +189,62 @@
   }
 }
 p.input-error {
+  font-family: "Hubot Sans", sans-serif;
   position: absolute;
   left: 0;
   bottom: -20px;
   @include fz(12);
+  @include lh(12);
   color: #EF6461;
+  letter-spacing: 1px;
+}
+.css-13cymwt-control {
+  background-color: #1a1a1a!important;
+  border: none!important;
+  border-bottom: 1px solid $color-grey4!important;
+  border-radius: 0!important;
+  min-height: 32px;
+  opacity: 0.75;
+}
+.css-art2ul-ValueContainer2 {
+  padding: 0!important;
+}
+.css-b62m3t-container {
+  height: 32px!important;
+  // margin-bottom: 46px!important;
+}
+.css-1u9des2-indicatorSeparator {
+  display: none;
+}
+.css-1xc3v61-indicatorContainer {
+  color: $color-grey4;
+  opacity: 0.75;
+}
+.css-1dimb5e-singleValue, .css-1jqq78o-placeholder{
+  color: #fff!important;
+  font-size: 18px!important;
+  line-height: 20px!important;
+  font-weight: 400!important;
+  opacity: 0.5!important;
+  font-family: "Hubot Sans", sans-serif!important;
+  letter-spacing: 0.08rem!important;
+}
+.css-qfz7i8-control {
+  border-bottom: 1px solid #EF6461!important;
+}
+.select-element {
+  position: relative;
+  height: 40px;
+  margin-bottom: 32px;
+  &.has-error {
+    .css-69jzk8-control {
+      border-bottom: 1px solid #EF6461!important;
+    }
+    // background-color: red;
+    // .css-qfz7i8-control {
+    //   border-bottom: 1px solid #EF6461!important;
+    // }
+  }
 }
 // #CONTACTS_SEC
 
