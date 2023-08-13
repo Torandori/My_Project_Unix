@@ -5,6 +5,8 @@ import {toast} from "react-toastify";
 // import { Exception } from "sass";
 import InputField from "./InputField";
 import contacts from '../data/contContactsSecData.json'
+import '../assets/scss/contacts.scss'
+
 
 function ContactForm() {
   const [name, setName] = useState('');

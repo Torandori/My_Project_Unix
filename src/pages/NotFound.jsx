@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/scss/style.scss"
 import "../assets/scss/error404.scss"
 
 
 function NotFound() {
+  
+  useEffect(()=>{
+    window.document.title = 'Unix Not Found';
+  }, []);
+
   return (
     <div className="error404Page">
       <div className="container">

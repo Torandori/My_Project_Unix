@@ -1,12 +1,27 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import FooterSocLinks from './FooterSocLinks'
 import btnCircleLight from '../assets/images/svg/btnCircleLight.svg'
 import footerPic from '../assets/images/footer-pic1.jpg'
-import footerArrow from '../assets/images/svg/footerArrow.svg'
 import footerData from '../data/footerData.json'
 import '../assets/scss/_footer.scss'
+import ContactsModal from './ContactsModal';
+// import FooterBtnBec from './FooterBtnBec'
+// import footerArrow from '../assets/images/svg/footerArrow.svg'
+
 
 function SiteFooter() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.classList.remove('modal-open');
+  };
 
   return ( 
     <footer id="footer">
@@ -24,11 +39,12 @@ function SiteFooter() {
               <div className="small-text">{footerData.footerSmallText}</div>
               <Link to="mailto: Hello@unixstudio.agency">{footerData.footerEmail}</Link>
             </div>
-            <button type="button" className="btn footer-btn">
+            {/* <FooterBtnBec /> */}
+            {/* <button type="button" className="btn footer-btn">
               become a client <img src={footerArrow} alt="Arrow" className="footerArrow" />
-            </button>
+            </button> */}
             <p className="copy">{footerData.footerCopy}</p>
-            <button type="button" className="btn btn-circle">
+            <button type="button" className="btn btn-circle" onClick={openModal}>
               <img src={btnCircleLight} alt="Contact us" />
             </button>
           </div>
@@ -37,6 +53,7 @@ function SiteFooter() {
         </div>
       </div>
       <img className="footer-pic" src={footerPic} alt="Team picture"/>
+      <ContactsModal isOpen={modalOpen} onClose={closeModal} />
     </footer>
   )
 }

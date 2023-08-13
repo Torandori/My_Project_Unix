@@ -3,6 +3,7 @@
 // import NewsItem from "../components/NewsItem";
 // import ky from "ky";
 // import { toast } from "react-toastify";
+import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
 import NewsSliderSec from "../components/NewsSliderSec";
 import NewsBestSec from "../components/NewsBestSec";
@@ -11,6 +12,10 @@ import par from '../data/heroData.json';
 
 
 function News(){
+  
+  useEffect(()=>{
+    window.document.title = 'Unix News';
+  }, []);
   // const [news, setNews] = useState([]);
   // const fetchCount = useRef(0);
 

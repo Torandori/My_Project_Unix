@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import HeroSec from '../components/HeroSec';
 import MainAboutCeoSec from '../components/MainAboutCeoSec';
 import MainAboutSec from '../components/mainAboutSec';
@@ -12,6 +13,10 @@ import par from '../data/heroData.json'
 
 function Home() {
   const heroPar = par.home;
+
+  useEffect(()=>{
+    window.document.title = 'Unix Studio';
+  }, []);
 
   return (
     <div className="main-body-bg main-page">

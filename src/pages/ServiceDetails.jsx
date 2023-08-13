@@ -8,15 +8,21 @@ import "../assets/scss/serviceDetails.scss"
 function ServiceDetails() {
   const [descr, setDescr] = useState({ howSec: {howList: []}, heroServ: {}})
   const { slug } = useParams();
-
+  
   useEffect(() => {
-    console.log(slug);
+    // console.log(slug);
     fetch(`/pubdata/${slug}.json`)
-      .then(resp => resp.json())
-      .then(resp => 
-        setDescr(resp)
+    .then(resp => resp.json())
+    .then(resp => 
+      setDescr(resp)
       )
-  }, [])
+    }, [])
+  
+  const pageTitle = descr.servPageTitle;
+
+  useEffect(()=>{
+    window.document.title = pageTitle;
+  }, [pageTitle]);
 
   return (
     <div id="service-details-page" className="service-details-body-bg">

@@ -9,7 +9,7 @@ import ServiceDetails from "./pages/ServiceDetails";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
 import News from "./pages/News";
-import NewsDetails from './components/NewsDetails';
+import NewsDetails from './pages/NewsDetails';
 import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';

@@ -4,7 +4,6 @@ import logo from '../assets/images/logo.svg';
 import '../assets/scss/_header.scss'
 
 function SiteHeader(){
-
   return (
     <header id="header">
       <div className="container separator">

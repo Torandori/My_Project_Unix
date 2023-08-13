@@ -1,14 +1,26 @@
+import { useState } from 'react'
 import btnCircle from '../assets/images/svg/btnCircle.svg'
 import Flake from './svgComponents/Flake'
-// import Contacts from '../pages/Contacts';
-// import heroData from '../data/heroData.json'
 import '../assets/scss/about.scss'
 import '../assets/scss/contacts.scss'
+import ContactsModal from './ContactsModal';
+
 
 
 function HeroSec(props){
   // const _heroData = heroData[0];
   const heroD = props.par;
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.classList.remove('modal-open');
+  };
   
   return (
     <section id="hero-sec">
@@ -34,10 +46,11 @@ function HeroSec(props){
       </div>
 
 
-        <button type="button" className="btn btn-circle">
+        <button type="button" className="btn btn-circle" onClick={openModal}>
           <img src={btnCircle} alt="Contact us" />
         </button>
       </div>
+        <ContactsModal isOpen={modalOpen} onClose={closeModal} />
     </section>
   )
 }

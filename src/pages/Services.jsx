@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
 import ServServicesSec from "../components/ServServicesSec";
 import ServFundingSec from "../components/ServFundingSec";
@@ -6,6 +7,11 @@ import par from '../data/heroData.json';
 
 function Services() {
   const heroPar = par.services;
+
+  useEffect(()=>{
+    window.document.title = 'Unix Services';
+  }, []);
+
   return (
     <div id="services-page">
       <HeroSec par={heroPar} />

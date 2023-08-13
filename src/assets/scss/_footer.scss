@@ -1,20 +1,7 @@
 @import 'vars';
 #footer {
   position: relative;
-  // background: url('../images/footer-pic.jpg') right top no-repeat;
-  // background-size: 50vw;
   background-color: $color-white-cream;
-  // .container {
-  //   position: relative;
-  //   .btn-circle {
-  //     position: absolute;
-  //     background-color: transparent;
-  //     top: 40.8%;
-  //     left: 50%;
-  //     z-index: 1;
-  //     transform: translate(-50%, -50%);
-  //   }
-  // }
   .footer-flex {
     display: flex;
   }

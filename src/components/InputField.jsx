@@ -1,6 +1,8 @@
 import { useId } from "react"
+import '../assets/scss/contacts.scss'
 
-function InputField({name, type, change, label, value, error, multy, blur}){
+
+function InputField({name, change, label, value, error, multy, blur}){
   const inputId = useId();
 
   function changeHandler(event){

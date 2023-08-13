@@ -1,0 +1,200 @@
+@import "vars";
+.modal-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  z-index: 1000;
+  .modal {
+    background-color: $color-black;
+    width: 80%;
+    max-width: 800px;
+    // height: 400px;
+    position: relative;
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      opacity: 0.3;
+      &:hover {
+        opacity: 1;
+      }
+      &:before, &:after {
+        position: absolute;
+        top: 0;
+        right: 14;
+        content: '';
+        height: 33px;
+        width: 2px;
+        background-color: #fff;
+      }
+      &:before {
+        transform: rotate(45deg),
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+    .modal-content {
+      padding: 60px 40px;
+      .h2 {
+        color: #fff;
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+.modal-open {
+  overflow: hidden;
+}
+
+// #contacts-sec {
+//   .container {
+//     padding: 80px 0 100px;
+//   }
+.form {
+  width: 50%;
+  color: #fff;
+  margin: 0 auto;
+  .h2 {
+    margin-bottom: 26px;
+    .text-italic {
+      margin-left: 12px;
+    }
+  }
+  &.first {
+    padding-top: 16px;
+  }
+}
+input:focus, textarea:focus {
+  outline: 0 none;
+}
+input[type=text], input[type=email], input[type=tel], textarea {
+  height: 32px;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $color-grey4;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+  color: #fff;
+}
+textarea {
+  height: 34px;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid $color-grey4;
+  width: 100%;
+  padding-bottom: 12px;
+  background-color: transparent;
+  color: #fff;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus, textarea:focus {
+  border-bottom: 1px solid #fff;
+}
+.form-element {
+  margin-bottom: 40px;
+  width: 100%;
+  @include fz(18);
+  @include lh(20);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  position: relative;
+  &.has-error {
+    input[type=text], input[type=email], input[type=tel], textarea {
+      border-color:  #EF6461;
+    }
+  }
+  label {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    &.fake {
+      opacity: 0.5;
+    }
+  }
+  &.last {
+    margin-bottom: 34px;
+    margin-top: -1px;
+  }
+}
+input[type=text], input[type=email], input[type=tel], textarea {
+  &:not(:-moz-placeholder-shown) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
+  &:not(:-ms-input-placeholder) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
+  &:focus + label, &:not(:placeholder-shown) + label {
+    top: -26px;
+    @include fz(16);
+    color: #9c9b9bf5;
+  }
+}
+.form-btn {
+  @include fz(16);
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  &:hover {
+    box-shadow: 0 0 20px rgba(205, 205, 205, 0.3);
+  }
+  &:active {
+    box-shadow: 0 0 40px rgba(205, 205, 205, 0.3);
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 12px rgba(205, 205, 205, 0.3);
+  }
+}
+p.input-error {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  @include fz(12);
+  color: #EF6461;
+}

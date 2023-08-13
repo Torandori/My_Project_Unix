@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
 import ContContactsSec from "../components/ContContactsSec";
 import ContSocialSec from "../components/contSocialSec";
@@ -7,6 +8,10 @@ import par from '../data/heroData.json';
 
 function Contacts() {
   const heroPar = par.contacts;
+  
+  useEffect(()=>{
+    window.document.title = 'Unix Contacts';
+  }, []);
 
   return(
     <div id="contacts-page">

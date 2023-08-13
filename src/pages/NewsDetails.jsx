@@ -6,10 +6,10 @@ import { toast } from "react-toastify";
 // import Loader from "../components/Loader";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import formatDate from "../helpers/formatDate"
-import LinkedinShare from "./svgComponents/LinkedinShare";
-import PinterestShare from "./svgComponents/PinterestShare";
+import LinkedinShare from "../components/svgComponents/LinkedinShare";
+import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
-import HeroSecNewsDet from "./HeroSecNewsDet";
+import HeroSecNewsDet from "../components/HeroSecNewsDet";
 
 
 function NewsDetails(){

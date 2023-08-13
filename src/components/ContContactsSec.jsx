@@ -1,4 +1,3 @@
-import contacts from '../data/contContactsSecData.json'
 import ContactForm from './ContactForm';
 
 function ContContactsSec() {
