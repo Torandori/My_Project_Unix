@@ -6,7 +6,7 @@ function NewsSliderSec() {
   return (
     <section id="slider-news-sec">
       <div className="container">
-        <SliderNewsOne />
+        {/* <SliderNewsOne /> */}
         <SliderNewsLine />
       </div>
     </section>

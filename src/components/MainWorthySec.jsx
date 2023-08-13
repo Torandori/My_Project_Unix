@@ -3,9 +3,21 @@ import btnCircle from '../assets/images/svg/btnCircle.svg'
 import { Link } from 'react-router-dom'
 import worthyData from '../data/mainWorthySecData.json'
 import PromoLines from './PromoLines';
+import ContactsModal from './ContactsModal';
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.classList.remove('modal-open');
+  };
 
   useEffect(() => {
     fetch('./pubdata/mainWorthyItems.json')
@@ -26,7 +38,7 @@ function MainWorthySec() {
           <div className="title-ending ">
             <span className="small-text">{worthyData.worthySmallText}</span>  <span className="h3 margin">{worthyData.worthyTitleContinue}</span>
             <span>
-              <button type="button" className="btn btn-circle">
+              <button type="button" className="btn btn-circle" onClick={openModal}>
                 <img src={btnCircle} alt={worthyData.worthyBtnAlt} />
               </button>
             </span>
@@ -36,6 +48,7 @@ function MainWorthySec() {
            {worthyData.worthySmallTextTwo}
           </div>
         </div>
+        <ContactsModal isOpen={modalOpen} onClose={closeModal} />
 
         <div className="worthy-grid">
           <div className="empty">

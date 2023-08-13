@@ -8,6 +8,7 @@ import ky from "ky";
 // import NewsItem from "./NewsItem";
 import { toast } from "react-toastify";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
+import formatDate from "../helpers/formatDate";
 
 
 function SliderNewsOne() {
@@ -31,12 +32,12 @@ function SliderNewsOne() {
     }
   
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=9`).json();
+      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=3`).json();
       setNewsList(resp.news);
       localStorage.setItem('newsList', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
     } catch (err){
-      console.log(err);
+      // console.log(err);
       toast.error("Some error occured");
     }
   }

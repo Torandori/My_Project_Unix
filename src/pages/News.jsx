@@ -35,7 +35,7 @@ function News(){
   //   }
   
   //   try {
-  //     const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=12`).json();
+  //     const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=3`).json();
   //     setNews(resp.news);
   //     localStorage.setItem('newsList', JSON.stringify(resp.news));
   //     localStorage.setItem('lastNewsUpdate', new Date().getTime());
@@ -55,7 +55,7 @@ function News(){
   return (
     <div id="news-page">
       <HeroSec par={heroPar} />
-      {/* <NewsSliderSec /> */}
+      <NewsSliderSec />
       {/* <NewsBestSliderSec /> */}
     </div>
   )

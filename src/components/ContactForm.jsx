@@ -48,11 +48,11 @@ const customStyles = {
   })
 }
 
-function ContactForm({drop}) {
+function ContactForm({title}) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [selectedOpt, setSelectedOpt] = useState('');
+  const [selectedOpt, setSelectedOpt] = useState(null);
 
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -150,7 +150,7 @@ function ContactForm({drop}) {
         setName('')
         setEmail('')
         setMessage('')
-        setSelectedOpt('')
+        setSelectedOpt(null)
       }
     } catch(error) {
       toast.error("Some error. Try again later")
@@ -160,7 +160,7 @@ function ContactForm({drop}) {
   return (
     <form className="form" onSubmit={submitHandler}>
       <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-        {!drop && 
+        {!title && 
           <Select
           autoFocus
           defaultValue={selectedOpt}

@@ -240,11 +240,25 @@ p.input-error {
     .css-69jzk8-control {
       border-bottom: 1px solid #EF6461!important;
     }
-    // background-color: red;
-    // .css-qfz7i8-control {
-    //   border-bottom: 1px solid #EF6461!important;
-    // }
   }
+}
+.css-feonkk-Input2 {
+  color: #fff!important;
+  font-size: 18px!important;
+  line-height: 20px!important;
+  font-weight: 400!important;
+  opacity: 0.5!important;
+  font-family: "Hubot Sans", sans-serif!important;
+  letter-spacing: 0.08rem!important;
+  &::after {
+    color: red!important;
+  }
+}
+.css-w9q2zk-Input2 {
+  color: #fff!important;
+}
+.css-69jzk8-control {
+  cursor: pointer!important;
 }
 // #CONTACTS_SEC
 

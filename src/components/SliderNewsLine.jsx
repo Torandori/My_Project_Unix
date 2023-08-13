@@ -5,6 +5,7 @@ import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
 import ky from "ky";
 import NewsItem from "./NewsItem";
 import { toast } from "react-toastify";
+import formatDate from "../helpers/formatDate";
 
 function SliderNewsLine() {
 
@@ -27,7 +28,7 @@ function SliderNewsLine() {
     }
   
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=9`).json();
+      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=3`).json();
       setNewsLine(resp.news);
       localStorage.setItem('newsList', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
