@@ -18,7 +18,7 @@ function MainPastProjectsSec() {
   
 
   useEffect(() => {
-    fetch('./pubdata/mainServiceItems.json?q='+new Date().getTime())
+    fetch('./pubdata/mainServiceItems.json')
     .then(resp => resp.json())
     .then(resp => {
       setServices(resp);

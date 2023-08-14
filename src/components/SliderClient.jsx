@@ -1,15 +1,28 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import React from "react";
-import clientData from '../data/mainOurClient.json'
+// import clientData from '../data/mainOurClient.json'
 import quote from '../assets/images/quote.svg'
 import Arrow from "./svgComponents/Arrow";
 
 function SliderClient() {
-  const client = clientData.clientSLider;
   const sliderClRef = useRef();
+  
+  const [clientData, setClientData] = useState({ clientSlider: []});
+  
+  useEffect(() => {
+    fetch('./pubdata/mainOurClient.json')
+    .then(resp => resp.json())
+    .then(resp => {
+      console.log(resp)
+      setClientData(resp);
+    })
+  }, [])
 
+  const client = clientData.clientSlider;
+  console.log(client)
+  
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -25,7 +38,6 @@ function SliderClient() {
   function next() {
     sliderClRef.current.slickNext();
   }
-
 
   return (
     <React.Fragment >
@@ -67,7 +79,7 @@ function SliderClient() {
                   </div>
                   <div className="gen-slider-descr">
                     <div className="pic-wrap">
-                      <img src={item.clientAvatarUrl} alt="Picture of Peter Visser" />
+                      <img src={item.clientAvatarUrl} alt={item.clientName} />
                     </div>
                     <div className="text">
                       <div className="panchang">{item.clientName}</div>

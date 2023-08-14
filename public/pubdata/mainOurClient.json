@@ -1,0 +1,29 @@
+{
+  "clientTitleStart": "our",
+  "clientTitleEnd": "clients",
+  "clientSmallTextStart": "all around",
+  "clientSmallTextEnd": "the globe",
+  "clientSlider": [
+    {
+      "clientReviewStart": "Working with UnixStudio has been a game-changer for our online presence. ",
+      "clientReviewEnd": "Their expertise and creativity transformed our website into a modern, user-friendly platform.",
+      "clientAvatarUrl": "./assets/images/oliver.jpg",
+      "clientName": "Oliver Brown",
+      "clientPosition": "Spectrum Enterprises"
+    },
+    {
+      "clientReviewStart": "I have been hiring people in this space for a number of years.",
+      "clientReviewEnd": "I have never seen this level of professionalism. It really feels like you are working with a team that can get the job done.",
+      "clientAvatarUrl": "./assets/images/peter_img.jpg",
+      "clientName": "Peter Visser",
+      "clientPosition": "Visser Consulting"
+    },
+    {
+      "clientReviewStart": "UnixStudio took our social media strategy to the next level.",
+      "clientReviewEnd": "Their campaigns brought in a significant increase in engagement and followers.",
+      "clientAvatarUrl": "./assets/images/jack_pic.jpg",
+      "clientName": "Jack Johnson",
+      "clientPosition": "Quantum Innovations"
+    }
+  ]
+}
