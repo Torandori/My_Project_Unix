@@ -20,13 +20,11 @@ const customStyles = {
   control: styles => ({
     ...styles,
     backgroundColor: 'transparent',
-    // background: '#3a3a3a'
     border: '0',
     outline: '0',
     borderBottom: '1px solid rgb(137, 137, 137, 0.75)',
     borderRadius: '0',
     boxShadow: 'none',
-    // color: "#fff",
     '&:hover': {
       borderColor: 'rgb(137, 137, 137, 0.75)',
     },

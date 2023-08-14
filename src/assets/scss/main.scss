@@ -898,6 +898,10 @@
   }
 }
 @media screen and (max-width: 990px) {
+  #main-services .accord-header .accord-title {
+    font-size: 2.6rem!important;
+    line-height: 2.8rem!important;
+  }
   #we-worthy-sec .wrap .title-ending .small-text {
     display: none;
   }
@@ -921,7 +925,7 @@
   #we-worthy-sec .h3 {
     font-size: 4rem;
   }
-  #main-services li p {
+  #main-services .accord-title {
     font-size: 2.2rem;
   }
   .services-cells {
@@ -970,6 +974,13 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #main-services .accord-header .accord-title {
+    font-size: 2rem!important;
+    line-height: 2.2rem!important;
+  }
+  .accordion-item-content .accordDescr {
+    font-size: 1.3rem!important;
+  }
   #we-worthy-sec {
     background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 100% no-repeat;
   }
@@ -1040,14 +1051,14 @@
   .worthy-grid .worthy-item p {
     width: 100%;
   }
-  #main-services li p {
+  #main-services .accord-title {
     font-size: 1.8rem;
     line-height: 2rem;
   }
-  #main-services li.padding {
+  #main-services .accordion-item.padding {
     padding: 40px 0 40px 0;
   }
-  #main-services li .arrow-btn svg {
+  #main-services .accordion-item .arrow-btn svg {
     width: 40px;
     height: 40px;
   }
@@ -1232,6 +1243,13 @@
   }
 }
 @media screen and (max-width: 600px) {
+  #main-services .accord-header .accord-title {
+    font-size: 1.8rem!important;
+    line-height: 2rem!important;
+  }
+  #main-services .accord-header {
+    padding: 30px 0;
+  }
   #about-sec {
     padding-bottom: 0px;
   }
@@ -1243,6 +1261,13 @@
   }
 }
 @media screen and (max-width: 560px) {
+  #main-services .accord-header .accord-title {
+    font-size: 1.4rem!important;
+    line-height: 1.6rem!important;
+  }
+  .accordion-item-content .accordDescr {
+    font-size: 1.1rem!important;
+  }
   #we-worthy-sec {
     background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 112% no-repeat;
     background-color: $color-black;
@@ -1351,11 +1376,11 @@
       margin-right: 66%;
     }
   }
-  #main-services li p {
+  #main-services .accord-title {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
-  #main-services li .arrow-btn svg {
+  #main-services .accord-item .arrow-btn svg {
     width: 30px;
     height: 30px;
   }
@@ -1422,6 +1447,17 @@
   }
 }
 @media screen and (max-width: 430px) { 
+  #main-services .accord-header .accord-title {
+    font-size: 1.2rem!important;
+    line-height: 1.4rem!important;
+  }
+  #main-services .accordion-item .arrow-btn svg {
+    width: 30px!important;
+    height: 30px!important;
+  }
+  #main-services .accord-header {
+    padding: 20px 0!important;
+  }
   .slider {
     padding-left: 0;
   }
@@ -1448,15 +1484,19 @@
   #past-projects-sec .services .content-cell {
     padding-top: 20px;
   }
-  #main-services li p {
+  #main-services .accord-title {
     font-size: 1.2rem;
   }
-  #main-services li .arrow-btn svg {
+  #main-services .accord-item .arrow-btn svg {
     width: 20px;
     height: 20px;
   }
 }
 @media screen and (max-width: 400px) { 
+  #main-services .accord-header .accord-title {
+    font-size: 1.1rem!important;
+    line-height: 1.3rem!important;
+  }
   #hero-sec .container h1 {
     line-height: 2.4rem;
     line-height: 2.4rem;

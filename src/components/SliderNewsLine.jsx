@@ -32,14 +32,14 @@ function SliderNewsLine() {
     }
   
     try {
-      const resp = await ky(`${NC_API}/v2/search?q=Design&lang=en&page_size=1`, {
+      const resp = await ky(`${NC_API}/v2/search?q=Design&lang=en&page_size=6`, {
         headers: {
           'x-api-key': NC_API_KEY
         }
       }).json();
 
       setNewsLine(resp.articles);
-      localStorage.setItem('newsLine', JSON.stringify(resp.news));
+      localStorage.setItem('newsLine', JSON.stringify(resp.articles));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
       setLoading(false);
     } catch (err){
@@ -53,6 +53,7 @@ function SliderNewsLine() {
     fetchNews();
   }, []);
 
+
   if(loading){
     return (<Loader />)
   }
@@ -63,7 +64,7 @@ function SliderNewsLine() {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     centerMode: false,
   };
 

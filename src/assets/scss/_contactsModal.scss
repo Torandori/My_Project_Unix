@@ -10,7 +10,7 @@
   z-index: 1000;
   .modal {
     position: fixed;
-    top: 52%;
+    top: 54%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: 80vh; 
@@ -64,10 +64,6 @@
   overflow: hidden;
 }
 
-// #contacts-sec {
-//   .container {
-//     padding: 80px 0 100px;
-//   }
 .form {
   width: 50%;
   color: #fff;
@@ -199,4 +195,51 @@ p.input-error {
   bottom: -20px;
   @include fz(12);
   color: #EF6461;
+}
+@media screen and (max-width: 1080px) {
+  .form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 860px) {
+  .form {
+    width: 80%;
+  }
+  .modal-shadow .modal .modal-content .h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .select-element, .form-element {
+    margin-bottom: 30px;
+  }
+  .modal-content {
+    padding: 70px 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+  .modal-shadow .modal .modal-content .h2 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    // margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    width: 90%;
+  }
+  .modal-shadow .modal .modal-content .h2 {
+    margin-bottom: 30px;
+  }
+  .modal-shadow .modal {
+    top: 60%;
+  }
+  .modal-shadow .modal {
+    width: 80%;
+  }
+  .modal-shadow .modal .modal-content {
+    padding: 60px 30px 30px;
+  }
 }

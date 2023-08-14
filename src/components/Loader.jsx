@@ -1,11 +1,11 @@
-import Flake from "./svgComponents/Flake";
-import "../assets/scss/_loader.scss"
+import Lottie from "lottie-react"
+import load from '../assets/other/load2.json'
 
 function Loader() {
   // document.body.style.overflow = 'hidden'; 
   return (
     <div className="loader">
-      <div className="loader-3d"></div>
+      <Lottie animationData={load} />
     </div>
   )
 }
