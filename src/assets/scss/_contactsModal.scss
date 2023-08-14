@@ -196,6 +196,9 @@ p.input-error {
   @include fz(12);
   color: #EF6461;
 }
+.css-hlgwow {
+  padding: 0 0!important;
+}
 @media screen and (max-width: 1080px) {
   .form {
     width: 70%;
