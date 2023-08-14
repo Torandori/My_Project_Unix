@@ -3,7 +3,7 @@ import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewsItem({item}){
-  const hash = btoa(item._id);
+  const hash = btoa(item.url);
   console.log(hash)
 
   return (
@@ -19,11 +19,11 @@ function NewsItem({item}){
           </div>
         </div>
         <div className="restTopic">
-          <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
+          <Link to={`/news/${hash}`} className="new-topic" title="Go to news details">{item.title}</Link>
         </div>
-        <div className="date-news">{formatDate(item.published_date)}</div>
+        <div className="date-news">{formatDate(item.publish_date)}</div>
         <div className="poster-wrap">
-          <img src={item.media ?? newsDefaultImg} alt={item.title} />
+          <img src={item.image ?? newsDefaultImg} alt={item.title} />
         </div>
       </div>
     </li>

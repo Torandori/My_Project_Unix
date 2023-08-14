@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { NC_API, NC_API_KEY } from "../env";
+import { WN_API, WN_API_KEY } from "../env";
 import { useState, useEffect, useRef } from "react";
 import ky from "ky";
 import { toast } from "react-toastify";
@@ -10,13 +10,47 @@ import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
 import Loader from "../components/Loader";
-import { useLocation } from 'react-router-dom';
 
 
 function NewsDetails(){
-  const location = useLocation();
-  const newsData = location.state.newsData;
-  console.log(newsData)
+  const {hash} = useParams();
+  const [news, setNewsData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const fetchCount = useRef(0);
+
+  async function fetchOneNews(){
+    if(fetchCount.current !== 0){
+      return false;
+    }
+    fetchCount.current++;
+
+    const storageNews = localStorage.getItem(hash);
+    if(storageNews !== null){
+      setNewsData(JSON.parse(storageNews));
+      setLoading(false);
+      return false;
+    }
+
+    try {
+      const url = atob(hash);
+      const resp = await ky(`${WN_API}extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
+      setNewsData(resp);
+      localStorage.setItem(hash, JSON.stringify(resp));
+      setLoading(false);
+    } catch (err){
+      console.log(err);
+      toast.error("Some error occured");
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchOneNews();
+  }, []);
+
+  if(loading){
+    return (<Loader />)
+  }
 
   return(
     <div id="news-details-page">
@@ -29,15 +63,15 @@ function NewsDetails(){
                 <img src="assets/images/peter_img.jpg" alt="Picture of Peter Visser" />
               </div>
               <div className="text">
-                <div>{newsData.author}</div>
+                <div>{news.author}</div>
                 <div>Head of Project Management</div>
               </div>
             </div>
-            <div className="date-news">{formatDate(newsData.published_date)}</div>
+            <div className="date-news">{formatDate(news.publish_date)}</div>
           </div>
           <div className="detail-overview-wrap2">
             <div className="overview panchang">Overview</div>
-            <p className="summary-text">{newsData.excerpt}</p>
+            <p className="summary-text">{news.summary}</p>
           </div>
         </div>
       </div>
@@ -63,9 +97,9 @@ function NewsDetails(){
               </div>
             </div>
             <div className="text-col">
-              <p>{newsData.summary}</p>
+              <p>{news.text}</p>
               <div className="poster-detail-wrap">
-                <img src={newsData.media ? newsData.media : newsDefaultImg} alt={newsData.title} />
+                <img src={news.image ? news.image : newsDefaultImg} alt={news.title} />
               </div>
             </div>
           </div>

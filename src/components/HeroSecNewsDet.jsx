@@ -28,18 +28,3 @@ function HeroSecNewsDet(props){
 
 export default HeroSecNewsDet;
 
-
-// return (
-//   <section id="hero-sec">
-//     <div className="container separator">
-//       <h1 className="panchang">{heroD.heroTitle}</h1>
-//       <div className="flake dark">
-//         <Flake />
-//       </div>
-//       <p>{heroD.heroDescr}</p>
-//       <button type="button" className="btn btn-circle">
-//         <img src={btnCircle} alt="Contact us" />
-//       </button>
-//     </div>
-//   </section>
-// )
