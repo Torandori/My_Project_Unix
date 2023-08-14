@@ -16,7 +16,23 @@ import { useLocation } from 'react-router-dom';
 function NewsDetails(){
   const location = useLocation();
   const newsData = location.state.newsData;
-  console.log(newsData)
+  console.log(location)
+  // const { hash } = useParams();
+
+  const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
+
+  useEffect(() => {
+    fetch('../pubdata/newsDetMockedData.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setNewsDetMock(resp);
+      })
+  }, [])
+  console.log(newsDetMock)
+
+  const randomObjIndex = Math.floor(Math.random() * newsDetMock.length);
+  const selectedAuthObj = newsDetMock[randomObjIndex];
+  // console.log(selectedAuthObj)
 
   return(
     <div id="news-details-page">
@@ -26,11 +42,11 @@ function NewsDetails(){
           <div className="detail-overview-wrap1">
             <div className="author">
               <div className="pic-wrap">
-                <img src="assets/images/peter_img.jpg" alt="Picture of Peter Visser" />
+                <img src={selectedAuthObj.authImg} alt={newsData.author} />
               </div>
               <div className="text">
-                <div>{newsData.author}</div>
-                <div>Head of Project Management</div>
+                <div>{newsData.authors}</div>
+                <div>{selectedAuthObj.authPosition}</div>
               </div>
             </div>
             <div className="date-news">{formatDate(newsData.published_date)}</div>
