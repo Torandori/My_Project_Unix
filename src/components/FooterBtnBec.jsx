@@ -6,7 +6,7 @@ import '../helpers/footerBtn.js'
 function FooterBtnBec() {
   return (
     <>
-      <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+      <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" className="svg-sprite">
       <defs>
           <filter id="filter">
               <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
@@ -14,7 +14,7 @@ function FooterBtnBec() {
           </filter>
       </defs>
       </svg>
-      <div class="btn btn-small btn-dark btn-glitch">Bitch'n</div>
+      <div className="btn btn-small btn-dark btn-glitch">Bitch'n</div>
     </>
   )
 }
