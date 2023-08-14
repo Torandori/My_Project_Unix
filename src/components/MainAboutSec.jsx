@@ -26,7 +26,7 @@ function MainAboutSec() {
                         <Arrow />
                       </div>
                     </div>
-                    <div class="accordion-item-content">
+                    <div className="accordion-item-content">
                       <p className="accordDescr">{item.aboutAccordDescr}</p>
                     </div>
                   </div>
@@ -48,7 +48,7 @@ export default MainAboutSec;
 //         <Arrow />
 //       </div>
 //     </div>
-//     <div class="accordion-content">
+//     <div className="accordion-content">
 //       <p className="accordDescr">{item.aboutAccordDescr}</p>
 //     </div>
 //   </li>
