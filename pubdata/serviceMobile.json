@@ -11,7 +11,7 @@
     "servDetUnderDescr": "User-oriented design has proved to bring lucrative business benefits. From improving brand awareness to increasing customer acquisition",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "../assets/images/mob.jpg",
+    "howImgUrl": "./assets/images/mob.jpg",
     "howImgAlt": "Image by rawpixel.com Freepik",
     "howList": [
       {

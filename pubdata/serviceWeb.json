@@ -11,7 +11,7 @@
     "servDetUnderDescr": "Web app design refers to the process of creating the visual and interactive elements of a web-based application to ensure an optimal user experience. It encompasses the layout, user interface (UI), user experience (UX), and overall aesthetic of the application.",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "../assets/images/web.jpg",
+    "howImgUrl": "./assets/images/web.jpg",
     "howImgAlt": "Image by Freepik",
     "howList": [
       {

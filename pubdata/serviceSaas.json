@@ -11,7 +11,7 @@
     "servDetUnderDescr": "Software as a Service (SaaS) is a cloud-based software delivery model where applications are hosted by a third-party provider and made accessible to users over the internet. Instead of purchasing and installing software on individual computers or servers, users can access and use the software through a web browser, eliminating the need for local installations and maintenance.",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "../assets/images/saas.jpg",
+    "howImgUrl": "./assets/images/saas.jpg",
     "howImgAlt": "Image by senivpetroon Freepik",
     "howList": [
       {
