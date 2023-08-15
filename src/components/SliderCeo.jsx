@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import ceoData from '../data/mainAboutCeoSecData.json'
-import quote from '../assets/images/quote.svg'
+import quote from '../assets/images/svg/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
 import Arrow from "./svgComponents/Arrow";
 

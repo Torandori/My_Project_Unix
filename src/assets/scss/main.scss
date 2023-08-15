@@ -10,7 +10,7 @@
 #about-sec {
   margin-bottom: 160px;
   background: 
-  url("../images/vector2.svg") 50% 5% no-repeat;
+  url("../images/svg/vector2.svg") 50% 5% no-repeat;
   .container {
     padding-bottom: 80px;
     position: relative;
@@ -100,7 +100,7 @@
 // VIDEO_SEC
 #video-sec {
   background: 
-  url("../../assets/images/grad2.svg") 87% 64% no-repeat;
+  url("../../assets/images/svg/grad2.svg") 87% 64% no-repeat;
   background-color: $color-black;
   padding-bottom: 188px;
   .container {
@@ -190,7 +190,7 @@
 #witness-sec{
   padding-bottom: 238px;
   background: 
-  url("../images/vector3.svg") 50% 26% no-repeat;
+  url("../images/svg/vector3.svg") 50% 26% no-repeat;
   background-color: $color-black;
   .container {
     .h2{
@@ -233,8 +233,8 @@
 // ABOUT_CEO_SEC
 #about-ceo-sec {
   background: 
-  url("../images/vector2.svg") 50% 26% no-repeat,
-  url("../images/grad3.svg") 30% 30% no-repeat;
+  url("../images/svg/vector2.svg") 50% 26% no-repeat,
+  url("../images/svg/grad3.svg") 30% 30% no-repeat;
   background-color: $color-black;
 
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider {
@@ -571,7 +571,7 @@
 // WE_WORTHY_SEC
 #we-worthy-sec {
   background: 
-  url("../images/grad4.svg") 26% 80% no-repeat;
+  url("../images/svg/grad4.svg") 26% 80% no-repeat;
   color: #fff;
   background-color: $color-black;
   padding-top: 100px;
@@ -852,7 +852,7 @@
 
 @media screen and (max-width: 1316px) {
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 96% no-repeat;
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 96% no-repeat;
   }
   #we-worthy-sec .wrap {
     flex-wrap: wrap;
@@ -983,7 +983,7 @@
     font-size: 1.3rem!important;
   }
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 100% no-repeat;
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 100% no-repeat;
   }
   #video-sec {
     background-color: $color-black;
@@ -1218,11 +1218,6 @@
   .subtext {
     margin-bottom: 50px;
   }
-  // #video-sec { 
-  //   background: 
-  //     url("/My_Project_Unix/src/assets/images/grad2.svg") 84% 120% no-repeat;
-  //   background-color: $color-black;
-  // }
   .slider-descr .pic-wrap {
     img {
       min-width: 72px!important;
@@ -1253,8 +1248,8 @@
   }
   #bout-ceo-sec {
     background: 
-    url("../images/vector2.svg") 50% 34% no-repeat,
-    url("../images/grad3.svg") 50% 18% no-repeat!important;
+    url("../images/svg/vector2.svg") 50% 34% no-repeat,
+    url("../images/svg/grad3.svg") 50% 18% no-repeat!important;
     background-color: $color-black;
   }
 }
@@ -1267,7 +1262,7 @@
     font-size: 1.1rem!important;
   }
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 112% no-repeat;
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 112% no-repeat;
     background-color: $color-black;
   }
   #we-worthy-sec .promo-lines {
@@ -1463,7 +1458,7 @@
     padding-top: 40px;
   }
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/grad4.svg") 26% 114% no-repeat;
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 114% no-repeat;
     background-color: $color-black;
   }
   #we-worthy-sec .promo-lines {

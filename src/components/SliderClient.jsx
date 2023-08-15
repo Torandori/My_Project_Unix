@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import React from "react";
 // import clientData from '../data/mainOurClient.json'
-import quote from '../assets/images/quote.svg'
+import quote from '../assets/images/svg/quote.svg'
 import Arrow from "./svgComponents/Arrow";
 
 function SliderClient() {

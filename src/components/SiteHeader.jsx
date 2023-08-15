@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { MainNav } from '../data/navigation';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/svg/logo.svg';
 import '../assets/scss/_header.scss'
 
 function SiteHeader(){

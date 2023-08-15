@@ -164,8 +164,8 @@ ul {
 // HERO_SEC
 #hero-sec {
   background: 
-  url("../images/vector1.svg") 52% 75% no-repeat,
-  url("../images/grad1.svg") 87% -12% no-repeat;
+  url("../images/svg/vector1.svg") 52% 75% no-repeat,
+  url("../images/svg/grad1.svg") 87% -12% no-repeat;
   background-color: $color-black;
   .container {
     height: 828px;
@@ -640,9 +640,6 @@ ul {
 }
 
 
-// @import "footer";
-
-@import "response";
 
 
 // RESPONSIVE

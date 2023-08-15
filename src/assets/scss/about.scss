@@ -110,18 +110,14 @@
 // TESTIMONIAL_SEC
 #testimonial-sec {
   background: 
-  url("../images/vector5.svg") 50% 42% no-repeat,
-  url("../images/grad7.svg") 84% 243% no-repeat,
-  url("../images/grad3.svg") 50% -46% no-repeat;
+  url("../images/svg/vector5.svg") 50% 42% no-repeat,
+  url("../images/svg/grad5.svg") 84% 243% no-repeat,
+  url("../images/svg/grad3.svg") 50% -46% no-repeat;
   background-color: $color-black-text;
   margin-bottom: 100px;
-  // padding-top: 140px;
   .promo-second {
     margin-bottom: 76px;
   }
-  // .container.first {
-  //   margin-bottom: 380px;
-  // }
   .block-text-under-pic {
     margin-bottom: 293px;
     text-align: left;
@@ -237,9 +233,9 @@
 @media screen and (max-width: 1360px) { 
   #testimonial-sec {
     background: 
-    url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad7.svg") 84% 150% no-repeat,
-    url("../images/grad3.svg") 50% -7% no-repeat;
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 150% no-repeat,
+    url("../images/svg/grad3.svg") 50% -7% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -274,9 +270,9 @@
 @media screen and (max-width: 1100px) {
   #testimonial-sec {
     background: 
-    url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad7.svg") 84% 152% no-repeat,
-    url("../images/grad3.svg") 50% -30% no-repeat;
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 152% no-repeat,
+    url("../images/svg/grad3.svg") 50% -30% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -329,9 +325,9 @@
 @media screen and (max-width: 860px) {
   #testimonial-sec {
     background: 
-    url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad7.svg") 84% 180% no-repeat,
-    url("../images/grad3.svg") 50% -18% no-repeat;
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 180% no-repeat,
+    url("../images/svg/grad3.svg") 50% -18% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -404,9 +400,9 @@
   }
   #testimonial-sec {
     background: 
-    url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad7.svg") 84% 170% no-repeat,
-    url("../images/grad3.svg") 50% -18% no-repeat;
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 170% no-repeat,
+    url("../images/svg/grad3.svg") 50% -18% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -414,9 +410,9 @@
 @media screen and (max-width: 590px) {
   #testimonial-sec {
     background: 
-    url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad7.svg") 84% 220% no-repeat,
-    url("../images/grad3.svg") 50% -20% no-repeat;
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 220% no-repeat,
+    url("../images/svg/grad3.svg") 50% -20% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 60px;
   }

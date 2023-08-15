@@ -6,8 +6,8 @@ import footerPic from '../assets/images/footer-pic1.jpg'
 import footerData from '../data/footerData.json'
 import '../assets/scss/_footer.scss'
 import ContactsModal from './ContactsModal';
-// import FooterBtnBec from './FooterBtnBec'
-// import footerArrow from '../assets/images/svg/footerArrow.svg'
+import FooterBtnBec from './FooterBtnBec'
+import footerArrow from '../assets/images/svg/footerArrow.svg'
 
 
 function SiteFooter() {
@@ -39,7 +39,7 @@ function SiteFooter() {
               <div className="small-text">{footerData.footerSmallText}</div>
               <Link to="mailto: Hello@unixstudio.agency">{footerData.footerEmail}</Link>
             </div>
-            {/* <FooterBtnBec /> */}
+            <FooterBtnBec />
             {/* <button type="button" className="btn footer-btn">
               become a client <img src={footerArrow} alt="Arrow" className="footerArrow" />
             </button> */}
