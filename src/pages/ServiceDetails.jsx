@@ -16,7 +16,7 @@ function ServiceDetails() {
     .then(resp => 
       setDescr(resp)
       )
-    }, [])
+    }, [slug])
   
   const pageTitle = descr.servPageTitle;
 

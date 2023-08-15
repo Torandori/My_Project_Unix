@@ -1,15 +1,6 @@
 @import 'vars';
 // HERO_SEC
 
-// .about-grafic-bg {
-//   background: 
-//   url("../images/gradient2.svg") 84% 19% no-repeat,
-//   url("../images/vector5.svg") 50% 66% no-repeat,
-//   url("../images/gradient3.svg") 40% 82% no-repeat,
-// }
-// .about-body-bg {
-//   background: linear-gradient(180deg, white 0%, white 23%, #1A1A1A 23%, #1A1A1A 57%, white 57%, white 100%);
-// }
 
 
 #about-page {
@@ -119,16 +110,11 @@
 // TESTIMONIAL_SEC
 #testimonial-sec {
   background: 
-    url("../images/gradient2.svg") 84% -20% no-repeat,
-    url("../images/vector5.svg") 50% 66% no-repeat,
-    url("../images/gradient3.svg") 50% 500% no-repeat,
-    linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
+  url("../images/vector5.svg") 50% 42% no-repeat,
+  url("../images/grad2.svg") 84% 179% no-repeat,
+  url("../images/grad3.svg") 50% -50% no-repeat;
+  background-color: $color-black-text;
   margin-bottom: 100px;
-  // .about-grafic-bg {
-//   url("../images/gradient3.svg") 40% 82% no-repeat,
-// }
-// .about-body-bg {
-// }
   .promo-second {
     margin-bottom: 76px;
   }
@@ -311,10 +297,10 @@
 @media screen and (max-width: 1100px) {
   #testimonial-sec {
     background: 
-      url("../images/gradient2.svg") 84% -20% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% 900% no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
+    url("../images/vector5.svg") 50% 42% no-repeat,
+    url("../images/grad2.svg") 84% 162% no-repeat,
+    url("../images/grad3.svg") 50% -30% no-repeat;
+    background-color: $color-black-text;
     margin-bottom: 100px;
   }
   #principals-sec .pricnciples-wrap .pricnciples-item .wrap .paragraph, #principals-sec .pricnciples-wrap .pricnciples-item p {
@@ -366,20 +352,15 @@
 @media screen and (max-width: 860px) {
   #testimonial-sec {
     background: 
-      url("../images/gradient2.svg") 84% -20% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% 700% no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
+    url("../images/vector5.svg") 50% 42% no-repeat,
+    url("../images/grad2.svg") 84% 148% no-repeat,
+    url("../images/grad3.svg") 50% -24% no-repeat;
+    background-color: $color-black-text;
     margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 800px) {
   #testimonial-sec {
-    background: 
-      url("../images/gradient2.svg") 84% -20% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% -3800% no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
     margin-bottom: 100px;
   }
   #principals-sec .pricnciples-wrap {
@@ -442,35 +423,22 @@
 }
 @media screen and (max-width: 780px) {
   #testimonial-sec {
-    background: 
-      url("../images/gradient2.svg") 84% -20% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% -3800% no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
     margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 770px) {
   #testimonial-sec {
-    background: 
-      url("../images/gradient2.svg") 84% -20% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% 1400px no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 80%, white 80%, white 100%);
     margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 560px) {
-  #testimonial-sec .container.first {
-    margin-bottom: 100px;
-  }
   #testimonial-sec {
     background: 
-      url("../images/gradient2.svg") 84% -40% no-repeat,
-      url("../images/vector5.svg") 50% 66% no-repeat,
-      url("../images/gradient3.svg") 50% 1100px no-repeat,
-      linear-gradient(180deg, white 0%, white 8%, #1A1A1A 8%, #1A1A1A 79%, white 79%, white 100%);
-    margin-bottom: 100px;
+    url("../images/vector5.svg") 50% 42% no-repeat,
+    url("../images/grad2.svg") 84% 150% no-repeat,
+    url("../images/grad3.svg") 50% -20% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 60px;
   }
   #principals-sec .h2 {
     font-size: 2rem;
