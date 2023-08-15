@@ -2,6 +2,7 @@ import MobBar from "../components/MobBar"
 import SiteHeader from "../components/SiteHeader"
 import SiteFooter from "../components/SiteFooter"
 import { Outlet } from "react-router-dom"
+// import { Suspense } from "react"
 
 function Default(){
 
@@ -11,7 +12,9 @@ function Default(){
         <MobBar />
         <SiteHeader />
           <main>
-            <Outlet />
+            {/* <Suspense fallback={<p>Loading..</p>}> */}
+              <Outlet />  
+            {/* </Suspense>  */}
           </main>
         <SiteFooter />
       </div>

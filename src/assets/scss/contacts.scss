@@ -4,7 +4,7 @@
 #contacts-page {
   background-color: $color-black-text;
   #hero-sec {
-    background:   url("../images/vector1.svg") 52% 75% no-repeat;
+    background:   url("../images/svg/vector1.svg") 52% 75% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 0;
     h1 {
@@ -338,15 +338,6 @@ p.input-error {
     .right-col {
       .wrap-soc-projects {
         display: flex;
-      }
-      .soc-project-wrap {
-        overflow: hidden;
-        border-radius: 20px;
-        width: 420px;
-        height: 320px;
-        img {
-          aspect-ratio: 42/32;
-        }
       }
     }
   }

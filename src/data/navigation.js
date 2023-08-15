@@ -26,10 +26,10 @@ export const MainNav = [
     name: 'news',
     title: 'Go to News page',
     to: '/news'
-  },
-  {
-    name: '404',
-    title: 'Go to News page',
-    to: '/404'
   }
+  // {
+  //   name: '404',
+  //   title: 'Go to News page',
+  //   to: '/404'
+  // }
 ];

@@ -4,7 +4,7 @@ import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewsItem({item}){
   const hash = btoa(item.url);
-  console.log(hash)
+  // console.log(hash)
 
   return (
     <li>

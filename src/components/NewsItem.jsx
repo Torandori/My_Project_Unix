@@ -5,7 +5,7 @@ import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewsItem({item}){
   const hash = btoa(item._id);
-  console.log(hash)
+  // console.log(hash)
   const [newsMock, setNewsMock] = useState([{}, {}]);
 
   useEffect(() => {

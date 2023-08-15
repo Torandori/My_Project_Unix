@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
 import witnessData from "../data/mainWitnessSecData.json"
 import SliderWitness from "./SliderWitness";
 
 function MainWitnessSec() {
-
-  // const [sliderItems, setSliderItems] = useState([]);
-
-  // useEffect(() => {
-  //   fetch('./pubdata/mainWitSliderItems.json')
-  //   .then(resp => resp.json())
-  //   .then(resp => {
-  //     setSliderItems(resp);
-  //   })
-  // }, []);
-
   return (
     <section id="witness-sec">
     <div className="container">

@@ -15,13 +15,11 @@ function SliderClient() {
     fetch('./pubdata/mainOurClient.json')
     .then(resp => resp.json())
     .then(resp => {
-      console.log(resp)
       setClientData(resp);
     })
   }, [])
 
   const client = clientData.clientSlider;
-  console.log(client)
   
   const sliderSettings = {
     dots: false,

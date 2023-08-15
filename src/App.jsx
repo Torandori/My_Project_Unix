@@ -2,6 +2,7 @@ import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-
 import {useLayoutEffect} from 'react';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
+// import { lazy } from 'react';
 import Home from "./pages/Home";
 import Case from "./pages/Case";
 import Services from "./pages/Services";
@@ -11,6 +12,17 @@ import Contacts from "./pages/Contacts";
 import News from "./pages/News";
 import NewsDetails from './pages/NewsDetails';
 import NotFound from './pages/NotFound';
+// const Home = lazy(() => import('./pages/Home'))
+// const Case = lazy(() => import('./pages/Case'))
+// const Services = lazy(() => import('./pages/Services'))
+// const ServiceDetails = lazy(() => import('./pages/ServiceDetails'))
+// const About = lazy(() => import('./pages/About'))
+// const Contacts = lazy(() => import('./pages/Contacts'))
+// const News  = lazy(() => import('./pages/News'))
+// const NewsDetails = lazy(() => import('./pages/NewsDetails'))
+// const NotFound = lazy(() => import('./pages/NotFound'))
+
+
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

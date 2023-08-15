@@ -12,7 +12,6 @@ function MainProjCardsAnim({projects}) {
     <>
       {projects.map((item, index) => {
         const animCardClassName = "animCard animCard" + index;
-        console.log(animCardClassName)
 
         return (
           <React.Fragment key={index}>

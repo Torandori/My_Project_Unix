@@ -186,6 +186,7 @@
 }
 .slick-slider .slick-track, .slick-slider .slick-list {
   margin-bottom: 40px;
+  cursor: grab;
 }
 #witness-sec{
   padding-bottom: 238px;
@@ -452,12 +453,12 @@
           padding: 45px 40.8px 42.26px 36.8px;
           border-left: 1px solid $color-grey;
           border-bottom: 1px solid $color-grey;
-          .img-wrap {
-            overflow: hidden;
-            border-radius: 16px;
-            width: 100%;
-            height: 100%;
-          }
+          // .img-wrap {
+          //   overflow: hidden;
+          //   border-radius: 16px;
+          //   width: 100%;
+          //   height: 100%;
+          // }
         }
       }
     }
