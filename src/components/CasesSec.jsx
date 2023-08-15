@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import casesData from "../data/caseCasesSecData.json"
 import Arrow from "./svgComponents/Arrow";
 import { useNavigate } from "react-router-dom";
+// import ImgPar from "./ImgPar";
 
 function CasesSec() {
   const [caseItems, setCaseItems] = useState({ casesFirstBlock: [], casesSecondBlock: [] });
@@ -60,6 +61,7 @@ function CasesSec() {
                 <div className="img-line">
                   <div className="img-wrap">
                     <img src={item.caseImgUrl} alt={item.caseImgAlt} />
+                    <div className="overlay"></div>
                   </div>
                   <div className="dashed-line"></div>
                 </div>
@@ -96,8 +98,10 @@ function CasesSec() {
                   <p className="short-descr">{item.caseDescr}</p>
                 </div>
                 <div className="img-line">
+                  {/* <ImgPar item={item}/> */}
                   <div className="img-wrap">
                     <img src={item.caseImgUrl} alt={item.caseImgAlt} />
+                    <div className="overlay"></div>
                   </div>
                   <div className="dashed-line"></div>
                 </div>

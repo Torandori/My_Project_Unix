@@ -195,6 +195,10 @@
       .pic-wrap {
         width: 64px;
         height: 64px;
+        img {
+          width: 64px!important;
+          height: 64px!important;
+        }
       }
       .text {
         div:first-child {
