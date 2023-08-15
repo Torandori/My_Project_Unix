@@ -3,7 +3,7 @@
 // HERO_SEC
 #news-page {
   #hero-sec {
-    margin-bottom: 243px; //need 64
+    margin-bottom: 64px; 
     .under-title {
       font-weight: 600;
       @include lh(28);
@@ -36,6 +36,71 @@
 // #HERO_SEC
 
 // SLIDER_NEWS_SEC
+.newSlider {
+  cursor: auto;
+}
+.content-wrap-first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.prev-next-arrows {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+  .prev {
+    transition: all .2s ease;
+  }
+  .next {
+    transition: all .2s ease;
+    scale: (-1);
+  }
+  button {
+    background-color: transparent;
+    border: none;
+    transition: all .2s ease;
+    &:hover {
+      svg rect {
+        fill: $color-black-text;
+        opacity: 1;
+      } 
+      svg path {
+        fill: $color-white-cream;
+      }
+    }
+  }
+}
+.img-wrap-new {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 700px;
+  margin-bottom: 100px;
+  img {
+    aspect-ratio: 1318/737;
+  }
+}
+.content-wrap2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 38px;
+  .new {
+    @include fz(64);
+    @include lh(68);
+    font-weight: 700;
+    letter-spacing: -0.64px;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $color-black-text;
+    color: #fff;
+  }
+  .date-news {
+    @include fz(20);
+    @include lh(30);
+  }
+}
 #slider-news-sec {
   .restTopic {
     height: 110px;
@@ -154,10 +219,9 @@
   @include fz(20);
   @include lh(26);
   font-weight: 600;
-  margin-bottom: 48px;
   display: block;
   color: $color-black-text;
-  max-width: 500px;
+  // max-width: 500px;
   position: relative;
   &:hover {
     opacity: 0.8;

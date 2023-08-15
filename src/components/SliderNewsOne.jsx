@@ -10,7 +10,46 @@
 // import newsDefaultImg from '../assets/images/newsDefault.jpg';
 // import formatDate from "../helpers/formatDate";
 
-
+// function SliderNewsOne() { 
+//   return (
+//   <Slider ref={sliderRef} {...sliderSettings}>
+//     {newsList.map((item, index) => {
+//       return (
+//         <div className="news-slider-item" key={index}>
+//           <div className="content-wrap">
+//             <div className="author">
+//               <div className="pic-wrap">
+//                 <img src="assets/images/peter_img.jpg" alt="Picture of Peter Visser" />
+//               </div>
+//               <div className="text">
+//                 <div>{item.author}</div>
+//                 <div>Head of Project Management</div>
+//               </div>
+//             </div>
+//             <h2 className="panchang topic">{item.title}</h2>
+//             <div className="prev-next-arrows">
+//               <div className="prev" onClick={prev}>
+//                 <NewsSlideArrow />
+//               </div>
+//               <div className="next" onClick={next}>
+//                 <NewsSlideArrow />
+//               </div>
+//             </div>
+//           </div>
+//           <div className="content-wrap2">
+//             <div className="new panchang">{newsSliderGen.newsSliderNum}</div>
+//             <div className="date-news">{formatDate(item.publish_date)}</div>
+//           </div>
+//           <div className="img-wrap">
+//             <img src={item.image ?? newsDefaultImg} alt="Picture of new 1" />
+//           </div>
+//         </div>
+//       )
+//     })}
+//   </Slider>
+//   )
+// }
+// export default SliderNewsOne;
 // function SliderNewsOne() {
 //   const sliderRef = useRef();
 //   const [newsList, setNewsList] = useState([]);
