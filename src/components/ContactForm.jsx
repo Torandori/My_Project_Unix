@@ -157,20 +157,20 @@ function ContactForm({title}) {
 
   return (
     <form className="form" onSubmit={submitHandler}>
-      <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-        {!title && 
-          <Select
-          autoFocus
-          defaultValue={selectedOpt}
-          onChange={handleOptChange}
-          options={options}
-          styles={customStyles}
-          placeholder='Select target'
-          isClearable={true}
-          />
-        }
+        {!title && (
+          <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
+            <Select
+            autoFocus
+            defaultValue={selectedOpt}
+            onChange={handleOptChange}
+            options={options}
+            styles={customStyles}
+            placeholder='Select target'
+            isClearable={true}
+            />
         {selectError && <p className="input-error">{selectError}</p>}
       </div>
+    )}
 
       <InputField 
         multy={false} 

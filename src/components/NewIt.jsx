@@ -28,7 +28,7 @@ function NewIt({item}) {
       <div className="content-wrap-first">
         <div className="author">
           <div className="pic-wrap">
-            <img src="assets/images/peter_img.jpg" alt="Picture of Peter Visser" />
+            <img src={mockedObj.authImg} alt={item.author} />
           </div>
           <div className="text">
             <div>{item.author}</div>

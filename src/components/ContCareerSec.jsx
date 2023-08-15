@@ -17,24 +17,6 @@ function ContCareerSec() {
     document.body.classList.remove('open-modal')
   }
 
-  // const  = () => {
-  //   setModalOpen(false)
-  //   document.body.classList.remove('open-modal')
-  // }
-
-  // const buttonData = [
-  //   {
-  //     id: "project",
-  //     careerClass: "btn btn-circle-arrow-text dark",
-  //     careerText: "start a project"
-  //   },
-  //   {
-  //     id: "career",
-  //     careerClass: "btn btn-circle-arrow-text",
-  //     careerText: "start your career"
-  //   }
-  // ]
-
   return (
     <section id="project-career-sec">
       <div className="container">
