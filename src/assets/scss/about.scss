@@ -111,16 +111,17 @@
 #testimonial-sec {
   background: 
   url("../images/vector5.svg") 50% 42% no-repeat,
-  url("../images/grad2.svg") 84% 179% no-repeat,
-  url("../images/grad3.svg") 50% -50% no-repeat;
+  url("../images/grad7.svg") 84% 243% no-repeat,
+  url("../images/grad3.svg") 50% -46% no-repeat;
   background-color: $color-black-text;
   margin-bottom: 100px;
+  // padding-top: 140px;
   .promo-second {
     margin-bottom: 76px;
   }
-  .container.first {
-    margin-bottom: 380px;
-  }
+  // .container.first {
+  //   margin-bottom: 380px;
+  // }
   .block-text-under-pic {
     margin-bottom: 293px;
     text-align: left;
@@ -132,53 +133,20 @@
       margin-bottom: 36px;
     }
   }
-  .slider-team {
-    display: flex;
-    .slider-member {
-      .img-wrap {
-        border-radius: 20px;
-        overflow: hidden;
-        height: 600px;
-        width: 560px;
-        margin-bottom: 38px;
-        position: relative;
-        img {
-          aspect-ratio: 585/879;
-          position: absolute;
-          height: auto;
-          left: 0;
-          top: 0;
-        }
-        .change-position {
-          top: -20%;
-          left: 0;
-        }
-      }
-      .under-pic {
-        font-family: 'Panchang', sans-serif;
-        @include fz(24);
-        @include lh(28);
-        font-weight: 700;
-        letter-spacing: -0.24px;
-        text-transform: uppercase;
-        color: #fff;
-        text-align: center;
-      }
-    }
-  }
   .run-wrap {
     margin-bottom: 76px;
   }
   .container {
-    border-bottom: 1px solid $color-grey;
     text-align: center;
-    padding-bottom: 101px;
     .testimonial-text {
       width: 62%;
       margin: 0 auto;
       margin-bottom: 40px;
     }
   }
+}
+#testimonial-sec .container:last-child {
+  padding-bottom: 80px;
 }
 // #TESTIMONIAL_SEC
 
@@ -192,7 +160,6 @@
     border-top: 1px solid $color-grey;
     display: grid;
     grid-template-columns: 262px 1fr;
-    // grid-template-rows: 70% 30%;
     grid-template-rows: 1122px 1fr;
 
     .empty-col {
@@ -267,6 +234,16 @@
 }
 
 // #PRINICPALS_SEC
+@media screen and (max-width: 1360px) { 
+  #testimonial-sec {
+    background: 
+    url("../images/vector5.svg") 50% 42% no-repeat,
+    url("../images/grad7.svg") 84% 150% no-repeat,
+    url("../images/grad3.svg") 50% -7% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 100px;
+  }
+}
 @media screen and (max-width: 1290px) { 
   #principals-sec .pricnciples-wrap .pricnciples-item .wrap .paragraph, #principals-sec .pricnciples-wrap .pricnciples-item p {
     font-size: 2.5rem;
@@ -298,7 +275,7 @@
   #testimonial-sec {
     background: 
     url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad2.svg") 84% 162% no-repeat,
+    url("../images/grad7.svg") 84% 152% no-repeat,
     url("../images/grad3.svg") 50% -30% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
@@ -353,8 +330,8 @@
   #testimonial-sec {
     background: 
     url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad2.svg") 84% 148% no-repeat,
-    url("../images/grad3.svg") 50% -24% no-repeat;
+    url("../images/grad7.svg") 84% 180% no-repeat,
+    url("../images/grad3.svg") 50% -18% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -425,17 +402,20 @@
   #testimonial-sec {
     margin-bottom: 100px;
   }
-}
-@media screen and (max-width: 770px) {
-  #testimonial-sec {
-    margin-bottom: 100px;
-  }
-}
-@media screen and (max-width: 560px) {
   #testimonial-sec {
     background: 
     url("../images/vector5.svg") 50% 42% no-repeat,
-    url("../images/grad2.svg") 84% 150% no-repeat,
+    url("../images/grad7.svg") 84% 170% no-repeat,
+    url("../images/grad3.svg") 50% -18% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 590px) {
+  #testimonial-sec {
+    background: 
+    url("../images/vector5.svg") 50% 42% no-repeat,
+    url("../images/grad7.svg") 84% 220% no-repeat,
     url("../images/grad3.svg") 50% -20% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 60px;

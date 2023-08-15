@@ -9,18 +9,21 @@
   "aboutTestSlider": [
     {
       "sliderMemberImg": "./assets/images/slider-member1.jpg",
-      "sliderImgAlt": "Portrait of Eugene Massy",
-      "sliderMemberName": "Eugene Massy"
+      "sliderMemberName": "Eugene Massy",
+      "sliderMemberToF": "https://www.facebook.com/",
+      "sliderMemberToI": "https://www.instagram.com/"
     },
     {
       "sliderMemberImg": "./assets/images/slider-member2.jpg",
-      "sliderImgAlt": "Portrait of Tilda Marrow",
-      "sliderMemberName": "Tilda Marrow"
+      "sliderMemberName": "Theo Marrow",
+      "sliderMemberToF": "https://www.facebook.com/",
+      "sliderMemberToI": "https://www.instagram.com/"
     },
     {
       "sliderMemberImg": "./assets/images/slider-member3.jpg",
-      "sliderImgAlt": "Portrait of Priscilla Hargraves",
-      "sliderMemberName": "Priscilla Hargraves"
+      "sliderMemberName": "Louis Hargraves",
+      "sliderMemberToF": "https://www.facebook.com/",
+      "sliderMemberToI": "https://www.instagram.com/"
     }
   ]
 }

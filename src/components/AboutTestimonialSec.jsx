@@ -16,8 +16,8 @@ function AboutTestimonialSec() {
           <p className="text first">{testData.aboutTestTextFirst}</p>
           <p className="text">{testData.aboutTestText}</p>
         </div>
-        <AboutTestSlider />
       </div>
+        <AboutTestSlider />
       <div className="promo-second">
         <PromoLines />
       </div>
