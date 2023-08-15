@@ -108,6 +108,7 @@ body {
   font-family: 'Hubot Sans', sans-serif;
   @include fz(24);
   font-weight: 400;
+  // perspective: 2000px;
 }
 
 main {
@@ -146,7 +147,6 @@ a {
 .container {
   width: min(90%, 1280px);
   margin-inline: auto;
-  // border: 1px solid red;
 }
 .page-wrap {
   min-height: 100vh;

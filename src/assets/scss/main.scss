@@ -344,6 +344,7 @@
 // #ABOUT_CEO_SEC
 // PAST_PROJECTS
 #past-projects-sec {
+  perspective: 2000px;
   background-color: #fff;
   padding-bottom: 100px;
   .container {
@@ -1156,9 +1157,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr 2fr;
   }
-  // #past-projects-sec .container .projects-net .projects-cells .project-pic .img-wrap {
-  //   display: flex;
-  // }
   #past-projects-sec .container .projects-net .projects-cells .project-descr p {
     margin-bottom: 100px;
   }

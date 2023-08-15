@@ -1,6 +1,8 @@
-$(function(){
-  const $card = document.querySelector('.card');
-  let bounds;
+
+const animCards = document.querySelectorAll('.animCard');
+
+animCards.forEach($animCard => {
+  let bounds; 
 
   function rotateToMouse(e) {
     const mouseX = e.clientX;
@@ -12,8 +14,8 @@ $(function(){
       y: topY - bounds.height / 2
     }
     const distance = Math.sqrt(center.x**2 + center.y**2);
-    
-    $card.style.transform = `
+
+    $animCard.style.transform = `
       scale3d(1.07, 1.07, 1.07)
       rotate3d(
         ${center.y / 100},
@@ -22,8 +24,8 @@ $(function(){
         ${Math.log(distance)* 2}deg
       )
     `;
-    
-    $card.querySelector('.glow').style.backgroundImage = `
+
+    $animCard.querySelector('.glow').style.backgroundImage = `
       radial-gradient(
         circle at
         ${center.x * 2 + bounds.width/2}px
@@ -33,14 +35,15 @@ $(function(){
       )
     `;
   }
-  $card.addEventListener('mouseenter', () => {
-    bounds = $card.getBoundingClientRect();
+
+  $animCard.addEventListener('mouseenter', () => {
+    bounds = $animCard.getBoundingClientRect();
     document.addEventListener('mousemove', rotateToMouse);
   });
 
-  $card.addEventListener('mouseleave', () => {
+  $animCard.addEventListener('mouseleave', () => {
     document.removeEventListener('mousemove', rotateToMouse);
-    $card.style.transform = '';
-    $card.style.background = '';
+    $animCard.style.transform = '';
+    $animCard.style.background = '';
   });
-})
+});

@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json"
 import React from "react";
+// import '../assets/scss/_animCard.scss'
+// import '../helpers/animateCard.js'
+import MainProjCardsAnim from "./MainProjCardsAnim";
 
 function MainPastProjectsSec() {
   const [projects, setProjects] = useState([{}, {}]);
@@ -38,7 +41,11 @@ function MainPastProjectsSec() {
         <div className="projects-net">
           <div className="empty-cell"></div>
           <div className="projects-cells">
-            {projects.map((item, index) => {
+            <MainProjCardsAnim projects={projects}/>
+            {/* {projects.map((item, index) => {
+              const animCardClassName = "animCard animCard" + index;
+              console.log(animCardClassName)
+
               return (
                 <React.Fragment key={index}>
                   <div className="project-descr" key={index}>
@@ -52,13 +59,14 @@ function MainPastProjectsSec() {
                     <div>{item.projUnderText}</div>
                   </div>
                   <div className="project-pic" key={item.projName}>
-                    <div className="img-wrap">
-                      <img src={item.projImgUrl} alt={item.projAlt} />
+                    <div class={animCardClassName}>
+                      3D Card 
+                      <div className="glow"></div>
                     </div>
                   </div>
                 </React.Fragment>
               )
-            })}
+            })} */}
           </div>
         </div>
 
@@ -110,3 +118,14 @@ function MainPastProjectsSec() {
   )
 }
 export default MainPastProjectsSec;
+
+
+                  {/* <div className="animCard animCard1">
+                    3D Card2
+                    <div className="glow"></div>
+                  </div> */}
+                  {/* <div className="project-pic" key={item.projName}>
+                    <div className="img-wrap">
+                      <img src={item.projImgUrl} alt={item.projAlt} />
+                    </div>
+                  </div> */}
