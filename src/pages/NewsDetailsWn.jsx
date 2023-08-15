@@ -1,56 +1,65 @@
-import { Link, useParams } from "react-router-dom";
 import { WN_API, WN_API_KEY } from "../env";
-import { useState, useEffect, useRef } from "react";
-import ky from "ky";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import formatDate from "../helpers/formatDate"
 import LinkedinShare from "../components/svgComponents/LinkedinShare";
 import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
-import Loader from "../components/Loader";
+
 
 
 function NewsDetails(){
-  const {hash} = useParams();
-  const [news, setNewsData] = useState({});
-  const [loading, setLoading] = useState(true);
-  const fetchCount = useRef(0);
+  const location = useLocation();
+  const newsData = location.state.newsData;
 
-  async function fetchOneNews(){
-    if(fetchCount.current !== 0){
-      return false;
-    }
-    fetchCount.current++;
-
-    const storageNews = localStorage.getItem(hash);
-    if(storageNews !== null){
-      setNewsData(JSON.parse(storageNews));
-      setLoading(false);
-      return false;
-    }
-
-    try {
-      const url = atob(hash);
-      const resp = await ky(`${WN_API}extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
-      setNewsData(resp);
-      localStorage.setItem(hash, JSON.stringify(resp));
-      setLoading(false);
-    } catch (err){
-      console.log(err);
-      toast.error("Some error occured");
-      setLoading(false);
-    }
-  }
+  const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
 
   useEffect(() => {
-    fetchOneNews();
-  }, []);
+    fetch('../pubdata/newsDetMockedData.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setNewsDetMock(resp);
+      })
+  }, [])
+  const randomObjIndex = Math.floor(Math.random() * newsDetMock.length);
+  const selectedAuthObj = newsDetMock[randomObjIndex];
 
-  if(loading){
-    return (<Loader />)
-  }
+  // async function fetchOneNews(){
+  //   if(fetchCount.current !== 0){
+  //     return false;
+  //   }
+  //   fetchCount.current++;
+
+  //   const storageNews = localStorage.getItem(hash);
+  //   if(storageNews !== null){
+  //     setNewsData(JSON.parse(storageNews));
+  //     setLoading(false);
+  //     return false;
+  //   }
+
+  //   try {
+  //     const url = atob(hash);
+  //     const resp = await ky(`${WN_API}extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
+  //     setNewsData(resp);
+  //     localStorage.setItem(hash, JSON.stringify(resp));
+  //     setLoading(false);
+  //   } catch (err){
+  //     console.log(err);
+  //     toast.error("Some error occured");
+  //     setLoading(false);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   fetchOneNews();
+  // }, []);
+
+  // if(loading){
+  //   return (<Loader />)
+  // }
 
   return(
     <div id="news-details-page">
@@ -60,18 +69,18 @@ function NewsDetails(){
           <div className="detail-overview-wrap1">
             <div className="author">
               <div className="pic-wrap">
-                <img src="assets/images/peter_img.jpg" alt="Picture of Peter Visser" />
+                <img src={selectedAuthObj.authImg} alt={newsData.author} />
               </div>
               <div className="text">
                 <div>{news.author}</div>
-                <div>Head of Project Management</div>
+                <div>{selectedAuthObj.authPosition}</div>
               </div>
             </div>
-            <div className="date-news">{formatDate(news.publish_date)}</div>
+            <div className="date-news">{formatDate(newsData.publish_date)}</div>
           </div>
           <div className="detail-overview-wrap2">
             <div className="overview panchang">Overview</div>
-            <p className="summary-text">{news.summary}</p>
+            <p className="summary-text">{newsData.summary}</p>
           </div>
         </div>
       </div>
@@ -97,9 +106,9 @@ function NewsDetails(){
               </div>
             </div>
             <div className="text-col">
-              <p>{news.text}</p>
+              <p>{newsData.text}</p>
               <div className="poster-detail-wrap">
-                <img src={news.image ? news.image : newsDefaultImg} alt={news.title} />
+                <img src={newsData.image ? newsData.image : newsDefaultImg} alt={newsData.title} />
               </div>
             </div>
           </div>

@@ -1,23 +1,18 @@
-import { Link, useParams } from "react-router-dom";
 import { NC_API, NC_API_KEY } from "../env";
-import { useState, useEffect, useRef } from "react";
-import ky from "ky";
-import { toast } from "react-toastify";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import formatDate from "../helpers/formatDate"
 import LinkedinShare from "../components/svgComponents/LinkedinShare";
 import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
-import Loader from "../components/Loader";
-import { useLocation } from 'react-router-dom';
 
 
 function NewsDetails(){
   const location = useLocation();
   const newsData = location.state.newsData;
-  console.log(location)
-  // const { hash } = useParams();
 
   const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
 
@@ -28,11 +23,10 @@ function NewsDetails(){
         setNewsDetMock(resp);
       })
   }, [])
-  console.log(newsDetMock)
+  // console.log(newsDetMock)
 
   const randomObjIndex = Math.floor(Math.random() * newsDetMock.length);
   const selectedAuthObj = newsDetMock[randomObjIndex];
-  // console.log(selectedAuthObj)
 
   return(
     <div id="news-details-page">

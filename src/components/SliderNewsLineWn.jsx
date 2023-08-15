@@ -1,9 +1,9 @@
+import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
 import { useState, useEffect, useRef } from "react";
+import NewsItem from "./NewsItem";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
 import ky from "ky";
-import NewsItem from "./NewsItem";
 import { toast } from "react-toastify";
 import Loader from "./Loader";
 // import formatDate from "../helpers/formatDate";
@@ -32,7 +32,8 @@ function SliderNewsLine() {
     }
   
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=3`).json();
+      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
+
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
@@ -47,6 +48,7 @@ function SliderNewsLine() {
   useEffect(() => {
     fetchNews();
   }, []);
+  
 
   if(loading){
     return (<Loader />)

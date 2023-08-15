@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+// import { useEffect } from "react";
 import Arrow from './svgComponents/Arrow';
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
 import '../assets/scss/_accordArrows.scss'
+
 
 function MainAboutSec() {
 

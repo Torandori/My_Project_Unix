@@ -1,10 +1,10 @@
 import { NC_API_KEY, NC_API, NEWS_CACHE_TIME} from "../env";
 import { useState, useEffect, useRef } from "react";
 import NewsItem from "./NewsItem";
-import ky from "ky";
-import { toast } from "react-toastify";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import ky from "ky";
+import { toast } from "react-toastify";
 import Loader from "./Loader";
 // import formatDate from "../helpers/formatDate";
 

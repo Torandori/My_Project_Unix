@@ -1,3 +1,8 @@
+// import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
+// import { useState, useEffect, useRef } from "react";
+// import NewsItem from "../components/NewsItem";
+// import ky from "ky";
+// import { toast } from "react-toastify";
 import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
 import NewsSliderSec from "../components/NewsSliderSec";

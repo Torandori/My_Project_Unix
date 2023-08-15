@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
@@ -5,17 +6,30 @@ import newsDefaultImg from '../assets/images/newsDefault.jpg';
 function NewsItem({item}){
   const hash = btoa(item.url);
   // console.log(hash)
+  const [newsMock, setNewsMock] = useState([{}, {}]);
+
+  useEffect(() => {
+    fetch('../pubdata/newsDetMockedData.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setNewsMock(resp);
+      })
+  }, [])
+
+  const randomIndex = Math.floor(Math.random() * newsMock.length);
+  const selectedObj = newsMock[randomIndex];
+
 
   return (
     <li>
       <div className="news-list-item">
         <div className="author">
           <div className="pic-wrap">
-            <img src="assets/images/news-card1.jpg" alt="Picture of Cynthia Houle" />
+            <img src={selectedObj.authImg} alt={authImg.author} />
           </div>
           <div className="text">
             <div>{item.author}</div>
-            <div>Head of Project Management</div>
+            <div>{selectedObj.authPosition}</div>
           </div>
         </div>
         <div className="restTopic">
