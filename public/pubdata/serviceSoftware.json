@@ -11,7 +11,7 @@
     "servDetUnderDescr": "Cloud software refers to applications and services that are hosted and operated remotely on cloud servers and accessed over the internet.",
     "servDetBigName": "boost",
     "servDetBigNameContinue": "your business",
-    "howImgUrl": "../assets/images/software.jpg",
+    "howImgUrl": "./assets/images/software.jpg",
     "howImgAlt": "Image by senivpetroon Freepik",
     "howList": [
       {
