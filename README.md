@@ -14,13 +14,13 @@ Front-End Development program.
 🟣 Vite: Utilized the Vite build tool to ensure fast and optimized development, resulting in quicker load times.  
 🟣 JavaScript: Employed JavaScript to enhance interactivity, validate forms, and create custom functionality.  
 🟣 Dynamic Data Loading (AJAX and JSON): Implemented AJAX requests to fetch data from external sources in JSON format, 
-  enabling the website to display live news content from a remote API. The fetched data is dynamically rendered using JSX, providing  
-  visitors with up-to-date information.  
+   enabling the website to display live news content from a remote API. The fetched data is dynamically rendered using JSX, providing  
+   visitors with up-to-date information.  
 🟣 Integration with Telegram API: Demonstrated advanced integration skills by linking the website's contact form to the Telegram API.  
     Upon form submission, messages are sent directly to a Telegram channel, streamlining communication and enhancing real-time interactions.  
 🟣 SCSS Preprocessor: Applied SCSS for efficient CSS styling, allowing for modular, organized, and easily maintainable code.  
 🟣 Responsive Design: Ensured that the website is responsive and adaptable across various devices, providing a consistent user   
-  experience on desktops, tablets, and mobiles.  
+   experience on desktops, tablets, and mobiles.  
 🟣 Tilt 3D Animation: Integrated the Tilt library to add captivating 3D animations to elements, enhancing visual appeal and engagement.  
 🟣 Custom Select: Implemented a custom select component for improved user interaction and a more personalized design.  
 🟣 Form Validation: Developed robust form validation techniques to ensure accurate user input and enhance data integrity.  
