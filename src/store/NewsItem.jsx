@@ -4,7 +4,7 @@ import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewsItem({item}){
-  const hash = btoa(item.url);
+  const hash = btoa(item._id);
   // console.log(hash)
   const [newsMock, setNewsMock] = useState([{}, {}]);
 
@@ -13,20 +13,18 @@ function NewsItem({item}){
       .then(resp => resp.json())
       .then(resp => {
         setNewsMock(resp);
-        console.log(resp)
       })
   }, [])
 
   const randomIndex = Math.floor(Math.random() * newsMock.length);
   const selectedObj = newsMock[randomIndex];
 
-
   return (
     <li>
       <div className="news-list-item">
         <div className="author">
           <div className="pic-wrap">
-            <img src={selectedObj.authImg} alt={selectedObj.author} />
+            <img src={selectedObj.authImg} alt={authImg.author} />
           </div>
           <div className="text">
             <div>{item.author}</div>
@@ -34,13 +32,11 @@ function NewsItem({item}){
           </div>
         </div>
         <div className="restTopic">
-          {/* <Link to={`/news/${hash}`} className="new-topic" title="Go to news details">{item.title}</Link> */}
           <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
-
         </div>
-        <div className="date-news">{formatDate(item.publish_date)}</div>
+        <div className="date-news">{formatDate(item.published_date)}</div>
         <div className="poster-wrap">
-          <img src={item.image ?? newsDefaultImg} alt={item.title} />
+          <img src={item.media ?? newsDefaultImg} alt={item.title} />
         </div>
       </div>
     </li>

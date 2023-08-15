@@ -1,7 +1,7 @@
 // import SliderNewsOne from "./SliderNewsOne";
 // import SliderNewsLine from "./SliderNewsLine";
 // import SliderNewsLine from "./SliderNewsLine";
-import SliderNewsLine from "./SliderNewsLine";
+import SliderNewsLineWn from "./SliderNewsLineWn";
 
 function NewsSliderSec() {
 
@@ -10,7 +10,7 @@ function NewsSliderSec() {
       <div className="container">
         {/* <SliderNewsOne /> */}
         {/* <SliderNewsLine /> */}
-        <SliderNewsLine />
+        <SliderNewsLineWn />
       </div>
     </section>
   )

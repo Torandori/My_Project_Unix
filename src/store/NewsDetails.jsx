@@ -1,4 +1,4 @@
-import { WN_API, WN_API_KEY } from "../env";
+import { NC_API, NC_API_KEY } from "../env";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
@@ -10,12 +10,9 @@ import '../assets/scss/news-details.scss'
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
 
 
-
 function NewsDetails(){
   const location = useLocation();
-  const newsData = location.state?.newsData || {};
-  console.log(newsData)
-
+  const newsData = location.state.newsData;
 
   const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
 
@@ -26,6 +23,7 @@ function NewsDetails(){
         setNewsDetMock(resp);
       })
   }, [])
+  // console.log(newsDetMock)
 
   const randomObjIndex = Math.floor(Math.random() * newsDetMock.length);
   const selectedAuthObj = newsDetMock[randomObjIndex];
@@ -41,15 +39,15 @@ function NewsDetails(){
                 <img src={selectedAuthObj.authImg} alt={newsData.author} />
               </div>
               <div className="text">
-                <div>{newsData.author}</div>
+                <div>{newsData.authors}</div>
                 <div>{selectedAuthObj.authPosition}</div>
               </div>
             </div>
-            <div className="date-news">{formatDate(newsData.publish_date)}</div>
+            <div className="date-news">{formatDate(newsData.published_date)}</div>
           </div>
           <div className="detail-overview-wrap2">
             <div className="overview panchang">Overview</div>
-            <p className="summary-text">{newsData.summary}</p>
+            <p className="summary-text">{newsData.excerpt}</p>
           </div>
         </div>
       </div>
@@ -75,9 +73,9 @@ function NewsDetails(){
               </div>
             </div>
             <div className="text-col">
-              <p>{newsData.text}</p>
+              <p>{newsData.summary}</p>
               <div className="poster-detail-wrap">
-                <img src={newsData.image ? newsData.image : newsDefaultImg} alt={newsData.title} />
+                <img src={newsData.media ? newsData.media : newsDefaultImg} alt={newsData.title} />
               </div>
             </div>
           </div>

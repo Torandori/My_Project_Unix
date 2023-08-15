@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import Loader from "./Loader";
 // import formatDate from "../helpers/formatDate";
 
-function SliderNewsLine() {
+function SliderNewsLineWn() {
 
   const [newsLine, setNewsLine] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -80,7 +80,7 @@ function SliderNewsLine() {
     </div>
   )
 }
-export default SliderNewsLine;
+export default SliderNewsLineWn;
 
           {/* <li>
             <div className="news-list-item">

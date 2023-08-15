@@ -1,7 +1,6 @@
-import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
+import { NC_API_KEY, NC_API, NEWS_CACHE_TIME} from "../env";
 import { useState, useEffect, useRef } from "react";
 import NewsItem from "./NewsItem";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import ky from "ky";
@@ -33,10 +32,14 @@ function SliderNewsLine() {
     }
   
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
+      const resp = await ky(`${NC_API}/v2/search?q=Design&lang=en&page_size=6`, {
+        headers: {
+          'x-api-key': NC_API_KEY
+        }
+      }).json();
 
-      setNewsLine(resp.news);
-      localStorage.setItem('newsLine', JSON.stringify(resp.news));
+      setNewsLine(resp.articles);
+      localStorage.setItem('newsLine', JSON.stringify(resp.articles));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
       setLoading(false);
     } catch (err){
@@ -61,7 +64,7 @@ function SliderNewsLine() {
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     centerMode: false,
   };
 
@@ -71,7 +74,7 @@ function SliderNewsLine() {
         <Slider {...sliderSettings}>
           {newsLine.map(item => {
             return (
-              <NewsItem item={item} key={item.id} />
+              <NewsItem item={item} key={item._id} />
             )
           })}
         </Slider>
@@ -80,5 +83,3 @@ function SliderNewsLine() {
   )
 }
 export default SliderNewsLine;
-
-         
