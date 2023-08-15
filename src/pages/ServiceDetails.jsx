@@ -11,7 +11,7 @@ function ServiceDetails() {
   
   useEffect(() => {
     // console.log(slug);
-    fetch(`/pubdata/${slug}.json`)
+    fetch(`/My_Project_Unix/pubdata/${slug}.json`)
     .then(resp => resp.json())
     .then(resp => 
       setDescr(resp)
