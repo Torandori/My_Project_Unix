@@ -9,7 +9,7 @@ function NewIt({item}) {
   const [newMock, setNewMock] = useState([{}, {}]);
 
   useEffect(() => {
-    fetch('./pubdata/newsDetMockedData.json')
+    fetch('../pubdata/newsDetMockedData.json')
       .then(resp => resp.json())
       .then(resp => {
         setNewMock(resp);
