@@ -45,20 +45,21 @@ function NewsDetails(){
                 <div>{selectedAuthObj.authPosition}</div>
               </div>
             </div>
+            <div className="overview panchang">Overview</div>
             <div className="date-news">{formatDate(newsData.publish_date)}</div>
           </div>
-          <div className="detail-overview-wrap2">
+          {/* <div className="detail-overview-wrap2">
             <div className="overview panchang">Overview</div>
             <p className="summary-text">{newsData.summary}</p>
-          </div>
+          </div> */}
         </div>
       </div>
 
       <section id="detail-text-sec">
         <div className="container">
           <div className="detail-text-wrap">
-            <div className="share-col">
-              <div className="share-wrap">
+            {/* <div className="share-col"> */}
+              {/* <div className="share-wrap">
                 <div>Share:</div>
                 <ul className="share-links">
                   <li>
@@ -72,13 +73,13 @@ function NewsDetails(){
                     </Link>
                   </li>
                 </ul>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <div className="text-col">
-              <p>{newsData.text}</p>
               <div className="poster-detail-wrap">
                 <img src={newsData.image ? newsData.image : newsDefaultImg} alt={newsData.title} />
               </div>
+              <p>{newsData.text}</p>
             </div>
           </div>
         </div>
