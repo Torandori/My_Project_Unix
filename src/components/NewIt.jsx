@@ -46,7 +46,7 @@ function NewIt({item}) {
         </div> */}
       </div>
       <div className="content-wrap2">
-        <div className="new panchang">new/1</div>
+        <div className="new panchang">new/</div>
         <div className="date-news">{formatDate(item.publish_date)}</div>
       </div>
       <div className="img-wrap-new">

@@ -23,7 +23,7 @@ function ContCareerSec() {
         <div className="wrap-poject-career">
           <div className="wrap-buttons">
             {career.map((item) => {
-              console.log(item.id)
+              // console.log(item.id)
               return (
                 <button type="button" className={item.careerClass} key ={item.id} onClick={() => openModal(item.careerText)}>
                   <span className="btn-content">

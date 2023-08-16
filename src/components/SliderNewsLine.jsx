@@ -11,6 +11,7 @@ import NewArrow from "./svgComponents/newArrow";
 // import formatDate from "../helpers/formatDate";
 
 function SliderNewsLine() {
+  const isDev = false;
 
   const [newsLine, setNewsLine] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -34,9 +35,10 @@ function SliderNewsLine() {
         return false;
       } 
     }
-  
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`, {
+      const resp = isDev 
+      ? await fetch('../mock/mockNews.json').then(response => response.json())
+      : await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`, {
         timeout: 15000,
       }).json();
 
