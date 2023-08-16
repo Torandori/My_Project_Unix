@@ -474,6 +474,13 @@ p.input-error {
   }
 }
 @media screen and (max-width: 980px) {
+  .tiltEl {
+    width: 380px;
+    height: 280px;
+  }
+  #social-sec .soc-projects-wrap {
+    flex-wrap: wrap;
+  }
   #social-sec .soc-projects-wrap .left-col .name {
     font-size: 1.6rem;
   }
@@ -538,6 +545,16 @@ p.input-error {
   }
 }
 @media screen and (max-width: 560px) {
+  .modal-shadow .modal {
+    width: 100%!important;
+  }
+  .tiltEl {
+    width: 300px!important;
+    height: 200px!important;
+  }
+  #social-sec .soc-projects-wrap {
+    flex-wrap: wrap;
+  }
   .btn-circle-arrow-text {
     width: 280px;
     height: 280px;
