@@ -40,9 +40,6 @@ function SiteFooter() {
               <Link to="mailto: Hello@unixstudio.agency">{footerData.footerEmail}</Link>
             </div>
             <FooterBtnBec />
-            {/* <button type="button" className="btn footer-btn">
-              become a client <img src={footerArrow} alt="Arrow" className="footerArrow" />
-            </button> */}
             <p className="copy">{footerData.footerCopy}</p>
             <button type="button" className="btn btn-circle" onClick={openModal}>
               <img src={btnCircleLight} alt="Contact us" />

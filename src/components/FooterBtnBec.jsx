@@ -1,11 +1,12 @@
 import footerArrow from '../assets/images/svg/footerArrow.svg'
+import { Link } from 'react-router-dom';
 
 function FooterBtnBec() {
   return (
     <>
-      <button type="button" className="btn footer-btn">
+      <Link to="/contacts" type="button" className="btn footer-btn">
         become a client <img src={footerArrow} alt="Arrow" className="footerArrow" />
-      </button>
+      </Link>
     </>
   )
 }

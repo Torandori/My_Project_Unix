@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-import { useRef } from "react";
 import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
-import NewArrow from "./svgComponents/newArrow";
 
 function NewIt({item}) {
 
@@ -36,14 +34,6 @@ function NewIt({item}) {
           </div>
         </div>
         <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
-        {/* <div className="prev-next-arrows">
-          <button type="button" className="prev" onClick={prev}>
-            <NewArrow />
-          </button>
-          <button className="next" onClick={next}>
-             <NewArrow />
-          </button>
-        </div> */}
       </div>
       <div className="content-wrap2">
         <div className="new panchang">new/</div>
