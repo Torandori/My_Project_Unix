@@ -9,7 +9,7 @@ function NewsItem({item}){
   const [newsMock, setNewsMock] = useState([{}, {}]);
 
   useEffect(() => {
-    fetch('../pubdata/newsDetMockedData.json')
+    fetch('./pubdata/newsDetMockedData.json')
       .then(resp => resp.json())
       .then(resp => {
         setNewsMock(resp);
