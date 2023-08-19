@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
-function NewIt({item}) {
+function NewIt({item, mock}) {
 
   const hash = btoa(item.url);
   const [newMock, setNewMock] = useState([{}, {}]);
@@ -36,7 +36,7 @@ function NewIt({item}) {
         <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
       </div>
       <div className="content-wrap2">
-        <div className="new panchang">new/</div>
+        <div className="new panchang">{`new/${mock.newNum}`}</div>
         <div className="date-news">{formatDate(item.publish_date)}</div>
       </div>
       <div className="img-wrap-new">

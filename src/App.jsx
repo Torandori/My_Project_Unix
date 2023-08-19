@@ -2,7 +2,7 @@ import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-
 import {useLayoutEffect} from 'react';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
-import { ParallaxProvider } from 'react-scroll-parallax';
+// import { ParallaxProvider } from 'react-scroll-parallax';
 import Home from "./pages/Home";
 import Case from "./pages/Case";
 import Services from "./pages/Services";
@@ -29,7 +29,7 @@ const Wrapper = ({children}) => {
 function App() {
   return (
     <Wrapper>
-      <ParallaxProvider>
+      {/* <ParallaxProvider> */}
         <Routes>
           <Route path="/" element={<Default />}>
             <Route index element={<Home />}/>
@@ -45,7 +45,7 @@ function App() {
             <Route path="/contacts" element={<Contacts />}/>
           </Route>
         </Routes>
-      </ParallaxProvider>
+      {/* </ParallaxProvider> */}
       <ToastContainer theme="dark" pauseOnHover position="bottom-left"/>
     </Wrapper>
   )

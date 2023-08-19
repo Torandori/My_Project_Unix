@@ -19,9 +19,8 @@ function ContSocialSec() {
       "max-glare": 0.3
     });
 
-    // return () => {
-    //   // Cleanup code if needed
-    // };
+    return () => {
+    };
   }, []);
 
 

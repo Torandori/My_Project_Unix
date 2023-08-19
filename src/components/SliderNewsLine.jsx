@@ -11,13 +11,24 @@ import NewArrow from "./svgComponents/newArrow";
 // import formatDate from "../helpers/formatDate";
 
 function SliderNewsLine() {
-  const isDev = false;
+  const isDev = true;
 
   const [newsLine, setNewsLine] = useState([]);
   const [loading, setLoading] = useState(true)
   
   const fetchCount = useRef(0);
   const sliderNewRef = useRef();
+
+  const [newMock, setNewMock] = useState([{}, {}]);
+
+  useEffect(() => {
+    fetch('./pubdata/newsDetMockedData.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setNewMock(resp);
+        console.log(resp)
+      })
+  }, [])
 
 
   async function fetchNews(){
@@ -36,11 +47,19 @@ function SliderNewsLine() {
       } 
     }
     try {
-      const resp = isDev 
-      ? await fetch('../mock/mockNews.json').then(response => response.json())
-      : await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`, {
-        timeout: 15000,
-      }).json();
+      // const resp = isDev 
+      // ? await fetch('./mock/mockNews.json').then(response => response.json())
+      // : await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`, {
+      //   timeout: 15000,
+      // }).json();
+      const url = isDev 
+      ? './mock/mockNews.json'
+      : `${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`;
+      const resp = await ky(url, {
+          timeout: 15000,
+        }).json();
+        console.log("resp", resp)
+
 
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));
@@ -54,6 +73,7 @@ function SliderNewsLine() {
   }
 
   useEffect(() => {
+    console.log("newsLine in useEffect:", newsLine)
     fetchNews();
   }, []);
 
@@ -122,12 +142,19 @@ function SliderNewsLine() {
              <NewArrow />
           </button>
         </div>
-        <Slider {...sliderFirstSet} ref={sliderNewRef}>
+        {/* <Slider {...sliderFirstSet} ref={sliderNewRef}>
           {newsLine.map(item => {
             return (
               <NewIt item={item} key={item.id} />
             )
           })}
+        </Slider> */}
+        <Slider {...sliderFirstSet} ref={sliderNewRef}>
+          {newsLine.map(item =>  (
+              newMock.map(mock => (
+                  <NewIt item={item} key={item.id} mock={mock}/>
+            ))
+            ))}
         </Slider>
       </div>
 

@@ -15,7 +15,6 @@ function ContactsModal({ isOpen, onClose, prop}) {
         <button className="modal-close" onClick={onClose}></button>
         <div className="modal-content">
           <div className="h2">{prop ? prop : modalData.modalTitle}</div>
-            {/* {prop ? <ContactForm drop={isDrop} /> : <ContactForm /> } */}
             <ContactForm title={prop}/> 
         </div>
       </div>
