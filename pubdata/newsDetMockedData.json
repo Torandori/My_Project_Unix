@@ -1,26 +1,32 @@
 [
   {
     "authImg": "./assets/images/au-img1.jpg",
-    "authPosition": "Head of Project Management"
+    "authPosition": "Head of Project Management",
+    "newNum": "1"
   },
   {
     "authImg": "./assets/images/au-img2.jpg",
-    "authPosition": "Chief Executive Officer"
+    "authPosition": "Chief Executive Officer",
+    "newNum": "2"
   },
   {
     "authImg": "./assets/images/au-img3.jpg",
-    "authPosition": "Director"
+    "authPosition": "Director",
+    "newNum": "3"
   },
   {
     "authImg": "./assets/images/au-img4.jpg",
-    "authPosition": "Head of Marketing"
+    "authPosition": "Head of Marketing",
+    "newNum": "4"
   },
   {
     "authImg": "./assets/images/au-img5.jpg",
-    "authPosition": "Head Chef"
+    "authPosition": "Head Chef",
+    "newNum": "5"
   },
   {
     "authImg": "./assets/images/au-img6.jpg",
-    "authPosition": "Head of Finance"
+    "authPosition": "Head of Finance",
+    "newNum": "6"
   }
 ]
