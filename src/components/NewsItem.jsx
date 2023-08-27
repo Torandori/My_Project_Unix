@@ -3,22 +3,27 @@ import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
-function NewsItem({item}){
+function NewsItem({item}) {
+
   const hash = btoa(item.url);
-  // console.log(hash)
-  const [newsMock, setNewsMock] = useState([{}, {}]);
+
+  const [newMock, setNewMock] = useState([{}, {}]);
 
   useEffect(() => {
-    fetch('./pubdata/newsDetMockedData.json')
-      .then(resp => resp.json())
-      .then(resp => {
-        setNewsMock(resp);
-        console.log(resp)
-      })
+    try {
+      fetch('./pubdata/newsDetMockedData.json')
+        .then(resp => resp.json())
+        .then(resp => {
+          setNewMock(resp);
+          console.log(resp)
+        })
+    } catch (error) {
+      console.log(error)
+    }
   }, [])
 
-  const randomIndex = Math.floor(Math.random() * newsMock.length);
-  const selectedObj = newsMock[randomIndex];
+  const randomIndex = Math.floor(Math.random() * newMock.length);
+  const selectedObj = newMock[randomIndex];
 
 
   return (

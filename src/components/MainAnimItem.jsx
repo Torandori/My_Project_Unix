@@ -1,11 +1,13 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import '../assets/scss/_tiltCardProj.scss'
 
 function MainAnimItem({item}) {
+  const any = useRef(null)
+
   useEffect(() => {
-    VanillaTilt.init(document.querySelectorAll(".tiltElProj"), {
+    VanillaTilt.init(any.current, {
       max: 25,
       speed: 400,
       glare: true,
@@ -13,7 +15,7 @@ function MainAnimItem({item}) {
     });
   }, []);
   return (
-    <div className="tiltElProj">
+    <div className="tiltElProj" ref={any}>
       <img src={item.projImgUrl} alt={item.projAlt} />
     </div>
   )

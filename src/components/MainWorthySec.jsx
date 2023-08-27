@@ -20,11 +20,15 @@ function MainWorthySec() {
   };
 
   useEffect(() => {
-    fetch('./pubdata/mainWorthyItems.json')
-    .then(resp => resp.json())
-    .then(resp => {
-      setWorthyItems(resp);
-    })
+    try {
+      fetch('./pubdata/mainWorthyItems.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setWorthyItems(resp);
+      })
+    } catch (error) {
+      console.log('An error occurred while fetching data:', error)
+    }
   }, []);
 
   return (

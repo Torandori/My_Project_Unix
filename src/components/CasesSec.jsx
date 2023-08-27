@@ -14,11 +14,15 @@ function CasesSec() {
   };
 
   useEffect(() => {
-    fetch('./pubdata/casesItems.json')
-      .then(resp => resp.json())
-      .then(resp => {
-        setCaseItems(resp);
-      })
+    try {
+      fetch('./pubdata/casesItems.json')
+        .then(resp => resp.json())
+        .then(resp => {
+          setCaseItems(resp);
+        })
+    } catch (error) {
+      console.log('An error occurred while fetching data:', error);
+    }
   }, [])
 
   const casesFirst = caseItems.casesFirstBlock;

@@ -9,11 +9,15 @@ function NewsItemWN({item}){
   const [newsMock, setNewsMock] = useState([{}, {}]);
 
   useEffect(() => {
-    fetch('../pubdata/newsDetMockedData.json')
-      .then(resp => resp.json())
-      .then(resp => {
-        setNewsMock(resp);
-      })
+    try {
+      fetch('../pubdata/newsDetMockedData.json')
+        .then(resp => resp.json())
+        .then(resp => {
+          setNewsMock(resp);
+        })
+    } catch (error) {
+      console.log(error)
+    }
   }, [])
 
   const randomIndex = Math.floor(Math.random() * newsMock.length);

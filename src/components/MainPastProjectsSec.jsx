@@ -10,20 +10,28 @@ function MainPastProjectsSec() {
   const [services, setServices] = useState({ left: [], right: [] });
 
   useEffect(() => {
-    fetch('./pubdata/mainPastProjectsItems.json')
-    .then(resp => resp.json())
-    .then(resp => {
-      setProjects(resp);
-    })
+    try {
+      fetch('./pubdata/mainPastProjectsItems.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setProjects(resp);
+      })
+    } catch (error) {
+      console.log('An error occured while fetching data:', error)
+    }
   }, []);
   
 
   useEffect(() => {
-    fetch('./pubdata/mainServiceItems.json')
-    .then(resp => resp.json())
-    .then(resp => {
-      setServices(resp);
-    })
+    try {
+      fetch('./pubdata/mainServiceItems.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setServices(resp);
+      })
+    } catch (error) {
+      console.log('An error occurred while fetching data:', error)
+    }
   }, []);
 
   let servicesLeft = services.left;

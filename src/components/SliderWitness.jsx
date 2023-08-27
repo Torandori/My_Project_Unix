@@ -8,11 +8,15 @@ function SliderWitness() {
   const [sliderItems, setSliderItems] = useState([]);
 
   useEffect(() => {
-    fetch('./pubdata/mainWitSliderItems.json')
-    .then(resp => resp.json())
-    .then(resp => {
-      setSliderItems(resp);
-    })
+    try {
+      fetch('./pubdata/mainWitSliderItems.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setSliderItems(resp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
   }, []);
 
   const sliderSettings = {

@@ -12,11 +12,15 @@ function SliderClient() {
   const [clientData, setClientData] = useState({ clientSlider: []});
   
   useEffect(() => {
-    fetch('./pubdata/mainOurClient.json')
-    .then(resp => resp.json())
-    .then(resp => {
-      setClientData(resp);
-    })
+    try {
+      fetch('./pubdata/mainOurClient.json')
+      .then(resp => resp.json())
+      .then(resp => {
+        setClientData(resp);
+      })
+    } catch (error) {
+      console.log(error);
+    }
   }, [])
 
   const client = clientData.clientSlider;

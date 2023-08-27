@@ -5,15 +5,15 @@ import '../assets/scss/news-details.scss'
 import heroNewsData from "../data/heroData.json"
 
 
-function HeroSecNewsDet(props){
+function HeroSecNewsDet({resp}){
   const heroD = heroNewsData.newsDet;
-  const newsResp = props.propNews
-  console.log(newsResp);
+  // const newsResp = props.propNews
+  // console.log(newsResp);
   
   return (
   <section id="hero-sec">
     <div className="container separator">
-      <h1 className="panchang">{newsResp.title}</h1>
+      <h1 className="panchang">{resp.title}</h1>
       <div className="flake dark">
         <Flake />
       </div>

@@ -5,7 +5,8 @@
 
 export const NEWS_CACHE_TIME = '72 * 60 * 60 * 1000'; // 72 hours news cashe in local storage
 
-export const WN_API_KEY = '92805652d0fd4b2db2bedc93645a5be4'; 
+// export const WN_API_KEY = '92805652d0fd4b2db2bedc93645a5be4'; 
+export const WN_API_KEY = '9fd494d8e6204bb38c8c938d81fb8e9a'; 
 export const WN_API = 'https://api.worldnewsapi.com/';
 // export const NC_API_KEY = 'YMo-JvBcq0Ki3MyEYXat-WVrRU2rWA5DMtu9kl0YtXk'; 
 // export const NC_API = 'https://api.newscatcherapi.com';

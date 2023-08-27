@@ -5,8 +5,8 @@ import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import formatDate from "../helpers/formatDate"
 import Loader from "../components/Loader";
 import ky from "ky";
-import { toast } from "react-toastify";
 // import { useLocation } from 'react-router-dom';
+// import { Toast } from "react-toastify/dist/components";
 // import LinkedinShare from "../components/svgComponents/LinkedinShare";
 // import PinterestShare from "../components/svgComponents/PinterestShare";
 import '../assets/scss/news-details.scss'
@@ -15,11 +15,15 @@ import HeroSecNewsDet from "../components/HeroSecNewsDet";
 
 
 function NewsDetails(){
+  // const location = useLocation();
+  // const newsData = location.state?.newsData || {};
+  // console.log(newsData)
   const { hash } = useParams();
   const [news, setNewsData] = useState({});
   const [loading, setLoading] = useState(true);
   const fetchCount = useRef(0);
   const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
+  // console.log("hashdet", hash)
 
   useEffect(() => {
     try {
@@ -29,7 +33,7 @@ function NewsDetails(){
           setNewsDetMock(resp);
         })
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }, [])
 
@@ -49,24 +53,25 @@ function NewsDetails(){
       setLoading(false);
       return false;
     }
-    console.log('hash', hash);
     
     try {
       const url = atob(hash);
-      const resp = await ky(`${WN_API}/extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
+      const resp = await ky(`${WN_API}extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
       setNewsData(resp);
       localStorage.setItem(hash, JSON.stringify(resp)); 
       setLoading(false);
     } catch (err){
       console.log(err);
-      toast.error("Some error occured");
+      // toast.error("test");
       setLoading(false);
     }
   }
+  // console.log('news2', news);
 
   useEffect(() => {
     fetchOneNews();
   }, []);
+  // console.log(news)
 
 
   if(loading){
