@@ -1,10 +1,13 @@
+// import { lazy, Suspense } from 'react';
 import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
+// const NewsSliderSec = lazy(() => import("../components/NewsSliderSec"));
 import NewsSliderSec from "../components/NewsSliderSec";
-import NewsBestSec from "../components/NewsBestSec";
+// import NewsBestSec from "../components/NewsBestSec";
 import "../assets/scss/news.scss"
 import par from '../data/heroData.json';
 
+// const renderLoader = () => <p>Loading</p>;
 
 function News(){
   
@@ -15,9 +18,11 @@ function News(){
 
   return (
     <div id="news-page">
-      <HeroSec par={heroPar} />
-      <NewsSliderSec />
-      {/* <NewsBestSliderSec /> */}
+      {/* <Suspense fallback={renderLoader()}> */}
+        <HeroSec par={heroPar} />
+        <NewsSliderSec />
+        {/* <NewsBestSliderSec /> */}
+      {/* </Suspense> */}
     </div>
   )
 }

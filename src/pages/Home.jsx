@@ -1,4 +1,15 @@
+// import { lazy, Suspense } from 'react';
 import { useEffect } from 'react';
+// const HeroSec = lazy(() => import('../components/HeroSec'));
+// const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'))
+// const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
+// const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
+// const MainPastProjectsSec = lazy(() => import('../components/MainPastProjectsSec'));
+// const MainVideoSec =  lazy(() => import('../components/MainVideoSec'));
+// const MainWitnessSec = lazy(() => import('../components/MainWitnessSec'));
+// const MainWorthySec = lazy(() => import('../components/MainWorthySec'));
+// const par = lazy(() => import('../data/heroData.json'));
+import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
 import MainAboutCeoSec from '../components/MainAboutCeoSec';
 import MainAboutSec from '../components/mainAboutSec';
@@ -7,9 +18,9 @@ import MainPastProjectsSec from '../components/MainPastProjectsSec';
 import MainVideoSec from '../components/MainVideoSec';
 import MainWitnessSec from '../components/MainWitnessSec';
 import MainWorthySec from '../components/MainWorthySec';
-import '../assets/scss/main.scss'
 import par from '../data/heroData.json'
 
+// const renderLoader = () => <p>Loading</p>;
 
 function Home() {
   const heroPar = par.home;
@@ -21,6 +32,7 @@ function Home() {
   return (
     <div className="main-body-bg main-page">
       <div className="main-grafic-bg">
+      {/* <Suspense fallback={renderLoader()}> */}
         <HeroSec par={heroPar} />
         <MainAboutSec />
         <MainVideoSec />
@@ -29,6 +41,7 @@ function Home() {
         <MainPastProjectsSec />
         <MainWorthySec />
         <MainOurClientSec />
+      {/* </Suspense> */}
       </div>
     </div>
   )
