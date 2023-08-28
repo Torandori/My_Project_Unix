@@ -1,0 +1,13 @@
+@import 'vars';
+
+.fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $color-black;
+}
+.no-scroll {
+  overflow: hidden;
+  // position: fixed;
+}

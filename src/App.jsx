@@ -1,5 +1,5 @@
 import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-dom';
-import {useLayoutEffect} from 'react';
+import {useLayoutEffect, useState, useEffect} from 'react';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
 import { lazy, Suspense } from 'react';
@@ -14,6 +14,9 @@ const LazyNews = lazy(() => import("./pages/News"));
 const LazyContacts = lazy(() => import("./pages/Contacts"));
 const LazyNewsDetails = lazy(() => import("./pages/NewsDetails"));
 const LazyNotFound = lazy(() => import('./pages/NotFound'));
+// import FallBackLoader from './components/FallbackLoader';
+// import Loader from './components/Loader';
+import Fallback from './components/Fallback';
 
 
 
@@ -26,10 +29,6 @@ const LazyNotFound = lazy(() => import('./pages/NotFound'));
 // import Contacts from "./pages/Contacts";
 // import NewsDetails from './pages/NewsDetails';
 // import NotFound from './pages/NotFound';
-
-
-
-
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -42,18 +41,27 @@ const Wrapper = ({children}) => {
   return children
 }  
 function App() {
+  const [showFallback, setShowFallback] = useState(true);
+
+  useEffect(() => {
+    if (showFallback) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [showFallback]);
   return (
     <Wrapper>
       {/* <ParallaxProvider> */}
         <Routes>
           <Route path="/" element={<Default />}>
             <Route index element={<Home />}/>
-            <Route path="/case" element={<Suspense fallback='ha'><LazyCase /></Suspense>}/>
-            <Route path="/services" element={<Suspense fallback='ha'><LazyServices /></Suspense>}/>
-            <Route path="/services/:slug" element={<Suspense fallback='ha'><LazyServiceDetails /></Suspense>}/>
-            <Route path="/about" element={<Suspense fallback='ha'><LazyAbout /></Suspense>}/>
-            <Route path="/news" element={<Suspense fallback='ha'><LazyNews/></Suspense>}/>
-            <Route path="news/:hash" element={<Suspense fallback='ha'><LazyNewsDetails/></Suspense>}/>
+            <Route path="/case" element={<Suspense fallback={showFallback && <Fallback />}><LazyCase /></Suspense>}/>
+            <Route path="/services" element={<Suspense fallback={showFallback && <Fallback />}><LazyServices /></Suspense>}/>
+            <Route path="/services/:slug" element={<Suspense fallback={showFallback && <Fallback />}><LazyServiceDetails /></Suspense>}/>
+            <Route path="/about" element={<Suspense fallback={showFallback && <Fallback />}><LazyAbout /></Suspense>}/>
+            <Route path="/news" element={<Suspense fallback={showFallback && <Fallback />}><LazyNews/></Suspense>}/>
+            <Route path="news/:hash" element={<Suspense fallback={showFallback && <Fallback />}><LazyNewsDetails/></Suspense>}/>
 
 
 
@@ -64,11 +72,11 @@ function App() {
             {/* <Route path="/news" element={<News />}/> */}
             {/* <Route path="news/:hash" element={<NewsDetails/>}/> */}
           </Route>
-          <Route path="*" element={<Suspense fallback='ha'><LazyNotFound/></Suspense>}/>
+          <Route path="*" element={<Suspense fallback={showFallback && <Fallback />}><LazyNotFound/></Suspense>}/>
           {/* <Route path="*" element={<NotFound />}/> */}
 
           <Route path="/" element={<DarkLayout />}>
-            <Route path="/contacts" element={<Suspense fallback='ha'><LazyContacts /></Suspense>}/>
+            <Route path="/contacts" element={<Suspense fallback={showFallback && <Fallback />}><LazyContacts /></Suspense>}/>
             {/* <Route path="/contacts" element={<Contacts />}/> */}
 
           </Route>

@@ -5,7 +5,9 @@ function Loader() {
   // document.body.style.overflow = 'hidden'; 
   return (
     <div className="loader">
-      <Lottie animationData={load} />
+      <div className="load-size">
+        <Lottie animationData={load} />
+      </div>
     </div>
   )
 }
