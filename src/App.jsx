@@ -62,9 +62,6 @@ function App() {
             <Route path="/about" element={<Suspense fallback={showFallback && <Fallback />}><LazyAbout /></Suspense>}/>
             <Route path="/news" element={<Suspense fallback={showFallback && <Fallback />}><LazyNews/></Suspense>}/>
             <Route path="news/:hash" element={<Suspense fallback={showFallback && <Fallback />}><LazyNewsDetails/></Suspense>}/>
-
-
-
             {/* <Route path="/case" element={<Case />}/> */}
             {/* <Route path="/services" element={<Services />}/> */}
             {/* <Route path="/services/:slug" element={<ServiceDetails />}/> */}
