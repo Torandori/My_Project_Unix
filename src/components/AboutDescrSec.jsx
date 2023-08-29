@@ -16,7 +16,7 @@ function AboutDescrSec() {
             <div className="img-wrap">
               <img src={stairs} alt="Picture of stairs" />
             </div>
-            <Link to={'/contacts'} title="Contact us" className="link-under-pic">{aboutDescr.aboutBoost}</Link>
+            <Link to={'/contacts'} title="Move to Contact us page" className="link-under-pic">{aboutDescr.aboutBoost}</Link>
           </div>
           <div className="about-item">
             <div className="name">{aboutDescr.aboutDescrTitleLeft}</div>

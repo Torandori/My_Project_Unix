@@ -7,7 +7,7 @@ function FooterSocLinks(){
       {footerSocLinks.map((item, index) => {
         return (
           <li key={index}>
-            <Link to={item.iconTo} title={item.iconTitle} target="_blank" rel="noreferrer nofollow">{item.iconName}</Link>
+            <Link to={item.iconTo} title={`Move to our social media` + `${item.iconTitle}`} target="_blank" rel="noreferrer nofollow">{item.iconName}</Link>
           </li>
         )
       })}

@@ -26,7 +26,7 @@ function NotFound() {
           </div>npm
           <div className="under-anim">
             <h1 className="panchang err-title">Page is not found</h1>
-            <Link to="/">Back to home</Link>
+            <Link to="/" title="Move to home page">Back to home</Link>
           </div>
         </div>
       </div>

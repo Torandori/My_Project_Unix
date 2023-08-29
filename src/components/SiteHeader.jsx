@@ -8,7 +8,7 @@ function SiteHeader(){
     <header id="header">
       <div className="container separator">
         <div id="logo">
-          <Link to="/">
+          <Link to="/" title="Move to main page">
             <img src={logo} alt="Unixstudio Logo" />
           </Link>
         </div>

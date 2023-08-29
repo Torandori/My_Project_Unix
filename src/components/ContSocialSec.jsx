@@ -32,11 +32,11 @@ function ContSocialSec() {
       <div className="container">
         <div className="soc-projects-wrap">
           <div className="left-col">
-            <Link to={socLeft.socTo} className="soc-icon-wrap" title={socLeft.socLinkTitle} target="_blank" rel="nofollow noreferrer">
+            <Link to={socLeft.socTo} className="soc-icon-wrap" title={`Move to our social media` + `${socLeft.socLinkTitle}`} target="_blank" rel="nofollow noreferrer">
               <DribbleIcon />
             </Link>
             <h2 className="name">{socLeft.socTitle}</h2>
-            <Link to={socLeft.socTo} className="arrow" target="_blank" title={socLeft.socLinkTitle} rel="noreferrer nofollow">
+            <Link to={socLeft.socTo} className="arrow" target="_blank" title={`Move to our social media` + `${socLeft.socLinkTitle}`} rel="noreferrer nofollow">
               <Arrow />
             </Link>
           </div>

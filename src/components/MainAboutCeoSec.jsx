@@ -24,7 +24,7 @@ function MainAboutCeoSec(){
     <PromoLines />
     <div className="container separator">
       <p className="under-run">{ceoData.underLinesText}</p>
-      <Link to={ceoData.ceoLinkTo} className="small-link">{ceoData.ceoLinkText}</Link>
+      <Link to={ceoData.ceoLinkTo} className="small-link" title="Move to services page">{ceoData.ceoLinkText}</Link>
     </div>
   </section>
   )

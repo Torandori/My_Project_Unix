@@ -23,7 +23,7 @@ function AboutTestimonialSec() {
       </div>
       <div className="container">
         <p className="testimonial-text">{testData.aboutTestUnderSlider}</p>
-        <Link to="/services" className="small-link">{testData.aboutTestLinkText}</Link>
+        <Link to="/services" className="small-link" title="Move to services page">{testData.aboutTestLinkText}</Link>
       </div>
     </section>
   )

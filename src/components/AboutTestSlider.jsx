@@ -14,10 +14,10 @@ function AboutTestSlider() {
             <div className="border">
               <div className="pic-capt">{item.sliderMemberName}</div>
               <div className="img-wrap icons">
-                <Link to={item.sliderMemberToF} className="icon-item" title={item.sliderMemberName} target="_blank" rel="noreferrer nofollow">
+                <Link to={item.sliderMemberToF} className="icon-item" title={`Visit social media of` + `${item.sliderMemberName}`} target="_blank" rel="noreferrer nofollow">
                   <Fbs />
                 </Link>
-                <Link to={item.sliderMemberToI} className="icon-item" title={item.sliderMemberName} target="_blank" rel="noreferrer nofollow">
+                <Link to={item.sliderMemberToI} className="icon-item" title={`Visit social media of` + `${item.sliderMemberName}`} target="_blank" rel="noreferrer nofollow">
                   <Ins />
                 </Link>
               </div>

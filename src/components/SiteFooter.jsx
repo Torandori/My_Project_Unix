@@ -37,7 +37,7 @@ function SiteFooter() {
             </div>
             <div className="footer-contact">
               <div className="small-text">{footerData.footerSmallText}</div>
-              <Link to="mailto: Hello@unixstudio.agency">{footerData.footerEmail}</Link>
+              <Link to="mailto: Hello@unixstudio.agency" title="Email us" >{footerData.footerEmail}</Link>
             </div>
             <FooterBtnBec />
             <p className="copy">{footerData.footerCopy}</p>

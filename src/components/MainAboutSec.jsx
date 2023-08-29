@@ -15,7 +15,7 @@ function MainAboutSec() {
         <div className="subtext">{aboutData.aboutSubtext}</div>
         <div className="wrap">
           <p>{aboutData.aboutDescr}</p>
-          <Link to={aboutData.aboutLinkTo} className="small-link">{aboutData.aboutLinkText}</Link>
+          <Link to={aboutData.aboutLinkTo} className="small-link" aria-label="Move to services page">{aboutData.aboutLinkText}</Link>
         </div>
         <div id="main-services" className="accordion panchang">
           {/* <ul className="panchang"> */}
