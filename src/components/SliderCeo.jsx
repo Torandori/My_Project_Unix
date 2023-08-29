@@ -33,17 +33,17 @@ function SliderCeo() {
         <div className="quote">
           <img src={quote} alt="Quote picture" />
         </div>
-        <ul>
+        {/* <ul> */}
           <Slider ref={sliderRef} {...sliderSettings}>
             {ceo.map((item, index) => {
               return (
-                <li key={index}>
+                <div key={index}>
                   <p>{item.ceoQuote}</p>
-                </li> 
+                </div> 
               )
             })}
           </Slider>
-        </ul>
+        {/* </ul> */}
       </div>
       <div className="gen-slider-descr">
         <div className="pic-wrap">
