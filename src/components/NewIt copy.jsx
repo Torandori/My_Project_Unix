@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
+
 function NewIt({respData, randomIt}) {
 
   const hash = btoa(respData.url);
@@ -15,6 +16,7 @@ function NewIt({respData, randomIt}) {
         <div className="date-news">{formatDate(respData.publish_date)}</div>
       </div>
       <div className="img-wrap-new">
+
         <img src={respData.image ?? newsDefaultImg} alt={respData.title} />
       </div>
     </>

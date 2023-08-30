@@ -1,6 +1,8 @@
 import React from "react";
 import StartBtn from "./svgComponents/StartBtn";
 import { useNavigate } from "react-router-dom";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ServDetHowSec({descr}) {
   const under = descr.howSec;
@@ -16,7 +18,8 @@ function ServDetHowSec({descr}) {
     <section id="how-sec">
       <div className="container">
         <div className="big-img-wrap">
-          <img src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} />
+          <LazyLoadImage src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} effect="blur" />
+          {/* <img src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} /> */}
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2">{under.servDetUnderTitle}</h2>

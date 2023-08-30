@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function NewsItem({item}) {
 
@@ -31,7 +33,8 @@ function NewsItem({item}) {
       <div className="news-list-item">
         <div className="author">
           <div className="pic-wrap">
-            <img src={selectedObj.authImg} alt={selectedObj.author} />
+            <LazyLoadImage src={selectedObj.authImg} alt={selectedObj.author} effect="blur" />
+            {/* <img src={selectedObj.authImg} alt={selectedObj.author} /> */}
           </div>
           <div className="text">
             <div>{item.author}</div>
@@ -45,7 +48,8 @@ function NewsItem({item}) {
         </div>
         <div className="date-news">{formatDate(item.publish_date)}</div>
         <div className="poster-wrap">
-          <img src={item.image ?? newsDefaultImg} alt={item.title} />
+          <LazyLoadImage src={item.image ?? newsDefaultImg} alt={item.title} effect="blur" />
+          {/* <img src={item.image ?? newsDefaultImg} alt={item.title} /> */}
         </div>
       </div>
     </li>

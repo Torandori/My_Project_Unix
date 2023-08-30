@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 function SliderWitness() {
@@ -28,6 +30,7 @@ function SliderWitness() {
     slidesToScroll: 3,
     autoplay: true,
     pauseOnDotsHover: true,
+    lazyLoad: true,
     // centerMode: true,
     centerPadding: '100px',
     arrows: false,
@@ -55,7 +58,8 @@ function SliderWitness() {
           return (
             <li key={index}>
               <div className="slider-img-wrap">
-                <img src={item.witSliderImgUrl} alt={item.witSliderImgAlt} />
+                <LazyLoadImage src={item.witSliderImgUrl} alt={item.witSliderImgAlt} effect="blur" />
+                {/* <img src={item.witSliderImgUrl} alt={item.witSliderImgAlt} /> */}
               </div>
               <div className="slider-descr">
                 <div className="panchang">{item.witSliderItemTitle}</div>

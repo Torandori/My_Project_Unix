@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function NewIt({respData, randomIt}) {
 
@@ -32,7 +34,8 @@ function NewIt({respData, randomIt}) {
       <div className="content-wrap-first">
         <div className="author">
           <div className="pic-wrap">
-            <img src={mockedObj.authImg} alt={respData.author} />
+            <LazyLoadImage src={mockedObj.authImg} alt={respData.author} effect="blur" />
+            {/* <img src={mockedObj.authImg} alt={respData.author} /> */}
           </div>
           <div className="text">
             <div>{respData.author}</div>
@@ -46,7 +49,8 @@ function NewIt({respData, randomIt}) {
         <div className="date-news">{formatDate(respData.publish_date)}</div>
       </div>
       <div className="img-wrap-new">
-        <img src={respData.image ?? newsDefaultImg} alt={respData.title} />
+        <LazyLoadImage  src={respData.image ?? newsDefaultImg} alt={respData.title} effect="blur" />
+        {/* <img src={respData.image ?? newsDefaultImg} alt={respData.title} /> */}
       </div>
     </>
   )

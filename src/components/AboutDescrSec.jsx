@@ -1,6 +1,8 @@
 import aboutDescr from '../data/aboutDescrSecData.json'
 import { Link } from 'react-router-dom';
 import stairs from "../assets/images/stairs.png"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function AboutDescrSec() {
 
@@ -14,7 +16,12 @@ function AboutDescrSec() {
           </div>
           <div className="about-item middle">
             <div className="img-wrap">
-              <img src={stairs} alt="Picture of stairs" />
+            <LazyLoadImage
+              alt="Picture of stairs"
+              src={stairs}
+              effect="blur" 
+            />
+              {/* <img src={stairs} alt="Picture of stairs" /> */}
             </div>
             <Link to={'/contacts'} title="Move to Contact us page" className="link-under-pic">{aboutDescr.aboutBoost}</Link>
           </div>

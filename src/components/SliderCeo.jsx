@@ -5,6 +5,8 @@ import ceoData from '../data/mainAboutCeoSecData.json'
 import quote from '../assets/images/svg/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
 import Arrow from "./svgComponents/Arrow";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function SliderCeo() {
   const ceo = ceoData.sliderCeo;
@@ -15,6 +17,7 @@ function SliderCeo() {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
+    lazyLoad: true,
     slidesToScroll: 1,
     arrows: false,
     centerMode: false,
@@ -31,7 +34,8 @@ function SliderCeo() {
     <>
       <div className="ceo-slider">
         <div className="quote">
-          <img src={quote} alt="Quote picture" />
+          <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
+          {/* <img src={quote} alt="Quote picture" /> */}
         </div>
         {/* <ul> */}
           <Slider ref={sliderRef} {...sliderSettings}>
@@ -47,7 +51,8 @@ function SliderCeo() {
       </div>
       <div className="gen-slider-descr">
         <div className="pic-wrap">
-          <img src={ceoPic} alt="Picture of ceo" />
+          <LazyLoadImage src={ceoPic} alt="Picture of ceo" effect="blur" />
+          {/* <img src={ceoPic} alt="Picture of ceo" /> */}
         </div>
         <div className="text">
           <div className="panchang">{ceoData.ceoName}</div>

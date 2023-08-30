@@ -5,8 +5,6 @@ import '../assets/scss/about.scss'
 import '../assets/scss/contacts.scss'
 import ContactsModal from './ContactsModal';
 
-
-
 function HeroSec(props){
   // const _heroData = heroData[0];
   const heroD = props.par;
@@ -47,7 +45,7 @@ function HeroSec(props){
 
 
         <button type="button" className="btn btn-circle" onClick={openModal}>
-          <img src={btnCircle} alt="Contact us" />
+          <img src={btnCircle}  />
         </button>
       </div>
         <ContactsModal isOpen={modalOpen} onClose={closeModal} />
@@ -57,18 +55,3 @@ function HeroSec(props){
 
 export default HeroSec;
 
-
-// return (
-//   <section id="hero-sec">
-//     <div className="container separator">
-//       <h1 className="panchang">{heroD.heroTitle}</h1>
-//       <div className="flake dark">
-//         <Flake />
-//       </div>
-//       <p>{heroD.heroDescr}</p>
-//       <button type="button" className="btn btn-circle">
-//         <img src={btnCircle} alt="Contact us" />
-//       </button>
-//     </div>
-//   </section>
-// )

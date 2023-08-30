@@ -3,13 +3,21 @@ import PromoLines from "./PromoLines";
 import testimonialPic from "../assets/images/team-pic.jpg"
 import testData from '../data/aboutTestimonial.json'
 import AboutTestSlider from "./AboutTestSlider";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function AboutTestimonialSec() {
   return (
     <section id="testimonial-sec">
       <div className="container first">
         <div className="big-img-wrap">
-          <img src={testimonialPic} alt={testData.aboutPictureTitle} title={testData.aboutPicTitle} />
+          <LazyLoadImage
+          src={testimonialPic}
+          alt={testData.aboutPictureTitle}
+          title={testData.aboutPicTitle}
+          effect="black-and-white" // You can also use 'opacity' or 'black-and-white'
+        />
+          {/* <img src={testimonialPic} alt={testData.aboutPictureTitle} title={testData.aboutPicTitle} /> */}
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2">{testData.aboutTestTitle}</h2>

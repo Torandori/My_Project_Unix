@@ -14,6 +14,7 @@ import HeroSecNewsDet from "../components/HeroSecNewsDet";
 
 
 
+
 function NewsDetails(){
   // const location = useLocation();
   // const newsData = location.state?.newsData || {};

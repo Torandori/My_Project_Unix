@@ -5,6 +5,8 @@ import React from "react";
 // import clientData from '../data/mainOurClient.json'
 import quote from '../assets/images/svg/quote.svg'
 import Arrow from "./svgComponents/Arrow";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function SliderClient() {
   const sliderClRef = useRef();
@@ -32,6 +34,7 @@ function SliderClient() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    lazyLoad: true,
     centerMode: false,
   };
   function prev() {
@@ -70,7 +73,8 @@ function SliderClient() {
                 <React.Fragment key={index}>
                   <div className="client-slider">
                     <div className="quote">
-                      <img src={quote} alt="Quote picture" />
+                      <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
+                      {/* <img src={quote} alt="Quote picture" /> */}
                     </div>
                     <ul>
                       <li>
@@ -81,7 +85,8 @@ function SliderClient() {
                   </div>
                   <div className="gen-slider-descr">
                     <div className="pic-wrap">
-                      <img src={item.clientAvatarUrl} alt={item.clientName} />
+                      <LazyLoadImage src={item.clientAvatarUrl} alt={item.clientName} effect="blur" />
+                      {/* <img src={item.clientAvatarUrl} alt={item.clientName} /> */}
                     </div>
                     <div className="text">
                       <div className="panchang">{item.clientName}</div>

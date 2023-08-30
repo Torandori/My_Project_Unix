@@ -99,14 +99,3 @@ function MainPastProjectsSec() {
   )
 }
 export default MainPastProjectsSec;
-
-
-                  {/* <div className="animCard animCard1">
-                    3D Card2
-                    <div className="glow"></div>
-                  </div> */}
-                  {/* <div className="project-pic" key={item.projName}>
-                    <div className="img-wrap">
-                      <img src={item.projImgUrl} alt={item.projAlt} />
-                    </div>
-                  </div> */}

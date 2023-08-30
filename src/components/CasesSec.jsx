@@ -4,6 +4,8 @@ import casesData from "../data/caseCasesSecData.json"
 import Arrow from "./svgComponents/Arrow";
 import { useNavigate } from "react-router-dom";
 // import ImgPar from "./ImgPar";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function CasesSec() {
   const [caseItems, setCaseItems] = useState({ casesFirstBlock: [], casesSecondBlock: [] });
@@ -64,7 +66,13 @@ function CasesSec() {
                 </div>
                 <div className="img-line">
                   <div className="img-wrap">
-                    <img src={item.caseImgUrl} alt={item.caseImgAlt} />
+                  <LazyLoadImage
+                  alt={item.caseImgAlt}
+                  src={item.caseImgUrl}
+                  effect="blur" 
+                  />
+
+                    {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>
                   </div>
                   <div className="dashed-line"></div>

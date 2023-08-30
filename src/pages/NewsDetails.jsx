@@ -10,7 +10,9 @@ import formatDate from "../helpers/formatDate"
 import Loader from "../components/Loader";
 import ky from "ky";
 import { toast } from "react-toastify";
-import '../assets/scss/news-details.scss'
+import '../assets/scss/news-details.scss';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // import { useLocation } from 'react-router-dom';
 // import LinkedinShare from "../components/svgComponents/LinkedinShare";
 // import PinterestShare from "../components/svgComponents/PinterestShare";
@@ -88,7 +90,8 @@ function NewsDetails(){
             <div className="detail-overview-wrap1">
               <div className="author">
                 <div className="pic-wrap">
-                  <img src={selectedAuthObj.authImg} alt={news.author} />
+                  <LazyLoadImage src={selectedAuthObj.authImg} alt={news.author} effect="blur" />
+                  {/* <img src={selectedAuthObj.authImg} alt={news.author} /> */}
                 </div>
                 <div className="text">
                   <div>{news.author}</div>
@@ -110,7 +113,8 @@ function NewsDetails(){
             <div className="detail-text-wrap">
               <div className="text-col">
                 <div className="poster-detail-wrap">
-                  <img src={news.image ? news.image : newsDefaultImg}  />
+                  <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
+                  {/* <img src={news.image ? news.image : newsDefaultImg}  /> */}
                 </div>
                 <p>{news.text}</p>
               </div>

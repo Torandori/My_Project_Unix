@@ -2,6 +2,8 @@ import fundingData from '../data/servFundingSecData.json'
 import circleArrowBtn from '../assets/images/svg/circleArrowBtn.svg'
 import { useNavigate } from 'react-router-dom';
 import FaqList from './FaqList';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ServFundingSec() {
   // const fundingList = fundingData.fundingList;
@@ -36,7 +38,8 @@ function ServFundingSec() {
             <div className="text-block2">
               <p className="text-medium">{fundingData.fundingContinue}</p>
               <div className="circle-arrow-btn" onClick={btnClick}>
-                <img src={circleArrowBtn} alt="Contact us" />
+                <LazyLoadImage src={circleArrowBtn} alt="Contact us" effect="blur" />
+                {/* <img src={circleArrowBtn} alt="Contact us" /> */}
               </div>
             </div>
           </div>

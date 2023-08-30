@@ -1,4 +1,6 @@
 import { useParallax } from "react-scroll-parallax";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ImgPar({item}) {
   console.log(item)
@@ -8,7 +10,12 @@ function ImgPar({item}) {
   });
   return (
     <div className="img-wrap spinner"  style={parallaxStyles} >
-      <img src={item.caseImgUrl} alt={item.caseImgAlt} />
+      <LazyLoadImage
+      alt={item.caseImgAlt}
+      src={item.caseImgUrl}
+      effect="blur" 
+      />
+      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
       <div className="overlay"></div>
     </div>
   )

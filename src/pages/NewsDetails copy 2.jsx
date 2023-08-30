@@ -2,9 +2,11 @@ import { WN_API, WN_API_KEY } from "../env";
 import { useParams } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
-import Loader from "../components/Loader";
+// import Loader from "../components/Loader";
 import ky from "ky";
 import '../assets/scss/news-details.scss'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 
@@ -49,7 +51,8 @@ function NewsDetails(){
           <div className="detail-text-wrap">
             <div className="text-col">
               <div className="poster-detail-wrap">
-                <img src={news.image ? news.image : newsDefaultImg}  />
+                <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
+                {/* <img src={news.image ? news.image : newsDefaultImg}  /> */}
               </div>
               <p>{news.text}</p>
             </div>
