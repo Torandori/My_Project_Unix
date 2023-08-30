@@ -2,21 +2,7 @@ import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-
 import {useLayoutEffect, useState, useEffect} from 'react';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
-import { lazy, Suspense } from 'react';
-// import { LazyExoticComponent } from 'react';
-// import { ParallaxProvider } from 'react-scroll-parallax';
 import Home from "./pages/Home";
-// import Fallback from './components/Fallback';
-// const LazyCase = lazy(() => import("./pages/Case"))
-// const LazyServices = lazy(() => import("./pages/Services"));
-// const LazyServiceDetails = lazy(() => import("./pages/ServiceDetails"));
-// const LazyAbout = lazy(() => import("./pages/About"));
-// const LazyNews = lazy(() => import("./pages/News"));
-// const LazyContacts = lazy(() => import("./pages/Contacts"));
-// const LazyNewsDetails = lazy(() => import("./pages/NewsDetails"));
-// const LazyNotFound = lazy(() => import('./pages/NotFound'));
-// import FallBackLoader from './components/FallbackLoader';
-// import Loader from './components/Loader';
 import Case from "./pages/Case";
 import Services from "./pages/Services";
 import ServiceDetails from "./pages/ServiceDetails";
@@ -28,6 +14,20 @@ import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import { lazy, Suspense } from 'react';
+// import { LazyExoticComponent } from 'react';
+// import { ParallaxProvider } from 'react-scroll-parallax';
+// import Fallback from './components/Fallback';
+// const LazyCase = lazy(() => import("./pages/Case"))
+// const LazyServices = lazy(() => import("./pages/Services"));
+// const LazyServiceDetails = lazy(() => import("./pages/ServiceDetails"));
+// const LazyAbout = lazy(() => import("./pages/About"));
+// const LazyNews = lazy(() => import("./pages/News"));
+// const LazyContacts = lazy(() => import("./pages/Contacts"));
+// const LazyNewsDetails = lazy(() => import("./pages/NewsDetails"));
+// const LazyNotFound = lazy(() => import('./pages/NotFound'));
+// import FallBackLoader from './components/FallbackLoader';
+// import Loader from './components/Loader';
 
 const Wrapper = ({children}) => {
   const location = useLocation();

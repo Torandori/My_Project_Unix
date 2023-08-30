@@ -41,17 +41,3 @@ function MainAboutSec() {
   )
 }
 export default MainAboutSec;
-
-// return (
-//   <li tabIndex="1" key={index}>
-//     <div className="accord-header">
-//       <div className="accord-title">{item.aboutAccordName}</div>
-//       <div className="arrow-btn">
-//         <Arrow />
-//       </div>
-//     </div>
-//     <div className="accordion-content">
-//       <p className="accordDescr">{item.aboutAccordDescr}</p>
-//     </div>
-//   </li>
-// )

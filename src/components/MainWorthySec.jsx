@@ -67,7 +67,7 @@ function MainWorthySec() {
               <div className={item.worthyItemClass} key={index} >
                 <p>{item.worthyItemText}</p>
                 <div>{item.worthyItemCount}</div>
-                <Link to={item.worthyItemLinkTo} title={item.worthyItemLinkTitle}>{item.worthyItemLinkText}</Link>
+                {/* <Link to={item.worthyItemLinkTo} title={item.worthyItemLinkTitle}>{item.worthyItemLinkText}</Link> */}
               </div>
             )
           })}

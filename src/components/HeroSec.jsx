@@ -35,17 +35,17 @@ function HeroSec(props){
         <div className="hero-wrap">
           <div className="wrap-item">
             <div>{heroD.heroAsk}</div>
-            <a href="mailto:Hello@unixstudio.agency">{heroD.heroEmail}</a>
+            <a href="mailto:Hello@unixstudio.agency" title="Send an email to us">{heroD.heroEmail}</a>
           </div>
         <div className="wrap-item">
           <div>{heroD.heroAction}</div>
-          <a href="mailto:hello@unixstudio.agency">{heroD.heroEmailSecond}</a>
+          <a href="mailto:hello@unixstudio.agency" title="Send an email to us">{heroD.heroEmailSecond}</a>
         </div>
       </div>
 
 
-        <button type="button" className="btn btn-circle" onClick={openModal}>
-          <img src={btnCircle}  />
+        <button type="button" className="btn btn-circle" onClick={openModal} aria-label="Open contact form" title="Contact us">
+          <img src={btnCircle} alt="Open contact form" />
         </button>
       </div>
         <ContactsModal isOpen={modalOpen} onClose={closeModal} />

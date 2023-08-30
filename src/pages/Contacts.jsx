@@ -1,35 +1,56 @@
-// import { lazy, Suspense } from 'react';
 import { useEffect } from "react";
 import HeroSec from "../components/HeroSec";
-
-// const ContContactsSec = lazy(() => import("../components/ContContactsSec"));
-// const ContSocialSec = lazy(() => import("../components/ContSocialSec"));
-// const ContCareerSec = lazy(() => import("../components/ContCareerSec"));
-
 import ContContactsSec from "../components/ContContactsSec";
 import ContSocialSec from "../components/contSocialSec";
 import ContCareerSec from "../components/ContCareerSec";
 import '../assets/scss/contacts.scss';
 import par from '../data/heroData.json';
+import pageTitle from '../data/pagesTitles.json';
+import { Helmet } from "react-helmet-async";
+// import { lazy, Suspense } from 'react';
+// const ContContactsSec = lazy(() => import("../components/ContContactsSec"));
+// const ContSocialSec = lazy(() => import("../components/ContSocialSec"));
+// const ContCareerSec = lazy(() => import("../components/ContCareerSec"));
+
 
 // const renderLoader = () => <p>Loading</p>;
 
 function Contacts() {
   const heroPar = par.contacts;
   
-  useEffect(()=>{
-    window.document.title = 'Unix Contacts';
-  }, []);
+  // useEffect(()=>{
+  //   window.document.title = 'Unix Contacts';
+  // }, []);
 
   return(
-    <div id="contacts-page">
-      {/* <Suspense fallback={renderLoader()}> */}
-        <HeroSec par={heroPar} />
-        <ContContactsSec />
-        <ContSocialSec />
-        <ContCareerSec />
-      {/* </Suspense> */}
-    </div>
+    <>
+      <Helmet>
+        <title>{pageTitle.contacts}</title>
+        <meta name="description" content="Connect with our digital agency's team of experts. &#9742; +18880007999" />
+        <meta name="robots" content="all" />
+        <meta name="revisit-after" content="1 days" />
+
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Unixstudio" />
+        <meta property="og:description" content="Connect with our digital agency's team of experts. " />
+        <meta property="og:url" content="https://torandori.github.io/My_Project_Unix/" />
+        <meta property="og:site_name" content=" Unixstudio " />
+        <meta property="og:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
+        <meta name="twitter:title" content="Unixstudio" />
+        <meta name="twitter:description" content="Whether you have inquiries, collaboration ideas, or projects in mind, we're here to help you navigate the digital landscape. Reach out to us today." />
+        <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
+        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
+      </Helmet>
+      <div id="contacts-page">
+        {/* <Suspense fallback={renderLoader()}> */}
+          <HeroSec par={heroPar} />
+          <ContContactsSec />
+          <ContSocialSec />
+          <ContCareerSec />
+        {/* </Suspense> */}
+      </div>
+    </>
   )
 }
 export default Contacts;
