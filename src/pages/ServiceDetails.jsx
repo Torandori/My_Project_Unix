@@ -35,6 +35,8 @@ function ServiceDetails() {
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{`Unix ` + pageTitle}</title>
         <meta name="description" content="Comprehensive range of digital solutions emphasizes the variety of services your agency provides. &#9742; +18880007999" />
         <meta name="robots" content="all" />

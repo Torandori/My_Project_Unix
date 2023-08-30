@@ -28,6 +28,8 @@ function About(){
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{pageTitle.about}</title>
         <meta name="description" content="Discover Unixstudio innovative digital agency's expertise in strategic marketing, creative design, and cutting-edge technology. &#9742; +18880007999" />
         <meta name="robots" content="all" />

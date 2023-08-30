@@ -22,6 +22,8 @@ function News(){
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{pageTitle.news}</title>
         <meta name="description" content="Latest updates and insights from our digital agency. &#9742; +18880007999" />
         <meta name="robots" content="all" />

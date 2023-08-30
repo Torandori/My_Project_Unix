@@ -35,6 +35,8 @@ function Home() {
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{pageTitle.home}</title>
         <meta name="description" content="Providing digital solutions for business. &#9742; +18880007999" />
         <meta name="robots" content="all" />

@@ -18,7 +18,9 @@ function Services() {
   return (
     <>
       <Helmet>
-      <title>{pageTitle.services}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
+        <title>{pageTitle.services}</title>
         <meta name="description" content="From web design and development to strategic marketing campaigns, our digital agency crafts tailored strategies to help you thrive in the digital landscape. &#9742; +18880007999" />
         <meta name="robots" content="all" />
         <meta name="revisit-after" content="1 days" />

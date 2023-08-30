@@ -22,6 +22,8 @@ function NotFound() {
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{pageTitle.notFound}</title>
         <meta name="description" content="Oops! It seems you've ventured into uncharted digital territory uses a friendly tone to acknowledge the situation. &#9742; +18880007999" />
         <meta name="robots" content="all" />

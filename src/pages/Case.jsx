@@ -21,6 +21,7 @@ function Case() {
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
         <title>{pageTitle.case}</title>
         <meta name="description" content="Explore our diverse portfolio of digital successes, ranging from captivating web designs to strategic marketing campaigns. &#9742; +18880007999" />
         <meta name="robots" content="all" />

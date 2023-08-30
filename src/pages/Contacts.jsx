@@ -25,6 +25,8 @@ function Contacts() {
   return(
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" data-rh="true" />
+
         <title>{pageTitle.contacts}</title>
         <meta name="description" content="Connect with our digital agency's team of experts. &#9742; +18880007999" />
         <meta name="robots" content="all" />
