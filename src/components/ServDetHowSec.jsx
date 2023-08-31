@@ -38,7 +38,7 @@ function ServDetHowSec({descr}) {
           })}
         </div>
         <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
-          <button type="button" onClick={btnClick} className="btn project-btn">
+          <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
             <StartBtn />
           </button>
         </div>
