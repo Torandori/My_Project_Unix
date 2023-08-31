@@ -66,11 +66,11 @@ function CasesSec() {
                 </div>
                 <div className="img-line">
                   <div className="img-wrap">
-                  <LazyLoadImage
-                  alt={item.caseImgAlt}
-                  src={item.caseImgUrl}
-                  effect="blur" 
-                  />
+                    <LazyLoadImage
+                    alt={item.caseImgAlt}
+                    src={item.caseImgUrl}
+                    effect="blur" 
+                    />
 
                     {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>

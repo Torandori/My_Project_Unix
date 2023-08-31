@@ -37,10 +37,10 @@
     }
     .btn-circle {
       &:active {
-        box-shadow: 0 0 32px rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 32px rgb(197, 218, 73, 0.3);
       }
       &:focus-visible {
-        box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 14px rgb(197, 218, 73, 0.2);
         outline: none;
       }
     }
@@ -84,8 +84,16 @@
   justify-content: space-between;
   transition: all .3s ease;
   &:hover {
+    .h4 {
+      background-size: 100% 100%;
+    }
     .img-wrap {
       transform: scale(1.1);
+      box-shadow: 0 0 10px rgb(141, 155, 54, 0.1),
+        0 0 20px rgb(141, 155, 54, 0.1),
+        0 0 40px rgb(141, 155, 54, 0.2),
+        0 0 80px rgb(141, 155, 54, 0.5),
+        0 0 160px rgb(141, 155, 54, 0.6);
       img {
         transition: all .2 ease;
       }
@@ -154,7 +162,9 @@
       }
     }
     .arrow:hover {
-      opacity: 0.7;
+      svg path {
+        fill: #C5DA49;
+      }
     }
   }
   .h4 {
@@ -165,6 +175,12 @@
     text-transform: uppercase;
     margin-bottom: 32px;
     margin-right: 20px;
+    background: linear-gradient(#C5DA49, #C5DA49) left no-repeat, #fff;
+    background-size: 0% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s ease-in-out;
     .year {
       font-family: 'Hubot Sans', sans-serif;
       @include fz(18);

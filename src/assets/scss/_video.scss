@@ -56,6 +56,16 @@
       background-color: rgba(18, 18, 18, 0);
       &::before, &::after {
         opacity: 1;
+        // transform: scale(1, 1);
+      }
+      &::before {
+        width: 100px;
+        height: 100px;
+      }
+      &::after {
+        border-left: 46px solid #fff;
+        border-top: 26px solid transparent;
+        border-bottom: 26px solid transparent;
       }
     }
   }
