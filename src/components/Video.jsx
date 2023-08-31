@@ -11,9 +11,9 @@ function Video({code}) {
     <div className="video-wrapper">
       {
         isVideo 
-        ?  <iframe width="560" height="315" src={`https://www.youtube.com/embed/${code}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /> 
+        ? <iframe width="560" height="315" src={`https://www.youtube.com/embed/${code}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /> 
         : <>
-          <img src={`https://img.youtube.com/vi/${code}/maxresdefault.jpg`} alt="" />
+          <img src={`https://img.youtube.com/vi/${code}/maxresdefault.jpg`} alt="Video preview picture" />
           <button type="button" className="video-play-btn"  title="Play Video" tabIndex="0" onClick={playHandler}></button>
         </>
       }

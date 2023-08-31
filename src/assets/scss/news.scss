@@ -443,6 +443,16 @@
   }
 }
 
+.poster-wrap .slick-slide img {
+  display: inline!important;
+}
+.img-wrap-new .lazy-load-image-background.blur.lazy-load-image-loaded {
+  display: inline!important;
+}
+.big-img-wrap, .img-wrap-new, .poster-wrap, .poster-detail-wrap, .pic-wrap, .img-wrap, .card, .slider-img-wrap, .tiltElProj img {
+  background-color: $color-grey2;
+}
+
 @media screen and (max-width: 520px) {
   #best-sec .container .h3 {
     font-size: 4rem;

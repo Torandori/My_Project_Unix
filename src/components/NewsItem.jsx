@@ -29,11 +29,11 @@ function NewsItem({item}) {
 
 
   return (
-    <li>
+    // <>
       <div className="news-list-item">
         <div className="author">
           <div className="pic-wrap">
-            <LazyLoadImage src={selectedObj.authImg} alt={selectedObj.author} effect="blur" />
+            <LazyLoadImage src={selectedObj.authImg} alt={`Picture of ` + selectedObj.authPosition} effect="blur" />
             {/* <img src={selectedObj.authImg} alt={selectedObj.author} /> */}
           </div>
           <div className="text">
@@ -52,7 +52,7 @@ function NewsItem({item}) {
           {/* <img src={item.image ?? newsDefaultImg} alt={item.title} /> */}
         </div>
       </div>
-    </li>
+    // </li>
   )
 }
 export default NewsItem;

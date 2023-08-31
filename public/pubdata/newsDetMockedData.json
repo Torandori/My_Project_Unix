@@ -28,5 +28,35 @@
     "authImg": "./assets/images/au-img6.jpg",
     "authPosition": "Head of Finance",
     "newNum": "6"
+  },
+  {
+    "authImg": "./assets/images/best-new2.jpg",
+    "authPosition": "Digital Marketing Specialist",
+    "newNum": "7"
+  },
+  {
+    "authImg": "./assets/images/best-new3.jpg",
+    "authPosition": "Web Developer",
+    "newNum": "8"
+  },
+  {
+    "authImg": "./assets/images/best-avatar4.jpg",
+    "authPosition": "UX/UI Designer",
+    "newNum": "9"
+  },
+  {
+    "authImg": "./assets/images/best-avatar3.jpg",
+    "authPosition": "E-commerce Manager",
+    "newNum": "10"
+  },
+  {
+    "authImg": "./assets/images/best-avatar2.jpg",
+    "authPosition": "Data Analyst",
+    "newNum": "11"
+  },
+  {
+    "authImg": "./assets/images/best-avatar1.jpg",
+    "authPosition": "Content Strategist",
+    "newNum": "12"
   }
 ]

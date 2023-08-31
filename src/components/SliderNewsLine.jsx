@@ -130,10 +130,10 @@ function SliderNewsLine() {
     <div className="news-slider">
       <div className="newSlider">
         <div className="prev-next-arrows">
-          <button type="button" className="prev" onClick={prev}>
+          <button type="button" className="prev" onClick={prev} aria-label="Previous slide">
             <NewArrow />
           </button>
-          <button className="next" onClick={next}>
+          <button type="button" className="next" onClick={next} aria-label="Next slide">
              <NewArrow />
           </button>
         </div>
@@ -145,7 +145,7 @@ function SliderNewsLine() {
       </div>
 
       <div className="news-line">
-        <ul className="news-list">
+        <div className="news-list">
           <Slider {...sliderSecondSet}>
             {newsLine.map(item => {
               return (
@@ -153,7 +153,7 @@ function SliderNewsLine() {
               )
             })}
           </Slider>
-        </ul>
+        </div>
       </div>
     </div>
   )
