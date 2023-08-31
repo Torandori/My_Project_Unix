@@ -45,6 +45,9 @@
       width: 50%;
       padding-top: 76px;
       padding-right: 75px;
+      .img-wrap {
+        background-color: transparent;
+      }
       .name {
         font-family: 'Panchang', sans-serif;
         @include lh(28);

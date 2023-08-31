@@ -13,6 +13,9 @@
   border-radius: 10px;
   transition: border 1s;
   position: relative;
+  .img-wrap {
+    background-color: transparent!important;
+  }
   &:hover {
     border: 1px solid white;
   }
