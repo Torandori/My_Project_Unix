@@ -89,11 +89,11 @@
     }
     .img-wrap {
       transform: scale(1.1);
-      box-shadow: 0 0 10px rgb(141, 155, 54, 0.1),
-        0 0 20px rgb(141, 155, 54, 0.1),
-        0 0 40px rgb(141, 155, 54, 0.2),
-        0 0 80px rgb(141, 155, 54, 0.5),
-        0 0 160px rgb(141, 155, 54, 0.6);
+      // box-shadow: 0 0 10px rgb(141, 155, 54, 0.1),
+      //   0 0 20px rgb(141, 155, 54, 0.1),
+      //   0 0 40px rgb(141, 155, 54, 0.2),
+      //   0 0 80px rgb(141, 155, 54, 0.5),
+      //   0 0 160px rgb(141, 155, 54, 0.6);
       img {
         transition: all .2 ease;
       }
@@ -163,7 +163,7 @@
     }
     .arrow:hover {
       svg path {
-        fill: #C5DA49;
+        fill: #d7f046;
       }
     }
   }
@@ -175,7 +175,7 @@
     text-transform: uppercase;
     margin-bottom: 32px;
     margin-right: 20px;
-    background: linear-gradient(#C5DA49, #C5DA49) left no-repeat, #fff;
+    background: linear-gradient(#d7f046, #d7f046) left no-repeat, #fff;
     background-size: 0% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -208,8 +208,38 @@
   .btn-circle-arrow-text {
     max-width: 246px;
     max-height: 246px;
+    position: relative;
+    color: #fff;
+    .btn-content {
+      position: relative;
+      z-index: 1;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 1px;
+      background-color: #121212;
+      border-radius: 50%;
+    }
+    &:hover {
+      background-color: #d7f046;
+      opacity: 1;
+      box-shadow: 0 0 45px #d7f046;
+      .btn-text {
+      color: #d7f046;
+      }
+      .arrow-in svg path {
+        fill: #d7f046;
+      }
+    }
+    &:active {
+      // background-color: #d7f046;
+      // opacity: 1;
+      box-shadow: 0 0 55px #d7f046;
+    }
   }
 }
+
 // #CASES_SEC
 @media screen and (max-width: 1300px) {
   #case-page #hero-sec {
