@@ -56,7 +56,14 @@ function MainWorthySec() {
 
         <div className="worthy-grid">
           <div className="empty">
-            <Link to={worthyData.worthyLinkTo} className="small-link" title={worthyData.worthyLinkTitle}>{worthyData.worthyLinkName}</Link>
+            <Link to={worthyData.worthyLinkTo} className="small-link" title={worthyData.worthyLinkTitle}>
+              <span className="mask">
+                <div className="small-link-container">
+                  <span className="small-link-title1 title">{worthyData.worthyLinkName}</span>
+                  <span className="small-link-title2 title">{worthyData.worthyLinkName}</span>
+                </div>
+              </span>
+            </Link>
           </div>
           <div className="border"></div>
           <div className="nocontent"></div>

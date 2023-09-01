@@ -31,7 +31,14 @@ function AboutTestimonialSec() {
       </div>
       <div className="container">
         <p className="testimonial-text">{testData.aboutTestUnderSlider}</p>
-        <Link to="/services" className="small-link" title="Move to services page">{testData.aboutTestLinkText}</Link>
+        <Link to="/services" className="small-link" title="Move to services page">
+          <span className="mask">
+            <div className="small-link-container">
+              <span className="small-link-title1 title">{testData.aboutTestLinkText}</span>
+              <span className="small-link-title2 title">{testData.aboutTestLinkText}</span>
+            </div>
+          </span>
+        </Link>
       </div>
     </section>
   )

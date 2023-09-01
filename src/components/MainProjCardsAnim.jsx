@@ -19,6 +19,7 @@ function MainProjCardsAnim({projects}) {
                 <div className="project-name">{item.projName}</div>
                 <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
                   <Arrow />
+                  <Arrow />
                 </Link>
               </div>
               <p>{item.projDescr}</p>

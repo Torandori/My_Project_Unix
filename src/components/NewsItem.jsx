@@ -4,6 +4,7 @@ import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import "../assets/scss/_newsCardHover.scss"
 
 function NewsItem({item}) {
 
@@ -47,7 +48,7 @@ function NewsItem({item}) {
 
         </div>
         <div className="date-news">{formatDate(item.publish_date)}</div>
-        <div className="poster-wrap">
+        <div className="poster-wrap card-hover">
           <LazyLoadImage src={item.image ?? newsDefaultImg} alt={item.title} effect="blur" />
           {/* <img src={item.image ?? newsDefaultImg} alt={item.title} /> */}
         </div>

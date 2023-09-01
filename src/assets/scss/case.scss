@@ -61,6 +61,7 @@
     text-transform: uppercase;
     &::before {
       background-color: #fff;
+      height: 1px;
       opacity: 0.5;
       bottom: -6px;
     }
@@ -69,7 +70,6 @@
 .cases-projects {
   display: grid;
   grid-template-columns: 25% repeat(2, minmax(400px, 1fr));
-  // grid-template-columns: 25% 1fr 1fr;
   grid-template-rows: repeat(2, 1fr);
   border-top: 1px solid $color-dark-line;
   border-bottom: 1px solid $color-dark-line;
@@ -224,7 +224,6 @@
     &:hover {
       background-color: #d7f046;
       opacity: 1;
-      box-shadow: 0 0 45px #d7f046;
       .btn-text {
       color: #d7f046;
       }

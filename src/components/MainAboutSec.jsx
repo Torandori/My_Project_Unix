@@ -15,7 +15,14 @@ function MainAboutSec() {
         <div className="subtext">{aboutData.aboutSubtext}</div>
         <div className="wrap">
           <p>{aboutData.aboutDescr}</p>
-          <Link to={aboutData.aboutLinkTo} className="small-link" title="Move to services page">{aboutData.aboutLinkText}</Link>
+          <Link to={aboutData.aboutLinkTo} className="small-link" title="Move to services page">
+            <span className="mask">
+              <div className="small-link-container">
+                <span className="small-link-title1 title">{aboutData.aboutLinkText}</span>
+                <span className="small-link-title2 title">{aboutData.aboutLinkText}</span>
+              </div>
+            </span>
+          </Link>
         </div>
         <div id="main-services" className="accordion panchang">
           {/* <ul className="panchang"> */}
@@ -25,6 +32,7 @@ function MainAboutSec() {
                     <div className="accord-header">
                       <div className="accord-title">{item.aboutAccordName}</div>
                       <div className="arrow-btn">
+                        <Arrow />
                         <Arrow />
                       </div>
                     </div>

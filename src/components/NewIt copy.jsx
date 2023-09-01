@@ -16,7 +16,6 @@ function NewIt({respData, randomIt}) {
         <div className="date-news">{formatDate(respData.publish_date)}</div>
       </div>
       <div className="img-wrap-new">
-
         <img src={respData.image ?? newsDefaultImg} alt={respData.title} />
       </div>
     </>

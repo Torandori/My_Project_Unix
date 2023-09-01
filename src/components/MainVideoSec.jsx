@@ -13,7 +13,14 @@ function MainVideoSec() {
             <div className="video-descr panchang">{videoData.videoDescrTitle}</div>
             <div>{videoData.videoUnder}</div>
           </div>
-          <Link to={videoData.videoLinkTo} className="small-link" title={videoData.videoLinkTitle}>{videoData.videoLinkText}</Link>
+          <Link to={videoData.videoLinkTo} className="small-link" title={videoData.videoLinkTitle}>
+            <span className="mask">
+              <div className="small-link-container">
+                <span className="small-link-title1 title">{videoData.videoLinkText}</span>
+                <span className="small-link-title2 title">{videoData.videoLinkText}</span>
+              </div>
+            </span>
+          </Link>
         </div>
       </div>
     </section>

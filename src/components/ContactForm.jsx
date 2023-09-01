@@ -196,7 +196,7 @@ function ContactForm({title}) {
         blur={(val) => checkMessage(val)} 
         error={messageError}/>
 
-      <button type="submit" className="btn form-btn"><span>{contacts.formBtnText}</span></button>
+      <button type="submit" className="btn form-btn-hover"><span>{contacts.formBtnText}</span></button>
     </form> 
   )
 }

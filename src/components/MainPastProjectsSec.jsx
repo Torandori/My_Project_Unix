@@ -4,10 +4,44 @@ import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json"
 import React from "react";
 import MainProjCardsAnim from "./MainProjCardsAnim";
+// import '../helpers/hoverCurs.js'
 
 function MainPastProjectsSec() {
   const [projects, setProjects] = useState([{}, {}]);
   const [services, setServices] = useState({ left: [], right: [] });
+
+  // useEffect(() => {
+  //   const links = document.querySelectorAll('.hover-me');
+  //   const cursor = document.querySelector('.cursor');
+  
+  //   const animateMe = function(e) {
+  //     const span = this.querySelector('span');
+  //     const { offsetX: x, offsetY: y } = e,
+  //           { offsetWidth: width, offsetHeight: height } = this;
+      
+  //     move = 20;
+  //     xMove = x / width * (move * 2) - move;
+  //     yMove = y / height * (move * 2) - move;
+      
+  //     span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+      
+  //     if (e.type === 'mouseleave') span.style.transform = '';
+  //   };
+    
+  //   const editCursor = e => {
+  //     const { clientX: x, clientY: y } = e;
+  //     cursor.style.left = x + 'px';
+  //     cursor.style.top = y + 'px';
+  //   };
+    
+  //   links.forEach(link => link.addEventListener('mousemove', animateMe));
+  //   links.forEach(link => link.addEventListener('mouseleave', animateMe));
+  //   window.addEventListener('mousemove', editCursor);
+
+  //   return () => {
+
+  //   }
+  // }, [])
 
   useEffect(() => {
     try {
@@ -65,13 +99,15 @@ function MainPastProjectsSec() {
                 {servicesLeft.map((item, index) => {
                   return (
                     <div className="service-item" key={index}>
-                      <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
-                        <div className="h3 panchang">{item.mainServiceName}</div>
-                        <div className="arrow-btn">
-                          <Arrow />
-                        </div>
-                      </Link>
-                      <p className="item-descr">{item.mainServiceDescr}</p>
+                      <div className="nav-wrapper">
+                        <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
+                          <div className="h3 panchang">{item.mainServiceName}</div>
+                          <div className="arrow-btn">
+                            <Arrow />
+                          </div>
+                        </Link>
+                        <p className="item-descr">{item.mainServiceDescr}</p>
+                      </div>
                   </div>
                   )
                 })}
