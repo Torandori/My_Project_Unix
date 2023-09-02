@@ -25,14 +25,13 @@ function ServDetHowSec({descr}) {
           <h2 className="h2">{under.servDetUnderTitle}</h2>
           <p className="text">{under.servDetUnderDescr}</p>
         </div>
-        <div className="how-list">
+        <div className="how-list" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="700">
           {_under.map((item, index) => {
-
             return (
               <React.Fragment key={index}>
-                <div className="number cell" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListNumber}</div>
-                <div className="name cell" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListTitle}</div>
-                <p className="item-descr cell" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListDescr}</p>
+                <div className="number cell">{item.howListNumber}</div>
+                <div className="name cell">{item.howListTitle}</div>
+                <p className="item-descr cell">{item.howListDescr}</p>
               </React.Fragment>
             )
           })}

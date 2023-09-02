@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom'
 import worthyData from '../data/mainWorthySecData.json'
 import PromoLines from './PromoLines';
 import ContactsModal from './ContactsModal';
+import CountUp from 'react-countup';
+import ScrollTrigger from 'react-scroll-trigger';
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [counterOn, setCounterOn] = useState(false);
 
   const openModal = () => {
     setModalOpen(true);
@@ -65,19 +68,32 @@ function MainWorthySec() {
               </span>
             </Link>
           </div>
-          <div className="border"></div>
+          <div className="border1"></div>
           <div className="nocontent"></div>
           <div className="nocontent"></div>
 
-          {worthyItems.map((item, index) => {
-            return (
-              <div className={item.worthyItemClass} key={index} >
-                <p>{item.worthyItemText}</p>
-                <div>{item.worthyItemCount}</div>
-                {/* <Link to={item.worthyItemLinkTo} title={item.worthyItemLinkTitle}>{item.worthyItemLinkText}</Link> */}
-              </div>
-            )
-          })}
+            {worthyItems.map((item, index) => {
+              return (
+                <div className={item.worthyItemClass} key={index} >
+                    <p>{item.worthyItemText}</p>
+                    <div>{item.worthyItemCount}</div>
+                    {/* <ScrollTrigger 
+                    onEnter={() => setCounterOn(true)} 
+                    onExit={() => setCounterOn(false)} 
+                    threshold={0}
+                    > */}
+                      {/* <div>
+                        {`${item.worthyItemCountStart}`}
+                        {item.worthyItemNum && counterOn ? (
+                          <CountUp start={0} end={item.worthyItemNum} duration={2} />
+                        ) : null}
+                        {`${item.worthyItemCountEnd}`}
+                      </div> */}
+                    {/* <Link to={item.worthyItemLinkTo} title={item.worthyItemLinkTitle}>{item.worthyItemLinkText}</Link> */}
+                    {/* </ScrollTrigger> */}
+                  </div>
+              )
+            })}
         </div>
       </div>
     </section>
