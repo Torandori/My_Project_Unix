@@ -38,7 +38,7 @@ function CasesSec() {
     <section id="cases-sec">
       <div className="container">
         <div className="cases-projects">
-          <div className="left">
+          <div className="left" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="500">
             <div className="project-descr first">
               <h4 className="h4">{casesLeftFirst.casesLeftTitle}</h4>
               <p className="short-descr">{casesLeftFirst.casesLeftShortDescr}</p>
@@ -54,8 +54,8 @@ function CasesSec() {
           </div>
           {casesFirst.map((item, index) => {
             return (
-              <div className="case-item" key={index}>
-                <div className="project-descr">
+              <div className="case-item" key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
+                <div className="project-descr" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
                   <div className="title-wrap">
                     <div className="h4">{item.caseName} <span className="year">{item.caseDate}</span></div>
                     <Link to={item.caseTo} className="arrow" target="_blank" title={item.caseLinkTitle}>
@@ -64,7 +64,7 @@ function CasesSec() {
                   </div>
                   <p className="short-descr">{item.caseDescr}</p>
                 </div>
-                <div className="img-line">
+                <div className="img-line" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
                   <div className="img-wrap">
                     <LazyLoadImage
                     alt={item.caseImgAlt}
@@ -83,8 +83,8 @@ function CasesSec() {
         </div>
 
         <div className="cases-projects">
-          <div className="left">
-            <div className="project-descr">
+          <div className="left" data-aos="flip-down" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+            <div className="project-descr" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
               <div className="h4">{casesLeftSecond.casesLeftTitle}</div>
               <p className="short-descr">{casesLeftSecond.casesLeftShortDescr}</p>
             </div>
@@ -99,7 +99,7 @@ function CasesSec() {
           </div>
           {casesSecond.map((item, index) => {
             return (
-              <div className="case-item" key={index}>
+              <div className="case-item" key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
                 <div className="project-descr">
                   <div className="title-wrap">
                     <div className="h4">{item.caseName} <span className="year">{item.caseDate}</span></div>
@@ -109,7 +109,7 @@ function CasesSec() {
                   </div>
                   <p className="short-descr">{item.caseDescr}</p>
                 </div>
-                <div className="img-line">
+                <div className="img-line" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
                   {/* <ImgPar item={item}/> */}
                   <div className="img-wrap">
                     <img src={item.caseImgUrl} alt={item.caseImgAlt} />
@@ -121,7 +121,7 @@ function CasesSec() {
             )
           })}
         </div>
-        <Link to={casesLink.casesLinkTo} className="small-link panchang" title={casesLink.casesLinkTitle}>{casesLink.casesLinkText}</Link>
+        <Link to={casesLink.casesLinkTo} className="small-link panchang" title={casesLink.casesLinkTitle} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">{casesLink.casesLinkText}</Link>
       </div>
     </section>
   )

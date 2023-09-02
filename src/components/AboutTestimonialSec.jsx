@@ -20,7 +20,7 @@ function AboutTestimonialSec() {
           {/* <img src={testimonialPic} alt={testData.aboutPictureTitle} title={testData.aboutPicTitle} /> */}
         </div>
         <div className="block-text-under-pic">
-          <h2 className="h2">{testData.aboutTestTitle}</h2>
+          <h2 className="h2" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{testData.aboutTestTitle}</h2>
           <p className="text first">{testData.aboutTestTextFirst}</p>
           <p className="text">{testData.aboutTestText}</p>
         </div>

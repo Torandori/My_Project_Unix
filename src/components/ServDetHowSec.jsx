@@ -21,7 +21,7 @@ function ServDetHowSec({descr}) {
           <LazyLoadImage src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} effect="blur" />
           {/* <img src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} /> */}
         </div>
-        <div className="block-text-under-pic">
+        <div className="block-text-under-pic" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           <h2 className="h2">{under.servDetUnderTitle}</h2>
           <p className="text">{under.servDetUnderDescr}</p>
         </div>
@@ -30,9 +30,9 @@ function ServDetHowSec({descr}) {
 
             return (
               <React.Fragment key={index}>
-                <div className="number cell">{item.howListNumber}</div>
-                <div className="name cell">{item.howListTitle}</div>
-                <p className="item-descr cell">{item.howListDescr}</p>
+                <div className="number cell" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListNumber}</div>
+                <div className="name cell" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListTitle}</div>
+                <p className="item-descr cell" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{item.howListDescr}</p>
               </React.Fragment>
             )
           })}

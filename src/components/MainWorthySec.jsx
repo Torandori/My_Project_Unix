@@ -37,8 +37,8 @@ function MainWorthySec() {
         <PromoLines />
       </div>
       <div className="container">
-        <h3 className="h3">{worthyData.worthyTitle}</h3>
-        <div className="wrap">
+        <h3 className="h3" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{worthyData.worthyTitle}</h3>
+        <div className="wrap" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
           <div className="title-ending ">
             <span className="small-text">{worthyData.worthySmallText}</span>  <span className="h3 margin">{worthyData.worthyTitleContinue}</span>
             <span>
@@ -56,7 +56,7 @@ function MainWorthySec() {
 
         <div className="worthy-grid">
           <div className="empty">
-            <Link to={worthyData.worthyLinkTo} className="small-link" title={worthyData.worthyLinkTitle}>
+            <Link to={worthyData.worthyLinkTo} className="small-link" title={worthyData.worthyLinkTitle} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
               <span className="mask">
                 <div className="small-link-container">
                   <span className="small-link-title1 title">{worthyData.worthyLinkName}</span>

@@ -26,7 +26,7 @@ function MainProjCardsAnim({projects}) {
               <div>{item.projUnderText}</div>
             </div>
             <div className="project-pic" key={item.projName}>
-              <div class={animCardClassName}>
+              <div className={animCardClassName}>
                 3D Card 
                 <div className="glow"></div>
               </div>

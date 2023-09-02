@@ -14,7 +14,7 @@ function MainProjCardsAnim({projects}) {
       {projects.map((item, index) => {
         return (
           <React.Fragment key={index}>
-            <div className="project-descr" key={index}>
+            <div className="project-descr" key={index} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>
                 <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>

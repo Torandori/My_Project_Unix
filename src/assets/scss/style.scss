@@ -793,12 +793,7 @@ ul {
 .lazy-load-image-background .blur .lazy-load-image-loaded {
   display: inline!important;
 }
-// @keyframes spin {
-//   from{
-//     transform: rotate(0deg);
-//   }
-//   to{
-//     transform: rotate(360deg);
-//   }
-// }
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  display: inline!important;
+}
 // #RESPONSIVE

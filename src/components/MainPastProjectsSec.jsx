@@ -4,44 +4,10 @@ import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json"
 import React from "react";
 import MainProjCardsAnim from "./MainProjCardsAnim";
-// import '../helpers/hoverCurs.js'
 
 function MainPastProjectsSec() {
   const [projects, setProjects] = useState([{}, {}]);
   const [services, setServices] = useState({ left: [], right: [] });
-
-  // useEffect(() => {
-  //   const links = document.querySelectorAll('.hover-me');
-  //   const cursor = document.querySelector('.cursor');
-  
-  //   const animateMe = function(e) {
-  //     const span = this.querySelector('span');
-  //     const { offsetX: x, offsetY: y } = e,
-  //           { offsetWidth: width, offsetHeight: height } = this;
-      
-  //     move = 20;
-  //     xMove = x / width * (move * 2) - move;
-  //     yMove = y / height * (move * 2) - move;
-      
-  //     span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-      
-  //     if (e.type === 'mouseleave') span.style.transform = '';
-  //   };
-    
-  //   const editCursor = e => {
-  //     const { clientX: x, clientY: y } = e;
-  //     cursor.style.left = x + 'px';
-  //     cursor.style.top = y + 'px';
-  //   };
-    
-  //   links.forEach(link => link.addEventListener('mousemove', animateMe));
-  //   links.forEach(link => link.addEventListener('mouseleave', animateMe));
-  //   window.addEventListener('mousemove', editCursor);
-
-  //   return () => {
-
-  //   }
-  // }, [])
 
   useEffect(() => {
     try {
@@ -74,7 +40,7 @@ function MainPastProjectsSec() {
   return (
     <section id="past-projects-sec">
       <div className="container">
-        <div className="title">
+        <div className="title" data-aos="slide-right" data-aos-easing="ease-in-out-sine" data-aos-duration="600" data-aos-delay="200">
           <h2 className="h2">{projectSecData.pastTitle}</h2>
           <div>{projectSecData.pastCount}</div>
         </div>
@@ -98,16 +64,14 @@ function MainPastProjectsSec() {
               <div className="left-col">
                 {servicesLeft.map((item, index) => {
                   return (
-                    <div className="service-item" key={index}>
-                      <div className="nav-wrapper">
-                        <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
-                          <div className="h3 panchang">{item.mainServiceName}</div>
-                          <div className="arrow-btn">
-                            <Arrow />
-                          </div>
-                        </Link>
-                        <p className="item-descr">{item.mainServiceDescr}</p>
-                      </div>
+                    <div className="service-item" key={index} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
+                      <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
+                        <div className="h3 panchang hoverText">{item.mainServiceName}</div>
+                        <div className="arrow-btn">
+                          <Arrow />
+                        </div>
+                      </Link>
+                      <p className="item-descr" data-aos="slide-up" data-aos-easing="ease-in-cubic" data-aos-duration="500" data-aos-delay="200">{item.mainServiceDescr}</p>
                   </div>
                   )
                 })}
@@ -115,14 +79,14 @@ function MainPastProjectsSec() {
               <div className="right-col">
                 {servicesRight.map((item, index) => {
                     return (
-                      <div className="service-item" key={index}>
+                      <div className="service-item" key={index} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
                         <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
-                          <div className="h3 panchang">{item.mainServiceName}</div>
+                          <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                           <div className="arrow-btn">
                             <Arrow />
                           </div>
                         </Link>
-                        <p className="item-descr">{item.mainServiceDescr}</p>
+                        <p className="item-descr" data-aos="slide-up" data-aos-easing="ease-in-cubic" data-aos-duration="500" data-aos-delay="200">{item.mainServiceDescr}</p>
                     </div>
                     )
                   })}

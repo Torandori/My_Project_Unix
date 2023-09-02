@@ -78,8 +78,8 @@ function SliderClient() {
                     </div>
                     <ul>
                       <li>
-                        <p>{item.clientReviewStart}</p>
-                        <p>{item.clientReviewEnd}</p>
+                        <p data-aos="fade-up-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{item.clientReviewStart}</p>
+                        <p data-aos="fade-up-right" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">{item.clientReviewEnd}</p>
                       </li>
                     </ul>
                   </div>

@@ -42,7 +42,7 @@ function SliderCeo() {
             {ceo.map((item, index) => {
               return (
                 <div key={index}>
-                  <p>{item.ceoQuote}</p>
+                  <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">{item.ceoQuote}</p>
                 </div> 
               )
             })}

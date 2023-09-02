@@ -13,9 +13,18 @@
     <meta name="msapplication-config" content="/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>Unix Studio</title>
+    <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div id="root"></div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        disable: 'mobile'
+      });
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

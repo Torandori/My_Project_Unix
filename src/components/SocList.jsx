@@ -40,7 +40,7 @@ function SocList() {
       <ul className="soc-list">
         {socList.map((item, index) => {
           return (
-            <li key={index} >
+            <li key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
               <Link to={item.socItemUrl} title={item.socItemTitle} target="_blank" rel="nofollow noreferrer">
                 {item.icon}
               </Link>

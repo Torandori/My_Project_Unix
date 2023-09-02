@@ -23,21 +23,21 @@ function HeroSec(props){
   return (
     <section id="hero-sec">
       <div className="container separator">
-        <h1 className="panchang">{heroD.heroTitle}<span className="shot">{heroD.underCase}</span></h1>
-        <div className="flake dark">
+        <h1 className="panchang" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{heroD.heroTitle}<span className="shot">{heroD.underCase}</span></h1>
+        <div className="flake dark" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
           <Flake />
         </div>
 
-        <div className="under">
+        <div className="under" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           <div className="under-title panchang">{heroD.underTitle}</div>
         </div>
-        <p>{heroD.heroDescr}</p>
+        <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">{heroD.heroDescr}</p>
         <div className="hero-wrap">
-          <div className="wrap-item">
+          <div className="wrap-item" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
             <div>{heroD.heroAsk}</div>
             <a href="mailto:Hello@unixstudio.agency" title="Send an email to us">{heroD.heroEmail}</a>
           </div>
-        <div className="wrap-item">
+        <div className="wrap-item" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           <div>{heroD.heroAction}</div>
           <a href="mailto:hello@unixstudio.agency" title="Send an email to us">{heroD.heroEmailSecond}</a>
         </div>

@@ -4,7 +4,7 @@ function AboutPrinciplesSec() {
   return (
     <section id="principals-sec">
       <div className="container">
-        <h2 className="h2">{princ.princTitle}</h2>
+        <h2 className="h2" data-aos="flip-right" data-aos-easing="ease-in-out-quart" data-aos-duration="600" data-aos-delay="300">{princ.princTitle}</h2>
         <div className="pricnciples-wrap">
           <div className="empty-col"></div>
           <div className="pricnciples-item">

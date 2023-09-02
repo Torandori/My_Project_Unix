@@ -156,7 +156,7 @@ function ContactForm({title}) {
   }
 
   return (
-    <form className="form" onSubmit={submitHandler}>
+    <form className="form" onSubmit={submitHandler} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         {!title && (
           <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
             <Select

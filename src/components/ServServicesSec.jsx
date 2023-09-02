@@ -16,7 +16,7 @@ function ServServicesSec() {
                 </div>
                 {column.map((item, index) => {
                   return (
-                    <div className="services-item" key={index}>
+                    <div className="services-item" key={index} data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                       <Link to={"/services/" + item.servicesTo} className="wrap-text-arrow" title={item.servicesLinkTitle}>
                         <div className="wrap-number-text">
                           <div className="number">{item.number}</div>

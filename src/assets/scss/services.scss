@@ -48,9 +48,6 @@ main {
         .services-item-title {
           padding-left: 40px;
         }
-        .services-item {
-          padding-left: 40px;
-        }
       }
       .services-item-title {
         padding: 54px 0 40px;
@@ -64,10 +61,20 @@ main {
           gap: 70px;
           justify-content: space-between;
           align-items: center;
-          &:hover {
-            opacity: 0.5;
-          }
         }
+      }
+    }
+  }
+}
+.services-item {
+  padding-left: 40px;
+  &:hover {
+    .wrap-number-text .number, .wrap-number-text .text, {
+      color: #bfd442;
+    }
+    .arrow-btn {
+      svg path {
+        fill: #bfd442;
       }
     }
   }

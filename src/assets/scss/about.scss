@@ -62,9 +62,6 @@
         letter-spacing: 0.36px;
       }
     }
-    .about-item:first-child {
-      border-top: 1px solid $color-grey;
-    }
     .about-item:last-child {
       border-bottom: 1px solid $color-grey;
     }
@@ -81,13 +78,13 @@
           aspect-ratio: 4/4;
         }
       }
-      .link-under-pic {
+      .small-link {
         color: $color-black-text;
         font-weight: 500;
         letter-spacing: 1.2px;
         text-transform: uppercase;
-        &:hover {
-          opacity: 0.7;
+        &::before {
+          background-color: transparent;
         }
         &:active {
           opacity: 0.5;

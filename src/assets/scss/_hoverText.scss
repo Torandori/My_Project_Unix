@@ -1,0 +1,30 @@
+@import 'vars';
+
+.hoverText {
+  font-size: 5vw;
+  text-align: center;
+  line-height: 5.5vw;
+  cursor: cell;
+}
+
+.hoverText span {
+  transition: color 3s;
+  transition-delay: 1s;
+  letter-spacing: -0.2vw;
+}
+
+.hoverText span:hover {
+  transition: color 0s;
+}
+
+.hoverText span:nth-child(1n):hover {
+  color: #bfd442;
+}
+
+.hoverText span:nth-child(2n):hover {
+  color:  #bfd442;
+}
+
+.hoverText span:nth-child(3n):hover {
+  color: #bfd442;
+}

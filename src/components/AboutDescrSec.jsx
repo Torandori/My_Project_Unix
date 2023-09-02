@@ -10,7 +10,7 @@ function AboutDescrSec() {
     <div id="about-descr-sec">
       <div className="container">
         <div className="wrap-about">
-          <div className="about-item">
+          <div className="about-item" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="300">
             <div className="name">{aboutDescr.aboutDescrTitleLeft}</div>
             <p>{aboutDescr.aboutDescrTextLeft}</p>
           </div>
@@ -23,9 +23,16 @@ function AboutDescrSec() {
             />
               {/* <img src={stairs} alt="Picture of stairs" /> */}
             </div>
-            <Link to={'/contacts'} title="Move to Contact us page" className="link-under-pic">{aboutDescr.aboutBoost}</Link>
+            <Link to={'/contacts'} title="Move to Contact us page" className="link-under-pic small-link" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="400">
+              <span className="mask">
+                <div className="small-link-container">
+                  <span className="small-link-title1 title">{aboutDescr.aboutBoost}</span>
+                  <span className="small-link-title2 title">{aboutDescr.aboutBoost}</span>
+                </div>
+              </span>
+              </Link>
           </div>
-          <div className="about-item">
+          <div className="about-item" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="300">
             <div className="name">{aboutDescr.aboutDescrTitleLeft}</div>
             <p>{aboutDescr.aboutDescrTextLeft}</p>
           </div>

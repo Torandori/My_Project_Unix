@@ -11,7 +11,7 @@ function FaqList(){
         {fundingList.map((item, index) => {
           return (
             <AccordionItem key={index} header={              
-            <div className="wrap-number-text">
+            <div className="wrap-number-text" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
             <div className="number">{item.fundingNumber}</div>
             <div className="text">{item.fundingText}</div> 
             </div>}>
