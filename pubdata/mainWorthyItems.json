@@ -2,12 +2,18 @@
   {
     "worthyItemClass": "worthy-item",
     "worthyItemText": "Active users on marketplaces we've created",
-    "worthyItemCount": "1m"
+    "worthyItemCount": "1m",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "1",
+    "worthyItemCountEnd": "m"
   },
   {
     "worthyItemClass": "worthy-item clients",
     "worthyItemText": "Our clients raised owning to our design work",
     "worthyItemCount": "$500m",
+    "worthyItemCountStart": "$",
+    "worthyItemNum": "500",
+    "worthyItemCountEnd": "m",
     "worthyItemLinkTo": "/",
     "worthyItemLinkTitle": "View our case link",
     "worthyItemLinkText": "view our case"
@@ -15,30 +21,48 @@
   {
     "worthyItemClass": "worthy-item other-size",
     "worthyItemText": "People on board",
-    "worthyItemCount": "60+"
+    "worthyItemCount": "60+",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "60",
+    "worthyItemCountEnd": "+"
   },
   {
     "worthyItemClass": "worthy-item other-size",
     "worthyItemText": "Years of growth",
-    "worthyItemCount": "7"
+    "worthyItemCount": "7",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "7",
+    "worthyItemCountEnd": ""
   },
   {
     "worthyItemClass": "worthy-item other-size last",
     "worthyItemText": "Successfully finished projects",
-    "worthyItemCount": "500+"
+    "worthyItemCount": "500+",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "500",
+    "worthyItemCountEnd": "+"
   },
   {
     "worthyItemClass": "worthy-item no-count",
-    "worthyItemText": "Wanna fill this cell with your success story"
+    "worthyItemText": "Wanna fill this cell with your success story",
+    "worthyItemCount": "",
+    "worthyItemCountStart": "",
+    "worthyItemCountEnd": ""
   },
   {
     "worthyItemClass": "worthy-item other-size",
     "worthyItemText": "Design awards",
-    "worthyItemCount": "80+"
+    "worthyItemCount": "80+",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "80",
+    "worthyItemCountEnd": "+"
   },
   {
     "worthyItemClass": "worthy-item other",
     "worthyItemText": "Monthly visit on E-Commerce we designed",
-    "worthyItemCount": "25m"
+    "worthyItemCount": "25m",
+    "worthyItemCountStart": "",
+    "worthyItemNum": "25",
+    "worthyItemCountEnd": "m"
   }
 ]
