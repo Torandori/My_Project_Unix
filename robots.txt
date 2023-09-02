@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Sitemap: https://torandori.github.io/My_Project_Unix/sitemap.xml
+Host: torandori.github.io
