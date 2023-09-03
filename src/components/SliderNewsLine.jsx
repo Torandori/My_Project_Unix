@@ -128,7 +128,7 @@ function SliderNewsLine() {
 
   return (
     <div className="news-slider">
-      <div className="newSlider">
+      <div className="newSlider" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="prev-next-arrows">
           <button type="button" className="prev" onClick={prev} aria-label="Previous slide">
             <NewArrow />
@@ -144,7 +144,7 @@ function SliderNewsLine() {
         </Slider>
       </div>
 
-      <div className="news-line">
+      <div className="news-line" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="news-list">
           <Slider {...sliderSecondSet}>
             {newsLine.map(item => {

@@ -3,8 +3,14 @@ import { Link } from 'react-router-dom';
 import stairs from "../assets/images/stairs.png"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Parallax } from 'react-scroll-parallax';
+// import { useParallax } from 'react-scroll-parallax';
 
 function AboutDescrSec() {
+
+  // const parallax = useParallax<HTMLDivElement>({
+  //   rotate: [0, 360],
+  // });
 
   return (
     <div id="about-descr-sec">
@@ -15,13 +21,15 @@ function AboutDescrSec() {
             <p>{aboutDescr.aboutDescrTextLeft}</p>
           </div>
           <div className="about-item middle">
-            <div className="img-wrap">
-            <LazyLoadImage
-              alt="Picture of stairs"
-              src={stairs}
-              effect="blur" 
-            />
+            <div className="img-wrap" >
+          <Parallax  rotateY={['0', '360']}>
+              <LazyLoadImage
+                alt="Picture of stairs"
+                src={stairs}
+                effect="blur" 
+              />
               {/* <img src={stairs} alt="Picture of stairs" /> */}
+          </Parallax>
             </div>
             <Link to={'/contacts'} title="Move to Contact us page" className="link-under-pic small-link" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="400">
               <span className="mask">

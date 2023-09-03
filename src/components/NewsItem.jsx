@@ -30,30 +30,28 @@ function NewsItem({item}) {
 
 
   return (
-    // <>
-      <div className="news-list-item">
-        <div className="author">
-          <div className="pic-wrap">
-            <LazyLoadImage src={selectedObj.authImg} alt={`Picture of ` + selectedObj.authPosition} effect="blur" />
-            {/* <img src={selectedObj.authImg} alt={selectedObj.author} /> */}
-          </div>
-          <div className="text">
-            <div>{item.author}</div>
-            <div>{selectedObj.authPosition}</div>
-          </div>
+    <div className="news-list-item">
+      <div className="author">
+        <div className="pic-wrap">
+          <LazyLoadImage src={selectedObj.authImg} alt={`Picture of ` + selectedObj.authPosition} effect="blur" />
+          {/* <img src={selectedObj.authImg} alt={selectedObj.author} /> */}
         </div>
-        <div className="restTopic">
-          {/* <Link to={`/news/${hash}`} className="new-topic" title="Go to news details">{item.title}</Link> */}
-          <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
-
-        </div>
-        <div className="date-news">{formatDate(item.publish_date)}</div>
-        <div className="poster-wrap card-hover">
-          <LazyLoadImage src={item.image ?? newsDefaultImg} alt={item.title} effect="blur" />
-          {/* <img src={item.image ?? newsDefaultImg} alt={item.title} /> */}
+        <div className="text">
+          <div>{item.author}</div>
+          <div>{selectedObj.authPosition}</div>
         </div>
       </div>
-    // </li>
+      <div className="restTopic">
+        {/* <Link to={`/news/${hash}`} className="new-topic" title="Go to news details">{item.title}</Link> */}
+        <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
+
+      </div>
+      <div className="date-news">{formatDate(item.publish_date)}</div>
+      <div className="poster-wrap card-hover">
+        <LazyLoadImage src={item.image ?? newsDefaultImg} alt={item.title} effect="blur" />
+        {/* <img src={item.image ?? newsDefaultImg} alt={item.title} /> */}
+      </div>
+    </div>
   )
 }
 export default NewsItem;

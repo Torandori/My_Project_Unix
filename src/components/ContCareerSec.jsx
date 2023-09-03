@@ -21,7 +21,7 @@ function ContCareerSec() {
     <section id="project-career-sec">
       <div className="container">
         <div className="wrap-poject-career">
-          <div className="wrap-buttons" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="600" data-aos-delay="100">
+          <div className="wrap-buttons">
             {career.map((item) => {
               // console.log(item.id)
               return (

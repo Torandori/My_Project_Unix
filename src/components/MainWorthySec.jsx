@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 import worthyData from '../data/mainWorthySecData.json'
 import PromoLines from './PromoLines';
 import ContactsModal from './ContactsModal';
-import CountUp from 'react-countup';
-import ScrollTrigger from 'react-scroll-trigger';
+import { Parallax } from 'react-scroll-parallax';
+// import CountUp from 'react-countup';
+// import ScrollTrigger from 'react-scroll-trigger';
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
@@ -76,7 +77,9 @@ function MainWorthySec() {
               return (
                 <div className={item.worthyItemClass} key={index} >
                     <p>{item.worthyItemText}</p>
-                    <div>{item.worthyItemCount}</div>
+                    <Parallax  translateX={['-20px', '50px']}>
+                      <div>{item.worthyItemCount}</div>
+                    </Parallax>
                     {/* <ScrollTrigger 
                     onEnter={() => setCounterOn(true)} 
                     onExit={() => setCounterOn(false)} 

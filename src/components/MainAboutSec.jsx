@@ -3,6 +3,7 @@ import Arrow from './svgComponents/Arrow';
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
 import '../assets/scss/_accordArrows.scss'
+import { Parallax } from "react-scroll-parallax";
 
 
 function MainAboutSec() {
@@ -10,8 +11,12 @@ function MainAboutSec() {
   return (
     <section id="about-sec">
       <div className="container separator">
-        <h2 className="h2" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{aboutData.aboutTitle}</h2>
-        <div className="subtext"  data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">{aboutData.aboutSubtext}</div>
+        <Parallax translateX={['-200px', '200px']}>
+          <h2 className="h2" >{aboutData.aboutTitle}</h2>
+        </Parallax>
+        <Parallax translateX={['200px', '-200px']}>
+          <div className="subtext">{aboutData.aboutSubtext}</div>
+        </Parallax>
         <div className="wrap">
           <p data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{aboutData.aboutDescr}</p>
           <Link to={aboutData.aboutLinkTo} className="small-link" title="Move to services page" data-aos="fade-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">

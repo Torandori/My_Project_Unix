@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
 import Arrow from "./svgComponents/Arrow";
+import MainAnimItem from "./MainAnimItem";
 // import VanillaTilt from 'vanilla-tilt';
 // import '../assets/scss/_tiltCardProj.scss'
-import MainAnimItem from "./MainAnimItem";
 
 function MainProjCardsAnim({projects}) {
 

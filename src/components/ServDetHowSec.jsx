@@ -1,10 +1,16 @@
+import { useState } from 'react'
+import ContactsModal from './ContactsModal';
 import React from "react";
 import StartBtn from "./svgComponents/StartBtn";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from 'react-responsive';
 
 function ServDetHowSec({descr}) {
+  const isMobile = useMediaQuery({ maxWidth: 880 });
+
   const under = descr.howSec;
   const _under = under.howList;
 
@@ -13,6 +19,19 @@ function ServDetHowSec({descr}) {
   const btnClick = () => {
     moveTo('/contacts');
   };
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+    document.body.classList.add('modal-open');
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    document.body.classList.remove('modal-open');
+  };
+  
 
   return (
     <section id="how-sec">
@@ -36,12 +55,24 @@ function ServDetHowSec({descr}) {
             )
           })}
         </div>
-        <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
-          <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
-            <StartBtn />
-          </button>
-        </div>
+        {isMobile ? ( 
+          <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
+            <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
+              <StartBtn />
+            </button>
+          </div>
+        ) :
+        (
+          <Parallax translateX={['-100px', '100px']}>
+            <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
+              <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
+                <StartBtn />
+              </button>
+            </div>
+          </Parallax>
+        )}
       </div>
+      <ContactsModal isOpen={modalOpen} onClose={closeModal} />
     </section>
   )
 }

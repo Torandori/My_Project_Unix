@@ -14,9 +14,9 @@ import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
 // import { lazy, Suspense } from 'react';
 // import { LazyExoticComponent } from 'react';
-// import { ParallaxProvider } from 'react-scroll-parallax';
 // import Fallback from './components/Fallback';
 // const LazyCase = lazy(() => import("./pages/Case"))
 // const LazyServices = lazy(() => import("./pages/Services"));
@@ -48,7 +48,7 @@ function App() {
   // }, [showFallback]);
   return (
     <Wrapper>
-      {/* <ParallaxProvider> */}
+      <ParallaxProvider>
         <Routes>
           <Route path="/" element={<Default />}>
             <Route index element={<Home />}/>
@@ -72,7 +72,7 @@ function App() {
             <Route path="/contacts" element={<Contacts />}/>
           </Route>
         </Routes>
-      {/* </ParallaxProvider> */}
+      </ParallaxProvider>
       <ToastContainer theme="dark" pauseOnHover position="bottom-left"/>
     </Wrapper>
   )

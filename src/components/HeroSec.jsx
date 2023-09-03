@@ -1,13 +1,18 @@
 import { useState } from 'react'
+import ContactsModal from './ContactsModal';
 import btnCircle from '../assets/images/svg/btnCircle.svg'
 import Flake from './svgComponents/Flake'
 import '../assets/scss/about.scss'
 import '../assets/scss/contacts.scss'
-import ContactsModal from './ContactsModal';
+import { Parallax } from 'react-scroll-parallax';
+import { useMediaQuery } from 'react-responsive';
+
 
 function HeroSec(props){
+  const isMobile = useMediaQuery({ maxWidth: 880 });
   // const _heroData = heroData[0];
   const heroD = props.par;
+  
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -23,9 +28,17 @@ function HeroSec(props){
   return (
     <section id="hero-sec">
       <div className="container separator">
+      {isMobile ? (
         <h1 className="panchang" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{heroD.heroTitle}<span className="shot">{heroD.underCase}</span></h1>
+      ) : (
+        <Parallax translateX={['180px', '-200px']}>
+          <h1 className="panchang" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{heroD.heroTitle}<span className="shot">{heroD.underCase}</span></h1>
+        </Parallax>
+      )}
         <div className="flake dark" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
-          <Flake />
+          <Parallax rotate={['0', '360']}>
+            <Flake />
+          </Parallax>
         </div>
 
         <div className="under" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">

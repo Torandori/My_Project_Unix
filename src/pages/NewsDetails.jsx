@@ -111,7 +111,7 @@ function NewsDetails(){
           <HeroSecNewsDet resp={news}/>
           <div id="detail-overview-sec">
             <div className="container">
-              <div className="detail-overview-wrap1">
+              <div className="detail-overview-wrap1" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                 <div className="author">
                   <div className="pic-wrap">
                     <LazyLoadImage src={selectedAuthObj.authImg} alt={news.author} effect="blur" />
@@ -136,7 +136,7 @@ function NewsDetails(){
             <div className="container">
               <div className="detail-text-wrap">
                 <div className="text-col">
-                  <div className="poster-detail-wrap">
+                  <div className="poster-detail-wrap" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                     <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
                     {/* <img src={news.image ? news.image : newsDefaultImg}  /> */}
                   </div>

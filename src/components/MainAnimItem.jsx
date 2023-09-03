@@ -1,7 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import '../assets/scss/_tiltCardProj.scss'
+import '../assets/scss/_tiltCardProj.scss';
 
 function MainAnimItem({item}) {
   const any = useRef(null)

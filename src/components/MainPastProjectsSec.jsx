@@ -40,7 +40,7 @@ function MainPastProjectsSec() {
   return (
     <section id="past-projects-sec">
       <div className="container">
-        <div className="title" data-aos="slide-right" data-aos-easing="ease-in-out-sine" data-aos-duration="600" data-aos-delay="200">
+        <div className="title" data-aos="slide-right" data-aos-easing="ease-in-out-sine" data-aos-duration="600">
           <h2 className="h2">{projectSecData.pastTitle}</h2>
           <div>{projectSecData.pastCount}</div>
         </div>

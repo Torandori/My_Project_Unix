@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 import Flake from './svgComponents/Flake'
 import PromoLines from './PromoLines'
 import ceoData from '../data/mainAboutCeoSecData.json'
-import SliderCeo from './SliderCeo'
+import SliderCeo from './SliderCeo';
+import { Parallax } from "react-scroll-parallax";
 
 function MainAboutCeoSec(){
 
@@ -11,8 +12,10 @@ function MainAboutCeoSec(){
       <div className="container">
         <div className="wrap">
           <h2 className="h2">{ceoData.ceoTitle}</h2>
-          <div className="flake" data-aos="zoom-in" data-aos-easing="ease-in-out-back" data-aos-duration="500" data-aos-delay="300"> 
-            <Flake />
+          <div className="flake"> 
+           <Parallax rotate={['0', '360']}>
+             <Flake />
+           </Parallax>
           </div>
         </div>
         <div className="ceo-wrap">
