@@ -3,7 +3,7 @@
 // export const NEWS_API = 'https://api.marketaux.com/v1/news/';
 
 
-export const NEWS_CACHE_TIME = '72 * 60 * 60 * 1000'; // 72 hours news cashe in local storage
+export const NEWS_CACHE_TIME = '48 * 60 * 60 * 1000'; // 48 hours news cashe in local storage
 
 // export const WN_API_KEY = '92805652d0fd4b2db2bedc93645a5be4'; 
 export const WN_API_KEY = '9fd494d8e6204bb38c8c938d81fb8e9a'; 

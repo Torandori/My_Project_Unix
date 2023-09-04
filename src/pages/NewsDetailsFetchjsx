@@ -1,4 +1,4 @@
-// import { WN_API, WN_API_KEY } from "../env";
+import { WN_API, WN_API_KEY } from "../env";
 import { useParams } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
@@ -12,21 +12,19 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
-import { useLocation } from 'react-router-dom';
+
+// import { useLocation } from 'react-router-dom';
+// import LinkedinShare from "../components/svgComponents/LinkedinShare";
+// import PinterestShare from "../components/svgComponents/PinterestShare";
 
 
 
 function NewsDetails(){
-  const location = useLocation();
-  const newsData = location.state?.newsData || {};
-  // const newsData = location.state.respData;
-  // console.log('newsData', newsData)
-  // const { hash } = useParams();
-  // console.log('hashNewsDet', hash);
-
-  // const [news, setNewsData] = useState({});
-  // const [loading, setLoading] = useState(true);
-  // const fetchCount = useRef(0);
+  const { hash } = useParams();
+  console.log('hashNewsDet', hash);
+  const [news, setNewsData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const fetchCount = useRef(0);
   const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
 
   useEffect(() => {
@@ -44,6 +42,42 @@ function NewsDetails(){
   const randomObjIndex = Math.floor(Math.random() * newsDetMock.length);
   const selectedAuthObj = newsDetMock[randomObjIndex];
 
+
+  async function fetchOneNews(){
+    if(fetchCount.current !== 0){
+      return false;
+    }
+    fetchCount.current++;
+
+    const storageNews = localStorage.getItem(hash);
+    if(storageNews !== null){
+      setNewsData(JSON.parse(storageNews));
+      setLoading(false);
+      return false;
+    }
+    
+    
+    try {
+      const url = atob(hash);
+      const resp = await ky(`${WN_API}/extract-news?api-key=${WN_API_KEY}&url=${url}`).json();
+      setNewsData(resp);
+      localStorage.setItem(hash, JSON.stringify(resp)); 
+      setLoading(false);
+    } catch (err){
+      console.log('err', err);
+      toast.error("Some error occured");
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchOneNews();
+  }, []);
+
+
+  if(loading){
+    return (<Loader />)
+  }
 
   return(
     <>
@@ -67,23 +101,29 @@ function NewsDetails(){
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
         {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
+      {/* <Suspense fallback={renderLoader()}> */}
         <div id="news-details-page">
-          <HeroSecNewsDet resp={newsData}/>
+          <HeroSecNewsDet resp={news}/>
           <div id="detail-overview-sec">
             <div className="container">
               <div className="detail-overview-wrap1" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                 <div className="author">
                   <div className="pic-wrap">
-                    <LazyLoadImage src={selectedAuthObj.authImg} alt={newsData.author} effect="blur" />
+                    <LazyLoadImage src={selectedAuthObj.authImg} alt={news.author} effect="blur" />
+                    {/* <img src={selectedAuthObj.authImg} alt={news.author} /> */}
                   </div>
                   <div className="text">
-                    <div>{newsData.author}</div>
+                    <div>{news.author}</div>
                     <div>{selectedAuthObj.authPosition}</div>
                   </div>
                 </div>
                 <div className="overview panchang">Overview</div>
-                <div className="date-news">{formatDate(newsData.publish_date)}</div>
+                <div className="date-news">{formatDate(news.publish_date)}</div>
               </div>
+              {/* <div className="detail-overview-wrap2">
+                <div className="overview panchang">Overview</div>
+                <p className="summary-text">{news.summary}</p>
+              </div> */}
             </div>
           </div>
   
@@ -92,14 +132,16 @@ function NewsDetails(){
               <div className="detail-text-wrap">
                 <div className="text-col">
                   <div className="poster-detail-wrap" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-                    <LazyLoadImage src={newsData.image ? newsData.image : newsDefaultImg} alt="News picture" effect="blur" />
+                    <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
+                    {/* <img src={news.image ? news.image : newsDefaultImg}  /> */}
                   </div>
-                  <p>{newsData.text}</p>
+                  <p>{news.text}</p>
                 </div>
               </div>
             </div>
           </section>
         </div>
+      {/* </Suspense> */}
     </>
   )
 }

@@ -27,10 +27,10 @@ function SliderNewsLine() {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log(resp)
+          console.log('respNewsLine', resp)
         })
     } catch (error) {
-      console.log(error);
+      console.log('err', error);
     }
   }, [])
 
@@ -53,20 +53,19 @@ function SliderNewsLine() {
     }
     try {
       const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
-      console.log("resp", resp)
+      // console.log("resp", resp)
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
       setLoading(false);
     } catch (err){
-      console.log(err);
+      console.log('err', err);
       toast.error("Some error occured");
       setLoading(false);
     }
   }
 
   useEffect(() => {
-    console.log("newsLine in useEffect:", newsLine)
     fetchNews();
   }, []);
 
@@ -159,5 +158,3 @@ function SliderNewsLine() {
   )
 }
 export default SliderNewsLine;
-
-         

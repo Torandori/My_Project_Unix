@@ -7,10 +7,14 @@ import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from "react-responsive";
+
 
 function CasesSec() {
   const [caseItems, setCaseItems] = useState({ casesFirstBlock: [], casesSecondBlock: [] });
   const moveTo = useNavigate(); 
+  const isMobile = useMediaQuery({ maxWidth: 880 });
+
 
   const btnClick = () => {
     moveTo('/contacts');
@@ -66,7 +70,7 @@ function CasesSec() {
                   <p className="short-descr">{item.caseDescr}</p>
                 </div>
                 <div className="img-line" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
-                <Parallax rotate={['-20', '10']}>
+                {isMobile ? (
                   <div className="img-wrap">
                     <LazyLoadImage
                     alt={item.caseImgAlt}
@@ -76,7 +80,19 @@ function CasesSec() {
                     {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>
                   </div>
-                </Parallax>
+                ) : (
+                  <Parallax rotate={['-20', '10']}>
+                    <div className="img-wrap">
+                      <LazyLoadImage
+                      alt={item.caseImgAlt}
+                      src={item.caseImgUrl}
+                      effect="blur" 
+                      />
+                      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
+                      <div className="overlay"></div>
+                    </div>
+                  </Parallax>
+                )}
                   <div className="dashed-line"></div>
                 </div>
               </div>
@@ -113,7 +129,7 @@ function CasesSec() {
                 </div>
                 <div className="img-line" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
                   {/* <ImgPar item={item}/> */}
-                <Parallax rotate={['-20', '10']}>
+                {isMobile ? (
                   <div className="img-wrap">
                     <LazyLoadImage
                       alt={item.caseImgAlt}
@@ -123,8 +139,19 @@ function CasesSec() {
                     {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>
                   </div>
-                </Parallax>
-
+                ) : (
+                  <Parallax rotate={['-20', '10']}>
+                    <div className="img-wrap">
+                      <LazyLoadImage
+                        alt={item.caseImgAlt}
+                        src={item.caseImgUrl}
+                        effect="blur" 
+                      />
+                      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
+                      <div className="overlay"></div>
+                    </div>
+                  </Parallax>
+                )}
                   <div className="dashed-line"></div>
                 </div>
               </div>

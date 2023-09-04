@@ -9,6 +9,8 @@ import "../assets/scss/_newsCardHover.scss"
 function NewsItem({item}) {
 
   const hash = btoa(item.url);
+  console.log("hashNewItem", hash)
+
 
   const [newMock, setNewMock] = useState([{}, {}]);
 
@@ -18,10 +20,10 @@ function NewsItem({item}) {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log(resp)
+          console.log('respNewsItem', resp)
         })
     } catch (error) {
-      console.log(error)
+      console.log('err', error)
     }
   }, [])
 

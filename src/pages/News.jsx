@@ -6,17 +6,8 @@ import par from '../data/heroData.json';
 import { Helmet } from "react-helmet-async";
 import pageTitle from '../data/pagesTitles.json';
 
-// import { lazy, Suspense } from 'react';
-// const NewsSliderSec = lazy(() => import("../components/NewsSliderSec"));
-// import NewsBestSec from "../components/NewsBestSec";
-
-// const renderLoader = () => <p>Loading</p>;
-
 function News(){
   
-  // useEffect(()=>{
-  //   window.document.title = 'Unix News';
-  // }, []);
   const heroPar = par.news;
 
   return (
@@ -39,14 +30,10 @@ function News(){
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Latest updates and insights from our digital agency communicates that the page offers fresh and valuable content." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
       <div id="news-page">
-      {/* <Suspense fallback={renderLoader()}> */}
         <HeroSec par={heroPar} />
         <NewsSliderSec />
-        {/* <NewsBestSliderSec /> */}
-      {/* </Suspense> */}
       </div>
     </>
   )
