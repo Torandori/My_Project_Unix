@@ -1,22 +1,12 @@
-// import { lazy, Suspense } from 'react';
-import { useEffect } from 'react';
 import HeroSec from '../components/HeroSec';
-// const CasesSec = lazy(() => import('../components/CasesSec'));
 import CasesSec from '../components/CasesSec';
 import par from '../data/heroData.json';
 import '../assets/scss/case.scss';
 import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
 
-
-// const renderLoader = () => <p>Loading</p>;
-
 function Case() {
   const heroPar = par.cases;
-
-  // useEffect(()=>{
-  //   window.document.title = 'Unix Cases';
-  // }, []);
 
   return (
     <>
@@ -37,13 +27,10 @@ function Case() {
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Diverse portfolio of digital successes emphasizes the variety of projects your agency has undertaken." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
       <div id="case-page">
-        {/* <Suspense fallback={renderLoader()}> */}
-          <HeroSec par={heroPar} />
-          <CasesSec />
-        {/* </Suspense> */}
+        <HeroSec par={heroPar} />
+        <CasesSec />
       </div>
     </>
   )

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import casesData from "../data/caseCasesSecData.json"
 import Arrow from "./svgComponents/Arrow";
 import { useNavigate } from "react-router-dom";
-// import ImgPar from "./ImgPar";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from "react-scroll-parallax";
@@ -77,7 +76,6 @@ function CasesSec() {
                     src={item.caseImgUrl}
                     effect="blur" 
                     />
-                    {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>
                   </div>
                 ) : (
@@ -88,7 +86,6 @@ function CasesSec() {
                       src={item.caseImgUrl}
                       effect="blur" 
                       />
-                      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                       <div className="overlay"></div>
                     </div>
                   </Parallax>
@@ -128,7 +125,6 @@ function CasesSec() {
                   <p className="short-descr">{item.caseDescr}</p>
                 </div>
                 <div className="img-line" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
-                  {/* <ImgPar item={item}/> */}
                 {isMobile ? (
                   <div className="img-wrap">
                     <LazyLoadImage
@@ -136,7 +132,6 @@ function CasesSec() {
                       src={item.caseImgUrl}
                       effect="blur" 
                     />
-                    {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                     <div className="overlay"></div>
                   </div>
                 ) : (
@@ -147,7 +142,6 @@ function CasesSec() {
                         src={item.caseImgUrl}
                         effect="blur" 
                       />
-                      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
                       <div className="overlay"></div>
                     </div>
                   </Parallax>

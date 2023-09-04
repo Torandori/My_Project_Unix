@@ -10,9 +10,8 @@ import { useMediaQuery } from 'react-responsive';
 
 function HeroSec(props){
   const isMobile = useMediaQuery({ maxWidth: 880 });
-  // const _heroData = heroData[0];
   const heroD = props.par;
-  
+
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {

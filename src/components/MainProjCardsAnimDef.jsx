@@ -1,5 +1,4 @@
 
-import { useEffect, useState } from "react";
 import React from "react";
 import '../assets/scss/_animCard.scss'
 import '../helpers/animateCard.js'

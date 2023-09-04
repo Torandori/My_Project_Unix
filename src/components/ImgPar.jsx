@@ -15,7 +15,6 @@ function ImgPar({item}) {
       src={item.caseImgUrl}
       effect="blur" 
       />
-      {/* <img src={item.caseImgUrl} alt={item.caseImgAlt} /> */}
       <div className="overlay"></div>
     </div>
   )

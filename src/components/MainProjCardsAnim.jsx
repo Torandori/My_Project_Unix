@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import React from "react";
 import Arrow from "./svgComponents/Arrow";
 import MainAnimItem from "./MainAnimItem";
-// import VanillaTilt from 'vanilla-tilt';
-// import '../assets/scss/_tiltCardProj.scss'
 
 function MainProjCardsAnim({projects}) {
 

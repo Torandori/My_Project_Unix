@@ -6,7 +6,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ServFundingSec() {
-  // const fundingList = fundingData.fundingList;
   const moveTo = useNavigate(); 
 
   const btnClick = () => {
@@ -27,10 +26,6 @@ function ServFundingSec() {
             <FaqList />
             <div className="text-block2">
               <p className="text-medium">{fundingData.fundingContinue}</p>
-              {/* <div className="circle-arrow-btn" onClick={btnClick}> */}
-                {/* <LazyLoadImage src={circleArrowBtn} alt="Contact us" effect="blur" /> */}
-                {/* <img src={circleArrowBtn} alt="Contact us" /> */}
-              {/* </div> */}
             </div>
           </div>
         </div>

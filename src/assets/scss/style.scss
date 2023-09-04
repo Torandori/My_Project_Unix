@@ -91,10 +91,6 @@
 }
 // #MOBMENU & HAMBURGER
 
-
-// .hubot-sans {
-//   font-family: 'Hubot Sans', sans-serif;
-// }
 .neo-haas {
   font-family: 'Neo Haas', sans-serif;
 }
@@ -108,11 +104,9 @@ body {
   font-family: 'Hubot Sans', sans-serif;
   @include fz(24);
   font-weight: 400;
-  // perspective: 2000px;
 }
 
 main {
-  // flex-grow: 1;
   padding-top: 70px;
 }
 img {
@@ -159,8 +153,6 @@ ul {
   position: absolute;
   z-index: 999999;
 }
-// @import "header";
-
 // HERO_SEC
 #hero-sec {
   background: 
@@ -203,10 +195,6 @@ ul {
   }
 }
 // #HERO_SEC
-// .test {
-//   height: 400px;
-//   background-color: red;
-// }
 .big-img-wrap{
   border-radius: 20px;
   overflow: hidden;
@@ -282,56 +270,6 @@ ul {
     outline: none;
   }
 }
-
-// Marquee
-// .run-wrap {
-//   border: 1px solid orange;
-// }
-// .run-wrap:hover .run div {
-//   animation-play-state: paused;
-//   -webkit-text-stroke-width: 3px;
-//   -webkit-text-stroke-color: $color-black-text;
-//   color: transparent;
-// }
-// .run {
-//   font-size: 5vw;
-//   color: $color-black-text;
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   height: 6vw;
-//   overflow: hidden;
-//   position: relative;
-//   letter-spacing: -1.6px;
-//   display: flex;
-//   align-items: center;
-//   margin-bottom: 14px;
-//   div {
-//     display: block;
-//     width: 225%;
-//     position: absolute; 
-//     overflow: hidden;
-//     animation: run 12s linear infinite;
-//   }
-// }
-// .run span {
-//   float: left;
-//   width: 48.5%;
-//   display: flex;
-//   align-items: center;
-//   border: none;
-//   svg {
-//     width: 100px;
-//     height: 100px;
-//     margin: 0 30px 0 40px;
-//   }
-// }
-// .run span:last-child {
-//   align-items: center;
-// }
-// @keyframes run {
-//   0% { left: 0; }
-//   100% { left: -112.5%; }
-// }
 // #Marquee
 .promo-lines {
   position: relative;
@@ -505,12 +443,6 @@ ul {
     width: 100%;
     height: 4px;
   }
-  // &:hover {
-  //   color: #d7f046!important;
-  //   &::before {
-  //     background-color: #d7f046!important;
-  //   }
-  // }
   &:active {
     opacity: 0.6;
     &::before {

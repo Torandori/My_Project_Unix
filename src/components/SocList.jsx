@@ -1,5 +1,4 @@
 import React from 'react';
-import soc from "../data/contSocialSec.json" 
 import { Link } from 'react-router-dom';
 import LinkedinIcon from './svgComponents/LinkedinIcon';
 import BehanceIcon from './svgComponents/BehanceIcon';
@@ -7,7 +6,6 @@ import FacebookIcon from './svgComponents/FacebookIcon';
 import InstagramIcon from './svgComponents/InstagramIcon';
 
 function SocList() {
-  // const socList = soc.socList;
   const socList = [
     {
       socItemUrl: "https://www.linkedin.com/",

@@ -38,7 +38,6 @@ function ServDetHowSec({descr}) {
       <div className="container">
         <div className="big-img-wrap">
           <LazyLoadImage src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} effect="blur" />
-          {/* <img src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} /> */}
         </div>
         <div className="block-text-under-pic" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           <h2 className="h2">{under.servDetUnderTitle}</h2>

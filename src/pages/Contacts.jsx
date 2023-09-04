@@ -7,20 +7,9 @@ import '../assets/scss/contacts.scss';
 import par from '../data/heroData.json';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
-// import { lazy, Suspense } from 'react';
-// const ContContactsSec = lazy(() => import("../components/ContContactsSec"));
-// const ContSocialSec = lazy(() => import("../components/ContSocialSec"));
-// const ContCareerSec = lazy(() => import("../components/ContCareerSec"));
-
-
-// const renderLoader = () => <p>Loading</p>;
 
 function Contacts() {
   const heroPar = par.contacts;
-  
-  // useEffect(()=>{
-  //   window.document.title = 'Unix Contacts';
-  // }, []);
 
   return(
     <>
@@ -42,15 +31,12 @@ function Contacts() {
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Whether you have inquiries, collaboration ideas, or projects in mind, we're here to help you navigate the digital landscape. Reach out to us today." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
       <div id="contacts-page">
-        {/* <Suspense fallback={renderLoader()}> */}
-          <HeroSec par={heroPar} />
-          <ContContactsSec />
-          <ContSocialSec />
-          <ContCareerSec />
-        {/* </Suspense> */}
+        <HeroSec par={heroPar} />
+        <ContContactsSec />
+        <ContSocialSec />
+        <ContCareerSec />
       </div>
     </>
   )

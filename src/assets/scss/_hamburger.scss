@@ -10,9 +10,6 @@ $hamburger-hover-opacity       : 0.7 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
-// To use CSS filters as the hover effect instead of opacity,
-// set $hamburger-hover-use-filter as true and
-// change the value of $hamburger-hover-filter accordingly.
 $hamburger-hover-use-filter   : false !default;
 $hamburger-hover-filter       : opacity(50%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
@@ -108,7 +105,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 
     &::after {
-      // top: 12px;
       top: ($hamburger-layer-height * 2) + ($hamburger-layer-spacing * 2);
       transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }

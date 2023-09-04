@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import React from "react";
-// import clientData from '../data/mainOurClient.json'
 import quote from '../assets/images/svg/quote.svg'
 import Arrow from "./svgComponents/Arrow";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -74,7 +73,6 @@ function SliderClient() {
                   <div className="client-slider">
                     <div className="quote">
                       <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
-                      {/* <img src={quote} alt="Quote picture" /> */}
                     </div>
                     <ul>
                       <li>
@@ -86,7 +84,6 @@ function SliderClient() {
                   <div className="gen-slider-descr">
                     <div className="pic-wrap">
                       <LazyLoadImage src={item.clientAvatarUrl} alt={item.clientName} effect="blur" />
-                      {/* <img src={item.clientAvatarUrl} alt={item.clientName} /> */}
                     </div>
                     <div className="text">
                       <div className="panchang">{item.clientName}</div>

@@ -25,9 +25,3 @@ function FaqList(){
 }
 
 export default FaqList;
-
-// <div className="container">
-// <Accordion transition transitionTimeout={250}>
-//   {faqs.map(f => <AccordionItem header={f.question}><div dangerouslySetInnerHTML={{__html: f.answer}} /></AccordionItem>)}
-// </Accordion>
-// </div> 

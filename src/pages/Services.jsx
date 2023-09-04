@@ -5,15 +5,9 @@ import '../assets/scss/services.scss';
 import par from '../data/heroData.json';
 import { Helmet } from "react-helmet-async";
 import pageTitle from '../data/pagesTitles.json';
-// import { useEffect } from "react";
-
 
 function Services() {
   const heroPar = par.services;
-
-  // useEffect(()=>{
-  //   window.document.title = 'Unix Services';
-  // }, []);
 
   return (
     <>

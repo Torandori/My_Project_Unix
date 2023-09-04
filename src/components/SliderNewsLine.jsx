@@ -8,11 +8,8 @@ import "slick-carousel/slick/slick.css";
 import NewIt from "./NewIt";
 import Loader from "./Loader";
 import NewArrow from "./svgComponents/newArrow";
-// import formatDate from "../helpers/formatDate";
 
 function SliderNewsLine() {
-  // const isDev = false; //false - api 
-
   const [newsLine, setNewsLine] = useState([]);
   const [loading, setLoading] = useState(true)
   
@@ -53,7 +50,6 @@ function SliderNewsLine() {
     }
     try {
       const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
-      // console.log("resp", resp)
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());

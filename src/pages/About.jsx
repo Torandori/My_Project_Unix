@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { lazy, Suspense } from 'react';
 import HeroSec from "../components/HeroSec";
 import AboutDescrSec from "../components/AboutDescrSec";
 import AboutTestimonialSec from "../components/AboutTestimonialSec";
@@ -9,21 +7,8 @@ import '../assets/scss/about.scss';
 import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
 
-
-// const AboutDescrSec = lazy(() => import("../components/AboutDescrSec"));
-// const AboutTestimonialSec = lazy(() => import("../components/AboutTestimonialSec"));
-// const AboutPrinciplesSec = lazy(() => import("../components/AboutPrinciplesSec"));
-
-// const renderLoader = () => <p>Loading</p>;
-
-
 function About(){
   const heroPar = par.about;
-
-
-  // useEffect(()=>{
-  //   window.document.title = 'Unix About';
-  // }, []);
 
   return (
     <>
@@ -45,15 +30,12 @@ function About(){
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Unveiling Our Story: Crafting Digital Success | Unixstudio" />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
       <div className="about-grafic-bg" id="about-page">
-        {/* <Suspense fallback={renderLoader()}> */}
           <HeroSec par={heroPar} />
           <AboutDescrSec />
           <AboutTestimonialSec />
           <AboutPrinciplesSec />
-        {/* </Suspense> */}
       </div>
     </>
   )

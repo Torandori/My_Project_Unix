@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/scss/style.scss";
 import "../assets/scss/error404.scss";
@@ -6,18 +5,8 @@ import Lottie from "lottie-react";
 import animationErr from '../assets/other/404error.json';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
-// import { lazy, Suspense } from 'react';
-// const Lottie = lazy(() => import("lottie-react"));
-
-
-// const renderLoader = () => <p>Loading</p>;
-
 
 function NotFound() {
-  
-  // useEffect(()=>{
-  //   window.document.title = 'Unix Not Found';
-  // }, []);
 
   return (
     <>
@@ -39,21 +28,18 @@ function NotFound() {
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Oops! It seems you've ventured into uncharted digital territory uses a friendly tone to acknowledge the situation." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
-      {/* <Suspense fallback={renderLoader()}> */}
-        <div className="error404Page">
-          <div className="container">
-            <div className="anim-wrap">
-              <Lottie animationData={animationErr} />
-            </div>
-            <div className="under-anim">
-              <h1 className="panchang err-title">Page is not found</h1>
-              <Link to="/" title="Move to home page">Back to home</Link>
-            </div>
+      <div className="error404Page">
+        <div className="container">
+          <div className="anim-wrap">
+            <Lottie animationData={animationErr} />
+          </div>
+          <div className="under-anim">
+            <h1 className="panchang err-title">Page is not found</h1>
+            <Link to="/" title="Move to home page">Back to home</Link>
           </div>
         </div>
-      {/* </Suspense> */}
+      </div>
     </>
   )
 }

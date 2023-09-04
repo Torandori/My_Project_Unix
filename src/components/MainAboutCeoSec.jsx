@@ -27,7 +27,6 @@ function MainAboutCeoSec(){
       <PromoLines />
       <div className="container separator">
         <p className="under-run" data-aos="fade-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">{ceoData.underLinesText}</p>
-        {/* <Link to={ceoData.ceoLinkTo} className="small-link" title="Move to services page">{ceoData.ceoLinkText}</Link> */}
         <Link to={ceoData.ceoLinkTo} className="small-link" title="Move to services page" data-aos="fade-in" data-aos-easing="ease-out-cubic" data-aos-duration="600" data-aos-delay="300">
           <span className="mask">
             <div className="small-link-container">

@@ -19,8 +19,6 @@ import { useLocation } from 'react-router-dom';
 function NewsDetails(){
   const location = useLocation();
   const newsData = location.state?.newsData || {};
-  // const newsData = location.state.respData;
-  // console.log('newsData', newsData)
   // const { hash } = useParams();
   // console.log('hashNewsDet', hash);
 

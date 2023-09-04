@@ -40,7 +40,6 @@ function MainAboutSec() {
           </Link>
         </div>
         <div id="main-services" className="accordion panchang">
-          {/* <ul className="panchang"> */}
             {aboutAccord.map((item, index) => {
                 return (
                   <div key={index} className="accordion-item">
@@ -57,7 +56,6 @@ function MainAboutSec() {
                   </div>
                 )
             })}
-          {/* </ul> */}
         </div>
       </div>
     </section>

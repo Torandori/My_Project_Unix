@@ -35,9 +35,7 @@ function SliderCeo() {
       <div className="ceo-slider">
         <div className="quote">
           <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
-          {/* <img src={quote} alt="Quote picture" /> */}
         </div>
-        {/* <ul> */}
           <Slider ref={sliderRef} {...sliderSettings}>
             {ceo.map((item, index) => {
               return (
@@ -47,12 +45,10 @@ function SliderCeo() {
               )
             })}
           </Slider>
-        {/* </ul> */}
       </div>
       <div className="gen-slider-descr">
         <div className="pic-wrap">
           <LazyLoadImage src={ceoPic} alt="Picture of ceo" effect="blur" />
-          {/* <img src={ceoPic} alt="Picture of ceo" /> */}
         </div>
         <div className="text">
           <div className="panchang">{ceoData.ceoName}</div>

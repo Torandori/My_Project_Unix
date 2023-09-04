@@ -13,11 +13,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
 
-// import { useLocation } from 'react-router-dom';
-// import LinkedinShare from "../components/svgComponents/LinkedinShare";
-// import PinterestShare from "../components/svgComponents/PinterestShare";
-
-
 
 function NewsDetails(){
   const { hash } = useParams();
@@ -99,49 +94,40 @@ function NewsDetails(){
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Industry trends, expert opinions, and noteworthy achievements." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
-      {/* <Suspense fallback={renderLoader()}> */}
-        <div id="news-details-page">
-          <HeroSecNewsDet resp={news}/>
-          <div id="detail-overview-sec">
-            <div className="container">
-              <div className="detail-overview-wrap1" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-                <div className="author">
-                  <div className="pic-wrap">
-                    <LazyLoadImage src={selectedAuthObj.authImg} alt={news.author} effect="blur" />
-                    {/* <img src={selectedAuthObj.authImg} alt={news.author} /> */}
-                  </div>
-                  <div className="text">
-                    <div>{news.author}</div>
-                    <div>{selectedAuthObj.authPosition}</div>
-                  </div>
+      <div id="news-details-page">
+        <HeroSecNewsDet resp={news}/>
+        <div id="detail-overview-sec">
+          <div className="container">
+            <div className="detail-overview-wrap1" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+              <div className="author">
+                <div className="pic-wrap">
+                  <LazyLoadImage src={selectedAuthObj.authImg} alt={news.author} effect="blur" />
                 </div>
-                <div className="overview panchang">Overview</div>
-                <div className="date-news">{formatDate(news.publish_date)}</div>
+                <div className="text">
+                  <div>{news.author}</div>
+                  <div>{selectedAuthObj.authPosition}</div>
+                </div>
               </div>
-              {/* <div className="detail-overview-wrap2">
-                <div className="overview panchang">Overview</div>
-                <p className="summary-text">{news.summary}</p>
-              </div> */}
+              <div className="overview panchang">Overview</div>
+              <div className="date-news">{formatDate(news.publish_date)}</div>
             </div>
           </div>
-  
-          <section id="detail-text-sec">
-            <div className="container">
-              <div className="detail-text-wrap">
-                <div className="text-col">
-                  <div className="poster-detail-wrap" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-                    <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
-                    {/* <img src={news.image ? news.image : newsDefaultImg}  /> */}
-                  </div>
-                  <p>{news.text}</p>
+        </div>
+
+        <section id="detail-text-sec">
+          <div className="container">
+            <div className="detail-text-wrap">
+              <div className="text-col">
+                <div className="poster-detail-wrap" data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+                  <LazyLoadImage src={news.image ? news.image : newsDefaultImg} alt="News picture" effect="blur" />
                 </div>
+                <p>{news.text}</p>
               </div>
             </div>
-          </section>
-        </div>
-      {/* </Suspense> */}
+          </div>
+        </section>
+      </div>
     </>
   )
 }

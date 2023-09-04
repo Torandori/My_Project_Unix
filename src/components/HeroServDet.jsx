@@ -33,7 +33,6 @@ function HeroServDet({descr}){
           <h1 className="panchang" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{heroServ.heroServTitle}</h1>
         </Parallax>
       )}
-        {/* <h1 className="panchang">{heroServ.heroServTitle}</h1> */}
         <div className="flake dark" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
           <Parallax rotate={['0', '360']}>
             <Flake />

@@ -15,9 +15,8 @@ function AboutTestimonialSec() {
           src={testimonialPic}
           alt={testData.aboutPictureTitle}
           title={testData.aboutPicTitle}
-          effect="black-and-white" // You can also use 'opacity' or 'black-and-white'
+          effect="black-and-white" 
         />
-          {/* <img src={testimonialPic} alt={testData.aboutPictureTitle} title={testData.aboutPicTitle} /> */}
         </div>
         <div className="block-text-under-pic">
           <h2 className="h2" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">{testData.aboutTestTitle}</h2>

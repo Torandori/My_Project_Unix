@@ -12,26 +12,9 @@ import par from '../data/heroData.json'
 import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
 
-// import { lazy, Suspense } from 'react';
-// const HeroSec = lazy(() => import('../components/HeroSec'));
-// const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'))
-// const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
-// const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
-// const MainPastProjectsSec = lazy(() => import('../components/MainPastProjectsSec'));
-// const MainVideoSec =  lazy(() => import('../components/MainVideoSec'));
-// const MainWitnessSec = lazy(() => import('../components/MainWitnessSec'));
-// const MainWorthySec = lazy(() => import('../components/MainWorthySec'));
-// const par = lazy(() => import('../data/heroData.json'));
-
-// const renderLoader = () => <p>Loading</p>;
-
 function Home() {
   const heroPar = par.home;
 
-  // useEffect(()=>{
-  //   window.document.title = 'Unix Studio';
-  // }, []);
-  
   return (
     <>
       <Helmet>
@@ -52,11 +35,9 @@ function Home() {
         <meta name="twitter:title" content="Unixstudio" />
         <meta name="twitter:description" content="Strategic and creative services to clients, focusing on digital marketing, web design, development, and online branding." />
         <meta name="twitter:image" content="https://torandori.github.io/My_Project_Unix/assets/logo-91daf828.svg" />
-        {/* <meta name="description" content="This is the meta description for this specific page." /> */}
       </Helmet>
       <div className="main-body-bg main-page">
         <div className="main-grafic-bg">
-        {/* <Suspense fallback={renderLoader()}> */}
           <HeroSec par={heroPar} />
           <MainAboutSec />
           <MainVideoSec />
@@ -65,7 +46,6 @@ function Home() {
           <MainPastProjectsSec />
           <MainWorthySec />
           <MainOurClientSec />
-        {/* </Suspense> */}
         </div>
       </div>
     </>

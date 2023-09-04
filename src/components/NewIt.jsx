@@ -40,7 +40,6 @@ function NewIt({respData, randomIt}) {
         <div className="author">
           <div className="pic-wrap">
             <LazyLoadImage src={mockedObj.authImg} alt={respData.author} effect="blur" />
-            {/* <img src={mockedObj.authImg} alt={respData.author} /> */}
           </div>
           <div className="text">
             <div>{respData.author}</div>
@@ -49,7 +48,6 @@ function NewIt({respData, randomIt}) {
         </div>
         <Link to={`/news/${hash}`} state={{ newsData: respData }} className="new-topic" title="Go to news details">{respData.title}</Link>
 
-        {/* <Link to={`/news/${hash}`} className="new-topic" title="Go to news details">{respData.title}</Link> */}
       </div>
         <div className="content-wrap2">
           {isMobile ? (
@@ -63,7 +61,6 @@ function NewIt({respData, randomIt}) {
         </div>
       <div className="img-wrap-new">
         <LazyLoadImage  src={respData.image ?? newsDefaultImg} alt={respData.title} effect="blur" />
-        {/* <img src={respData.image ?? newsDefaultImg} alt={respData.title} /> */}
       </div>
     </>
   )
