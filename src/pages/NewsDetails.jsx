@@ -4,9 +4,9 @@ import { useState, useRef, useEffect } from "react";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
 import formatDate from "../helpers/formatDate"
-import Loader from "../components/Loader";
-import ky from "ky";
-import { toast } from "react-toastify";
+// import Loader from "../components/Loader";
+// import ky from "ky";
+// import { toast } from "react-toastify";
 import '../assets/scss/news-details.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -19,12 +19,6 @@ import { useLocation } from 'react-router-dom';
 function NewsDetails(){
   const location = useLocation();
   const newsData = location.state?.newsData || {};
-  // const { hash } = useParams();
-  // console.log('hashNewsDet', hash);
-
-  // const [news, setNewsData] = useState({});
-  // const [loading, setLoading] = useState(true);
-  // const fetchCount = useRef(0);
   const [newsDetMock, setNewsDetMock] = useState([{}, {}]);
 
   useEffect(() => {

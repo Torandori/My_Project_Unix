@@ -10,6 +10,8 @@ import Loader from "./Loader";
 import NewArrow from "./svgComponents/newArrow";
 
 function SliderNewsLine() {
+  const isDev = true; //is true - mock
+
   const [newsLine, setNewsLine] = useState([]);
   const [loading, setLoading] = useState(true)
   
@@ -24,7 +26,7 @@ function SliderNewsLine() {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log('respNewsLine', resp)
+          console.log('respPosition', resp)
         })
     } catch (error) {
       console.log('err', error);
@@ -49,7 +51,14 @@ function SliderNewsLine() {
       } 
     }
     try {
-      const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
+      const url = isDev 
+      ? './mock/mockNews.json'
+      : `${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`;
+      const resp = await ky(url, {
+          timeout: 15000,
+        }).json();
+      console.log("respNewsLine", resp)
+      // const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));
       localStorage.setItem('lastNewsUpdate', new Date().getTime());
@@ -112,14 +121,12 @@ function SliderNewsLine() {
     ]
   };
 
-
   function prev() {
     sliderNewRef.current.slickPrev();
   }
   function next() {
     sliderNewRef.current.slickNext();
   }
-
 
   return (
     <div className="news-slider">
