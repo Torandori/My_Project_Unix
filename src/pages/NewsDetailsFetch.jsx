@@ -14,7 +14,7 @@ import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
 
 
-function NewsDetails(){
+function NewsDetailsFetch(){
   const { hash } = useParams();
   console.log('hashNewsDet', hash);
   const [news, setNewsData] = useState({});
@@ -131,4 +131,4 @@ function NewsDetails(){
     </>
   )
 }
-export default NewsDetails;
+export default NewsDetailsFetch;

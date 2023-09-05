@@ -9,7 +9,8 @@ import ServiceDetails from "./pages/ServiceDetails";
 import About from "./pages/About";
 import News from "./pages/News";
 import Contacts from "./pages/Contacts";
-import NewsDetails from './pages/NewsDetails';
+// import NewsDetails from './pages/NewsDetails';
+import NewsDetailsFetch from './pages/NewsDetailsFetch';
 import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';
@@ -35,7 +36,8 @@ function App() {
             <Route path="/services/:slug" element={<ServiceDetails />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/news" element={<News />}/>
-            <Route path="news/:hash" element={<NewsDetails/>}/>
+            {/* <Route path="news/:hash" element={<NewsDetails/>}/> */}
+            <Route path="news/:hash" element={<NewsDetailsFetch />}/>
           </Route>
           <Route path="*" element={<NotFound />}/>
           <Route path="/" element={<DarkLayout />}>
