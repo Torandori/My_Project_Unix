@@ -15,8 +15,8 @@
     <title>Unix Studio</title>
     <!-- <link rel="stylesheet" href="bower_components/aos/dist/aos.css" /> -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script type="module" crossorigin src="/My_Project_Unix/assets/index-18c47bfb.js"></script>
-    <link rel="stylesheet" href="/My_Project_Unix/assets/index-7bae348f.css">
+    <script type="module" crossorigin src="/My_Project_Unix/assets/index-a590e7d1.js"></script>
+    <link rel="stylesheet" href="/My_Project_Unix/assets/index-5131ca92.css">
   </head>
   <body>
     <div id="root"></div>
@@ -24,7 +24,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
-        disable: 'mobile'
+        // disable: 'mobile';
+        disable: function() {
+        const maxWidth = 880;
+        return window.innerWidth < maxWidth;
+      }
       });
     </script>
     
