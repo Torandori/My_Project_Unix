@@ -24,7 +24,7 @@ function SiteHeader(){
           </ul>
         </nav>
         <div className="hamb-wrap">
-          <button id="hamb-btn" className="hamburger hamburger--elastic" type="button">
+          <button id="hamb-btn" className="hamburger hamburger--elastic" type="button" aria-label="Menu button">
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>
             </span>

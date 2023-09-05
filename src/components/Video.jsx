@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "../assets/scss/_video.scss"
+import "../assets/scss/_video.scss";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function Video({code}) {
   const [isVideo, setVideo] = useState()
@@ -13,7 +14,11 @@ function Video({code}) {
         isVideo 
         ? <iframe width="560" height="315" src={`https://www.youtube.com/embed/${code}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen /> 
         : <>
-          <img src={`https://img.youtube.com/vi/${code}/maxresdefault.jpg`} alt="Video preview picture" />
+          <LazyLoadImage
+          src={`https://img.youtube.com/vi/${code}/maxresdefault.jpg`}
+          alt="Video preview picture"
+          effect="blur" 
+          />
           <button type="button" className="video-play-btn"  title="Play Video" tabIndex="0" onClick={playHandler}></button>
         </>
       }

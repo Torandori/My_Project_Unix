@@ -39,13 +39,15 @@ function SliderWitness() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          autoplay: false,
         }
       },
       {
         breakpoint: 660,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          autoplay: false,
         }
       }
     ]

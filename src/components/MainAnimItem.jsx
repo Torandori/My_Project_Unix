@@ -5,7 +5,7 @@ import '../assets/scss/_tiltCardProj.scss';
 import { useMediaQuery } from 'react-responsive';
 
 function MainAnimItem({item}) {
-  const isMobile = useMediaQuery({ maxWidth: 880 });
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
   const any = useRef(null)
 
   useEffect(() => {
@@ -17,16 +17,16 @@ function MainAnimItem({item}) {
         glare: true,
         "max-glare": 0.3
       });
-    }
+    } 
   }, [isMobile]);
 
   return (
+    <div className={isMobile ? 'projPic' : 'tiltElProj'} ref={isMobile ? null : any}>
+      <img src={item.projImgUrl} alt={item.projAlt} />
+    </div>
     // <div className='tiltElProj' ref={any}>
     //   <img src={item.projImgUrl} alt={item.projAlt} />
     // </div>
-        <div className='tiltElProj' ref={any}>
-        <img src={item.projImgUrl} alt={item.projAlt} />
-      </div>
   )
 }
 export default MainAnimItem;

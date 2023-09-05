@@ -466,6 +466,7 @@ ul {
   gap: 24px;
   align-items: center;
   .pic-wrap {
+    flex: 0 0 auto; 
     width: 72px;
     height: 72px;
     border-radius: 50%;

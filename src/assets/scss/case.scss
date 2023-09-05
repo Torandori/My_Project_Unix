@@ -93,11 +93,6 @@
     }
     .img-wrap {
       transform: scale(1.1);
-      // box-shadow: 0 0 10px rgb(141, 155, 54, 0.1),
-      //   0 0 20px rgb(141, 155, 54, 0.1),
-      //   0 0 40px rgb(141, 155, 54, 0.2),
-      //   0 0 80px rgb(141, 155, 54, 0.5),
-      //   0 0 160px rgb(141, 155, 54, 0.6);
       img {
         transition: all .2 ease;
       }
@@ -341,6 +336,23 @@
   .left {
     grid-area: 1/1/2/2;
     padding-bottom: 0;
+  }
+  .case-item {
+    transition: all .3s ease;
+    .overlay {
+      opacity: 0;
+    }
+    &:hover {
+      .h4 {
+        background-size: 100% 100%;
+      }
+      .img-wrap {
+        transform: scale(1);
+        img {
+          transition: all .2 ease;
+        }
+      }
+    }
   }
 }
 

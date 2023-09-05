@@ -40,6 +40,9 @@
     gap: 100px;
     margin-bottom: 26px;
     .author {
+      .pic-wrap {
+        flex: 0 0 auto;
+      }
       .text {
         div:first-child {
           @include fz(24);
@@ -170,11 +173,12 @@
     }
   }
 }
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .news-list {
     display: none;
   }
+}
+@media screen and (max-width: 800px) {
   #news-details-page {
     #hero-sec {
       height: 760px;
@@ -268,9 +272,6 @@
   }
   #detail-overview-sec .detail-overview-wrap1 .author .text div:first-child {
     font-size: 1.2rem;
-  }
-  .author .pic-wrap {
-    flex-shrink: 0;
   }
 }
 @media screen and (max-width: 560px) {

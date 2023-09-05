@@ -34,45 +34,51 @@ function ServDetHowSec({descr}) {
   
 
   return (
-    <section id="how-sec">
-      <div className="container">
-        <div className="big-img-wrap">
-          <LazyLoadImage src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} effect="blur" />
-        </div>
-        <div className="block-text-under-pic" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-          <h2 className="h2">{under.servDetUnderTitle}</h2>
-          <p className="text">{under.servDetUnderDescr}</p>
-        </div>
-        <div className="how-list" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="700">
-          {_under.map((item, index) => {
-            return (
-              <React.Fragment key={index}>
-                <div className="number cell">{item.howListNumber}</div>
-                <div className="name cell">{item.howListTitle}</div>
-                <p className="item-descr cell">{item.howListDescr}</p>
-              </React.Fragment>
-            )
-          })}
-        </div>
-        {isMobile ? ( 
-          <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
-            <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
-              <StartBtn />
-            </button>
+    <>
+      <div className="gradient">
+        <div className="container">
+          <div className="big-img-wrap">
+            <LazyLoadImage src={under.howImgUrl} alt={under.howImgAlt} title={under.howImgAlt} effect="blur" />
           </div>
-        ) :
-        (
-          <Parallax translateX={['-100px', '100px']}>
+        </div>
+      </div>
+      <section id="how-sec">
+        <div className="container">
+          <div className="block-text-under-pic" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+            <h2 className="h2">{under.servDetUnderTitle}</h2>
+            <p className="text">{under.servDetUnderDescr}</p>
+          </div>
+          <div className="how-list" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="700">
+            {_under.map((item, index) => {
+              return (
+                <React.Fragment key={index}>
+                  <div className="number cell">{item.howListNumber}</div>
+                  <div className="name cell">{item.howListTitle}</div>
+                  <p className="item-descr cell">{item.howListDescr}</p>
+                </React.Fragment>
+              )
+            })}
+          </div>
+          {isMobile ? ( 
             <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
               <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
                 <StartBtn />
               </button>
             </div>
-          </Parallax>
-        )}
-      </div>
-      <ContactsModal isOpen={modalOpen} onClose={closeModal} />
-    </section>
+          ) :
+          (
+            <Parallax translateX={['-100px', '100px']}>
+              <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
+                <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
+                  <StartBtn />
+                </button>
+              </div>
+            </Parallax>
+          )}
+        </div>
+        <ContactsModal isOpen={modalOpen} onClose={closeModal} />
+      </section>
+    </>
   )
 }
 export default ServDetHowSec;
