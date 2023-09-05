@@ -22,7 +22,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({
-        disable: 'mobile'
+        // disable: 'mobile';
+        disable: function() {
+        const maxWidth = 880;
+        return window.innerWidth < maxWidth;
+      }
       });
     </script>
     <script type="module" src="/src/main.jsx"></script>

@@ -107,7 +107,7 @@
   background: 
   url("../images/svg/vector5.svg") 50% 42% no-repeat,
   url("../images/svg/grad5.svg") 84% 243% no-repeat,
-  url("../images/svg/grad3.svg") 50% -46% no-repeat;
+  url("../images/svg/grad3.svg") 50% -12% no-repeat;
   background-color: $color-black-text;
   margin-bottom: 100px;
   .promo-second {
@@ -266,8 +266,8 @@
   #testimonial-sec {
     background: 
     url("../images/svg/vector5.svg") 50% 42% no-repeat,
-    url("../images/svg/grad5.svg") 84% 152% no-repeat,
-    url("../images/svg/grad3.svg") 50% -30% no-repeat;
+    url("../images/svg/grad5.svg") 84% 140% no-repeat,
+    url("../images/svg/grad3.svg") 50% -3% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -318,6 +318,12 @@
   }
 }
 @media screen and (max-width: 880px) {
+  #testimonial-sec {
+    background: 
+    url("../images/svg/grad5.svg") 84% 160% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 100px;
+  }
   .interact-elements {
     display: none;
   }
@@ -329,13 +335,21 @@
   #testimonial-sec {
     background: 
     url("../images/svg/vector5.svg") 50% 42% no-repeat,
-    url("../images/svg/grad5.svg") 84% 180% no-repeat,
-    url("../images/svg/grad3.svg") 50% -18% no-repeat;
+    url("../images/svg/grad5.svg") 84% 160% no-repeat,
+    url("../images/svg/grad3.svg") 50% 0% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
 }
 @media screen and (max-width: 800px) {
+  #testimonial-sec {
+    background: 
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 140% no-repeat,
+    url("../images/svg/grad3.svg") 50% 0% no-repeat;
+    background-color: $color-black-text;
+    margin-bottom: 100px;
+  }
   #testimonial-sec {
     margin-bottom: 100px;
   }
@@ -399,13 +413,23 @@
 }
 @media screen and (max-width: 780px) {
   #testimonial-sec {
+    background: 
+    url("../images/svg/vector5.svg") 50% 42% no-repeat,
+    url("../images/svg/grad5.svg") 84% 140% no-repeat,
+    url("../images/svg/grad3.svg") 50% 0% no-repeat;
+    background-color: $color-black-text;
     margin-bottom: 100px;
   }
   #testimonial-sec {
+    margin-bottom: 100px;
+  }
+}
+@media screen and (max-width: 598px) {
+  #testimonial-sec {
     background: 
     url("../images/svg/vector5.svg") 50% 42% no-repeat,
-    url("../images/svg/grad5.svg") 84% 170% no-repeat,
-    url("../images/svg/grad3.svg") 50% -18% no-repeat;
+    url("../images/svg/grad5.svg") 84% 160% no-repeat,
+    url("../images/svg/grad3.svg") 50% 0% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
@@ -414,8 +438,8 @@
   #testimonial-sec {
     background: 
     url("../images/svg/vector5.svg") 50% 42% no-repeat,
-    url("../images/svg/grad5.svg") 84% 220% no-repeat,
-    url("../images/svg/grad3.svg") 50% -20% no-repeat;
+    url("../images/svg/grad5.svg") 84% 164% no-repeat,
+    url("../images/svg/grad3.svg") 50% -6% no-repeat;
     background-color: $color-black-text;
     margin-bottom: 60px;
   }

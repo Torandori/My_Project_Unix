@@ -78,7 +78,7 @@
     .arrow-btn svg {
       width: 48px;
       height: 48px;
-      margin-right: 23px;
+      margin-right: 0!important;
     }
     .accord-title{
       @include fz(48);
@@ -905,7 +905,9 @@
 @media screen and (max-width: 1316px) {
   .wrap-soc-projects {
     flex-wrap: wrap;
-
+  }
+  .worthy-grid .border1 {
+    display: none;
   }
   #we-worthy-sec {
     background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 96% no-repeat;
@@ -1213,7 +1215,7 @@
   #past-projects-sec .container .title {
     display: flex;
     flex-wrap: wrap;
-    gap: 80px;
+    gap: 20px;
     .h2 {
       width: 100%;
     }
@@ -1299,8 +1301,23 @@
     top: -42px!important;
     height: 60px!important;
   }
+  #past-projects-sec .container .title {
+    padding-bottom: 40px;
+  }
+  #about-ceo-sec .container:last-child {
+    padding-bottom: 0;
+  }
+  #witness-sec {
+    padding-bottom: 80px;
+  }
 }
 @media screen and (max-width: 600px) {
+  .slider {
+    padding-left: 0;
+  }
+  #about-ceo-sec .container:last-child {
+    margin-bottom: 0;
+  }
   #main-services .accord-header .accord-title {
     font-size: 1.8rem!important;
     line-height: 2rem!important;
@@ -1334,7 +1351,7 @@
     font-size: 1.1rem!important;
   }
   #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 112% no-repeat;
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 106% no-repeat;
     background-color: $color-black;
   }
   #we-worthy-sec .promo-lines {
@@ -1370,7 +1387,7 @@
     gap: 0;
   }
   .client-slider .quote img {
-    width: 24px;
+    width: 28px;
     height: 20px;
   }
   .client-slider p:first-child {
@@ -1522,6 +1539,11 @@
   #past-projects-sec .container .projects-net .projects-cells .project-pic {
     padding: 20px;
   }
+  #we-worthy-sec {
+    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 110% no-repeat;
+    background-color: $color-black;
+    padding-top: 40px;
+  }
 }
 @media screen and (max-width: 430px) { 
   #past-projects-sec .container .projects-net .projects-cells {
@@ -1544,15 +1566,8 @@
   .slider {
     padding-left: 0;
   }
-  #we-worthy-sec {
-    padding-top: 40px;
-  }
-  #we-worthy-sec {
-    background: url("/My_Project_Unix/src/assets/images/svg/grad4.svg") 26% 114% no-repeat;
-    background-color: $color-black;
-  }
   #we-worthy-sec .promo-lines {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   } 
   #about-ceo-sec .container:last-child .under-run {
     width: 100%;
@@ -1576,6 +1591,9 @@
   }
 }
 @media screen and (max-width: 400px) { 
+  #main-services .accord-header .arrow-btn svg {
+    margin-right: 0px!important;
+  }
   #past-projects-sec .container .projects-net .projects-cells .project-pic {
     padding: 0;
   }
@@ -1589,9 +1607,6 @@
   }
   .promo-second .line-red {
     top: -70px;
-  }
-  #we-worthy-sec .promo-lines {
-    margin-bottom: 100px;
   }
 }
 }

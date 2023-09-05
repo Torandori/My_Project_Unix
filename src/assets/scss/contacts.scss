@@ -556,6 +556,20 @@ p.input-error {
   }
 }
 @media screen and (max-width: 980px) {
+  #social-sec .soc-projects-wrap .left-col {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #social-sec .soc-projects-wrap .left-col .soc-icon-wrap {
+    margin-bottom: 20px;
+  }
+  #social-sec .soc-projects-wrap .right-col .wrap-soc-projects {
+    justify-content: center;
+  }
   .tiltEl {
     width: 380px;
     height: 280px;
@@ -627,6 +641,9 @@ p.input-error {
   }
 }
 @media screen and (max-width: 560px) {
+  #contacts-page #hero-sec h1 {
+    width: 100%;
+  }
   .modal-shadow .modal {
     width: 100%!important;
   }
