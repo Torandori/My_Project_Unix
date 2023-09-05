@@ -151,7 +151,7 @@ function SliderNewsLine() {
           <Slider {...sliderSecondSet}>
             {newsLine.map(item => {
               return (
-                <NewsItem item={item} key={item.id} />
+                <NewsItem respData={item} key={item.id} />
               )
             })}
           </Slider>

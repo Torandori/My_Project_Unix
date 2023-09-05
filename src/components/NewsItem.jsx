@@ -6,9 +6,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import "../assets/scss/_newsCardHover.scss"
 
-function NewsItem({item}) {
+function NewsItem({respData}) {
 
-  const hash = btoa(item.url);
+  const hash = btoa(respData.url);
   console.log("hashNewItem", hash)
 
 
@@ -38,17 +38,17 @@ function NewsItem({item}) {
           <LazyLoadImage src={selectedObj.authImg} alt={`Picture of ` + selectedObj.authPosition} effect="blur" />
         </div>
         <div className="text">
-          <div>{item.author}</div>
+          <div>{respData.author}</div>
           <div>{selectedObj.authPosition}</div>
         </div>
       </div>
       <div className="restTopic">
-        <Link to={`/news/${hash}`} state={{ newsData: item }} className="new-topic" title="Go to news details">{item.title}</Link>
+        <Link to={`/news/${hash}`}state={{ newsData: respData }} className="new-topic" title="Go to news details">{respData.title}</Link>
 
       </div>
-      <div className="date-news">{formatDate(item.publish_date)}</div>
+      <div className="date-news">{formatDate(respData.publish_date)}</div>
       <div className="poster-wrap card-hover">
-        <LazyLoadImage src={item.image ?? newsDefaultImg} alt={item.title} effect="blur" />
+        <LazyLoadImage src={respData.image ?? newsDefaultImg} alt={respData.title} effect="blur" />
       </div>
     </div>
   )
