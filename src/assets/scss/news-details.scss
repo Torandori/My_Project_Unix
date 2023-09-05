@@ -172,6 +172,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .news-list {
+    display: none;
+  }
   #news-details-page {
     #hero-sec {
       height: 760px;

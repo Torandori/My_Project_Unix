@@ -112,7 +112,7 @@ function SliderNewsLine() {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
