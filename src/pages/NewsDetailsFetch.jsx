@@ -13,7 +13,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
 
-
 function NewsDetailsFetch(){
   const { hash } = useParams();
   console.log('hashNewsDet', hash);

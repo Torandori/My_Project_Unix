@@ -2,8 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { lazy, Suspense } from 'react';
 import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
-const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'));
 const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
+const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'));
 const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
 const MainPastProjectsSec = lazy(() => import('../components/MainPastProjectsSec'));
 const MainVideoSec = lazy(() => import('../components/MainVideoSec'));
@@ -14,8 +14,8 @@ import pageTitle from '../data/pagesTitles.json';
 import Loader from "../components/Loader";
 
 
-// import MainAboutCeoSec from '../components/MainAboutCeoSec';
 // import MainAboutSec from '../components/mainAboutSec';
+// import MainAboutCeoSec from '../components/MainAboutCeoSec';
 // import MainOurClientSec from '../components/MainOurClientSec';
 // import MainPastProjectsSec from '../components/MainPastProjectsSec';
 // import MainVideoSec from '../components/MainVideoSec';

@@ -1,10 +1,14 @@
+import { lazy, Suspense } from 'react';
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+const ServDetDescrSec = lazy(() => import('../components/ServDetDescrSec'));
+const ServDetHowSec = lazy(() => import('../components/ServDetHowSec'));
 import HeroServDet from '../components/HeroServDet';
-import ServDetDescrSec from "../components/ServDetDescrSec";
-import ServDetHowSec from "../components/ServDetHowSec";
+// import ServDetDescrSec from "../components/ServDetDescrSec";
+// import ServDetHowSec from "../components/ServDetHowSec";
 import "../assets/scss/serviceDetails.scss";
 import { Helmet } from 'react-helmet-async';
+import Loader from '../components/Loader';
 
 
 function ServiceDetails() {
@@ -45,8 +49,12 @@ function ServiceDetails() {
       <div id="service-details-page" className="service-details-body-bg">
         <div className="service-details-grafic-bg" >
           <HeroServDet descr={descr} />
-          <ServDetDescrSec descr={descr} />
-          <ServDetHowSec descr={descr} />
+          <Suspense fallback={<Loader />}>
+            <ServDetDescrSec descr={descr} />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <ServDetHowSec descr={descr} />
+          </Suspense>
         </div>
       </div>
     </>

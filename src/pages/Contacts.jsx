@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { lazy, Suspense } from 'react';
+import Loader from '../components/Loader';
 import HeroSec from "../components/HeroSec";
-import ContContactsSec from "../components/ContContactsSec";
-import ContSocialSec from "../components/contSocialSec";
-import ContCareerSec from "../components/ContCareerSec";
+const ContContactsSec = lazy(() => import('../components/ContContactsSec'));
+const ContSocialSec = lazy(() => import('../components/ContSocialSec'));
+const ContCareerSec = lazy(() => import('../components/ContCareerSec'));
+// import ContContactsSec from "../components/ContContactsSec";
+// import ContSocialSec from "../components/contSocialSec";
+// import ContCareerSec from "../components/ContCareerSec";
 import '../assets/scss/contacts.scss';
 import par from '../data/heroData.json';
 import pageTitle from '../data/pagesTitles.json';
@@ -34,9 +38,15 @@ function Contacts() {
       </Helmet>
       <div id="contacts-page">
         <HeroSec par={heroPar} />
-        <ContContactsSec />
-        <ContSocialSec />
-        <ContCareerSec />
+        <Suspense fallback={<Loader />}>
+          <ContContactsSec />
+        </Suspense>
+        <Suspense fallback={<Loader />}>
+          <ContSocialSec />
+        </Suspense>
+        <Suspense fallback={<Loader />}>
+          <ContCareerSec />
+        </Suspense>
       </div>
     </>
   )
