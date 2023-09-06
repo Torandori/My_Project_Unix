@@ -1,18 +1,27 @@
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { lazy, Suspense } from 'react';
 import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
-import MainAboutCeoSec from '../components/MainAboutCeoSec';
-import MainAboutSec from '../components/mainAboutSec';
-import MainOurClientSec from '../components/MainOurClientSec';
-import MainPastProjectsSec from '../components/MainPastProjectsSec';
-import MainVideoSec from '../components/MainVideoSec';
-import MainWitnessSec from '../components/MainWitnessSec';
-import MainWorthySec from '../components/MainWorthySec';
+const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'));
+const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
+const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
+const MainPastProjectsSec = lazy(() => import('../components/MainPastProjectsSec'));
+const MainVideoSec = lazy(() => import('../components/MainVideoSec'));
+const MainWitnessSec = lazy(() => import('../components/MainWitnessSec'));
+const MainWorthySec = lazy(() => import('../components/MainWorthySec'));
 import par from '../data/heroData.json'
-import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
-import { Suspense } from 'react';
 import Loader from "../components/Loader";
+
+
+// import MainAboutCeoSec from '../components/MainAboutCeoSec';
+// import MainAboutSec from '../components/mainAboutSec';
+// import MainOurClientSec from '../components/MainOurClientSec';
+// import MainPastProjectsSec from '../components/MainPastProjectsSec';
+// import MainVideoSec from '../components/MainVideoSec';
+// import MainWitnessSec from '../components/MainWitnessSec';
+// import MainWorthySec from '../components/MainWorthySec';
+
 
 function Home() {
   const heroPar = par.home;
@@ -41,17 +50,16 @@ function Home() {
       <div className="main-body-bg main-page">
         <div className="main-grafic-bg">
           <HeroSec par={heroPar} />
-          <MainAboutSec />
+          {/* <MainAboutSec />
           <MainVideoSec />
           <MainWitnessSec />
           <MainAboutCeoSec />
           <MainPastProjectsSec />
           <MainWorthySec />
-          <MainOurClientSec />
+          <MainOurClientSec /> */}
 
-
-          {/* <Suspense fallback={<Loader />}>
-              <MainAboutSec />
+          <Suspense fallback={<Loader />}>
+           <MainAboutSec />
           </Suspense>
           <Suspense fallback={<Loader />}>
             <MainVideoSec />
@@ -70,7 +78,7 @@ function Home() {
           </Suspense>
           <Suspense fallback={<Loader />}>
             <MainOurClientSec />
-          </Suspense> */}
+          </Suspense>
         </div>
       </div>
     </>

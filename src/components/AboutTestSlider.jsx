@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+const Fbs = lazy(() => import('./svgComponents/Fbs'));
+const Ins = lazy(() => import('./svgComponents/Ins'));
 import testData from '../data/aboutTestimonial.json'
 import '../assets/scss/_testimonialTeamCards.scss'
-import Fbs from './svgComponents/Fbs';
-import Ins from './svgComponents/Ins';
+// import Fbs from './svgComponents/Fbs';
+// import Ins from './svgComponents/Ins';
 
 function AboutTestSlider() {
   return (

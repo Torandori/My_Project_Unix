@@ -1,9 +1,12 @@
-import { useEffect } from "react";
+import { lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import HeroSec from "../components/HeroSec";
-import NewsSliderSec from "../components/NewsSliderSec";
+const NewsSliderSec = lazy(() => import('../components/NewsSliderSec'));
+import Loader from "../components/Loader";
+
+// import NewsSliderSec from "../components/NewsSliderSec";
 import "../assets/scss/news.scss"
 import par from '../data/heroData.json';
-import { Helmet } from "react-helmet-async";
 import pageTitle from '../data/pagesTitles.json';
 
 function News(){
@@ -33,7 +36,9 @@ function News(){
       </Helmet>
       <div id="news-page">
         <HeroSec par={heroPar} />
-        <NewsSliderSec />
+        <Suspense fallback={<Loader />}>
+          <NewsSliderSec />
+        </Suspense>
       </div>
     </>
   )
