@@ -1,6 +1,23 @@
 import { Helmet } from 'react-helmet-async';
 import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
+import par from '../data/heroData.json'
+import pageTitle from '../data/pagesTitles.json';
+// import MainAboutSec from '../components/mainAboutSec';
+// import MainAboutCeoSec from '../components/MainAboutCeoSec';
+// import MainOurClientSec from '../components/MainOurClientSec';
+// import MainPastProjectsSec from '../components/MainPastProjectsSec';
+// import MainVideoSec from '../components/MainVideoSec';
+// import MainWitnessSec from '../components/MainWitnessSec';
+// import MainWorthySec from '../components/MainWorthySec';
+import loadable from '@loadable/component';
+const MainAboutSec = loadable(() => import('../components/mainAboutSec'));
+const MainAboutCeoSec = loadable(() => import('../components/MainAboutCeoSec'));
+const MainOurClientSec = loadable(() => import('../components/MainOurClientSec'));
+const MainPastProjectsSec = loadable(() => import('../components/MainPastProjectsSec'));
+const MainVideoSec = loadable(() => import('../components/MainVideoSec'));
+const MainWitnessSec = loadable(() => import('../components/MainWitnessSec'));
+const MainWorthySec = loadable(() => import('../components/MainWorthySec'));
 // const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
 // const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'));
 // const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
@@ -8,18 +25,7 @@ import HeroSec from '../components/HeroSec';
 // const MainVideoSec = lazy(() => import('../components/MainVideoSec'));
 // const MainWitnessSec = lazy(() => import('../components/MainWitnessSec'));
 // const MainWorthySec = lazy(() => import('../components/MainWorthySec'));
-import par from '../data/heroData.json'
-import pageTitle from '../data/pagesTitles.json';
-import Loader from "../components/Loader";
 // import { lazy, Suspense } from 'react';
-import MainAboutSec from '../components/mainAboutSec';
-import MainAboutCeoSec from '../components/MainAboutCeoSec';
-import MainOurClientSec from '../components/MainOurClientSec';
-import MainPastProjectsSec from '../components/MainPastProjectsSec';
-import MainVideoSec from '../components/MainVideoSec';
-import MainWitnessSec from '../components/MainWitnessSec';
-import MainWorthySec from '../components/MainWorthySec';
-
 
 function Home() {
   const heroPar = par.home;
@@ -55,7 +61,6 @@ function Home() {
           <MainPastProjectsSec />
           <MainWorthySec />
           <MainOurClientSec />
-
           {/* <Suspense fallback={<Loader />}>
            <MainAboutSec />
           </Suspense>
