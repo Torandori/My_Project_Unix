@@ -18,14 +18,6 @@ const MainPastProjectsSec = loadable(() => import('../components/MainPastProject
 const MainVideoSec = loadable(() => import('../components/MainVideoSec'));
 const MainWitnessSec = loadable(() => import('../components/MainWitnessSec'));
 const MainWorthySec = loadable(() => import('../components/MainWorthySec'));
-// const MainAboutSec = lazy(() => import('../components/mainAboutSec'));
-// const MainAboutCeoSec = lazy(() => import('../components/MainAboutCeoSec'));
-// const MainOurClientSec = lazy(() => import('../components/MainOurClientSec'));
-// const MainPastProjectsSec = lazy(() => import('../components/MainPastProjectsSec'));
-// const MainVideoSec = lazy(() => import('../components/MainVideoSec'));
-// const MainWitnessSec = lazy(() => import('../components/MainWitnessSec'));
-// const MainWorthySec = lazy(() => import('../components/MainWorthySec'));
-// import { lazy, Suspense } from 'react';
 
 function Home() {
   const heroPar = par.home;

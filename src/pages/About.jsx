@@ -1,17 +1,16 @@
 import { Helmet } from 'react-helmet-async';
 import HeroSec from "../components/HeroSec";
-// const AboutDescrSec = lazy(() => import('../components/AboutDescrSec'));
-// const AboutTestimonialSec = lazy(() => import('../components/AboutTestimonialSec'));
-// const AboutPrinciplesSec = lazy(() => import('../components/AboutPrinciplesSec'));
+import loadable from '@loadable/component';
+const AboutDescrSec = loadable(() => import('../components/AboutDescrSec'));
+const AboutTestimonialSec = loadable(() => import('../components/AboutTestimonialSec'));
+const AboutPrinciplesSec = loadable(() => import('../components/AboutPrinciplesSec'));
 import '../assets/scss/about.scss';
 import pageTitle from '../data/pagesTitles.json';
 import par from '../data/heroData.json';
-// import { lazy, Suspense } from 'react';
-// import Loader from '../components/Loader';
 
-import AboutDescrSec from "../components/AboutDescrSec";
-import AboutTestimonialSec from "../components/AboutTestimonialSec";
-import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
+// import AboutDescrSec from "../components/AboutDescrSec";
+// import AboutTestimonialSec from "../components/AboutTestimonialSec";
+// import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
 
 function About(){
   const heroPar = par.about;

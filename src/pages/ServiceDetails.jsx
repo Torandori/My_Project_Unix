@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import HeroServDet from '../components/HeroServDet';
-import ServDetDescrSec from "../components/ServDetDescrSec";
-import ServDetHowSec from "../components/ServDetHowSec";
+// import ServDetDescrSec from "../components/ServDetDescrSec";
+// import ServDetHowSec from "../components/ServDetHowSec";
 import "../assets/scss/serviceDetails.scss";
 import { Helmet } from 'react-helmet-async';
-// import { lazy, Suspense } from 'react';
-// import Loader from '../components/Loader';
-// const ServDetDescrSec = lazy(() => import('../components/ServDetDescrSec'));
-// const ServDetHowSec = lazy(() => import('../components/ServDetHowSec'));
+import loadable from '@loadable/component';
+const ServDetDescrSec = loadable(() => import('../components/ServDetDescrSec'));
+const ServDetHowSec = loadable(() => import('../components/ServDetHowSec'));
 
 
 function ServiceDetails() {

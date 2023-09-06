@@ -1,16 +1,15 @@
 import HeroSec from "../components/HeroSec";
-import ContContactsSec from "../components/ContContactsSec";
-import ContSocialSec from "../components/contSocialSec";
-import ContCareerSec from "../components/ContCareerSec";
+// import ContContactsSec from "../components/ContContactsSec";
+// import ContSocialSec from "../components/contSocialSec";
+// import ContCareerSec from "../components/ContCareerSec";
 import '../assets/scss/contacts.scss';
 import par from '../data/heroData.json';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
-// import { lazy, Suspense } from 'react';
-// import Loader from '../components/Loader';
-// const ContContactsSec = lazy(() => import('../components/ContContactsSec'));
-// const ContSocialSec = lazy(() => import('../components/ContSocialSec'));
-// const ContCareerSec = lazy(() => import('../components/ContCareerSec'));
+import loadable from '@loadable/component';
+const ContContactsSec = loadable(() => import('../components/ContContactsSec'));
+const ContSocialSec = loadable(() => import('../components/ContSocialSec'));
+const ContCareerSec = loadable(() => import('../components/ContCareerSec'));
 
 function Contacts() {
   const heroPar = par.contacts;
