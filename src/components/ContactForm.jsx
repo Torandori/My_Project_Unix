@@ -156,48 +156,50 @@ function ContactForm({title}) {
   }
 
   return (
-    <form className="form" onSubmit={submitHandler} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-        {!title && (
-          <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-            <Select
-            autoFocus
-            defaultValue={selectedOpt}
-            onChange={handleOptChange}
-            options={options}
-            styles={customStyles}
-            placeholder='Select target'
-            isClearable={true}
-            />
-        {selectError && <p className="input-error">{selectError}</p>}
-      </div>
-    )}
+    <>
+      <form className="form" onSubmit={submitHandler} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+          {!title && (
+            <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
+              <Select
+              autoFocus
+              defaultValue={selectedOpt}
+              onChange={handleOptChange}
+              options={options}
+              styles={customStyles}
+              placeholder='Select target'
+              isClearable={true}
+              />
+          {selectError && <p className="input-error">{selectError}</p>}
+        </div>
+      )}
 
-      <InputField 
-        multy={false} 
-        label="Your name" 
-        value={name} 
-        change={(val) => setName(val)}
-        blur={(val) => checkName(val)} 
-        error={nameError}/>
+        <InputField 
+          multy={false} 
+          label="Your name" 
+          value={name} 
+          change={(val) => setName(val)}
+          blur={(val) => checkName(val)} 
+          error={nameError}/>
 
-      <InputField 
-        multy={false} 
-        label="Email" 
-        value={email} 
-        change={(val) => setEmail(val)} 
-        blur={(val) => checkEmail(val)} 
-        error={emailError}/>
+        <InputField 
+          multy={false} 
+          label="Email" 
+          value={email} 
+          change={(val) => setEmail(val)} 
+          blur={(val) => checkEmail(val)} 
+          error={emailError}/>
 
-      <InputField 
-        multy={true} 
-        label="Tell more" 
-        value={message} 
-        change={(val) => setMessage(val)} 
-        blur={(val) => checkMessage(val)} 
-        error={messageError}/>
+        <InputField 
+          multy={true} 
+          label="Tell more" 
+          value={message} 
+          change={(val) => setMessage(val)} 
+          blur={(val) => checkMessage(val)} 
+          error={messageError}/>
 
-      <button type="submit" className="btn form-btn-hover"><span>{contacts.formBtnText}</span></button>
-    </form> 
+        <button type="submit" className="btn form-btn-hover"><span>{contacts.formBtnText}</span></button>
+      </form> 
+    </>
   )
 }
 

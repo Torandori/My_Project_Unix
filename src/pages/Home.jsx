@@ -11,6 +11,8 @@ import MainWorthySec from '../components/MainWorthySec';
 import par from '../data/heroData.json'
 import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
+import { Suspense } from 'react';
+import Loader from "../components/Loader";
 
 function Home() {
   const heroPar = par.home;
@@ -46,6 +48,29 @@ function Home() {
           <MainPastProjectsSec />
           <MainWorthySec />
           <MainOurClientSec />
+
+
+          {/* <Suspense fallback={<Loader />}>
+              <MainAboutSec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainVideoSec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainWitnessSec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainAboutCeoSec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainPastProjectsSec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainWorthySec />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <MainOurClientSec />
+          </Suspense> */}
         </div>
       </div>
     </>
