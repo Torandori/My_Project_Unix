@@ -1,14 +1,14 @@
-import { lazy, Suspense } from 'react';
 import HeroSec from "../components/HeroSec";
-const ServServicesSec = lazy(() => import('../components/ServServicesSec'));
-const ServFundingSec = lazy(() => import('../components/ServFundingSec'));
-// import ServServicesSec from "../components/ServServicesSec";
-// import ServFundingSec from "../components/ServFundingSec";
+import ServServicesSec from "../components/ServServicesSec";
+import ServFundingSec from "../components/ServFundingSec";
 import '../assets/scss/services.scss';
 import par from '../data/heroData.json';
 import { Helmet } from "react-helmet-async";
 import pageTitle from '../data/pagesTitles.json';
-import Loader from '../components/Loader';
+// import { lazy, Suspense } from 'react';
+// import Loader from '../components/Loader';
+// const ServServicesSec = lazy(() => import('../components/ServServicesSec'));
+// const ServFundingSec = lazy(() => import('../components/ServFundingSec'));
 
 function Services() {
   const heroPar = par.services;
@@ -37,12 +37,14 @@ function Services() {
       </Helmet>
       <div id="services-page">
         <HeroSec par={heroPar} />
-        <Suspense fallback={<Loader />}>
+        <ServServicesSec />
+        <ServFundingSec />
+        {/* <Suspense fallback={<Loader />}>
           <ServServicesSec />
         </Suspense>
         <Suspense fallback={<Loader />}>
           <ServFundingSec />
-        </Suspense>
+        </Suspense> */}
       </div>
     </>
   )

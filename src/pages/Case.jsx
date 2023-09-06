@@ -1,13 +1,12 @@
-import { lazy, Suspense } from 'react';
 import HeroSec from '../components/HeroSec';
-const CasesSec = lazy(() => import('../components/CasesSec'));
-
-// import CasesSec from '../components/CasesSec';
+import CasesSec from '../components/CasesSec';
 import par from '../data/heroData.json';
 import '../assets/scss/case.scss';
 import { Helmet } from 'react-helmet-async';
 import pageTitle from '../data/pagesTitles.json';
-import Loader from '../components/Loader';
+// import { lazy, Suspense } from 'react';
+// import Loader from '../components/Loader';
+// const CasesSec = lazy(() => import('../components/CasesSec'));
 
 function Case() {
   const heroPar = par.cases;
@@ -34,9 +33,10 @@ function Case() {
       </Helmet>
       <div id="case-page">
         <HeroSec par={heroPar} />
-        <Suspense fallback={<Loader />}>
+        <CasesSec />
+        {/* <Suspense fallback={<Loader />}>
           <CasesSec />
-        </Suspense>
+        </Suspense> */}
       </div>
     </>
   )

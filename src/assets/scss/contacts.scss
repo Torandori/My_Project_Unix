@@ -423,6 +423,9 @@ p.input-error {
 .btn-circle-arrow-text .arrow-in svg path {
   fill: #000;
 }
+.btn-circle-arrow-text {
+  color: $color-black-text;
+}
 
 .btn-circle-arrow-text.dark {
   &:hover {

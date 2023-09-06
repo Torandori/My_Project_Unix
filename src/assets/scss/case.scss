@@ -73,7 +73,8 @@
 }
 .cases-projects {
   display: grid;
-  grid-template-columns: 25% repeat(2, minmax(400px, 1fr));
+  grid-template-columns: 25% repeat(2, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   border-top: 1px solid $color-dark-line;
   border-bottom: 1px solid $color-dark-line;
@@ -357,25 +358,6 @@
 }
 
 @media screen and (max-width: 560px) {
-  .case-item {
-    padding: 6px;
-  }
-  // .case-item {
-  //   padding-left: 0;
-  // }
-  // .project-descr {
-  //   height: auto;
-  //   width: 80%;
-  // }
-  // .case-item .img-wrap {
-  //   width: 90%;
-  // }
-  // .project-descr .short-descr, .project-descr .h4 {
-  //   text-align: left;
-  // }
-  // #cases-sec {
-  //   padding-bottom: 40px;
-  // }
   #case-page #hero-sec {
     h1 {
       line-height: 3rem;
@@ -383,4 +365,8 @@
     }
   }
 }
-
+@media screen and (max-width: 560px) {
+  .case-item {
+    padding: 60px 6px 20px 0px;
+  }
+}

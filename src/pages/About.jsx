@@ -1,17 +1,17 @@
-import { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import HeroSec from "../components/HeroSec";
-const AboutDescrSec = lazy(() => import('../components/AboutDescrSec'));
-const AboutTestimonialSec = lazy(() => import('../components/AboutTestimonialSec'));
-const AboutPrinciplesSec = lazy(() => import('../components/AboutPrinciplesSec'));
+// const AboutDescrSec = lazy(() => import('../components/AboutDescrSec'));
+// const AboutTestimonialSec = lazy(() => import('../components/AboutTestimonialSec'));
+// const AboutPrinciplesSec = lazy(() => import('../components/AboutPrinciplesSec'));
 import '../assets/scss/about.scss';
 import pageTitle from '../data/pagesTitles.json';
-import Loader from '../components/Loader';
 import par from '../data/heroData.json';
+// import { lazy, Suspense } from 'react';
+// import Loader from '../components/Loader';
 
-// import AboutDescrSec from "../components/AboutDescrSec";
-// import AboutTestimonialSec from "../components/AboutTestimonialSec";
-// import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
+import AboutDescrSec from "../components/AboutDescrSec";
+import AboutTestimonialSec from "../components/AboutTestimonialSec";
+import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
 
 function About(){
   const heroPar = par.about;
@@ -39,15 +39,9 @@ function About(){
       </Helmet>
       <div className="about-grafic-bg" id="about-page">
           <HeroSec par={heroPar} />
-          <Suspense fallback={<Loader />}>
-            <AboutDescrSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <AboutTestimonialSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <AboutPrinciplesSec />
-          </Suspense>
+          <AboutDescrSec />
+          <AboutTestimonialSec />
+          <AboutPrinciplesSec />
       </div>
     </>
   )
