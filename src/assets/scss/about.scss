@@ -531,10 +531,13 @@
     padding: 40px 10px 40px 20px;
   }
   #principals-sec .pricnciples-wrap .pricnciples-item {
-    padding: 40px 0 0 0;
+    padding: 40px 0 0 20px;
   }
   #principals-sec .pricnciples-wrap .pricnciples-item.second {
-    padding: 40px 0 0 0;
+    padding: 40px 0 0 20px;
+  }
+  #principals-sec .pricnciples-wrap .pricnciples-item.second .wrap .small-text {
+    display: none;
   }
   #principals-sec .pricnciples-wrap .pricnciples-item .wrap .paragraph, #principals-sec .pricnciples-wrap .pricnciples-item .wrap .paragraph, #principals-sec .pricnciples-wrap .pricnciples-item p {
     font-size: 1.6rem;
