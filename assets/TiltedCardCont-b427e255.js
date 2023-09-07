@@ -1,1 +1,0 @@
-import{r as e,j as s}from"./index-a561fb05.js";function l({item:t}){const r=e.useRef(null);return e.useEffect(()=>(r.current&&VanillaTilt.init(r.current,{max:20,speed:100,glare:!0,"max-glare":.3}),()=>{}),[]),s.jsx("div",{className:"tiltEl",ref:r,children:s.jsx("img",{src:t.socImg,alt:t.socImgAlt})})}export{l as default};
