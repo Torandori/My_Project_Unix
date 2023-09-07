@@ -265,6 +265,12 @@
   }
 }
 @media screen and (max-width: 660px) { 
+  #service-details-page #service-descr-sec .wrap-service-details .right-col {
+    padding: 20px 0 0 0!important;
+  }
+  #service-details-page #service-descr-sec .wrap-service-details .right-col .number-text-block {
+    margin-left: 0;
+  }
   #how-sec .how-list {
     grid-template-rows: repeat(8, 160px)!important;
   }

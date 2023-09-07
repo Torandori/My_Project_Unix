@@ -237,6 +237,9 @@ main {
   }
 }
 @media screen and (max-width: 680px) {
+  #funding .wrap-funding .right-col {
+    padding-left: 0;
+  }
   #how-sec .block-text-under-pic .h2 {
     font-size: 2rem;
     width: 100%;

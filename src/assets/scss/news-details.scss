@@ -213,6 +213,9 @@
 @media screen and (max-width: 1200px) {
   #detail-overview-sec .detail-overview-wrap1 {
     padding: 40px 0;
+    .author {
+      margin-bottom: 0;
+    }
   }
   .best-news-list li .new-topic {
     order: 1;

@@ -528,7 +528,7 @@
       letter-spacing: -2.7px;
       .wrap {
         display: flex;
-        gap: 68px;
+        column-gap: 68px;
         justify-content: space-between;
         margin-bottom: 46px;
         div {
@@ -1049,6 +1049,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .slider-descr div:last-child {
+    margin-left: 0;
+  }
   #main-services .accord-header .accord-title {
     font-size: 2rem!important;
     line-height: 2.2rem!important;
@@ -1111,7 +1114,7 @@
     font-size: 4rem;
   }
   #our-client .small-text {
-    margin-left: 0;
+    padding-left: 0;
   }
   .slider .gen-slider-descr .pic-wrap {
     width: 100px;
@@ -1315,6 +1318,9 @@
   #witness-sec {
     padding-bottom: 80px;
   }
+  #about-ceo-sec .container:last-child .under-run {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 600px) {
   .slider {
@@ -1341,6 +1347,13 @@
   }
 }
 @media screen and (max-width: 560px) {
+  #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider .quote {
+    left: 0;
+    top: -20px;
+  }
+  #about-ceo-sec .container:first-child .ceo-wrap {
+    margin-left: 0;
+  }
   #past-projects-sec .container .projects-net .projects-cells {
     grid-template-columns: 1fr;
     .tiltElProj {
@@ -1360,6 +1373,7 @@
   }
   .gen-slider-descr .arrows {
     margin-left: 0;
+    margin-right: 0!important;
   }
   #past-projects-sec {
     margin-bottom: 0;
@@ -1414,7 +1428,7 @@
     margin-bottom: 40px;
   }
   #we-worthy-sec .h3 {
-    font-size: 2.2rem;
+    font-size: 3rem;
     line-height: 4rem;
   }
   #we-worthy-sec .wrap .title-ending .margin {
@@ -1530,7 +1544,7 @@
   }
 }
 @media screen and (max-width: 480px) { 
-  #past-projects-sec .container .projects-net .projects-cells .project-descr div {
+  #past-projects-sec .container .projects-net .projects-cells .project-descr div:last-child {
     display: none;
   }
  #past-projects-sec .container .projects-net .projects-cells {
