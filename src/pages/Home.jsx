@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import '../assets/scss/main.scss'
+// import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
 import par from '../data/heroData.json'
 import pageTitle from '../data/pagesTitles.json';
@@ -21,6 +22,19 @@ const MainWorthySec = loadable(() => import('../components/MainWorthySec'));
 
 function Home() {
   const heroPar = par.home;
+
+  useEffect(() => {
+    // Динамически загружаем все стили SCSS из определенной директории
+    const styleModules = import.meta.glob('../assets/scss/main.scss');
+
+    Promise.all(Object.values(styleModules).map((styleModule) => styleModule()))
+      .then(() => {
+        console.log('Стили загружены');
+      })
+      .catch((error) => {
+        console.error('Произошла ошибка при загрузке стилей', error);
+      });
+  }, []);
 
   return (
     <>

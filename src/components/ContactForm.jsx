@@ -2,10 +2,13 @@ import { BOT_TOKEN, CHAT_ID, TELEGRAM_API } from "../env";
 import ky from "ky";
 import { useState } from "react";
 import {toast} from "react-toastify";
+import { lazy, Suspense } from 'react';
 import InputField from "./InputField";
 import contacts from '../data/contContactsSecData.json'
-import '../assets/scss/contacts.scss'
-import Select from 'react-select';
+lazy(() => import('../assets/scss/contacts.scss'));
+const Select  = lazy(() => import('react-select'));
+// import '../assets/scss/contacts.scss'
+// import Select from 'react-select';
 
 const options = [
   { value: 'start a project', label: 'Project' },
@@ -160,15 +163,17 @@ function ContactForm({title}) {
       <form className="form" onSubmit={submitHandler} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           {!title && (
             <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-              <Select
-              autoFocus
-              defaultValue={selectedOpt}
-              onChange={handleOptChange}
-              options={options}
-              styles={customStyles}
-              placeholder='Select target'
-              isClearable={true}
-              />
+              <Suspense fallback={'loading'}>
+                <Select
+                autoFocus
+                defaultValue={selectedOpt}
+                onChange={handleOptChange}
+                options={options}
+                styles={customStyles}
+                placeholder='Select target'
+                isClearable={true}
+                />
+              </Suspense>
           {selectError && <p className="input-error">{selectError}</p>}
         </div>
       )}

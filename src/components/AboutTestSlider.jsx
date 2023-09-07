@@ -10,6 +10,7 @@ import '../assets/scss/_testimonialTeamCards.scss'
 function AboutTestSlider() {
   return (
     <>
+    <Suspense fallback={'loading'}>
       <div className="slider-team">
         {testData.aboutTestSlider.map((item, index) => {
           const cardClassName = "card card" + index;
@@ -30,6 +31,7 @@ function AboutTestSlider() {
           )
         })}
       </div>
+    </Suspense>
     </>
   )
 }

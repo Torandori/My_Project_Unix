@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import Slider from "react-slick";
+// import Slider from "react-slick";
+import { lazy, Suspense } from 'react';
+const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -54,22 +56,23 @@ function SliderWitness() {
   };
 
   return (
-    <Slider {...sliderSettings}>
-      {sliderItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <div className="slider-img-wrap">
-                <LazyLoadImage src={item.witSliderImgUrl} alt={item.witSliderImgAlt} effect="blur" />
-              </div>
-              <div className="slider-descr">
-                <div className="panchang">{item.witSliderItemTitle}</div>
-                <div>{item.witSliderItemService}</div>
-              </div>
-            </li>
-          )
-        })}
-    </Slider>
-
+    <Suspense fallback={'loading'}>
+      <Slider {...sliderSettings}>
+        {sliderItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <div className="slider-img-wrap">
+                  <LazyLoadImage src={item.witSliderImgUrl} alt={item.witSliderImgAlt} effect="blur" />
+                </div>
+                <div className="slider-descr">
+                  <div className="panchang">{item.witSliderItemTitle}</div>
+                  <div>{item.witSliderItemService}</div>
+                </div>
+              </li>
+            )
+          })}
+      </Slider>
+    </Suspense>
   )
 }
 export default SliderWitness;

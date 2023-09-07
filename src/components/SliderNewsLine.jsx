@@ -1,9 +1,12 @@
 import { WN_API_KEY, WN_API, NEWS_CACHE_TIME} from "../env";
 import { useState, useEffect, useRef } from "react";
+import { lazy, Suspense } from 'react';
 import ky from "ky";
-import { toast } from "react-toastify";
+const toast  = lazy(() => import('react-toastify'));
+// import { toast } from "react-toastify";
 import NewsItem from "./NewsItem";
-import Slider from "react-slick";
+// import Slider from "react-slick";
+const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 import NewIt from "./NewIt";
 import Loader from "./Loader";
@@ -139,15 +142,18 @@ function SliderNewsLine() {
              <NewArrow />
           </button>
         </div>
-        <Slider {...sliderFirstSet} ref={sliderNewRef}>
-          {newsLine.map((item, index) =>  (
-            <NewIt respData={item} key={item.id} randomIt={newMock[index]} />
-          ))}
-        </Slider>
+        <Suspense fallback={'loading'}>
+          <Slider {...sliderFirstSet} ref={sliderNewRef}>
+            {newsLine.map((item, index) =>  (
+              <NewIt respData={item} key={item.id} randomIt={newMock[index]} />
+            ))}
+          </Slider>
+        </Suspense>
       </div>
 
       <div className="news-line" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="news-list">
+        <Suspense fallback={'loading'}>
           <Slider {...sliderSecondSet}>
             {newsLine.map(item => {
               return (
@@ -155,6 +161,7 @@ function SliderNewsLine() {
               )
             })}
           </Slider>
+        </Suspense>
         </div>
       </div>
     </div>

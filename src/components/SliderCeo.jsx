@@ -1,5 +1,7 @@
 import { useRef } from "react";
-import Slider from "react-slick";
+import { lazy, Suspense } from 'react';
+// import Slider from "react-slick";
+const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 import ceoData from '../data/mainAboutCeoSecData.json'
 import quote from '../assets/images/svg/quote.svg'
@@ -36,6 +38,7 @@ function SliderCeo() {
         <div className="quote">
           <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
         </div>
+        <Suspense fallback={'loading'}>
           <Slider ref={sliderRef} {...sliderSettings}>
             {ceo.map((item, index) => {
               return (
@@ -45,6 +48,7 @@ function SliderCeo() {
               )
             })}
           </Slider>
+        </Suspense>
       </div>
       <div className="gen-slider-descr">
         <div className="pic-wrap">

@@ -1,5 +1,7 @@
 import { useRef, useState, useEffect } from "react";
-import Slider from "react-slick";
+import { lazy, Suspense } from 'react';
+// import Slider from "react-slick";
+const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 import React from "react";
 import quote from '../assets/images/svg/quote.svg'
@@ -66,6 +68,7 @@ function SliderClient() {
       <div className="flex-slider-sec">
         <div className="empty"></div>
         <div className="slider">
+        <Suspense fallback={'loading'}>
           <Slider {...sliderSettings}  ref={sliderClRef}>
             {client.map((item, index) => {
               return (
@@ -94,6 +97,7 @@ function SliderClient() {
               )
             })}
           </Slider>
+        </Suspense>
         </div>
       </div>
     </React.Fragment>
