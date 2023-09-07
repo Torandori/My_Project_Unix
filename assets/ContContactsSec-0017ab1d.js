@@ -1,1 +1,0 @@
-import{r as s,_ as a,j as t}from"./index-f7b64c5a.js";const n=s.lazy(()=>a(()=>import("./index-f7b64c5a.js").then(e=>e.p),["assets/index-f7b64c5a.js","assets/index-3ddb46f1.css"]));function r(){return t.jsx("div",{id:"contacts-sec",children:t.jsx("div",{className:"container",children:t.jsx(s.Suspense,{fallback:"loading",children:t.jsx(n,{})})})})}export{r as default};
