@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { lazy, Suspense } from 'react';
 import HeroServDet from '../components/HeroServDet';
+import { Helmet } from 'react-helmet-async';
+// import loadable from '@loadable/component';
 // import ServDetDescrSec from "../components/ServDetDescrSec";
 // import ServDetHowSec from "../components/ServDetHowSec";
 import "../assets/scss/serviceDetails.scss";
-import { Helmet } from 'react-helmet-async';
-import loadable from '@loadable/component';
-const ServDetDescrSec = loadable(() => import('../components/ServDetDescrSec'));
-const ServDetHowSec = loadable(() => import('../components/ServDetHowSec'));
+const ServDetDescrSec = lazy(() => import('../components/ServDetDescrSec'));
+const ServDetHowSec = lazy(() => import('../components/ServDetHowSec'));
 
 
 function ServiceDetails() {
@@ -48,8 +49,12 @@ function ServiceDetails() {
       <div id="service-details-page" className="service-details-body-bg">
         <div className="service-details-grafic-bg" >
           <HeroServDet descr={descr} />
-          <ServDetDescrSec descr={descr} />
-          <ServDetHowSec descr={descr} />
+          <Suspense fallback={'loading'}>
+            <ServDetDescrSec descr={descr} />
+          </Suspense>
+          <Suspense fallback={'loading'}>
+            <ServDetHowSec descr={descr} />
+          </Suspense>
           {/* <Suspense fallback={<Loader />}>
             <ServDetDescrSec descr={descr} />
           </Suspense>
