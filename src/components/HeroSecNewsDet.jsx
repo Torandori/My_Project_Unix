@@ -7,8 +7,6 @@ import heroNewsData from "../data/heroData.json";
 import { useMediaQuery } from 'react-responsive';
 import { Parallax } from 'react-scroll-parallax';
 
-
-
 function HeroSecNewsDet({resp}){
   const isMobile = useMediaQuery({ maxWidth: 880 });
   const heroD = heroNewsData.newsDet;

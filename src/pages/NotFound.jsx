@@ -7,6 +7,7 @@ const Lottie  = lazy(() => import('lottie-react'));
 import animationErr from '../assets/other/404error.json';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";
+import Loader from "../components/Loader";
 
 function NotFound() {
 
@@ -34,7 +35,7 @@ function NotFound() {
       <div className="error404Page">
         <div className="container">
           <div className="anim-wrap">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <Lottie animationData={animationErr} />
             </Suspense>
           </div>

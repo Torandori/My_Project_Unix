@@ -6,6 +6,7 @@ import { lazy, Suspense } from 'react';
 // import Slider from "react-slick";
 const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
+import Loader from "../components/Loader";
 
 
 function SliderWitness() {
@@ -56,7 +57,7 @@ function SliderWitness() {
   };
 
   return (
-    <Suspense fallback={'loading'}>
+    <Suspense fallback={<Loader />}>
       <Slider {...sliderSettings}>
         {sliderItems.map((item, index) => {
             return (

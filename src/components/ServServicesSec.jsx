@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 const ThinArrow = lazy(() => import('./svgComponents/thinArrow'));
 // import ThinArrow from "./svgComponents/thinArrow";
-import servicesData from '../data/servServicesData.json'
+import servicesData from '../data/servServicesData.json';
+import Loader from "../components/Loader";
 
 function ServServicesSec() {
   return (
@@ -25,7 +26,7 @@ function ServServicesSec() {
                           <div className="text">{item.area}</div> 
                         </div>
                         <div className="arrow-btn">
-                        <Suspense fallback={'loading'}>
+                        <Suspense fallback={<Loader />}>
                           <ThinArrow />
                         </Suspense>
                         </div>

@@ -4,6 +4,7 @@ import fundingData from '../data/servFundingSecData.json'
 const FaqList = lazy(() => import('./FaqList'));
 // import FaqList from './FaqList';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import Loader from "../components/Loader";
 
 function ServFundingSec() {
   const moveTo = useNavigate(); 
@@ -23,7 +24,7 @@ function ServFundingSec() {
               <p className="text-medium">{fundingData.fundingDescr}</p>
               <div className="services-subtitle">{fundingData.fundingSubtitle}</div>
             </div>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <FaqList />
             </Suspense>
             <div className="text-block2">

@@ -4,7 +4,8 @@ const Arrow  = lazy(() => import('./svgComponents/Arrow'));
 // const ContactsModal  = lazy(() => import('./ContactsModal'));
 import ArrowCareer from "./svgComponents/Arrow";
 import ContactsModal from "./ContactsModal";
-import career from "../data/contCareerSecData.json"
+import career from "../data/contCareerSecData.json";
+import Loader from "../components/Loader";
 
 function ContCareerSec() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -30,7 +31,7 @@ function ContCareerSec() {
                 <button type="button" className={item.careerClass} key ={item.id} onClick={() => openModal(item.careerText)}>
                   <span className="btn-content">
                     <span className="arrow-in">
-                    <Suspense fallback={'loading'}>
+                    <Suspense fallback={<Loader />}>
                       <ArrowCareer />
                     </Suspense>
                     </span>

@@ -8,6 +8,7 @@ const InputField  = lazy(() => import('./InputField'));
 import contacts from '../data/contContactsSecData.json'
 lazy(() => import('../assets/scss/contacts.scss'));
 const Select  = lazy(() => import('react-select'));
+import Loader from "../components/Loader";
 // import '../assets/scss/contacts.scss'
 // import Select from 'react-select';
 
@@ -164,7 +165,7 @@ function ContactForm({title}) {
       <form className="form" onSubmit={submitHandler} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
           {!title && (
             <div className={selectError !== '' ? 'select-element has-error' : 'select-element'}>
-              <Suspense fallback={'loading'}>
+              <Suspense fallback={<Loader />}>
                 <Select
                 autoFocus
                 defaultValue={selectedOpt}
@@ -178,7 +179,7 @@ function ContactForm({title}) {
           {selectError && <p className="input-error">{selectError}</p>}
         </div>
       )}
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <InputField 
             multy={false} 
             label="Your name" 

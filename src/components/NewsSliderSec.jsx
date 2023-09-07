@@ -7,7 +7,7 @@ function NewsSliderSec() {
   return (
     <section id="slider-news-sec">
       <div className="container">
-        {/* <Suspense fallback={'loading'}> */}
+        {/* <Suspense fallback={<Loader />}> */}
           <SliderNewsLine />
         {/* </Suspense> */}
       </div>

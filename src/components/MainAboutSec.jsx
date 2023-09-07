@@ -8,6 +8,7 @@ import aboutAccord from '../data/mainAboutSecAccordData.json'
 import '../assets/scss/_accordArrows.scss'
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
+import Loader from "../components/Loader";
 
 
 function MainAboutSec() {
@@ -49,7 +50,7 @@ function MainAboutSec() {
                     <div className="accord-header">
                       <div className="accord-title">{item.aboutAccordName}</div>
                       <div className="arrow-btn">
-                      <Suspense fallback={'loading'}>
+                      <Suspense fallback={<Loader />}>
                         <ArrowMainAb />
                         <ArrowMainAb />
                       </Suspense>

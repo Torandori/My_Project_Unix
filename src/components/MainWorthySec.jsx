@@ -9,6 +9,7 @@ const PromoLines = lazy(() => import('./PromoLines'));
 // import PromoLines from './PromoLines';
 import btnCircle from '../assets/images/svg/btnCircle.svg'
 // import ContactsModal from './ContactsModal';
+import Loader from "../components/Loader";
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
@@ -41,7 +42,7 @@ function MainWorthySec() {
     <section id="we-worthy-sec">
       <div className="gradientWorthy">
         <div className="promo-second">
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <PromoLines />
           </Suspense>
         </div>
@@ -60,7 +61,7 @@ function MainWorthySec() {
             <div className="around-title small-text">
               {worthyData.worthySmallTextTwo}
             </div>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <ContactsModal isOpen={modalOpen} onClose={closeModal} />
             </Suspense>
           </div>

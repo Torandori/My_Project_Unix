@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import Loader from "../components/Loader";
 const Fbs = lazy(() => import('./svgComponents/Fbs'));
 const Ins = lazy(() => import('./svgComponents/Ins'));
 import testData from '../data/aboutTestimonial.json'
@@ -10,7 +11,7 @@ import '../assets/scss/_testimonialTeamCards.scss'
 function AboutTestSlider() {
   return (
     <>
-    <Suspense fallback={'loading'}>
+    <Suspense fallback={<Loader />}>
       <div className="slider-team">
         {testData.aboutTestSlider.map((item, index) => {
           const cardClassName = "card card" + index;

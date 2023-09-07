@@ -3,9 +3,8 @@ import { lazy, Suspense } from 'react';
 const Flake  = lazy(() => import('./svgComponents/Flake'));
 const PromoLines  = lazy(() => import('./PromoLines'));
 const SliderCeo  = lazy(() => import('./SliderCeo'));
-
+import Loader from "../components/Loader";
 // import SliderCeo from './SliderCeo';
-
 // import Flake from './svgComponents/Flake'
 // import PromoLines from './PromoLines'
 import ceoData from '../data/mainAboutCeoSecData.json'
@@ -18,7 +17,7 @@ function MainAboutCeoSec(){
       <div className="container">
         <div className="wrap">
           <h2 className="h2">{ceoData.ceoTitle}</h2>
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <div className="flake"> 
             <Parallax rotate={['0', '360']}>
               <Flake />
@@ -28,13 +27,13 @@ function MainAboutCeoSec(){
         </div>
         <div className="ceo-wrap">
           <div className="slider-descr">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <SliderCeo />
             </Suspense>
           </div>
         </div>
       </div>
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={<Loader />}>
         <PromoLines />
       </Suspense>
       <div className="container separator">

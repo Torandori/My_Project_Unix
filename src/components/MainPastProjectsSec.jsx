@@ -6,7 +6,8 @@ const ArrowMainPast  = lazy(() => import('./svgComponents/Arrow'));
 const MainProjCardsAnim  = lazy(() => import('./MainProjCardsAnim'));
 // import MainProjCardsAnim from "./MainProjCardsAnim";
 // import Arrow from "./svgComponents/Arrow";
-import projectSecData from "../data/mainPastProjectsSecData.json"
+import projectSecData from "../data/mainPastProjectsSecData.json";
+import Loader from "../components/Loader";
 
 function MainPastProjectsSec() {
   const [projects, setProjects] = useState([{}, {}]);
@@ -50,7 +51,7 @@ function MainPastProjectsSec() {
         <div className="projects-net">
           <div className="empty-cell"></div>
           <div className="projects-cells">
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <MainProjCardsAnim projects={projects}/>
           </Suspense>
           </div>
@@ -73,7 +74,7 @@ function MainPastProjectsSec() {
                       <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                         <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                         <div className="arrow-btn">
-                        <Suspense fallback={'loading'}>
+                        <Suspense fallback={<Loader />}>
                           <ArrowMainPast />
                         </Suspense>
                         </div>
@@ -90,7 +91,7 @@ function MainPastProjectsSec() {
                         <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                           <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                           <div className="arrow-btn">
-                            <Suspense fallback={'loading'}>
+                            <Suspense fallback={<Loader />}>
                                 <ArrowMainPast />
                             </Suspense>
                           </div>

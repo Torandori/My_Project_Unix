@@ -10,6 +10,7 @@ import ceoData from '../data/mainAboutCeoSecData.json'
 import quote from '../assets/images/svg/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
 // import Arrow from "./svgComponents/Arrow";
+import Loader from "../components/Loader";
 
 function SliderCeo() {
   const ceo = ceoData.sliderCeo;
@@ -39,7 +40,7 @@ function SliderCeo() {
         <div className="quote">
           <LazyLoadImage src={quote} alt="Quote picture" effect="blur" />
         </div>
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <Slider ref={sliderRef} {...sliderSettings}>
             {ceo.map((item, index) => {
               return (
@@ -61,12 +62,12 @@ function SliderCeo() {
         </div>
         <div className="arrows">
           <div className="arrow-btn" onClick={prev}>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <ArrowSliderCeo />
             </Suspense>
           </div>
           <div className="arrow-btn" onClick={next}>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <ArrowSliderCeo />
             </Suspense>
           </div>

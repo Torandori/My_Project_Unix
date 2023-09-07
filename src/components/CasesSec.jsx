@@ -9,6 +9,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import casesData from "../data/caseCasesSecData.json"
 const Arrow = lazy(() => import('./svgComponents/Arrow'));
 // import Arrow from "./svgComponents/Arrow";
+import Loader from "../components/Loader";
 
 
 function CasesSec() {
@@ -65,7 +66,7 @@ function CasesSec() {
                   <div className="title-wrap">
                     <div className="h4">{item.caseName}</div>
                     <Link to={item.caseTo} className="arrow" target="_blank" title={item.caseLinkTitle}>
-                    <Suspense fallback={'loading'}>
+                    <Suspense fallback={<Loader />}>
                       <Arrow />
                     </Suspense>
                     </Link>

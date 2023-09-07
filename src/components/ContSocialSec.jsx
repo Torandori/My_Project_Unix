@@ -8,6 +8,7 @@ const SocList  = lazy(() => import('./SocList'));
 const TiltedCardCont  = lazy(() => import('./TiltedCardCont'));
 lazy(() => import('../assets/scss/_tiltCard.scss'));
 import soc from "../data/contSocialSec.json"
+import Loader from "../components/Loader";
 // import '../assets/scss/_tiltCard.scss'
 // const SocList  = lazy(() => import('./SocList'));
 
@@ -41,13 +42,13 @@ function ContSocialSec() {
         <div className="soc-projects-wrap">
           <div className="left-col">
             <Link to={socLeft.socTo} className="soc-icon-wrap" title={`Move to our social media` + `${socLeft.socLinkTitle}`} target="_blank" rel="nofollow noreferrer">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <DribbleIcon />
             </Suspense>
             </Link>
             <h2 className="name">{socLeft.socTitle}</h2>
             <Link to={socLeft.socTo} className="arrow" target="_blank" title={`Move to our social media` + `${socLeft.socLinkTitle}`} rel="noreferrer nofollow">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <Arrow />
             </Suspense>
             </Link>
@@ -58,7 +59,7 @@ function ContSocialSec() {
               {socRight.map((item, index) => {
                 return (
                   <div className="soc-project-wrap tiltWrap" key={index}> 
-                  <Suspense fallback={'loading'}>
+                  <Suspense fallback={<Loader />}>
                     <TiltedCardCont key={index} item={item} />
                   </Suspense>
                   </div>
@@ -67,7 +68,7 @@ function ContSocialSec() {
             </div>
           </div>
         </div>
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <SocList />
         </Suspense>
       </div>

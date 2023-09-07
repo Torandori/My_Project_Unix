@@ -9,6 +9,7 @@ const InstagramIcon  = lazy(() => import('./svgComponents/InstagramIcon'));
 // import BehanceIcon from './svgComponents/BehanceIcon';
 // import FacebookIcon from './svgComponents/FacebookIcon';
 // import InstagramIcon from './svgComponents/InstagramIcon';
+import Loader from "../components/Loader";
 
 function SocList() {
   const socList = [
@@ -40,7 +41,7 @@ function SocList() {
 
   return (
     <div className="soc-list-wrap">
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={<Loader />}>
         <ul className="soc-list">
           {socList.map((item, index) => {
             return (

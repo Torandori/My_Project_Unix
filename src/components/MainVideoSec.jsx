@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 const Video = lazy(() => import('./Video'));
 // import Video from './Video';
+import Loader from "../components/Loader";
 
 function MainVideoSec() {
   return (
     <section id="video-sec">
       <div className="container">
         <h2 className="h2" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="500">{videoData.videoTitle}</h2>
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <Video code="FO3MaJxLU5E" />
           </Suspense>
         <div className="flex-wrap">

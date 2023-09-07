@@ -12,7 +12,7 @@ const NewIt  = lazy(() => import('./NewIt'));
 import "slick-carousel/slick/slick.css";
 // import NewArrow from "./svgComponents/newArrow";
 // import NewIt from "./NewIt";
-import Loader from "./Loader";
+import Loader from "../components/Loader";
 
 function SliderNewsLine() {
   const isDev = true; //is true - mock
@@ -138,17 +138,17 @@ function SliderNewsLine() {
       <div className="newSlider" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="prev-next-arrows">
           <button type="button" className="prev" onClick={prev} aria-label="Previous slide">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <NewArrow />
             </Suspense>
           </button>
           <button type="button" className="next" onClick={next} aria-label="Next slide">
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <NewArrow />
             </Suspense>
           </button>
         </div>
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <Slider {...sliderFirstSet} ref={sliderNewRef}>
             {newsLine.map((item, index) =>  (
               <NewIt respData={item} key={item.id} randomIt={newMock[index]} />
@@ -159,7 +159,7 @@ function SliderNewsLine() {
 
       <div className="news-line" data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="news-list">
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <Slider {...sliderSecondSet}>
             {newsLine.map(item => {
               return (

@@ -8,8 +8,8 @@ import "slick-carousel/slick/slick.css";
 const ArrowSliderClient  = lazy(() => import('./svgComponents/Arrow'));
 import React from "react";
 import quote from '../assets/images/svg/quote.svg'
-
 // import Arrow from "./svgComponents/Arrow";
+import Loader from "../components/Loader";
 
 function SliderClient() {
   const sliderClRef = useRef();
@@ -60,12 +60,12 @@ function SliderClient() {
         </div>
         <div className="arrows">
           <div className="arrow-btn" onClick={next}>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <ArrowSliderClient />
             </Suspense>
           </div>
           <div className="arrow-btn" onClick={prev}>
-            <Suspense fallback={'loading'}>
+            <Suspense fallback={<Loader />}>
               <ArrowSliderClient />
             </Suspense>
           </div>
@@ -74,7 +74,7 @@ function SliderClient() {
       <div className="flex-slider-sec">
         <div className="empty"></div>
         <div className="slider">
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <Slider {...sliderSettings}  ref={sliderClRef}>
             {client.map((item, index) => {
               return (

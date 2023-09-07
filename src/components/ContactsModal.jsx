@@ -1,4 +1,3 @@
-import { lazy, Suspense } from 'react';
 // const ContactForm  = lazy(() => import('./ContactForm'));
 import ContactForm from "./ContactForm";
 import "../assets/scss/_contactsModal.scss"

@@ -6,6 +6,7 @@ const ArrowMainCards  = lazy(() => import('./svgComponents/Arrow'));
 const MainAnimItem  = lazy(() => import('./MainAnimItem'));
 // import Arrow from "./svgComponents/Arrow";
 // import MainAnimItem from "./MainAnimItem";
+import Loader from "../components/Loader";
 
 function MainProjCardsAnim({projects}) {
 
@@ -18,7 +19,7 @@ function MainProjCardsAnim({projects}) {
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>
                 <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
-                  <Suspense fallback={'loading'}>
+                  <Suspense fallback={<Loader />}>
                     <ArrowMainCards />
                     <ArrowMainCards />
                   </Suspense>
@@ -28,7 +29,7 @@ function MainProjCardsAnim({projects}) {
               <div>{item.projUnderText}</div>
             </div>
             <div className="project-pic" key={item.projName}>
-              <Suspense fallback={'loading'}>
+              <Suspense fallback={<Loader />}>
                 <MainAnimItem item={item} />
               </Suspense>
             </div>

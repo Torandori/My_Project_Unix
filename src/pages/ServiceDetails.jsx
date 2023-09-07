@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet-async';
 import "../assets/scss/serviceDetails.scss";
 const ServDetDescrSec = lazy(() => import('../components/ServDetDescrSec'));
 const ServDetHowSec = lazy(() => import('../components/ServDetHowSec'));
+import Loader from "../components/Loader";
 
 
 function ServiceDetails() {
@@ -49,10 +50,10 @@ function ServiceDetails() {
       <div id="service-details-page" className="service-details-body-bg">
         <div className="service-details-grafic-bg" >
           <HeroServDet descr={descr} />
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <ServDetDescrSec descr={descr} />
           </Suspense>
-          <Suspense fallback={'loading'}>
+          <Suspense fallback={<Loader />}>
             <ServDetHowSec descr={descr} />
           </Suspense>
           {/* <Suspense fallback={<Loader />}>

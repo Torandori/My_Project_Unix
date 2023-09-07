@@ -8,6 +8,7 @@ const AboutTestSlider = lazy(() => import('./AboutTestSlider'));
 // import AboutTestSlider from "./AboutTestSlider";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import Loader from "../components/Loader";
 
 function AboutTestimonialSec() {
   return (
@@ -27,11 +28,11 @@ function AboutTestimonialSec() {
           <p className="text">{testData.aboutTestText}</p>
         </div>
       </div>
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={<Loader />}>
         <AboutTestSlider />
       </Suspense>
       <div className="promo-second">
-      <Suspense fallback={'loading'}>
+      <Suspense fallback={<Loader />}>
         <PromoLines />
       </Suspense>
       </div>

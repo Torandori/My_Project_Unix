@@ -10,6 +10,7 @@ const ContactsModal = lazy(() => import('./ContactsModal'));
 const StartBtn = lazy(() => import('./svgComponents/StartBtn'));
 // import ContactsModal from './ContactsModal';
 // import StartBtn from "./svgComponents/StartBtn";
+import Loader from "../components/Loader";
 
 function ServDetHowSec({descr}) {
   const isMobile = useMediaQuery({ maxWidth: 880 });
@@ -65,7 +66,7 @@ function ServDetHowSec({descr}) {
           {isMobile ? ( 
             <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
               <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
-              <Suspense fallback={'loading'}>
+              <Suspense fallback={<Loader />}>
                 <StartBtn />
               </Suspense>
               </button>
@@ -75,7 +76,7 @@ function ServDetHowSec({descr}) {
             <Parallax translateX={['-100px', '100px']}>
               <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
                 <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
-                  <Suspense fallback={'loading'}>
+                  <Suspense fallback={<Loader />}>
                     <StartBtn />
                   </Suspense>
                 </button>
@@ -83,7 +84,7 @@ function ServDetHowSec({descr}) {
             </Parallax>
           )}
         </div>
-        <Suspense fallback={'loading'}>
+        <Suspense fallback={<Loader />}>
           <ContactsModal isOpen={modalOpen} onClose={closeModal} />
         </Suspense>
       </section>

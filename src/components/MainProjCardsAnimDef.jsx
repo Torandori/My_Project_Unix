@@ -7,6 +7,7 @@ lazy(() => import('../helpers/animateCard.js'));
 // import '../assets/scss/_animCard.scss'
 // import '../helpers/animateCard.js'
 // import Arrow from "./svgComponents/Arrow";
+import Loader from "../components/Loader";
 
 function MainProjCardsAnim({projects}) {
   
@@ -20,7 +21,7 @@ function MainProjCardsAnim({projects}) {
             <div className="project-descr" key={index}>
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>
-                <Suspense fallback={'loading'}>
+                <Suspense fallback={<Loader />}>
                   <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
                     <ArrowMainProjCards />
                   </Link>
