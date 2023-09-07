@@ -29,10 +29,10 @@ function Home() {
 
     Promise.all(Object.values(styleModules).map((styleModule) => styleModule()))
       .then(() => {
-        console.log('Стили загружены');
+        console.log('Styles loaded');
       })
       .catch((error) => {
-        console.error('Произошла ошибка при загрузке стилей', error);
+        console.error('Error while styles loading', error);
       });
   }, []);
 

@@ -271,6 +271,18 @@
     background-color: $color-black-text;
     margin-bottom: 100px;
   }
+  #principals-sec .pricnciples-wrap {
+    grid-template-columns: 100px 1fr;
+  }
+  #principals-sec .pricnciples-wrap .pricnciples-item {
+    padding-left: 60px;
+  }
+  #principals-sec .pricnciples-wrap .pricnciples-item .wrap {
+    flex-wrap: wrap;
+  }
+  #principals-sec .pricnciples-wrap .pricnciples-item .wrap .small-text {
+    margin-bottom: 40px;
+  }
   #principals-sec .pricnciples-wrap .pricnciples-item .wrap .paragraph, #principals-sec .pricnciples-wrap .pricnciples-item p {
     font-size: 2rem;
   }
@@ -285,7 +297,7 @@
     margin-left: 0;
   }
   #testimonial-sec .block-text-under-pic {
-    margin-left: 200px;
+    margin-left: 0;
     margin-bottom: 100px;
   }
   #testimonial-sec .block-text-under-pic .h2 {
