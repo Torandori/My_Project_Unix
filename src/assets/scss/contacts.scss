@@ -339,6 +339,7 @@ p.input-error {
     .right-col {
       .wrap-soc-projects {
         display: flex;
+        gap: 40px;
       }
     }
   }
@@ -403,6 +404,7 @@ p.input-error {
   }
   .wrap-poject-career {
     display: flex;
+    gap: 40px;
   }
   .location {
     align-self: center;
@@ -543,6 +545,10 @@ p.input-error {
   }
 }
 // #FOOOTER
+.tiltEl {
+  border-radius: 20px;
+  overflow: hidden;
+}
 
 @media screen and (max-width: 1180px) {
   #project-career-sec .wrap-buttons {
