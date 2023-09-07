@@ -184,6 +184,7 @@
     font-weight: 700;
     letter-spacing: -0.24px;
     text-transform: uppercase;
+    flex: 0 0 auto;
   }
 }
 .slick-dots {
@@ -512,9 +513,6 @@
       }
     }
   }
-}
-#past-projects-sec .container .projects-net .projects-cells .project-descr:nth-child(3) {
-  order: 1;
 }
 #past-projects-sec {
   .services {
@@ -954,6 +952,10 @@
   }
 }
 @media screen and (max-width: 1200px) { 
+  #past-projects-sec .container .projects-net .projects-cells .tiltElProj {
+    border-radius: 20px;
+    overflow: hidden;
+  }
   #past-projects-sec .container .projects-net .projects-cells {
     grid-template-columns: 1fr;
     .tiltElProj {
@@ -1008,6 +1010,11 @@
   }
 }
 @media screen and (max-width: 880px) {
+  #about-ceo-sec {
+    background: 
+    url("../images/svg/vector2.svg") 50% 26% no-repeat,
+    url("../images/svg/grad3.svg") 30% 33% no-repeat;
+  }
   #about-ceo-sec .container:first-child .ceo-wrap .slider-descr .ceo-slider p {
     font-size: 2rem;
     line-height: 2.4rem;

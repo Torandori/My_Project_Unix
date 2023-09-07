@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react';
-const ContactForm  = lazy(() => import('./ContactForm'));
-// import ContactForm from "./ContactForm";
+// const ContactForm  = lazy(() => import('./ContactForm'));
+import ContactForm from "./ContactForm";
 import "../assets/scss/_contactsModal.scss"
 import '../assets/scss/contacts.scss'
 import modalData from "../data/modalData.json"
@@ -17,9 +17,7 @@ function ContactsModal({ isOpen, onClose, prop}) {
         <button className="modal-close" onClick={onClose}></button>
         <div className="modal-content">
           <div className="h2">{prop ? prop : modalData.modalTitle}</div>
-          <Suspense fallback={'loading'}>
-            <ContactForm title={prop}/> 
-          </Suspense>
+          <ContactForm title={prop}/> 
         </div>
       </div>
     </div>

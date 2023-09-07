@@ -37,9 +37,6 @@ function News(){
       <div id="news-page">
         <HeroSec par={heroPar} />
         <NewsSliderSec />
-        {/* <Suspense fallback={<Loader />}>
-          <NewsSliderSec />
-        </Suspense> */}
       </div>
     </>
   )

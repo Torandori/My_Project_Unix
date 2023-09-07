@@ -6,9 +6,8 @@ import { lazy, Suspense } from 'react';
 import worthyData from '../data/mainWorthySecData.json'
 const ContactsModal = lazy(() => import('./ContactsModal'));
 const PromoLines = lazy(() => import('./PromoLines'));
-const btnCircle = lazy(() => import('../assets/images/svg/btnCircle.svg'));
 // import PromoLines from './PromoLines';
-// import btnCircle from '../assets/images/svg/btnCircle.svg'
+import btnCircle from '../assets/images/svg/btnCircle.svg'
 // import ContactsModal from './ContactsModal';
 
 function MainWorthySec() {
@@ -53,9 +52,7 @@ function MainWorthySec() {
               <span className="small-text">{worthyData.worthySmallText}</span>  <span className="h3 margin">{worthyData.worthyTitleContinue}</span>
               <span>
                 <button type="button" className="btn btn-circle" onClick={openModal}>
-                  <Suspense fallback={'loading'}>
-                    <img src={btnCircle} alt={worthyData.worthyBtnAlt} />
-                  </Suspense>
+                  <img src={btnCircle} alt={worthyData.worthyBtnAlt} />
                 </button>
               </span>
               <span className="h3">{worthyData.worhtyTitleEnd}</span>

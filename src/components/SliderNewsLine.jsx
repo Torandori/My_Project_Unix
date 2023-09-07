@@ -58,7 +58,7 @@ function SliderNewsLine() {
     try {
       const url = isDev 
       ? './mock/mockNews.json'
-      : `${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`;
+      : `${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=4`;
       const resp = await ky(url, {
           timeout: 15000,
         }).json();

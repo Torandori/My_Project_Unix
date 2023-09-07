@@ -44,6 +44,7 @@
         flex: 0 0 auto;
       }
       .text {
+        flex: 0 0 auto;
         div:first-child {
           @include fz(24);
           font-weight: 600;
@@ -226,7 +227,15 @@
     width: 30%;
   }
 }
+@media screen and (max-width: 900px) {
+  #detail-overview-sec .detail-overview-wrap1 {
+    flex-wrap: wrap;
+  }
+}
 @media screen and (max-width: 800px) {
+  #detail-overview-sec .detail-overview-wrap2 {
+    flex-wrap: wrap;
+  }
   #detail-text-sec .detail-text-wrap .text-col .h2 {
     font-size: 1.6rem;
   }
@@ -257,9 +266,6 @@
   }
   #detail-overview-sec .detail-overview-wrap2 .overview {
     width: 100%;
-  }
-  #detail-overview-sec .detail-overview-wrap2 {
-    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 660px) {
