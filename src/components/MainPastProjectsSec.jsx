@@ -1,9 +1,12 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Arrow from "./svgComponents/Arrow";
+import { lazy, Suspense } from 'react';
+const ArrowMainPast  = lazy(() => import('./svgComponents/Arrow'));
+const MainProjCardsAnim  = lazy(() => import('./MainProjCardsAnim'));
+// import MainProjCardsAnim from "./MainProjCardsAnim";
+// import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json"
-import React from "react";
-import MainProjCardsAnim from "./MainProjCardsAnim";
 
 function MainPastProjectsSec() {
   const [projects, setProjects] = useState([{}, {}]);
@@ -47,7 +50,9 @@ function MainPastProjectsSec() {
         <div className="projects-net">
           <div className="empty-cell"></div>
           <div className="projects-cells">
+          <Suspense fallback={'loading'}>
             <MainProjCardsAnim projects={projects}/>
+          </Suspense>
           </div>
         </div>
 
@@ -68,7 +73,9 @@ function MainPastProjectsSec() {
                       <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                         <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                         <div className="arrow-btn">
-                          <Arrow />
+                        <Suspense fallback={'loading'}>
+                          <ArrowMainPast />
+                        </Suspense>
                         </div>
                       </Link>
                       <p className="item-descr" data-aos="slide-up" data-aos-easing="ease-in-cubic" data-aos-duration="500" data-aos-delay="200">{item.mainServiceDescr}</p>
@@ -83,7 +90,9 @@ function MainPastProjectsSec() {
                         <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                           <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                           <div className="arrow-btn">
-                            <Arrow />
+                            <Suspense fallback={'loading'}>
+                                <ArrowMainPast />
+                            </Suspense>
                           </div>
                         </Link>
                         <p className="item-descr" data-aos="slide-up" data-aos-easing="ease-in-cubic" data-aos-duration="500" data-aos-delay="200">{item.mainServiceDescr}</p>

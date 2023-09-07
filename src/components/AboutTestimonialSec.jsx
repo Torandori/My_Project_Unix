@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import PromoLines from "./PromoLines";
+import { lazy, Suspense } from 'react';
+const PromoLines = lazy(() => import('./PromoLines'));
+// import PromoLines from "./PromoLines";
 import testimonialPic from "../assets/images/team-pic.jpg"
 import testData from '../data/aboutTestimonial.json'
-import AboutTestSlider from "./AboutTestSlider";
+const AboutTestSlider = lazy(() => import('./AboutTestSlider'));
+// import AboutTestSlider from "./AboutTestSlider";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
@@ -24,9 +27,13 @@ function AboutTestimonialSec() {
           <p className="text">{testData.aboutTestText}</p>
         </div>
       </div>
+      <Suspense fallback={'loading'}>
         <AboutTestSlider />
+      </Suspense>
       <div className="promo-second">
+      <Suspense fallback={'loading'}>
         <PromoLines />
+      </Suspense>
       </div>
       <div className="container">
         <p className="testimonial-text">{testData.aboutTestUnderSlider}</p>

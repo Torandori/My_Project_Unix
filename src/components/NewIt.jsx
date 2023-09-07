@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import formatDate from "../helpers/formatDate"
-import newsDefaultImg from '../assets/images/newsDefault.jpg';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from 'react-responsive';
+import formatDate from "../helpers/formatDate"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewIt({respData, randomIt}) {
   const isMobile = useMediaQuery({ maxWidth: 880 });

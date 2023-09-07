@@ -1,5 +1,5 @@
-import footerArrow from '../assets/images/svg/footerArrow.svg'
 import { Link } from 'react-router-dom';
+import footerArrow from '../assets/images/svg/footerArrow.svg'
 
 function FooterBtnBec() {
   return (

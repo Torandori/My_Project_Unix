@@ -1,13 +1,17 @@
 import videoData from '../data/mainVideoSecData.json'
 import { Link } from 'react-router-dom';
-import Video from './Video';
+import { lazy, Suspense } from 'react';
+const Video = lazy(() => import('./Video'));
+// import Video from './Video';
 
 function MainVideoSec() {
   return (
     <section id="video-sec">
       <div className="container">
         <h2 className="h2" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="500">{videoData.videoTitle}</h2>
-        <Video code="FO3MaJxLU5E" />
+          <Suspense fallback={'loading'}>
+            <Video code="FO3MaJxLU5E" />
+          </Suspense>
         <div className="flex-wrap">
           <div className="wrap" data-aos="fade-in" data-aos-easing="ease-in-quad" data-aos-duration="500">
             <div className="video-descr panchang">{videoData.videoDescrTitle}</div>

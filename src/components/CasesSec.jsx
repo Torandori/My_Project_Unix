@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
+import { lazy, Suspense } from 'react';
 import { Link } from "react-router-dom";
-import casesData from "../data/caseCasesSecData.json"
-import Arrow from "./svgComponents/Arrow";
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import casesData from "../data/caseCasesSecData.json"
+const Arrow = lazy(() => import('./svgComponents/Arrow'));
+// import Arrow from "./svgComponents/Arrow";
 
 
 function CasesSec() {
@@ -63,7 +65,9 @@ function CasesSec() {
                   <div className="title-wrap">
                     <div className="h4">{item.caseName}</div>
                     <Link to={item.caseTo} className="arrow" target="_blank" title={item.caseLinkTitle}>
+                    <Suspense fallback={'loading'}>
                       <Arrow />
+                    </Suspense>
                     </Link>
                   </div>
                   <p className="short-descr">{item.caseDescr}</p>

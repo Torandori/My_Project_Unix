@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LinkedinIcon from './svgComponents/LinkedinIcon';
-import BehanceIcon from './svgComponents/BehanceIcon';
-import FacebookIcon from './svgComponents/FacebookIcon';
-import InstagramIcon from './svgComponents/InstagramIcon';
+import { lazy, Suspense } from 'react';
+const LinkedinIcon  = lazy(() => import('./svgComponents/LinkedinIcon'));
+const BehanceIcon  = lazy(() => import('./svgComponents/BehanceIcon'));
+const FacebookIcon  = lazy(() => import('./svgComponents/FacebookIcon'));
+const InstagramIcon  = lazy(() => import('./svgComponents/InstagramIcon'));
+// import LinkedinIcon from './svgComponents/LinkedinIcon';
+// import BehanceIcon from './svgComponents/BehanceIcon';
+// import FacebookIcon from './svgComponents/FacebookIcon';
+// import InstagramIcon from './svgComponents/InstagramIcon';
 
 function SocList() {
   const socList = [
@@ -35,18 +40,20 @@ function SocList() {
 
   return (
     <div className="soc-list-wrap">
-      <ul className="soc-list">
-        {socList.map((item, index) => {
-          return (
-            <li key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
-              <Link to={item.socItemUrl} title={item.socItemTitle} target="_blank" rel="nofollow noreferrer">
-                {item.icon}
-              </Link>
-              <div className="soc-name">{item.socName}</div>
-            </li>
-          )
-        })}
-      </ul>
+      <Suspense fallback={'loading'}>
+        <ul className="soc-list">
+          {socList.map((item, index) => {
+            return (
+              <li key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500">
+                <Link to={item.socItemUrl} title={item.socItemTitle} target="_blank" rel="nofollow noreferrer">
+                  {item.icon}
+                </Link>
+                <div className="soc-name">{item.socName}</div>
+              </li>
+            )
+          })}
+        </ul>
+      </Suspense>
     </div>
   )
 }

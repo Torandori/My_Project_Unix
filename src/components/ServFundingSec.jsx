@@ -1,8 +1,8 @@
-import fundingData from '../data/servFundingSecData.json'
-import circleArrowBtn from '../assets/images/svg/circleArrowBtn.svg'
 import { useNavigate } from 'react-router-dom';
-import FaqList from './FaqList';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { lazy, Suspense } from 'react';
+import fundingData from '../data/servFundingSecData.json'
+const FaqList = lazy(() => import('./FaqList'));
+// import FaqList from './FaqList';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function ServFundingSec() {
@@ -23,7 +23,9 @@ function ServFundingSec() {
               <p className="text-medium">{fundingData.fundingDescr}</p>
               <div className="services-subtitle">{fundingData.fundingSubtitle}</div>
             </div>
-            <FaqList />
+            <Suspense fallback={'loading'}>
+              <FaqList />
+            </Suspense>
             <div className="text-block2">
               <p className="text-medium">{fundingData.fundingContinue}</p>
             </div>

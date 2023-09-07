@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import React from "react";
-// import Slider from "react-slick";
-import { lazy, Suspense } from 'react';
-const Slider  = lazy(() => import('react-slick'));
-import "slick-carousel/slick/slick.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import { lazy, Suspense } from 'react';
+// import Slider from "react-slick";
+const Slider  = lazy(() => import('react-slick'));
+import "slick-carousel/slick/slick.css";
 
 
 function SliderWitness() {

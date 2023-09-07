@@ -1,12 +1,15 @@
 import { useState } from 'react'
-import ContactsModal from './ContactsModal';
 import React from "react";
-import StartBtn from "./svgComponents/StartBtn";
+import { lazy, Suspense } from 'react';
 import { useNavigate } from "react-router-dom";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from 'react-responsive';
+const ContactsModal = lazy(() => import('./ContactsModal'));
+const StartBtn = lazy(() => import('./StartBtn'));
+// import ContactsModal from './ContactsModal';
+// import StartBtn from "./svgComponents/StartBtn";
 
 function ServDetHowSec({descr}) {
   const isMobile = useMediaQuery({ maxWidth: 880 });
@@ -62,7 +65,9 @@ function ServDetHowSec({descr}) {
           {isMobile ? ( 
             <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
               <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
+              <Suspense fallback={'loading'}>
                 <StartBtn />
+              </Suspense>
               </button>
             </div>
           ) :
@@ -70,13 +75,17 @@ function ServDetHowSec({descr}) {
             <Parallax translateX={['-100px', '100px']}>
               <div className="big-text panchang"><span className="margin">{under.servDetBigName}</span>{under.servDetBigNameContinue}
                 <button type="button" onClick={btnClick} className="btn project-btn" aria-label="Click to start a project">
-                  <StartBtn />
+                  <Suspense fallback={'loading'}>
+                    <StartBtn />
+                  </Suspense>
                 </button>
               </div>
             </Parallax>
           )}
         </div>
-        <ContactsModal isOpen={modalOpen} onClose={closeModal} />
+        <Suspense fallback={'loading'}>
+          <ContactsModal isOpen={modalOpen} onClose={closeModal} />
+        </Suspense>
       </section>
     </>
   )

@@ -1,4 +1,6 @@
-import ArrowTop from "./svgComponents/arrowTop";
+import { lazy, Suspense } from 'react';
+const ArrowTop  = lazy(() => import('./svgComponents/arrowTop'));
+// import ArrowTop from "./svgComponents/arrowTop";
 
 function ContactsFooter() {
   function btnTopHandler() {
@@ -12,7 +14,9 @@ function ContactsFooter() {
       <div className="container">
         <div className="to-top-wrap">
           <button type="button" onClick={btnTopHandler} title="Scroll to top" className="btn-to-top">
+          <Suspense fallback={'loading'}>
             <ArrowTop />
+          </Suspense>
           </button>
             <div>Back to top</div>
         </div>

@@ -7,10 +7,12 @@ const toast  = lazy(() => import('react-toastify'));
 import NewsItem from "./NewsItem";
 // import Slider from "react-slick";
 const Slider  = lazy(() => import('react-slick'));
+const NewArrow  = lazy(() => import('./svgComponents/newArrow'));
+const NewIt  = lazy(() => import('./NewIt'));
 import "slick-carousel/slick/slick.css";
-import NewIt from "./NewIt";
+// import NewArrow from "./svgComponents/newArrow";
+// import NewIt from "./NewIt";
 import Loader from "./Loader";
-import NewArrow from "./svgComponents/newArrow";
 
 function SliderNewsLine() {
   const isDev = true; //is true - mock
@@ -136,10 +138,14 @@ function SliderNewsLine() {
       <div className="newSlider" data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="500">
         <div className="prev-next-arrows">
           <button type="button" className="prev" onClick={prev} aria-label="Previous slide">
-            <NewArrow />
+            <Suspense fallback={'loading'}>
+              <NewArrow />
+            </Suspense>
           </button>
           <button type="button" className="next" onClick={next} aria-label="Next slide">
-             <NewArrow />
+            <Suspense fallback={'loading'}>
+              <NewArrow />
+            </Suspense>
           </button>
         </div>
         <Suspense fallback={'loading'}>

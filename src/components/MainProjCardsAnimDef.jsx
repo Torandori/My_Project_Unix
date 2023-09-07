@@ -1,9 +1,12 @@
-
-import React from "react";
-import '../assets/scss/_animCard.scss'
-import '../helpers/animateCard.js'
 import { Link } from "react-router-dom";
-import Arrow from "./svgComponents/Arrow";
+import React from "react";
+import { lazy, Suspense } from 'react';
+const ArrowMainProjCards  = lazy(() => import('./svgComponents/Arrow'));
+lazy(() => import('../assets/scss/_animCard.scss'));
+lazy(() => import('../helpers/animateCard.js'));
+// import '../assets/scss/_animCard.scss'
+// import '../helpers/animateCard.js'
+// import Arrow from "./svgComponents/Arrow";
 
 function MainProjCardsAnim({projects}) {
   
@@ -17,9 +20,11 @@ function MainProjCardsAnim({projects}) {
             <div className="project-descr" key={index}>
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>
-                <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
-                  <Arrow />
-                </Link>
+                <Suspense fallback={'loading'}>
+                  <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
+                    <ArrowMainProjCards />
+                  </Link>
+                </Suspense>
               </div>
               <p>{item.projDescr}</p>
               <div>{item.projUnderText}</div>

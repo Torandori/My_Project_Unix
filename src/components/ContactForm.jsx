@@ -3,7 +3,8 @@ import ky from "ky";
 import { useState } from "react";
 import {toast} from "react-toastify";
 import { lazy, Suspense } from 'react';
-import InputField from "./InputField";
+const InputField  = lazy(() => import('./InputField'));
+// import InputField from "./InputField";
 import contacts from '../data/contContactsSecData.json'
 lazy(() => import('../assets/scss/contacts.scss'));
 const Select  = lazy(() => import('react-select'));
@@ -177,30 +178,31 @@ function ContactForm({title}) {
           {selectError && <p className="input-error">{selectError}</p>}
         </div>
       )}
+        <Suspense fallback={'loading'}>
+          <InputField 
+            multy={false} 
+            label="Your name" 
+            value={name} 
+            change={(val) => setName(val)}
+            blur={(val) => checkName(val)} 
+            error={nameError}/>
 
-        <InputField 
-          multy={false} 
-          label="Your name" 
-          value={name} 
-          change={(val) => setName(val)}
-          blur={(val) => checkName(val)} 
-          error={nameError}/>
+          <InputField 
+            multy={false} 
+            label="Email" 
+            value={email} 
+            change={(val) => setEmail(val)} 
+            blur={(val) => checkEmail(val)} 
+            error={emailError}/>
 
-        <InputField 
-          multy={false} 
-          label="Email" 
-          value={email} 
-          change={(val) => setEmail(val)} 
-          blur={(val) => checkEmail(val)} 
-          error={emailError}/>
-
-        <InputField 
-          multy={true} 
-          label="Tell more" 
-          value={message} 
-          change={(val) => setMessage(val)} 
-          blur={(val) => checkMessage(val)} 
-          error={messageError}/>
+          <InputField 
+            multy={true} 
+            label="Tell more" 
+            value={message} 
+            change={(val) => setMessage(val)} 
+            blur={(val) => checkMessage(val)} 
+            error={messageError}/>
+        </Suspense>
 
         <button type="submit" className="btn form-btn-hover"><span>{contacts.formBtnText}</span></button>
       </form> 

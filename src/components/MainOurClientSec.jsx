@@ -1,12 +1,16 @@
-import clientData from '../data/mainOurClient.json'
-import SliderClient from './SliderClient';
+import { lazy, Suspense } from 'react';
+const SliderClient = lazy(() => import('./SliderClient'));
+
+// import SliderClient from './SliderClient';
 
 function MainOurClientSec() {
 
   return (
     <section id="our-client">
       <div className="container">
-        <SliderClient />
+        <Suspense fallback={'loading'}>
+          <SliderClient /> 
+        </Suspense>
       </div>
     </section>
   )

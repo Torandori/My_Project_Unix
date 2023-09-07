@@ -1,9 +1,11 @@
 
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import React from "react";
-import Arrow from "./svgComponents/Arrow";
-import MainAnimItem from "./MainAnimItem";
+import { lazy, Suspense } from 'react';
+const ArrowMainCards  = lazy(() => import('./svgComponents/Arrow'));
+const MainAnimItem  = lazy(() => import('./MainAnimItem'));
+// import Arrow from "./svgComponents/Arrow";
+// import MainAnimItem from "./MainAnimItem";
 
 function MainProjCardsAnim({projects}) {
 
@@ -16,15 +18,19 @@ function MainProjCardsAnim({projects}) {
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>
                 <Link to={item.projTo} className="arrow-btn" target="_blank" title={item.projLinkTitle}>
-                  <Arrow />
-                  <Arrow />
+                  <Suspense fallback={'loading'}>
+                    <ArrowMainCards />
+                    <ArrowMainCards />
+                  </Suspense>
                 </Link>
               </div>
               <p>{item.projDescr}</p>
               <div>{item.projUnderText}</div>
             </div>
             <div className="project-pic" key={item.projName}>
-              <MainAnimItem item={item} />
+              <Suspense fallback={'loading'}>
+                <MainAnimItem item={item} />
+              </Suspense>
             </div>
           </React.Fragment>
         )

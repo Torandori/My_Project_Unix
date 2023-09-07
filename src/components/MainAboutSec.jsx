@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import Arrow from './svgComponents/Arrow';
+import { lazy, Suspense } from 'react';
+const ArrowMainAb = lazy(() => import('./svgComponents/Arrow'));
+// import Arrow from './svgComponents/Arrow';
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
-import '../assets/scss/_accordArrows.scss'
+lazy(() => import('../assets/scss/_accordArrows.scss'));
+// import '../assets/scss/_accordArrows.scss'
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
 
@@ -46,8 +49,10 @@ function MainAboutSec() {
                     <div className="accord-header">
                       <div className="accord-title">{item.aboutAccordName}</div>
                       <div className="arrow-btn">
-                        <Arrow />
-                        <Arrow />
+                      <Suspense fallback={'loading'}>
+                        <ArrowMainAb />
+                        <ArrowMainAb />
+                      </Suspense>
                       </div>
                     </div>
                     <div className="accordion-item-content">

@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
-import btnCircle from '../assets/images/svg/btnCircle.svg'
 import { Link } from 'react-router-dom'
-import worthyData from '../data/mainWorthySecData.json'
-import PromoLines from './PromoLines';
-import ContactsModal from './ContactsModal';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive';
+import { lazy, Suspense } from 'react';
+import worthyData from '../data/mainWorthySecData.json'
+const ContactsModal = lazy(() => import('./ContactsModal'));
+const PromoLines = lazy(() => import('./PromoLines'));
+const btnCircle = lazy(() => import('../assets/images/svg/btnCircle.svg'));
+// import PromoLines from './PromoLines';
+// import btnCircle from '../assets/images/svg/btnCircle.svg'
+// import ContactsModal from './ContactsModal';
 
 function MainWorthySec() {
   const [worthyItems, setWorthyItems] = useState([]);
@@ -38,7 +42,9 @@ function MainWorthySec() {
     <section id="we-worthy-sec">
       <div className="gradientWorthy">
         <div className="promo-second">
-          <PromoLines />
+          <Suspense fallback={'loading'}>
+            <PromoLines />
+          </Suspense>
         </div>
         <div className="container">
         <h3 className="h3">{worthyData.worthyTitle}</h3>
@@ -47,7 +53,9 @@ function MainWorthySec() {
               <span className="small-text">{worthyData.worthySmallText}</span>  <span className="h3 margin">{worthyData.worthyTitleContinue}</span>
               <span>
                 <button type="button" className="btn btn-circle" onClick={openModal}>
-                  <img src={btnCircle} alt={worthyData.worthyBtnAlt} />
+                  <Suspense fallback={'loading'}>
+                    <img src={btnCircle} alt={worthyData.worthyBtnAlt} />
+                  </Suspense>
                 </button>
               </span>
               <span className="h3">{worthyData.worhtyTitleEnd}</span>
@@ -55,7 +63,9 @@ function MainWorthySec() {
             <div className="around-title small-text">
               {worthyData.worthySmallTextTwo}
             </div>
-            <ContactsModal isOpen={modalOpen} onClose={closeModal} />
+            <Suspense fallback={'loading'}>
+              <ContactsModal isOpen={modalOpen} onClose={closeModal} />
+            </Suspense>
           </div>
       </div>
       </div>

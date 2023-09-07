@@ -1,7 +1,9 @@
 
 import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import '../assets/scss/_tiltCardProj.scss';
+import { lazy } from 'react';
+lazy(() => import('../assets/scss/_tiltCardProj.scss'));
+// import '../assets/scss/_tiltCardProj.scss';
 import { useMediaQuery } from 'react-responsive';
 
 function MainAnimItem({item}) {

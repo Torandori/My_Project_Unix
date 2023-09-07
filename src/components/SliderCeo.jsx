@@ -1,14 +1,15 @@
 import { useRef } from "react";
 import { lazy, Suspense } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // import Slider from "react-slick";
 const Slider  = lazy(() => import('react-slick'));
+const ArrowSliderCeo  = lazy(() => import('./svgComponents/Arrow'));
 import "slick-carousel/slick/slick.css";
 import ceoData from '../data/mainAboutCeoSecData.json'
 import quote from '../assets/images/svg/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'
-import Arrow from "./svgComponents/Arrow";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import Arrow from "./svgComponents/Arrow";
 
 function SliderCeo() {
   const ceo = ceoData.sliderCeo;
@@ -60,10 +61,14 @@ function SliderCeo() {
         </div>
         <div className="arrows">
           <div className="arrow-btn" onClick={prev}>
-            <Arrow />
+            <Suspense fallback={'loading'}>
+              <ArrowSliderCeo />
+            </Suspense>
           </div>
           <div className="arrow-btn" onClick={next}>
-            <Arrow />
+            <Suspense fallback={'loading'}>
+              <ArrowSliderCeo />
+            </Suspense>
           </div>
         </div>
       </div>

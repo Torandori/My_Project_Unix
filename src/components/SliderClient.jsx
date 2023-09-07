@@ -1,13 +1,15 @@
 import { useRef, useState, useEffect } from "react";
 import { lazy, Suspense } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 // import Slider from "react-slick";
 const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
+const ArrowSliderClient  = lazy(() => import('./svgComponents/Arrow'));
 import React from "react";
 import quote from '../assets/images/svg/quote.svg'
-import Arrow from "./svgComponents/Arrow";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
+// import Arrow from "./svgComponents/Arrow";
 
 function SliderClient() {
   const sliderClRef = useRef();
@@ -58,10 +60,14 @@ function SliderClient() {
         </div>
         <div className="arrows">
           <div className="arrow-btn" onClick={next}>
-            <Arrow />
+            <Suspense fallback={'loading'}>
+              <ArrowSliderClient />
+            </Suspense>
           </div>
           <div className="arrow-btn" onClick={prev}>
-            <Arrow />
+            <Suspense fallback={'loading'}>
+              <ArrowSliderClient />
+            </Suspense>
           </div>
         </div>
       </div>
