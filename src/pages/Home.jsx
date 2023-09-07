@@ -24,7 +24,6 @@ function Home() {
   const heroPar = par.home;
 
   useEffect(() => {
-    // Динамически загружаем все стили SCSS из определенной директории
     const styleModules = import.meta.glob('../assets/scss/main.scss');
 
     Promise.all(Object.values(styleModules).map((styleModule) => styleModule()))
