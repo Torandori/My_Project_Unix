@@ -8,7 +8,6 @@ import { useMediaQuery } from "react-responsive";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import casesData from "../data/caseCasesSecData.json"
 const Arrow = lazy(() => import('./svgComponents/Arrow'));
-// import Arrow from "./svgComponents/Arrow";
 import Loader from "../components/Loader";
 
 

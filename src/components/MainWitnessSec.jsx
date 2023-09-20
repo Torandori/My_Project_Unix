@@ -1,7 +1,6 @@
 import witnessData from "../data/mainWitnessSecData.json"
 import { lazy, Suspense } from 'react';
 const SliderWitness = lazy(() => import('./SliderWitness'));
-// import SliderWitness from "./SliderWitness";
 import Loader from "../components/Loader";
 
 function MainWitnessSec() {

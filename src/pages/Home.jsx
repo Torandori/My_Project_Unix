@@ -1,16 +1,8 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-// import '../assets/scss/main.scss'
 import HeroSec from '../components/HeroSec';
 import par from '../data/heroData.json'
 import pageTitle from '../data/pagesTitles.json';
-// import MainAboutSec from '../components/mainAboutSec';
-// import MainAboutCeoSec from '../components/MainAboutCeoSec';
-// import MainOurClientSec from '../components/MainOurClientSec';
-// import MainPastProjectsSec from '../components/MainPastProjectsSec';
-// import MainVideoSec from '../components/MainVideoSec';
-// import MainWitnessSec from '../components/MainWitnessSec';
-// import MainWorthySec from '../components/MainWorthySec';
 import loadable from '@loadable/component';
 const MainAboutSec = loadable(() => import('../components/mainAboutSec'));
 const MainAboutCeoSec = loadable(() => import('../components/MainAboutCeoSec'));

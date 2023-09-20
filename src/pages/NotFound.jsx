@@ -3,7 +3,6 @@ import { lazy, Suspense } from 'react';
 import "../assets/scss/style.scss";
 import "../assets/scss/error404.scss";
 const Lottie  = lazy(() => import('lottie-react'));
-// import Lottie from "lottie-react";
 import animationErr from '../assets/other/404error.json';
 import pageTitle from '../data/pagesTitles.json';
 import { Helmet } from "react-helmet-async";

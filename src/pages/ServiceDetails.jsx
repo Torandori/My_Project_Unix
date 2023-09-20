@@ -3,9 +3,6 @@ import { useParams } from 'react-router-dom'
 import { lazy, Suspense } from 'react';
 import HeroServDet from '../components/HeroServDet';
 import { Helmet } from 'react-helmet-async';
-// import loadable from '@loadable/component';
-// import ServDetDescrSec from "../components/ServDetDescrSec";
-// import ServDetHowSec from "../components/ServDetHowSec";
 import "../assets/scss/serviceDetails.scss";
 const ServDetDescrSec = lazy(() => import('../components/ServDetDescrSec'));
 const ServDetHowSec = lazy(() => import('../components/ServDetHowSec'));

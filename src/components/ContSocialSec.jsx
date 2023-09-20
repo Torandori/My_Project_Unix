@@ -9,13 +9,6 @@ const TiltedCardCont  = lazy(() => import('./TiltedCardCont'));
 lazy(() => import('../assets/scss/_tiltCard.scss'));
 import soc from "../data/contSocialSec.json"
 import Loader from "../components/Loader";
-// import '../assets/scss/_tiltCard.scss'
-// const SocList  = lazy(() => import('./SocList'));
-
-// import DribbleIcon from "./svgComponents/DribbleIcon";
-// import Arrow from "./svgComponents/Arrow";
-// import SocList from "./SocList";
-// import TiltedCardCont from "./TiltedCardCont";
 
 function ContSocialSec() {
   const socLeft = soc.colLeft;

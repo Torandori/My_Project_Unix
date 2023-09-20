@@ -1,12 +1,7 @@
-// import { WN_API, WN_API_KEY } from "../env";
-// import { useParams } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import HeroSecNewsDet from "../components/HeroSecNewsDet";
 import formatDate from "../helpers/formatDate"
-// import Loader from "../components/Loader";
-// import ky from "ky";
-// import { toast } from "react-toastify";
 import '../assets/scss/news-details.scss';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';

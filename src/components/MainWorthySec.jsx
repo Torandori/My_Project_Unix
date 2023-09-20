@@ -6,9 +6,7 @@ import { lazy, Suspense } from 'react';
 import worthyData from '../data/mainWorthySecData.json'
 const ContactsModal = lazy(() => import('./ContactsModal'));
 const PromoLines = lazy(() => import('./PromoLines'));
-// import PromoLines from './PromoLines';
 import btnCircle from '../assets/images/svg/btnCircle.svg'
-// import ContactsModal from './ContactsModal';
 import Loader from "../components/Loader";
 
 function MainWorthySec() {

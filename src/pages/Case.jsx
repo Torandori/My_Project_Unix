@@ -1,5 +1,4 @@
 import HeroSec from '../components/HeroSec';
-// import CasesSec from '../components/CasesSec';
 import par from '../data/heroData.json';
 import '../assets/scss/case.scss';
 import { Helmet } from 'react-helmet-async';

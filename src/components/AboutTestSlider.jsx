@@ -5,8 +5,6 @@ const Fbs = lazy(() => import('./svgComponents/Fbs'));
 const Ins = lazy(() => import('./svgComponents/Ins'));
 import testData from '../data/aboutTestimonial.json'
 import '../assets/scss/_testimonialTeamCards.scss'
-// import Fbs from './svgComponents/Fbs';
-// import Ins from './svgComponents/Ins';
 
 function AboutTestSlider() {
   return (

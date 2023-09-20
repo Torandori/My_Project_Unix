@@ -4,9 +4,6 @@ const Flake  = lazy(() => import('./svgComponents/Flake'));
 const PromoLines  = lazy(() => import('./PromoLines'));
 const SliderCeo  = lazy(() => import('./SliderCeo'));
 import Loader from "../components/Loader";
-// import SliderCeo from './SliderCeo';
-// import Flake from './svgComponents/Flake'
-// import PromoLines from './PromoLines'
 import ceoData from '../data/mainAboutCeoSecData.json'
 import { Parallax } from "react-scroll-parallax";
 

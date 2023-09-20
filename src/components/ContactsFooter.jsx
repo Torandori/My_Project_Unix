@@ -1,6 +1,5 @@
 import { lazy, Suspense } from 'react';
 const ArrowTop  = lazy(() => import('./svgComponents/arrowTop'));
-// import ArrowTop from "./svgComponents/arrowTop";
 import Loader from "../components/Loader";
 
 function ContactsFooter() {

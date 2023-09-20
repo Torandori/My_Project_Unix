@@ -8,8 +8,6 @@ import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from 'react-responsive';
 const ContactsModal = lazy(() => import('./ContactsModal'));
 const StartBtn = lazy(() => import('./svgComponents/StartBtn'));
-// import ContactsModal from './ContactsModal';
-// import StartBtn from "./svgComponents/StartBtn";
 import Loader from "../components/Loader";
 
 function ServDetHowSec({descr}) {

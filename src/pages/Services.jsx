@@ -1,6 +1,4 @@
 import HeroSec from "../components/HeroSec";
-// import ServServicesSec from "../components/ServServicesSec";
-// import ServFundingSec from "../components/ServFundingSec";
 import '../assets/scss/services.scss';
 import par from '../data/heroData.json';
 import { Helmet } from "react-helmet-async";

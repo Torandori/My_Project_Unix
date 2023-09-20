@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import HeroSec from "../components/HeroSec";
-import Loader from "../components/Loader";
-
-// import { lazy, Suspense } from "react";
-// const NewsSliderSec = lazy(() => import('../components/NewsSliderSec'));
 import NewsSliderSec from "../components/NewsSliderSec";
 import "../assets/scss/news.scss"
 import par from '../data/heroData.json';

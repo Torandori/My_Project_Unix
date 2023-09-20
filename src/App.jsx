@@ -1,5 +1,5 @@
 import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-dom';
-import {useLayoutEffect, useState, useEffect} from 'react';
+import {useLayoutEffect} from 'react';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
 import Home from "./pages/Home";
@@ -10,7 +10,6 @@ import About from "./pages/About";
 import News from "./pages/News";
 import Contacts from "./pages/Contacts";
 import NewsDetails from './pages/NewsDetails';
-// import NewsDetailsFetch from './pages/NewsDetailsFetch';
 import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
 import { ToastContainer } from 'react-toastify';

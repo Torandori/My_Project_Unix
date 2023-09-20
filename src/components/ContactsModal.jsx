@@ -1,4 +1,3 @@
-// const ContactForm  = lazy(() => import('./ContactForm'));
 import ContactForm from "./ContactForm";
 import "../assets/scss/_contactsModal.scss"
 import '../assets/scss/contacts.scss'

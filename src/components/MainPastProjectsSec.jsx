@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 const ArrowMainPast  = lazy(() => import('./svgComponents/Arrow'));
 const MainProjCardsAnim  = lazy(() => import('./MainProjCardsAnim'));
-// import MainProjCardsAnim from "./MainProjCardsAnim";
-// import Arrow from "./svgComponents/Arrow";
 import projectSecData from "../data/mainPastProjectsSecData.json";
 import Loader from "../components/Loader";
 

@@ -8,10 +8,6 @@ import '../assets/scss/about.scss';
 import pageTitle from '../data/pagesTitles.json';
 import par from '../data/heroData.json';
 
-// import AboutDescrSec from "../components/AboutDescrSec";
-// import AboutTestimonialSec from "../components/AboutTestimonialSec";
-// import AboutPrinciplesSec from "../components/AboutPrinciplesSec";
-
 function About(){
   const heroPar = par.about;
 

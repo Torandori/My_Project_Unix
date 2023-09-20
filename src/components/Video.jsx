@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { lazy } from 'react';
-// lazy(() => import('../assets/scss/_video.scss'));
 import "../assets/scss/_video.scss";
 
 function Video({code}) {

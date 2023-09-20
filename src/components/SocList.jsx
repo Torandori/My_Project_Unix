@@ -5,10 +5,6 @@ const LinkedinIcon  = lazy(() => import('./svgComponents/LinkedinIcon'));
 const BehanceIcon  = lazy(() => import('./svgComponents/BehanceIcon'));
 const FacebookIcon  = lazy(() => import('./svgComponents/FacebookIcon'));
 const InstagramIcon  = lazy(() => import('./svgComponents/InstagramIcon'));
-// import LinkedinIcon from './svgComponents/LinkedinIcon';
-// import BehanceIcon from './svgComponents/BehanceIcon';
-// import FacebookIcon from './svgComponents/FacebookIcon';
-// import InstagramIcon from './svgComponents/InstagramIcon';
 import Loader from "../components/Loader";
 
 function SocList() {

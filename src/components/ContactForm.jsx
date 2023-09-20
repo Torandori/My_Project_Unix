@@ -4,13 +4,10 @@ import { useState } from "react";
 import {toast} from "react-toastify";
 import { lazy, Suspense } from 'react';
 const InputField  = lazy(() => import('./InputField'));
-// import InputField from "./InputField";
 import contacts from '../data/contContactsSecData.json'
 lazy(() => import('../assets/scss/contacts.scss'));
 const Select  = lazy(() => import('react-select'));
 import Loader from "../components/Loader";
-// import '../assets/scss/contacts.scss'
-// import Select from 'react-select';
 
 const options = [
   { value: 'start a project', label: 'Project' },

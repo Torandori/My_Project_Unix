@@ -4,9 +4,6 @@ import { lazy, Suspense } from 'react';
 const ArrowMainProjCards  = lazy(() => import('./svgComponents/Arrow'));
 lazy(() => import('../assets/scss/_animCard.scss'));
 lazy(() => import('../helpers/animateCard.js'));
-// import '../assets/scss/_animCard.scss'
-// import '../helpers/animateCard.js'
-// import Arrow from "./svgComponents/Arrow";
 import Loader from "../components/Loader";
 
 function MainProjCardsAnim({projects}) {

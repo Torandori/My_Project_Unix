@@ -3,15 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import { lazy, Suspense } from 'react';
 import ky from "ky";
 const toast  = lazy(() => import('react-toastify'));
-// import { toast } from "react-toastify";
 import NewsItem from "./NewsItem";
-// import Slider from "react-slick";
 const Slider  = lazy(() => import('react-slick'));
 const NewArrow  = lazy(() => import('./svgComponents/newArrow'));
 const NewIt  = lazy(() => import('./NewIt'));
 import "slick-carousel/slick/slick.css";
-// import NewArrow from "./svgComponents/newArrow";
-// import NewIt from "./NewIt";
 import Loader from "../components/Loader";
 
 function SliderNewsLine() {

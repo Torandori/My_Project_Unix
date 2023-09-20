@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 const ArrowMainAb = lazy(() => import('./svgComponents/Arrow'));
-// import Arrow from './svgComponents/Arrow';
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
-// lazy(() => import('../assets/scss/_accordArrows.scss'));
 import '../assets/scss/_accordArrows.scss'
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";

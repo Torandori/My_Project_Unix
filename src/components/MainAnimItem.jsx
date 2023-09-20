@@ -3,9 +3,7 @@ import { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import { lazy } from 'react';
 lazy(() => import('../assets/scss/_tiltCardProj.scss'));
-// import '../assets/scss/_tiltCardProj.scss';
 import { useMediaQuery } from 'react-responsive';
-import Loader from "../components/Loader";
 
 function MainAnimItem({item}) {
   const isMobile = useMediaQuery({ maxWidth: 1000 });
