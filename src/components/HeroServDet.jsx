@@ -1,16 +1,16 @@
 import { useState } from 'react';
+import { Parallax } from 'react-scroll-parallax';
+import { useMediaQuery } from 'react-responsive';
 import ContactsModal from './ContactsModal';
 import btnCircle from '../assets/images/svg/btnCircle.svg';
 import Flake from './svgComponents/Flake';
-import { Parallax } from 'react-scroll-parallax';
-import { useMediaQuery } from 'react-responsive';
 
 
 function HeroServDet({descr}){
   const isMobile = useMediaQuery({ maxWidth: 880 });
 
   const heroServ = descr.heroServ;
-  console.log(descr);
+  // console.log(descr);
 
   const [modalOpen, setModalOpen] = useState(false);
 

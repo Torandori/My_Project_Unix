@@ -1,5 +1,7 @@
 import {Routes, Route, BrowserRouter as Router, useLocation} from 'react-router-dom';
 import {useLayoutEffect} from 'react';
+import { ToastContainer } from 'react-toastify';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Default from "./layouts/default";
 import DarkLayout from "./layouts/DarkLayout";
 import Home from "./pages/Home";
@@ -12,9 +14,7 @@ import Contacts from "./pages/Contacts";
 import NewsDetails from './pages/NewsDetails';
 import NotFound from './pages/NotFound';
 import './assets/scss/style.scss'
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Wrapper = ({children}) => {
   const location = useLocation();

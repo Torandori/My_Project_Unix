@@ -3,11 +3,11 @@ import { useState, useEffect, useRef } from "react";
 import { lazy, Suspense } from 'react';
 import ky from "ky";
 const toast  = lazy(() => import('react-toastify'));
-import NewsItem from "./NewsItem";
 const Slider  = lazy(() => import('react-slick'));
+import "slick-carousel/slick/slick.css";
+import NewsItem from "./NewsItem";
 const NewArrow  = lazy(() => import('./svgComponents/newArrow'));
 const NewIt  = lazy(() => import('./NewIt'));
-import "slick-carousel/slick/slick.css";
 import Loader from "../components/Loader";
 
 function SliderNewsLine() {
@@ -27,7 +27,7 @@ function SliderNewsLine() {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log('respPosition', resp)
+          // console.log('respPosition', resp)
         })
     } catch (error) {
       console.log('err', error);
@@ -58,7 +58,7 @@ function SliderNewsLine() {
       const resp = await ky(url, {
           timeout: 15000,
         }).json();
-      console.log("respNewsLine", resp)
+      // console.log("respNewsLine", resp)
       // const resp = await ky(`${WN_API}search-news?api-key=${WN_API_KEY}&text=design&language=en&number=6`).json();
       setNewsLine(resp.news);
       localStorage.setItem('newsLine', JSON.stringify(resp.news));

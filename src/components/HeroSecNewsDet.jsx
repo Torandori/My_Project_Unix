@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Parallax } from 'react-scroll-parallax';
 import ContactsModal from './ContactsModal';
 import btnCircle from '../assets/images/svg/btnCircle.svg';
 import Flake from './svgComponents/Flake';
 import '../assets/scss/news-details.scss';
 import heroNewsData from "../data/heroData.json";
-import { useMediaQuery } from 'react-responsive';
-import { Parallax } from 'react-scroll-parallax';
 
 function HeroSecNewsDet({resp}){
   const isMobile = useMediaQuery({ maxWidth: 880 });

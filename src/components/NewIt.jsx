@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from 'react-responsive';
-import formatDate from "../helpers/formatDate"
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import formatDate from "../helpers/formatDate"
 import newsDefaultImg from '../assets/images/newsDefault.jpg';
 
 function NewIt({respData, randomIt}) {
   const isMobile = useMediaQuery({ maxWidth: 880 });
 
   const hash = btoa(respData.url);
-  console.log('respData', respData)
+  // console.log('respData', respData)
   
   const [newMock, setNewMock] = useState([{}, {}]);
 
@@ -21,7 +21,7 @@ function NewIt({respData, randomIt}) {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log('resp', resp)
+          // console.log('resp', resp)
         })
     } catch (error) {
       console.log(error)
@@ -32,7 +32,7 @@ function NewIt({respData, randomIt}) {
   const mockedObj = newMock[randomIndex];
 
 
-  console.log("hashNewIt", hash)
+  // console.log("hashNewIt", hash)
 
   return (
     <>

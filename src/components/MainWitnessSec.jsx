@@ -1,5 +1,5 @@
-import witnessData from "../data/mainWitnessSecData.json"
 import { lazy, Suspense } from 'react';
+import witnessData from "../data/mainWitnessSecData.json"
 const SliderWitness = lazy(() => import('./SliderWitness'));
 import Loader from "../components/Loader";
 

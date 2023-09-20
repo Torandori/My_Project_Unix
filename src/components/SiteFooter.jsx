@@ -7,8 +7,6 @@ import footerData from '../data/footerData.json'
 import '../assets/scss/_footer.scss'
 import ContactsModal from './ContactsModal';
 import FooterBtnBec from './FooterBtnBec'
-import footerArrow from '../assets/images/svg/footerArrow.svg'
-
 
 function SiteFooter() {
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const PromoLines = lazy(() => import('./PromoLines'));
 import testimonialPic from "../assets/images/team-pic.jpg"
 import testData from '../data/aboutTestimonial.json'
 const AboutTestSlider = lazy(() => import('./AboutTestSlider'));
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import Loader from "../components/Loader";
 
 function AboutTestimonialSec() {

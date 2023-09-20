@@ -6,7 +6,8 @@
     "projDescr": "The platform allows incredible flexibility via creation, distribution, and purchasing features for the brands to stand out and create their own identity in the Metaverse.",
     "projUnderText": "interface & website",
     "projImgUrl": "./assets/images/olive-max.jpg",
-    "projAlt": "Olive Max project picture"
+    "projAlt": "Olive Max project picture",
+    "projId": "oliveProject"
   },
   {
     "projName": "shock",
@@ -15,6 +16,7 @@
     "projDescr": "The platform is not just an app; it's your ally in conquering the chaos of modern life. Designed to elevate your productivity, organization, and well-being, it empowers you to streamline tasks, focus on what truly matters, and unlock your full potential.",
     "projUnderText": "interface & website",
     "projImgUrl": "./assets/images/digit-clothing.jpg",
-    "projAlt": "Digit clothing picture"
+    "projAlt": "Digit clothing picture",
+    "projId": "shokcProject"
   }
 ]

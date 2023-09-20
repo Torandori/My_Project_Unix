@@ -4,9 +4,9 @@ import footerSocLinks from '../data/footerSocLinks.json'
 function FooterSocLinks(){
   return(
     <ul>
-      {footerSocLinks.map((item, index) => {
+      {footerSocLinks.map((item) => {
         return (
-          <li key={index}>
+          <li key={item.iconName}>
             <Link to={item.iconTo} title={`Move to our social media` + `${item.iconTitle}`} target="_blank" rel="noreferrer nofollow">{item.iconName}</Link>
           </li>
         )

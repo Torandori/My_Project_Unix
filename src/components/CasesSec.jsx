@@ -58,9 +58,9 @@ function CasesSec() {
               </span>
             </button>
           </div>
-          {casesFirst.map((item, index) => {
+          {casesFirst.map((item) => {
             return (
-              <div className="case-item" key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
+              <div className="case-item" key={item.caseName} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
                 <div className="project-descr" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="200">
                   <div className="title-wrap">
                     <div className="h4">{item.caseName}</div>
@@ -116,9 +116,9 @@ function CasesSec() {
               </span>
             </button>
           </div>
-          {casesSecond.map((item, index) => {
+          {casesSecond.map((item) => {
             return (
-              <div className="case-item" key={index} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
+              <div className="case-item" key={item.caseName} data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="300">
                 <div className="project-descr">
                   <div className="title-wrap">
                     <div className="h4">{item.caseName} <span className="year">{item.caseDate}</span></div>

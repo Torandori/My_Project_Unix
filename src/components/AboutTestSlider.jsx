@@ -14,7 +14,7 @@ function AboutTestSlider() {
         {testData.aboutTestSlider.map((item, index) => {
           const cardClassName = "card card" + index;
           return (
-            <div className={cardClassName} key={index}>
+            <div className={cardClassName} key={item.sliderMemberName}>
               <div className="border">
                 <div className="pic-capt">{item.sliderMemberName}</div>
                 <div className="img-wrap icons">

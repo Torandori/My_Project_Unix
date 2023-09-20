@@ -3,8 +3,8 @@ import { lazy, Suspense } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 const Slider  = lazy(() => import('react-slick'));
-const ArrowSliderCeo  = lazy(() => import('./svgComponents/Arrow'));
 import "slick-carousel/slick/slick.css";
+const ArrowSliderCeo  = lazy(() => import('./svgComponents/Arrow'));
 import ceoData from '../data/mainAboutCeoSecData.json'
 import quote from '../assets/images/svg/quote.svg'
 import ceoPic from '../assets/images/ceo-pic.jpg'

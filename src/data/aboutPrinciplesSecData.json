@@ -9,30 +9,40 @@
   "princElements": [
     { 
       "princClass": "element",
-      "aboutPrincTitle": "passion is our craft"
+      "aboutPrincTitle": "passion is our craft",
+      "id": "0"
     },
     { 
       "princClass": "element light",
-      "aboutPrincTitle": "diligence"
+      "aboutPrincTitle": "diligence",
+      "id": "1"
+    },
+    { 
+      "princClass": "element",
+      "aboutPrincTitle": "creativity and innovation",
+      "id": "2"
+    },
+    { 
+      "princClass": "element light",
+      "aboutPrincTitle": "humor & irony",
+      "id": "3"
     },
     { "princClass": "element",
-      "aboutPrincTitle": "creativity and innovation"},
-    { 
-      "princClass": "element light",
-      "aboutPrincTitle": "humor & irony"
-    },
-    { "princClass": "element",
-      "aboutPrincTitle": "sincerity"
+      "aboutPrincTitle": "sincerity",
+      "id": "4"
     },
     { 
       "princClass": "element light",
-      "aboutPrincTitle": "amiable nerdiness"
+      "aboutPrincTitle": "amiable nerdiness",
+      "id": "5"
     },
     { "princClass": "element light",
-      "aboutPrincTitle": "humor & irony"
+      "aboutPrincTitle": "humor & irony",
+      "id": "6"
     },
     { "princClass": "element",
-      "aboutPrincTitle": "sincerity"
+      "aboutPrincTitle": "sincerity",
+      "id": "7"
     }
   ]
 }

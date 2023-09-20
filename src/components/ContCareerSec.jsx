@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { lazy, Suspense } from 'react';
-const Arrow  = lazy(() => import('./svgComponents/Arrow'));
-import ArrowCareer from "./svgComponents/Arrow";
+const ArrowCareer  = lazy(() => import('./svgComponents/Arrow'));
 import ContactsModal from "./ContactsModal";
 import career from "../data/contCareerSecData.json";
 import Loader from "../components/Loader";

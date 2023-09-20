@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import fundingData from '../data/servFundingSecData.json'
 const FaqList = lazy(() => import('./FaqList'));
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import Loader from "../components/Loader";
 
 function ServFundingSec() {

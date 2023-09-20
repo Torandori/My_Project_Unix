@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import aboutDescr from '../data/aboutDescrSecData.json'
-import stairs from "../assets/images/stairs.png"
-import 'react-lazy-load-image-component/src/effects/blur.css';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from "react-responsive";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import aboutDescr from '../data/aboutDescrSecData.json'
+import stairs from "../assets/images/stairs.png"
 
 function AboutDescrSec() {
   const isMobile = useMediaQuery({ maxWidth: 880 });

@@ -1,7 +1,7 @@
-import princ from '../data/aboutPrinciplesSecData.json';
-import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive';
+import React from 'react';
+import princ from '../data/aboutPrinciplesSecData.json';
 
 function AboutPrinciplesSec() {
   const isMobile = useMediaQuery({ maxWidth: 880 });
@@ -22,9 +22,9 @@ function AboutPrinciplesSec() {
               </div>
 
               <div className="interact-elements">
-                {princ.princElements.map((item, index) => {
+                {princ.princElements.map((item) => {
                   return (
-                    <React.Fragment key={index}>
+                    <React.Fragment key={item.id}>
                       {isMobile ? ( 
                         <div className={item.princClass}><span>{item.aboutPrincTitle}</span></div>
                       ) : (

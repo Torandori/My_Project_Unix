@@ -11,21 +11,22 @@ const MainPastProjectsSec = loadable(() => import('../components/MainPastProject
 const MainVideoSec = loadable(() => import('../components/MainVideoSec'));
 const MainWitnessSec = loadable(() => import('../components/MainWitnessSec'));
 const MainWorthySec = loadable(() => import('../components/MainWorthySec'));
+import '../assets/scss/main.scss'
 
 function Home() {
   const heroPar = par.home;
 
-  useEffect(() => {
-    const styleModules = import.meta.glob('../assets/scss/main.scss');
+  // useEffect(() => {
+  //   // const styleModules = import.meta.glob('../assets/scss/main.scss');
 
-    Promise.all(Object.values(styleModules).map((styleModule) => styleModule()))
-      .then(() => {
-        console.log('Styles loaded');
-      })
-      .catch((error) => {
-        console.error('Error while styles loading', error);
-      });
-  }, []);
+  //   Promise.all(Object.values(styleModules).map((styleModule) => styleModule()))
+  //     .then(() => {
+  //       // console.log('Styles loaded');
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error while styles loading', error);
+  //     });
+  // }, []);
 
   return (
     <>

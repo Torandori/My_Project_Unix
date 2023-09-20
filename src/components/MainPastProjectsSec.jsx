@@ -66,9 +66,9 @@ function MainPastProjectsSec() {
 
             <div className="services-cells">
               <div className="left-col">
-                {servicesLeft.map((item, index) => {
+                {servicesLeft.map((item) => {
                   return (
-                    <div className="service-item" key={index} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
+                    <div className="service-item" key={item.mainServiceName} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
                       <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                         <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                         <div className="arrow-btn">
@@ -83,9 +83,9 @@ function MainPastProjectsSec() {
                 })}
               </div>
               <div className="right-col">
-                {servicesRight.map((item, index) => {
+                {servicesRight.map((item) => {
                     return (
-                      <div className="service-item" key={index} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
+                      <div className="service-item" key={item.mainServiceName} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
                         <Link to={item.mainServiceTo} className="item-title" title={item.mainServiceLinkTitle}>
                           <div className="h3 panchang hoverText">{item.mainServiceName}</div>
                           <div className="arrow-btn">

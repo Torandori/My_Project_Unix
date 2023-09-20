@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
+import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from "react-responsive";
 const ArrowMainAb = lazy(() => import('./svgComponents/Arrow'));
 import aboutData from '../data/mainAboutSecData.json'
 import aboutAccord from '../data/mainAboutSecAccordData.json'
 import '../assets/scss/_accordArrows.scss'
-import { Parallax } from "react-scroll-parallax";
-import { useMediaQuery } from "react-responsive";
 import Loader from "../components/Loader";
 
 
@@ -42,9 +42,9 @@ function MainAboutSec() {
           </Link>
         </div>
         <div id="main-services" className="accordion panchang">
-            {aboutAccord.map((item, index) => {
+            {aboutAccord.map((item) => {
                 return (
-                  <div key={index} className="accordion-item">
+                  <div key={item.aboutAccordName} className="accordion-item">
                     <div className="accord-header">
                       <div className="accord-title">{item.aboutAccordName}</div>
                       <div className="arrow-btn">

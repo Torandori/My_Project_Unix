@@ -1,11 +1,11 @@
 import { useRef, useState, useEffect } from "react";
+import React from "react";
 import { lazy, Suspense } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 const ArrowSliderClient  = lazy(() => import('./svgComponents/Arrow'));
-import React from "react";
 import quote from '../assets/images/svg/quote.svg'
 import Loader from "../components/Loader";
 

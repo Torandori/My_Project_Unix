@@ -1,6 +1,6 @@
-import videoData from '../data/mainVideoSecData.json'
 import { Link } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import videoData from '../data/mainVideoSecData.json'
 const Video = lazy(() => import('./Video'));
 import Loader from "../components/Loader";
 

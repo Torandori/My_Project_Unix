@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import formatDate from "../helpers/formatDate"
-import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
+import formatDate from "../helpers/formatDate"
+import newsDefaultImg from '../assets/images/newsDefault.jpg';
 import "../assets/scss/_newsCardHover.scss"
 
 function NewsItem({respData}) {
 
   const hash = btoa(respData.url);
-  console.log("hashNewItem", hash)
+  // console.log("hashNewItem", hash)
 
 
   const [newMock, setNewMock] = useState([{}, {}]);
@@ -20,7 +20,7 @@ function NewsItem({respData}) {
         .then(resp => resp.json())
         .then(resp => {
           setNewMock(resp);
-          console.log('respNewsItem', resp)
+          // console.log('respNewsItem', resp)
         })
     } catch (error) {
       console.log('err', error)

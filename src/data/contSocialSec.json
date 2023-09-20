@@ -7,11 +7,13 @@
   "colRight": [
     {
       "socImg": "./assets/images/soc-slider-roject1.jpg",
-      "socImgAlt": "Dribble project Duh!"
+      "socImgAlt": "Dribble project Duh!",
+      "socImgId": "0"
     },
     {
       "socImg": "./assets/images/soc-slider-roject3.jpg",
-      "socImgAlt": "Dribble project Blitz!"
+      "socImgAlt": "Dribble project Blitz!",
+      "socImgId": "1"
     }
   ]
 }

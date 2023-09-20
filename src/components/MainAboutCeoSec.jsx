@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { lazy, Suspense } from 'react';
+import { Parallax } from "react-scroll-parallax";
 const Flake  = lazy(() => import('./svgComponents/Flake'));
 const PromoLines  = lazy(() => import('./PromoLines'));
 const SliderCeo  = lazy(() => import('./SliderCeo'));
 import Loader from "../components/Loader";
 import ceoData from '../data/mainAboutCeoSecData.json'
-import { Parallax } from "react-scroll-parallax";
 
 function MainAboutCeoSec(){
 

@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { Parallax } from 'react-scroll-parallax';
+import { useMediaQuery } from 'react-responsive';
 import ContactsModal from './ContactsModal';
 import btnCircle from '../assets/images/svg/btnCircle.svg'
 import Flake from './svgComponents/Flake'
 import '../assets/scss/about.scss'
 import '../assets/scss/contacts.scss'
-import { Parallax } from 'react-scroll-parallax';
-import { useMediaQuery } from 'react-responsive';
 
 
 function HeroSec(props){

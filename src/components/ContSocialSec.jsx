@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from 'react';
 import VanillaTilt from 'vanilla-tilt';
@@ -49,13 +49,15 @@ function ContSocialSec() {
 
           <div className="right-col">
             <div className="wrap-soc-projects">
-              {socRight.map((item, index) => {
+              {socRight.map((item) => {
                 return (
-                  <div className="soc-project-wrap tiltWrap" key={index}> 
-                  <Suspense fallback={<Loader />}>
-                    <TiltedCardCont key={index} item={item} />
-                  </Suspense>
-                  </div>
+                  <React.Fragment key={item.socImgId}>
+                    <div className="soc-project-wrap tiltWrap"> 
+                    <Suspense fallback={<Loader />}>
+                      <TiltedCardCont item={item} />
+                    </Suspense>
+                    </div>
+                  </React.Fragment>
                 )
               })}
             </div>
