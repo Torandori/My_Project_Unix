@@ -21,7 +21,7 @@ Front-End Development program.
 🟣 SCSS Preprocessor: Applied SCSS for efficient CSS styling, allowing for modular, organized, and easily maintainable code.  
 🟣 Responsive Design: Ensured that the website is responsive and adaptable across various devices, providing a consistent user   
    experience on desktops, tablets, and mobiles.  
-🟣 Parallax and AOS animation: added captivating parallax animations to the project, bringing a new level of depth and interactivity.
+🟣 Parallax and AOS animation: added captivating parallax animations to the project, bringing a new level of depth and interactivity.  
 🟣 Tilt 3D Animation: Integrated the Tilt library to add captivating 3D animations to elements, enhancing visual appeal and engagement.  
 🟣 Custom Select: Implemented a custom select component for improved user interaction and a more personalized design.  
 🟣 Form Validation: Developed robust form validation techniques to ensure accurate user input and enhance data integrity.  
