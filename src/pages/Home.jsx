@@ -59,27 +59,6 @@ function Home() {
           <MainPastProjectsSec />
           <MainWorthySec />
           <MainOurClientSec />
-          {/* <Suspense fallback={<Loader />}>
-           <MainAboutSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainVideoSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainWitnessSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainAboutCeoSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainPastProjectsSec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainWorthySec />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <MainOurClientSec />
-          </Suspense> */}
         </div>
       </div>
     </>

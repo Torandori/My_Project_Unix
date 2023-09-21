@@ -10,9 +10,9 @@ function MainProjCardsAnim({projects}) {
 
   return (
     <>
-      {projects.map((item) => {
+      {projects.map((item, index) => {
         return (
-          <React.Fragment key={item.projId}>
+          <React.Fragment key={index}>
             <div className="project-descr" key={item.projName} data-aos="slide-up" data-aos-easing="ease-out-cubic" data-aos-duration="500" data-aos-delay="100">
               <div className="wrap">
                 <div className="project-name">{item.projName}</div>

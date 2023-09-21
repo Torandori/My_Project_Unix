@@ -3,10 +3,10 @@ import ky from "ky";
 import { useState } from "react";
 import {toast} from "react-toastify";
 import { lazy, Suspense } from 'react';
+const Select  = lazy(() => import('react-select'));
 const InputField  = lazy(() => import('./InputField'));
 import contacts from '../data/contContactsSecData.json'
 lazy(() => import('../assets/scss/contacts.scss'));
-const Select  = lazy(() => import('react-select'));
 import Loader from "../components/Loader";
 
 const options = [

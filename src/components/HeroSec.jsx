@@ -8,6 +8,7 @@ import '../assets/scss/about.scss'
 import '../assets/scss/contacts.scss'
 
 
+
 function HeroSec(props){
   const isMobile = useMediaQuery({ maxWidth: 880 });
   const heroD = props.par;

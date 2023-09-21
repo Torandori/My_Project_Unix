@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
+import { lazy, Suspense } from 'react';
 import React from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { lazy, Suspense } from 'react';
 const Slider  = lazy(() => import('react-slick'));
 import "slick-carousel/slick/slick.css";
 import Loader from "../components/Loader";
