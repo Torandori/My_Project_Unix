@@ -7,6 +7,16 @@ export default defineConfig({
   plugins: [react(),
     htmlMinifier({
       minify: true,
+      removeComments: true,
+      collapseWhitespace: true,
     }),
   ],
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true, 
+      },
+    },
+  },
 })
