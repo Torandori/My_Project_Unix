@@ -1,8 +1,12 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import htmlMinifier from 'vite-plugin-html-minifier';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: '/My_Project_Unix/',
-  plugins: [react()],
+  plugins: [react(),
+    htmlMinifier({
+      minify: true,
+    }),
+  ],
 })
